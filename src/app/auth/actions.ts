@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 
 import { publicEnv } from "@/env/public";
+import { track } from "@/lib/analytics/track";
 import {
   type AuthFormState,
   safeNextPath,
@@ -78,6 +79,8 @@ export async function signup(
       values: { email: result.data.email },
     };
   }
+
+  await track("user_signed_up", { userId: data.user?.id });
 
   if (data.session) {
     redirect(next);

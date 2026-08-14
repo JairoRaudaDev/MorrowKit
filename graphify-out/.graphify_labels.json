@@ -23,5 +23,6 @@
   "21": "20260814010000_create_billing_tables.sql",
   "22": "Q: Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly",
   "23": "20260814020000_add_stripe_webhook_processing.sql",
-  "24": "welcome.tsx"
+  "24": "public.ts",
+  "25": "track.ts"
 }

@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 
 import { publicEnv } from "@/env/public";
+import { track } from "@/lib/analytics/track";
 import { requireAuth } from "@/lib/auth/session";
 import { stripe } from "@/lib/stripe/client";
 import { stripeConfig } from "@/lib/stripe/config";
@@ -54,6 +55,8 @@ export async function createCheckoutSession(formData: FormData) {
   if (!session.url) {
     throw new Error("Stripe did not return a checkout URL");
   }
+
+  await track("checkout_started", { plan, userId });
 
   redirect(session.url);
 }

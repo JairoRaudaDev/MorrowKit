@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1786727395.4816449,
+    "mtime": 1786727916.0322773,
     "ast_hash": "0ee2ee94b9d5490b7563e8b40d5a50e0",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786698640.1751301,
-    "ast_hash": "19ebdcc63367cda3d59674d48f653801",
+    "mtime": 1786727947.2843766,
+    "ast_hash": "e9398bc8168f1328c102f4bc6c4c81ef",
     "semantic_hash": ""
   },
   "eslint.config.mjs": {
@@ -375,13 +375,23 @@
     "semantic_hash": ""
   },
   "src/lib/email/provider.ts": {
-    "mtime": 1786727455.091688,
-    "ast_hash": "2a855a6575225951f0f7cd985af1369f",
+    "mtime": 1786727952.584218,
+    "ast_hash": "2a1ea8fe228332368ec57cafa0e3880f",
     "semantic_hash": ""
   },
   "src/lib/email/send.ts": {
     "mtime": 1786727455.092751,
     "ast_hash": "8778eee6fb8f449be125e19126a3be61",
+    "semantic_hash": ""
+  },
+  "src/emails/welcome-email.tsx": {
+    "mtime": 1786727952.6266098,
+    "ast_hash": "5855b3fc21547c54132816ee89247b12",
+    "semantic_hash": ""
+  },
+  "src/lib/email/welcome.tsx": {
+    "mtime": 1786727952.600209,
+    "ast_hash": "deb5b791476d028390f294866be1e203",
     "semantic_hash": ""
   }
 }

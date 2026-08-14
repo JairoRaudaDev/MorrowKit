@@ -35,6 +35,19 @@
   },
   "nodes": [
     {
+      "label": "ProfileFormState",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L7",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_actions_profileformstate",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "profileformstate"
+    },
+    {
       "label": "AppShellProps",
       "file_type": "code",
       "source_file": "src/components/app-shell.tsx",
@@ -126,6 +139,19 @@
       "norm_label": "premiuminsightsresult"
     },
     {
+      "label": "SubscriptionSnapshot",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/subscription.ts",
+      "source_location": "L5",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_stripe_subscription_subscriptionsnapshot",
+      "community": 11,
+      "community_name": "billing/page.tsx",
+      "norm_label": "subscriptionsnapshot"
+    },
+    {
       "label": "PaidPlan",
       "file_type": "code",
       "source_file": "src/app/pricing/actions.ts",
@@ -139,19 +165,6 @@
       "norm_label": "paidplan"
     },
     {
-      "label": "Environment",
-      "file_type": "code",
-      "source_file": "src/env/validation.ts",
-      "source_location": "L1",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_env_validation_environment",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "environment"
-    },
-    {
       "label": "CustomerIdentity",
       "file_type": "code",
       "source_file": "src/lib/stripe/customer.ts",
@@ -163,19 +176,6 @@
       "community": 17,
       "community_name": "pricing/actions.ts",
       "norm_label": "customeridentity"
-    },
-    {
-      "label": "SubscriptionSnapshot",
-      "file_type": "code",
-      "source_file": "src/lib/stripe/subscription.ts",
-      "source_location": "L5",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_lib_stripe_subscription_subscriptionsnapshot",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "subscriptionsnapshot"
     },
     {
       "label": "StripeClient",
@@ -230,6 +230,45 @@
       "norm_label": "containerprops"
     },
     {
+      "label": "WelcomeEmailProps",
+      "file_type": "code",
+      "source_file": "src/emails/welcome-email.tsx",
+      "source_location": "L1",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_emails_welcome_email_welcomeemailprops",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "welcomeemailprops"
+    },
+    {
+      "label": "Environment",
+      "file_type": "code",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L1",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_env_validation_environment",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "environment"
+    },
+    {
+      "label": "EmailDeliveryResult",
+      "file_type": "code",
+      "source_file": "src/lib/email/provider.ts",
+      "source_location": "L17",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_email_provider_emaildeliveryresult",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "emaildeliveryresult"
+    },
+    {
       "label": "ProviderEmail",
       "file_type": "code",
       "source_file": "src/lib/email/provider.ts",
@@ -239,7 +278,7 @@
       "_origin": "ast",
       "id": "src_lib_email_provider_provideremail",
       "community": 24,
-      "community_name": "provider.ts",
+      "community_name": "welcome.tsx",
       "norm_label": "provideremail"
     },
     {
@@ -252,21 +291,21 @@
       "_origin": "ast",
       "id": "src_lib_email_send_sendemailoptions",
       "community": 24,
-      "community_name": "provider.ts",
+      "community_name": "welcome.tsx",
       "norm_label": "sendemailoptions"
     },
     {
-      "label": "ProfileFormState",
+      "label": "SendWelcomeEmailOptions",
       "file_type": "code",
-      "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L7",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L8",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_app_dashboard_settings_actions_profileformstate",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "profileformstate"
+      "id": "src_lib_email_welcome_sendwelcomeemailoptions",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "sendwelcomeemailoptions"
     },
     {
       "label": "LoginPageProps",
@@ -319,6 +358,30 @@
       "community": 7,
       "community_name": "auth/actions.ts",
       "norm_label": "authformstate"
+    },
+    {
+      "label": "updateProfile()",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_actions_updateprofile",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "updateprofile()"
+    },
+    {
+      "label": "ProfileForm()",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/profile-form.tsx",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_profile_form_profileform",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "profileform()"
     },
     {
       "label": "AppShell()",
@@ -463,18 +526,6 @@
       "community": 1,
       "community_name": "cn",
       "norm_label": "button()"
-    },
-    {
-      "label": "CardAction()",
-      "file_type": "code",
-      "source_file": "src/components/ui/card.tsx",
-      "source_location": "L51",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_ui_card_cardaction",
-      "community": 1,
-      "community_name": "cn",
-      "norm_label": "cardaction()"
     },
     {
       "label": "Dialog()",
@@ -777,6 +828,30 @@
       "norm_label": "dropdownmenutrigger()"
     },
     {
+      "label": "Input()",
+      "file_type": "code",
+      "source_file": "src/components/ui/input.tsx",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_ui_input_input",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "input()"
+    },
+    {
+      "label": "Label()",
+      "file_type": "code",
+      "source_file": "src/components/ui/label.tsx",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_ui_label_label",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "label()"
+    },
+    {
       "label": "Separator()",
       "file_type": "code",
       "source_file": "src/components/ui/separator.tsx",
@@ -837,18 +912,6 @@
       "norm_label": "premiuminsightspage()"
     },
     {
-      "label": "DashboardLayout()",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/layout.tsx",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_dashboard_layout_dashboardlayout",
-      "community": 11,
-      "community_name": "billing/page.tsx",
-      "norm_label": "dashboardlayout()"
-    },
-    {
       "label": "DashboardPage()",
       "file_type": "code",
       "source_file": "src/app/dashboard/page.tsx",
@@ -861,42 +924,6 @@
       "norm_label": "dashboardpage()"
     },
     {
-      "label": "AccountSettingsPage()",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/page.tsx",
-      "source_location": "L17",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_page_accountsettingspage",
-      "community": 11,
-      "community_name": "billing/page.tsx",
-      "norm_label": "accountsettingspage()"
-    },
-    {
-      "label": "AuthForm()",
-      "file_type": "code",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L19",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_auth_form_authform",
-      "community": 11,
-      "community_name": "billing/page.tsx",
-      "norm_label": "authform()"
-    },
-    {
-      "label": "DashboardShell()",
-      "file_type": "code",
-      "source_file": "src/components/dashboard-shell.tsx",
-      "source_location": "L164",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_dashboard_shell_dashboardshell",
-      "community": 11,
-      "community_name": "billing/page.tsx",
-      "norm_label": "dashboardshell()"
-    },
-    {
       "label": "Card()",
       "file_type": "code",
       "source_file": "src/components/ui/card.tsx",
@@ -907,6 +934,18 @@
       "community": 11,
       "community_name": "billing/page.tsx",
       "norm_label": "card()"
+    },
+    {
+      "label": "CardAction()",
+      "file_type": "code",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_ui_card_cardaction",
+      "community": 11,
+      "community_name": "billing/page.tsx",
+      "norm_label": "cardaction()"
     },
     {
       "label": "CardContent()",
@@ -969,18 +1008,6 @@
       "norm_label": "cardtitle()"
     },
     {
-      "label": "requireAuth()",
-      "file_type": "code",
-      "source_file": "src/lib/auth/session.ts",
-      "source_location": "L11",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_auth_session_requireauth",
-      "community": 11,
-      "community_name": "billing/page.tsx",
-      "norm_label": "requireauth()"
-    },
-    {
       "label": "getEntitlements()",
       "file_type": "code",
       "source_file": "src/lib/entitlements.ts",
@@ -1041,6 +1068,30 @@
       "norm_label": "createbillingportalsession()"
     },
     {
+      "label": "DashboardLayout()",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/layout.tsx",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_dashboard_layout_dashboardlayout",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "dashboardlayout()"
+    },
+    {
+      "label": "AccountSettingsPage()",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/page.tsx",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_page_accountsettingspage",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "accountsettingspage()"
+    },
+    {
       "label": "createCheckoutSession()",
       "file_type": "code",
       "source_file": "src/app/pricing/actions.ts",
@@ -1065,16 +1116,28 @@
       "norm_label": "ispaidplan()"
     },
     {
-      "label": "validateEnv()",
+      "label": "DashboardShell()",
       "file_type": "code",
-      "source_file": "src/env/validation.ts",
-      "source_location": "L3",
+      "source_file": "src/components/dashboard-shell.tsx",
+      "source_location": "L164",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_env_validation_validateenv",
+      "id": "src_components_dashboard_shell_dashboardshell",
       "community": 17,
       "community_name": "pricing/actions.ts",
-      "norm_label": "validateenv()"
+      "norm_label": "dashboardshell()"
+    },
+    {
+      "label": "requireAuth()",
+      "file_type": "code",
+      "source_file": "src/lib/auth/session.ts",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_auth_session_requireauth",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "requireauth()"
     },
     {
       "label": "getOrCreateStripeCustomer()",
@@ -1159,18 +1222,6 @@
       "community": 17,
       "community_name": "pricing/actions.ts",
       "norm_label": "createadminclient()"
-    },
-    {
-      "label": "createClient()",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/client.ts",
-      "source_location": "L13",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_supabase_client_createclient",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "createclient()"
     },
     {
       "label": "Home()",
@@ -1281,15 +1332,39 @@
       "norm_label": "pricing()"
     },
     {
+      "label": "WelcomeEmail()",
+      "file_type": "code",
+      "source_file": "src/emails/welcome-email.tsx",
+      "source_location": "L6",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_emails_welcome_email_welcomeemail",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "welcomeemail()"
+    },
+    {
+      "label": "validateEnv()",
+      "file_type": "code",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_env_validation_validateenv",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "validateenv()"
+    },
+    {
       "label": "sendWithProvider()",
       "file_type": "code",
       "source_file": "src/lib/email/provider.ts",
-      "source_location": "L24",
+      "source_location": "L20",
       "_callable": true,
       "_origin": "ast",
       "id": "src_lib_email_provider_sendwithprovider",
       "community": 24,
-      "community_name": "provider.ts",
+      "community_name": "welcome.tsx",
       "norm_label": "sendwithprovider()"
     },
     {
@@ -1301,32 +1376,20 @@
       "_origin": "ast",
       "id": "src_lib_email_send_sendemail",
       "community": 24,
-      "community_name": "provider.ts",
+      "community_name": "welcome.tsx",
       "norm_label": "sendemail()"
     },
     {
-      "label": "updateSession()",
+      "label": "sendWelcomeEmail()",
       "file_type": "code",
-      "source_file": "src/lib/supabase/middleware.ts",
-      "source_location": "L12",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L13",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_supabase_middleware_updatesession",
-      "community": 25,
-      "community_name": "middleware.ts",
-      "norm_label": "updatesession()"
-    },
-    {
-      "label": "proxy()",
-      "file_type": "code",
-      "source_file": "src/proxy.ts",
-      "source_location": "L5",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_proxy_proxy",
-      "community": 25,
-      "community_name": "middleware.ts",
-      "norm_label": "proxy()"
+      "id": "src_lib_email_welcome_sendwelcomeemail",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "sendwelcomeemail()"
     },
     {
       "label": "authErrorMessage()",
@@ -1389,30 +1452,6 @@
       "norm_label": "get()"
     },
     {
-      "label": "updateProfile()",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L13",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_actions_updateprofile",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "updateprofile()"
-    },
-    {
-      "label": "ProfileForm()",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/profile-form.tsx",
-      "source_location": "L12",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_profile_form_profileform",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "profileform()"
-    },
-    {
       "label": "LoginPage()",
       "file_type": "code",
       "source_file": "src/app/login/page.tsx",
@@ -1437,6 +1476,18 @@
       "norm_label": "signuppage()"
     },
     {
+      "label": "AuthForm()",
+      "file_type": "code",
+      "source_file": "src/components/auth-form.tsx",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_auth_form_authform",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "authform()"
+    },
+    {
       "label": "AuthPage()",
       "file_type": "code",
       "source_file": "src/components/auth-page.tsx",
@@ -1447,30 +1498,6 @@
       "community": 7,
       "community_name": "auth/actions.ts",
       "norm_label": "authpage()"
-    },
-    {
-      "label": "Input()",
-      "file_type": "code",
-      "source_file": "src/components/ui/input.tsx",
-      "source_location": "L5",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_ui_input_input",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "input()"
-    },
-    {
-      "label": "Label()",
-      "file_type": "code",
-      "source_file": "src/components/ui/label.tsx",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_ui_label_label",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "label()"
     },
     {
       "label": "safeNextPath()",
@@ -1499,6 +1526,30 @@
     {
       "label": "createClient()",
       "file_type": "code",
+      "source_file": "src/lib/supabase/client.ts",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_supabase_client_createclient",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "createclient()"
+    },
+    {
+      "label": "updateSession()",
+      "file_type": "code",
+      "source_file": "src/lib/supabase/middleware.ts",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_supabase_middleware_updatesession",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "updatesession()"
+    },
+    {
+      "label": "createClient()",
+      "file_type": "code",
       "source_file": "src/lib/supabase/server.ts",
       "source_location": "L14",
       "_callable": true,
@@ -1507,6 +1558,18 @@
       "community": 7,
       "community_name": "auth/actions.ts",
       "norm_label": "createclient()"
+    },
+    {
+      "label": "proxy()",
+      "file_type": "code",
+      "source_file": "src/proxy.ts",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_proxy_proxy",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "proxy()"
     },
     {
       "label": "RootLayout()",
@@ -1519,6 +1582,50 @@
       "community": 9,
       "community_name": "layout.tsx",
       "norm_label": "rootlayout()"
+    },
+    {
+      "label": "settings/actions.ts",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_actions",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "settings/actions.ts"
+    },
+    {
+      "label": "settings/page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_page",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "settings/page.tsx"
+    },
+    {
+      "label": "profile-form.tsx",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/profile-form.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_profile_form",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "profile-form.tsx"
+    },
+    {
+      "label": "initialState",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/profile-form.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_profile_form_initialstate",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "initialstate"
     },
     {
       "label": "app-shell.tsx",
@@ -1609,6 +1716,28 @@
       "norm_label": "dropdown-menu.tsx"
     },
     {
+      "label": "input.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/input.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_input",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "input.tsx"
+    },
+    {
+      "label": "label.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/label.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_label",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "label.tsx"
+    },
+    {
       "label": "separator.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/separator.tsx",
@@ -1697,17 +1826,6 @@
       "norm_label": "insights/page.tsx"
     },
     {
-      "label": "dashboard/layout.tsx",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/layout.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_dashboard_layout",
-      "community": 11,
-      "community_name": "billing/page.tsx",
-      "norm_label": "dashboard/layout.tsx"
-    },
-    {
       "label": "dashboard/page.tsx",
       "file_type": "code",
       "source_file": "src/app/dashboard/page.tsx",
@@ -1730,17 +1848,6 @@
       "norm_label": "stats"
     },
     {
-      "label": "settings/page.tsx",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_page",
-      "community": 11,
-      "community_name": "billing/page.tsx",
-      "norm_label": "settings/page.tsx"
-    },
-    {
       "label": "auth-page.tsx",
       "file_type": "code",
       "source_file": "src/components/auth-page.tsx",
@@ -1761,17 +1868,6 @@
       "community": 11,
       "community_name": "billing/page.tsx",
       "norm_label": "card.tsx"
-    },
-    {
-      "label": "session.ts",
-      "file_type": "code",
-      "source_file": "src/lib/auth/session.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_lib_auth_session",
-      "community": 11,
-      "community_name": "billing/page.tsx",
-      "norm_label": "session.ts"
     },
     {
       "label": "entitlements.ts",
@@ -1827,6 +1923,17 @@
       "community": 11,
       "community_name": "billing/page.tsx",
       "norm_label": "demoinsights"
+    },
+    {
+      "label": "subscription.ts",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/subscription.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_stripe_subscription",
+      "community": 11,
+      "community_name": "billing/page.tsx",
+      "norm_label": "subscription.ts"
     },
     {
       "label": "eslint.config.mjs",
@@ -1983,6 +2090,17 @@
       "norm_label": "billing/actions.ts"
     },
     {
+      "label": "dashboard/layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/layout.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_dashboard_layout",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "dashboard/layout.tsx"
+    },
+    {
       "label": "pricing/actions.ts",
       "file_type": "code",
       "source_file": "src/app/pricing/actions.ts",
@@ -2003,28 +2121,6 @@
       "community": 17,
       "community_name": "pricing/actions.ts",
       "norm_label": "paidplans"
-    },
-    {
-      "label": "public.ts",
-      "file_type": "code",
-      "source_file": "src/env/public.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_env_public",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "public.ts"
-    },
-    {
-      "label": "publicEnv",
-      "file_type": "code",
-      "source_file": "src/env/public.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "src_env_public_publicenv",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "publicenv"
     },
     {
       "label": "env/server.ts",
@@ -2060,15 +2156,15 @@
       "norm_label": "serverenv"
     },
     {
-      "label": "env/validation.ts",
+      "label": "session.ts",
       "file_type": "code",
-      "source_file": "src/env/validation.ts",
+      "source_file": "src/lib/auth/session.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_env_validation",
+      "id": "src_lib_auth_session",
       "community": 17,
       "community_name": "pricing/actions.ts",
-      "norm_label": "env/validation.ts"
+      "norm_label": "session.ts"
     },
     {
       "label": "stripe/client.ts",
@@ -2126,17 +2222,6 @@
       "norm_label": "customer.ts"
     },
     {
-      "label": "subscription.ts",
-      "file_type": "code",
-      "source_file": "src/lib/stripe/subscription.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_lib_stripe_subscription",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "subscription.ts"
-    },
-    {
       "label": "types.ts",
       "file_type": "code",
       "source_file": "src/lib/stripe/types.ts",
@@ -2168,17 +2253,6 @@
       "community": 17,
       "community_name": "pricing/actions.ts",
       "norm_label": "admin.ts"
-    },
-    {
-      "label": "supabase/client.ts",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/client.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_lib_supabase_client",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "supabase/client.ts"
     },
     {
       "label": "seed.sql",
@@ -2698,6 +2772,28 @@
       "norm_label": "public.stripe_webhook_events"
     },
     {
+      "label": "welcome-email.tsx",
+      "file_type": "code",
+      "source_file": "src/emails/welcome-email.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_emails_welcome_email",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "welcome-email.tsx"
+    },
+    {
+      "label": "env/validation.ts",
+      "file_type": "code",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_env_validation",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "env/validation.ts"
+    },
+    {
       "label": "provider.ts",
       "file_type": "code",
       "source_file": "src/lib/email/provider.ts",
@@ -2705,30 +2801,8 @@
       "_origin": "ast",
       "id": "src_lib_email_provider",
       "community": 24,
-      "community_name": "provider.ts",
+      "community_name": "welcome.tsx",
       "norm_label": "provider.ts"
-    },
-    {
-      "label": "emailEnv",
-      "file_type": "code",
-      "source_file": "src/lib/email/provider.ts",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "src_lib_email_provider_emailenv",
-      "community": 24,
-      "community_name": "provider.ts",
-      "norm_label": "emailenv"
-    },
-    {
-      "label": "resend",
-      "file_type": "code",
-      "source_file": "src/lib/email/provider.ts",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "src_lib_email_provider_resend",
-      "community": 24,
-      "community_name": "provider.ts",
-      "norm_label": "resend"
     },
     {
       "label": "send.ts",
@@ -2738,41 +2812,19 @@
       "_origin": "ast",
       "id": "src_lib_email_send",
       "community": 24,
-      "community_name": "provider.ts",
+      "community_name": "welcome.tsx",
       "norm_label": "send.ts"
     },
     {
-      "label": "middleware.ts",
+      "label": "welcome.tsx",
       "file_type": "code",
-      "source_file": "src/lib/supabase/middleware.ts",
+      "source_file": "src/lib/email/welcome.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_supabase_middleware",
-      "community": 25,
-      "community_name": "middleware.ts",
-      "norm_label": "middleware.ts"
-    },
-    {
-      "label": "proxy.ts",
-      "file_type": "code",
-      "source_file": "src/proxy.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_proxy",
-      "community": 25,
-      "community_name": "middleware.ts",
-      "norm_label": "proxy.ts"
-    },
-    {
-      "label": "config",
-      "file_type": "code",
-      "source_file": "src/proxy.ts",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "src_proxy_config",
-      "community": 25,
-      "community_name": "middleware.ts",
-      "norm_label": "config"
+      "id": "src_lib_email_welcome",
+      "community": 24,
+      "community_name": "welcome.tsx",
+      "norm_label": "welcome.tsx"
     },
     {
       "label": "tsconfig.json",
@@ -3328,7 +3380,7 @@
       "label": "License",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L35",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "readme_license",
       "community": 5,
@@ -3339,7 +3391,7 @@
       "label": "Local Supabase",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L11",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "readme_local_supabase",
       "community": 5,
@@ -3361,12 +3413,23 @@
       "label": "Status",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L7",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "readme_status",
       "community": 5,
       "community_name": "SaaSSeed",
       "norm_label": "status"
+    },
+    {
+      "label": "Transactional email",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "readme_transactional_email",
+      "community": 5,
+      "community_name": "SaaSSeed",
+      "norm_label": "transactional email"
     },
     {
       "label": "devDependencies",
@@ -3644,39 +3707,6 @@
       "norm_label": "callback/route.ts"
     },
     {
-      "label": "settings/actions.ts",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_actions",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "settings/actions.ts"
-    },
-    {
-      "label": "profile-form.tsx",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/profile-form.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_profile_form",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "profile-form.tsx"
-    },
-    {
-      "label": "initialState",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/profile-form.tsx",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_profile_form_initialstate",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "initialstate"
-    },
-    {
       "label": "login/page.tsx",
       "file_type": "code",
       "source_file": "src/app/login/page.tsx",
@@ -3721,26 +3751,26 @@
       "norm_label": "initialstate"
     },
     {
-      "label": "input.tsx",
+      "label": "public.ts",
       "file_type": "code",
-      "source_file": "src/components/ui/input.tsx",
+      "source_file": "src/env/public.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_ui_input",
+      "id": "src_env_public",
       "community": 7,
       "community_name": "auth/actions.ts",
-      "norm_label": "input.tsx"
+      "norm_label": "public.ts"
     },
     {
-      "label": "label.tsx",
+      "label": "publicEnv",
       "file_type": "code",
-      "source_file": "src/components/ui/label.tsx",
-      "source_location": "L1",
+      "source_file": "src/env/public.ts",
+      "source_location": "L3",
       "_origin": "ast",
-      "id": "src_components_ui_label",
+      "id": "src_env_public_publicenv",
       "community": 7,
       "community_name": "auth/actions.ts",
-      "norm_label": "label.tsx"
+      "norm_label": "publicenv"
     },
     {
       "label": "auth/validation.ts",
@@ -3754,6 +3784,28 @@
       "norm_label": "auth/validation.ts"
     },
     {
+      "label": "supabase/client.ts",
+      "file_type": "code",
+      "source_file": "src/lib/supabase/client.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_supabase_client",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "supabase/client.ts"
+    },
+    {
+      "label": "middleware.ts",
+      "file_type": "code",
+      "source_file": "src/lib/supabase/middleware.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_supabase_middleware",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "middleware.ts"
+    },
+    {
       "label": "supabase/server.ts",
       "file_type": "code",
       "source_file": "src/lib/supabase/server.ts",
@@ -3763,6 +3815,28 @@
       "community": 7,
       "community_name": "auth/actions.ts",
       "norm_label": "supabase/server.ts"
+    },
+    {
+      "label": "proxy.ts",
+      "file_type": "code",
+      "source_file": "src/proxy.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_proxy",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "proxy.ts"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "src/proxy.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_proxy_config",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "config"
     },
     {
       "label": "dependencies",
@@ -5381,12 +5455,36 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "src/lib/email/provider.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_provider_sendwithprovider",
+      "target": "src_env_validation_validateenv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "src/lib/email/send.ts",
       "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_email_send_sendemail",
       "target": "src_lib_email_provider_sendwithprovider"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_welcome_sendwelcomeemail",
+      "target": "src_lib_email_send_sendemail"
     },
     {
       "relation": "calls",
@@ -7540,6 +7638,42 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_welcome",
+      "target": "src_emails_welcome_email_welcomeemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_welcome",
+      "target": "src_env_public_publicenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_welcome",
+      "target": "src_lib_email_send_sendemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/lib/entitlements.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -8812,6 +8946,42 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_welcome",
+      "target": "src_emails_welcome_email",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_welcome",
+      "target": "src_env_public",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_welcome",
+      "target": "src_lib_email_send",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/lib/entitlements.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -9853,7 +10023,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L11",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_saasseed",
+      "target": "readme_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_saasseed",
@@ -9864,7 +10045,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L35",
+      "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_saasseed",
@@ -9879,7 +10060,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_saasseed",
-      "target": "readme_status",
+      "target": "readme_transactional_email",
       "confidence_score": 1.0
     },
     {
@@ -10985,6 +11166,28 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/emails/welcome-email.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_emails_welcome_email",
+      "target": "src_emails_welcome_email_welcomeemailprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/emails/welcome-email.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_emails_welcome_email",
+      "target": "src_emails_welcome_email_welcomeemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/env/public.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -11089,25 +11292,14 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_email_provider",
-      "target": "src_lib_email_provider_emailenv",
+      "target": "src_lib_email_provider_emaildeliveryresult",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/email/provider.ts",
-      "source_location": "L22",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_email_provider",
-      "target": "src_lib_email_provider_resend",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/email/provider.ts",
-      "source_location": "L24",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_email_provider",
@@ -11145,6 +11337,28 @@
       "_origin": "ast",
       "source": "src_lib_email_send",
       "target": "src_lib_email_send_sendemailoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_welcome",
+      "target": "src_lib_email_welcome_sendwelcomeemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/email/welcome.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_email_welcome",
+      "target": "src_lib_email_welcome_sendwelcomeemailoptions",
       "confidence_score": 1.0
     },
     {
@@ -12279,5 +12493,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "a7e1dac6723e9a089055f0a80c46a887996e54e7"
+  "built_at_commit": "fe55f5f10091e7d92dae133016010a8fc2466168"
 }
