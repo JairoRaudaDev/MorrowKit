@@ -1,23 +1,23 @@
 # Graph Report - SaaSSeed  (2026-08-14)
 
 ## Corpus Check
-- 19 files · ~11,083 words
+- 29 files · ~12,752 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 121 nodes · 115 edges · 17 communities (14 shown, 3 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.92)
+- 204 nodes · 239 edges · 17 communities (14 shown, 3 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f2ce4434`
+- Built from commit: `97b704fc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Graphify Pipeline
-- Graph Build and Community Clustering
-- Semantic Extraction
+- cn
+- components.json
 - compilerOptions
 - package.json
 - SaaSSeed
@@ -26,32 +26,32 @@
 - dependencies
 - layout.tsx
 - postcss.config.mjs
-- scripts
+- dialog.tsx
 - prettier.config.mjs
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 16 edges
-2. `scripts` - 8 edges
-3. `Graphify Pipeline` - 7 edges
-4. `include` - 6 edges
-5. `Incremental Graph Update` - 6 edges
-6. `Graphify First Codebase Workflow` - 5 edges
-7. `Graph Build and Community Clustering` - 5 edges
-8. `Semantic Extraction` - 5 edges
-9. `lib` - 4 edges
-10. `engines` - 3 edges
+1. `cn()` - 41 edges
+2. `compilerOptions` - 16 edges
+3. `scripts` - 8 edges
+4. `Graphify Pipeline` - 7 edges
+5. `tailwind` - 6 edges
+6. `aliases` - 6 edges
+7. `include` - 6 edges
+8. `Incremental Graph Update` - 6 edges
+9. `Graphify First Codebase Workflow` - 5 edges
+10. `Graph Build and Community Clustering` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Agent Instruction Integration` --semantically_similar_to--> `Graphify First Codebase Workflow`  [INFERRED] [semantically similar]
   .codex/skills/graphify/references/hooks.md → AGENTS.md
 - `Graphify First Codebase Workflow` --references--> `Path and Explain Queries`  [EXTRACTED]
   AGENTS.md → .codex/skills/graphify/references/query.md
-- `Graphify First Codebase Workflow` --references--> `Budget Aware Graph Traversal`  [EXTRACTED]
-  AGENTS.md → .codex/skills/graphify/references/query.md
-- `Graphify First Codebase Workflow` --references--> `Incremental Graph Update`  [EXTRACTED]
-  AGENTS.md → .codex/skills/graphify/references/update.md
-- `Graphify Pipeline` --references--> `URL Ingestion`  [EXTRACTED]
-  .codex/skills/graphify/SKILL.md → .codex/skills/graphify/references/add-watch.md
+- `DialogOverlay()` --calls--> `cn()`  [EXTRACTED]
+  src/components/ui/dialog.tsx → src/lib/utils.ts
+- `DialogContent()` --calls--> `cn()`  [EXTRACTED]
+  src/components/ui/dialog.tsx → src/lib/utils.ts
+- `DialogHeader()` --calls--> `cn()`  [EXTRACTED]
+  src/components/ui/dialog.tsx → src/lib/utils.ts
 
 ## Import Cycles
 - None detected.
@@ -63,24 +63,24 @@
 ## Communities (17 total, 3 thin omitted)
 
 ### Community 0 - "Graphify Pipeline"
-Cohesion: 0.16
-Nodes (15): Folder Watch Incremental Rebuild, URL Ingestion, Cross Repository Graph Merge, GitHub Repository Clone, Agent Instruction Integration, Post Commit Graph Update Hook, Constrained Query Expansion, Budget Aware Graph Traversal (+7 more)
+Cohesion: 0.08
+Nodes (31): Folder Watch Incremental Rebuild, URL Ingestion, Optional Graph Exports, Token Reduction Benchmark, Edge Confidence Rubric, Deterministic Node IDs, Semantic Extraction JSON Schema, Cross Repository Graph Merge (+23 more)
 
-### Community 1 - "Graph Build and Community Clustering"
-Cohesion: 0.25
-Nodes (8): Optional Graph Exports, Token Reduction Benchmark, Cluster Only Refresh, Graph Build and Community Clustering, Graph Health Integrity Gate, Graph Honesty Rules, Graph Output Generation, Structural AST Extraction
+### Community 1 - "cn"
+Cohesion: 0.09
+Nodes (26): Avatar(), AvatarBadge(), AvatarFallback(), AvatarGroup(), AvatarGroupCount(), AvatarImage(), Card(), CardAction() (+18 more)
 
-### Community 2 - "Semantic Extraction"
-Cohesion: 0.25
-Nodes (8): Edge Confidence Rubric, Deterministic Node IDs, Semantic Extraction JSON Schema, Corpus Derived Transcription Prompt, Whisper Media Transcription, Semantic Extraction Cache, Corpus File Detection, Semantic Extraction
+### Community 2 - "components.json"
+Cohesion: 0.11
+Nodes (17): aliases, components, hooks, lib, ui, utils, iconLibrary, rsc (+9 more)
 
 ### Community 3 - "compilerOptions"
 Cohesion: 0.11
 Nodes (19): dom, dom.iterable, esnext, compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules (+11 more)
 
 ### Community 4 - "package.json"
-Cohesion: 0.20
-Nodes (9): description, engines, node, pnpm, license, name, packageManager, private (+1 more)
+Cohesion: 0.11
+Nodes (17): description, engines, node, pnpm, license, name, packageManager, private (+9 more)
 
 ### Community 5 - "SaaSSeed"
 Cohesion: 0.50
@@ -95,30 +95,32 @@ Cohesion: 0.22
 Nodes (8): .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts, node_modules, **/*.ts, **/*.tsx, exclude, include
 
 ### Community 8 - "dependencies"
-Cohesion: 0.29
-Nodes (7): next, dependencies, next, react, react-dom, react, react-dom
+Cohesion: 0.11
+Nodes (19): class-variance-authority, clsx, lucide-react, next, dependencies, class-variance-authority, clsx, lucide-react (+11 more)
 
-### Community 13 - "scripts"
-Cohesion: 0.25
-Nodes (8): scripts, build, dev, format, format:check, lint, start, typecheck
+### Community 13 - "dialog.tsx"
+Cohesion: 0.16
+Nodes (8): Button(), buttonVariants, DialogContent(), DialogDescription(), DialogFooter(), DialogHeader(), DialogOverlay(), DialogTitle()
 
 ## Knowledge Gaps
-- **62 isolated node(s):** `name`, `version`, `private`, `description`, `license` (+57 more)
+- **83 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+78 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `cn()` connect `cn` to `dialog.tsx`?**
+  _High betweenness centrality (0.050) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
-  _High betweenness centrality (0.095) - this node is a cross-community bridge._
-- **Why does `compilerOptions` connect `compilerOptions` to `include`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **Why does `scripts` connect `scripts` to `package.json`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
-- **What connects `name`, `version`, `private` to the rest of the system?**
-  _62 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `compilerOptions` be split into smaller, more focused modules?**
-  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
-- **Should `devDependencies` be split into smaller, more focused modules?**
-  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
+  _High betweenness centrality (0.045) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `dependencies` to `package.json`?**
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+- **What connects `$schema`, `style`, `rsc` to the rest of the system?**
+  _83 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Graphify Pipeline` be split into smaller, more focused modules?**
+  _Cohesion score 0.07526881720430108 - nodes in this community are weakly interconnected._
+- **Should `cn` be split into smaller, more focused modules?**
+  _Cohesion score 0.0931174089068826 - nodes in this community are weakly interconnected._
+- **Should `components.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._

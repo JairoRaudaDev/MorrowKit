@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1786697649.127129,
-    "ast_hash": "d079569a10b4a0dd69233107df5ef531",
+    "mtime": 1786698256.529854,
+    "ast_hash": "030c3d958fb0d2f6bd44e6ba9844c7bd",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -142,6 +142,21 @@
   "src/lib/utils.ts": {
     "mtime": 1786698069.1817048,
     "ast_hash": "d9837f38cc05303254571985e3164050",
+    "semantic_hash": ""
+  },
+  "src/components/app-shell.tsx": {
+    "mtime": 1786698256.5242946,
+    "ast_hash": "f4a2c68e7da50cb8f437d856a70dec58",
+    "semantic_hash": ""
+  },
+  "src/components/container.tsx": {
+    "mtime": 1786698256.5020373,
+    "ast_hash": "6224402294f6f7440a075b88bc73b9d2",
+    "semantic_hash": ""
+  },
+  "src/components/logo.tsx": {
+    "mtime": 1786698320.9614222,
+    "ast_hash": "83ba7b31b7f8ed3da715ae01562ffa1a",
     "semantic_hash": ""
   }
 }

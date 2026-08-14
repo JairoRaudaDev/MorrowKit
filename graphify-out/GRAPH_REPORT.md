@@ -1,16 +1,16 @@
 # Graph Report - SaaSSeed  (2026-08-14)
 
 ## Corpus Check
-- 29 files · ~12,752 words
+- 32 files · ~13,057 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 204 nodes · 239 edges · 17 communities (14 shown, 3 thin omitted)
+- 214 nodes · 261 edges · 17 communities (14 shown, 3 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `97b704fc`
+- Built from commit: `a459cc58`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,11 +26,12 @@
 - dependencies
 - layout.tsx
 - postcss.config.mjs
+- page.tsx
 - dialog.tsx
 - prettier.config.mjs
 
 ## God Nodes (most connected - your core abstractions)
-1. `cn()` - 41 edges
+1. `cn()` - 47 edges
 2. `compilerOptions` - 16 edges
 3. `scripts` - 8 edges
 4. `Graphify Pipeline` - 7 edges
@@ -38,8 +39,8 @@
 6. `aliases` - 6 edges
 7. `include` - 6 edges
 8. `Incremental Graph Update` - 6 edges
-9. `Graphify First Codebase Workflow` - 5 edges
-10. `Graph Build and Community Clustering` - 5 edges
+9. `Graph Build and Community Clustering` - 5 edges
+10. `Semantic Extraction` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Agent Instruction Integration` --semantically_similar_to--> `Graphify First Codebase Workflow`  [INFERRED] [semantically similar]
@@ -98,26 +99,30 @@ Nodes (8): .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts, node_mod
 Cohesion: 0.11
 Nodes (19): class-variance-authority, clsx, lucide-react, next, dependencies, class-variance-authority, clsx, lucide-react (+11 more)
 
+### Community 11 - "page.tsx"
+Cohesion: 0.21
+Nodes (7): AppShell(), AppShellProps, Container(), ContainerProps, containerSizes, Logo(), LogoProps
+
 ### Community 13 - "dialog.tsx"
 Cohesion: 0.16
 Nodes (8): Button(), buttonVariants, DialogContent(), DialogDescription(), DialogFooter(), DialogHeader(), DialogOverlay(), DialogTitle()
 
 ## Knowledge Gaps
-- **83 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+78 more)
+- **87 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+82 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `cn` to `dialog.tsx`?**
-  _High betweenness centrality (0.050) - this node is a cross-community bridge._
+- **Why does `cn()` connect `cn` to `page.tsx`, `dialog.tsx`?**
+  _High betweenness centrality (0.069) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `dependencies` to `package.json`?**
   _High betweenness centrality (0.041) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `dependencies` to `package.json`?**
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _83 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _87 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07526881720430108 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**
