@@ -4,6 +4,14 @@ SaaSSeed is an opinionated, open-source SaaS starter for launching small web pro
 
 The project will provide a production-ready Next.js and TypeScript base with reusable patterns for authentication, Supabase, billing, email, analytics, dashboards, and deployment. It is being developed by dogfooding the starter across real SaaS launches before adding a CLI.
 
+## Transactional email
+
+Resend is the default transactional email provider. Set `RESEND_API_KEY` and
+`EMAIL_FROM` from `.env.example` in production, then use `sendEmail` for custom
+messages or `sendWelcomeEmail` for the included welcome template. In development
+and tests, email calls return `{ delivery: "preview", id: null }` without making a
+network request.
+
 ## Status
 
 SaaSSeed is in its initial setup phase. Application functionality has not been added yet.

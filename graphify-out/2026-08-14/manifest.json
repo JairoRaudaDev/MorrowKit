@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1786701136.249806,
-    "ast_hash": "bc2c5a835c2ae0e34f1f91c4206a0254",
+    "mtime": 1786727395.4816449,
+    "ast_hash": "0ee2ee94b9d5490b7563e8b40d5a50e0",
     "semantic_hash": ""
   },
   "README.md": {
@@ -165,7 +165,7 @@
     "semantic_hash": ""
   },
   "src/env/server.ts": {
-    "mtime": 1786724775.0274572,
+    "mtime": 1786727455.0905929,
     "ast_hash": "5c9c3601b0c9dfdab591478cba051b30",
     "semantic_hash": ""
   },
@@ -372,6 +372,16 @@
   "graphify-out/memory/query_20260814_170051_create_a_centralized_entitlement_layer_that_conver.md": {
     "mtime": 1786726851.3340118,
     "ast_hash": "d20482dd0cb25dde78a464498b0c3f00",
+    "semantic_hash": ""
+  },
+  "src/lib/email/provider.ts": {
+    "mtime": 1786727455.091688,
+    "ast_hash": "2a855a6575225951f0f7cd985af1369f",
+    "semantic_hash": ""
+  },
+  "src/lib/email/send.ts": {
+    "mtime": 1786727455.092751,
+    "ast_hash": "8778eee6fb8f449be125e19126a3be61",
     "semantic_hash": ""
   }
 }
