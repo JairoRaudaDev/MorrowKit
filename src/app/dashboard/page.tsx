@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { logout } from "@/app/auth/actions";
 import { AppShell } from "@/components/app-shell";
 import { Container } from "@/components/container";
@@ -20,6 +22,9 @@ export default async function DashboardPage() {
                 {email}
               </span>
             ) : null}
+            <Button asChild variant="ghost" size="sm">
+              <Link href="/dashboard/settings">Settings</Link>
+            </Button>
             <form action={logout}>
               <Button type="submit" variant="outline" size="sm">
                 Sign out
