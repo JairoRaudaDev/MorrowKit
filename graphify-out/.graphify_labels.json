@@ -6,16 +6,17 @@
   "4": "scripts",
   "5": "SaaSSeed",
   "6": "devDependencies",
-  "7": "include",
+  "7": "auth-form.tsx",
   "8": "dependencies",
   "9": "layout.tsx",
   "10": "postcss.config.mjs",
-  "11": "page.tsx",
+  "11": "app/page.tsx",
   "12": "eslint.config.mjs",
   "13": "20260814000000_create_profiles.sql",
   "14": "prettier.config.mjs",
   "15": "prettier-plugin-tailwindcss",
   "16": "prettier",
   "17": "public.ts",
-  "18": "seed.sql"
+  "18": "seed.sql",
+  "19": "dialog.tsx"
 }

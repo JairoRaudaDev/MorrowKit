@@ -1,13 +1,43 @@
 import { AppShell } from "@/components/app-shell";
+import { Button } from "@/components/ui/button";
 import { Container } from "@/components/container";
 import { Logo } from "@/components/logo";
+import { logout } from "@/app/auth/actions";
+import { createClient } from "@/lib/supabase/server";
+import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getClaims();
+  const email =
+    typeof data?.claims?.email === "string" ? data.claims.email : null;
+
   return (
     <AppShell
       header={
-        <Container className="flex h-16 items-center">
+        <Container className="flex h-16 items-center justify-between gap-4">
           <Logo />
+          {email ? (
+            <div className="flex items-center gap-3">
+              <span className="hidden text-sm text-muted-foreground sm:inline">
+                {email}
+              </span>
+              <form action={logout}>
+                <Button type="submit" variant="outline" size="sm">
+                  Sign out
+                </Button>
+              </form>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2">
+              <Button asChild variant="ghost" size="sm">
+                <Link href="/login">Sign in</Link>
+              </Button>
+              <Button asChild size="sm">
+                <Link href="/signup">Sign up</Link>
+              </Button>
+            </div>
+          )}
         </Container>
       }
     >
