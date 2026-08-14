@@ -74,6 +74,19 @@
       "norm_label": "logoprops"
     },
     {
+      "label": "Environment",
+      "file_type": "code",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L1",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_env_validation_environment",
+      "community": 17,
+      "community_name": "server.ts",
+      "norm_label": "environment"
+    },
+    {
       "label": "Avatar()",
       "file_type": "code",
       "source_file": "src/components/ui/avatar.tsx",
@@ -638,6 +651,18 @@
       "norm_label": "dialogtrigger()"
     },
     {
+      "label": "validateEnv()",
+      "file_type": "code",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_env_validation_validateenv",
+      "community": 17,
+      "community_name": "server.ts",
+      "norm_label": "validateenv()"
+    },
+    {
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
@@ -890,6 +915,72 @@
       "community": 16,
       "community_name": "prettier",
       "norm_label": "prettier"
+    },
+    {
+      "label": "public.ts",
+      "file_type": "code",
+      "source_file": "src/env/public.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_env_public",
+      "community": 17,
+      "community_name": "server.ts",
+      "norm_label": "public.ts"
+    },
+    {
+      "label": "publicEnv",
+      "file_type": "code",
+      "source_file": "src/env/public.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_env_public_publicenv",
+      "community": 17,
+      "community_name": "server.ts",
+      "norm_label": "publicenv"
+    },
+    {
+      "label": "server.ts",
+      "file_type": "code",
+      "source_file": "src/env/server.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_env_server",
+      "community": 17,
+      "community_name": "server.ts",
+      "norm_label": "server.ts"
+    },
+    {
+      "label": "privateEnv",
+      "file_type": "code",
+      "source_file": "src/env/server.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_env_server_privateenv",
+      "community": 17,
+      "community_name": "server.ts",
+      "norm_label": "privateenv"
+    },
+    {
+      "label": "serverEnv",
+      "file_type": "code",
+      "source_file": "src/env/server.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_env_server_serverenv",
+      "community": 17,
+      "community_name": "server.ts",
+      "norm_label": "serverenv"
+    },
+    {
+      "label": "validation.ts",
+      "file_type": "code",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_env_validation",
+      "community": 17,
+      "community_name": "server.ts",
+      "norm_label": "validation.ts"
     },
     {
       "label": "components.json",
@@ -3517,6 +3608,42 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/public.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_public",
+      "target": "src_env_validation_validateenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/server.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_server",
+      "target": "src_env_public_publicenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/server.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_server",
+      "target": "src_env_validation_validateenv",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -3694,6 +3821,42 @@
       "_origin": "ast",
       "source": "src_components_ui_separator",
       "target": "src_lib_utils",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/public.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_public",
+      "target": "src_env_validation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/server.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_server",
+      "target": "src_env_public",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/server.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_server",
+      "target": "src_env_validation",
       "confidence_score": 1.0
     },
     {
@@ -4942,6 +5105,61 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/env/public.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_public",
+      "target": "src_env_public_publicenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/server.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_server",
+      "target": "src_env_server_serverenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/server.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_server",
+      "target": "src_env_server_privateenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_validation",
+      "target": "src_env_validation_environment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_env_validation",
+      "target": "src_env_validation_validateenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/lib/utils.ts",
       "source_location": "L4",
       "weight": 1.0,
@@ -5564,5 +5782,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "a459cc58d2f23eeb8e6974ee5ed8147693ec8a1f"
+  "built_at_commit": "b5c573e0d41bf2416697b7a6690c47865bfc4cc1"
 }

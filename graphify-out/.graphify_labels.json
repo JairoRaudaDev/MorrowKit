@@ -15,5 +15,6 @@
   "13": "dialog.tsx",
   "14": "prettier.config.mjs",
   "15": "prettier-plugin-tailwindcss",
-  "16": "prettier"
+  "16": "prettier",
+  "17": "server.ts"
 }
