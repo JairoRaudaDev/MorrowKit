@@ -1,0 +1,2 @@
+-- Seed data for local development.
+-- Keep statements idempotent so `supabase db reset` remains repeatable.
