@@ -270,8 +270,8 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/billing/page.tsx": {
-    "mtime": 1786726505.9008672,
-    "ast_hash": "43934857c2106edb0604b999a83a5583",
+    "mtime": 1786726782.9695928,
+    "ast_hash": "8175c855b887949e2a421f25acaf97df",
     "semantic_hash": ""
   },
   "src/app/dashboard/layout.tsx": {
@@ -352,6 +352,11 @@
   "src/lib/stripe/subscription.ts": {
     "mtime": 1786726499.3687177,
     "ast_hash": "0ff6295370b7289a47f8fba62672736c",
+    "semantic_hash": ""
+  },
+  "src/lib/entitlements.ts": {
+    "mtime": 1786726825.7130003,
+    "ast_hash": "bfb8056a9634c13d52bcff1094704649",
     "semantic_hash": ""
   }
 }

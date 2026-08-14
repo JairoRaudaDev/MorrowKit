@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T16:58:47.793390+00:00",
+  "generated_at": "2026-08-14T17:02:58.318540+00:00",
   "nodes": {
     "src_app_auth_actions_logout": {
       "code_fingerprint": "4f6339ce9879749dbb4f2bfd036763e7d13cc5e65f179ae4422892b7499cc0d8",
@@ -12,8 +12,24 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.992819853,
+      "score": 0.992753341,
       "source_file": "src/app/auth/actions.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_app_dashboard_billing_page_billingpage": {
+      "code_fingerprint": "5d6bd62d07bbe3609d442f11d76f6957c1c8c5f70aeea103506662141abbaf71",
+      "label": "BillingPage()",
+      "last": "2026-08-14T17:00:51.334745+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-14T17:00:51.334745+00:00",
+          "outcome": "useful",
+          "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
+        }
+      ],
+      "score": 0.999966043,
+      "source_file": "src/app/dashboard/billing/page.tsx",
       "status": "tentative",
       "uses": 1
     },
@@ -28,7 +44,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.992819853,
+      "score": 0.992753341,
       "source_file": "src/app/dashboard/page.tsx",
       "status": "tentative",
       "uses": 1
@@ -44,8 +60,40 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.992819853,
+      "score": 0.992753341,
       "source_file": "src/lib/auth/session.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_lib_stripe_config_stripeconfig": {
+      "code_fingerprint": "9e9e55b6e9ce965b662b7f6f1198f3fed2b90a5572c797fc064ef991ae5e7907",
+      "label": "stripeConfig",
+      "last": "2026-08-14T17:00:51.334745+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-14T17:00:51.334745+00:00",
+          "outcome": "useful",
+          "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
+        }
+      ],
+      "score": 0.999966043,
+      "source_file": "src/lib/stripe/config.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_lib_stripe_subscription_getcurrentsubscription": {
+      "code_fingerprint": "d58d09a833f5163dc5607dabe25d049fe89668f1da538a13c6b6e408bf0ef6c0",
+      "label": "getCurrentSubscription()",
+      "last": "2026-08-14T17:00:51.334745+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-14T17:00:51.334745+00:00",
+          "outcome": "useful",
+          "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
+        }
+      ],
+      "score": 0.999966043,
+      "source_file": "src/lib/stripe/subscription.ts",
       "status": "tentative",
       "uses": 1
     }

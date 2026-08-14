@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  ChartNoAxesCombined,
   CreditCard,
   LayoutDashboard,
   LogOut,
@@ -36,6 +37,11 @@ import { cn } from "@/lib/utils";
 
 const navigation = [
   { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
+  {
+    href: "/dashboard/insights",
+    label: "Premium Insights",
+    icon: ChartNoAxesCombined,
+  },
   { href: "/dashboard/settings", label: "Settings", icon: Settings },
   { href: "/dashboard/billing", label: "Billing", icon: CreditCard },
 ] as const;

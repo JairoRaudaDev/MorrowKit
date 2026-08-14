@@ -75,6 +75,8 @@ email
 emit
 engines
 ensure
+entitled
+entitlements
 env
 environment
 error
@@ -96,6 +98,7 @@ folder
 footer
 form
 format
+free
 from
 futu
 future
@@ -245,6 +248,7 @@ start
 state
 stats
 status
+statuses
 stop
 strict
 stripe
