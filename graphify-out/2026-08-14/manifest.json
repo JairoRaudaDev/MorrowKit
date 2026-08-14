@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1786698031.9182897,
-    "ast_hash": "a5aea02da02fcc0a9aafb48edde794ad",
+    "mtime": 1786698640.1741261,
+    "ast_hash": "8bd6b2b4eb75202122e40b0a8f464e89",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786696781.279747,
-    "ast_hash": "7ae95096009eb5378080447acdd968ed",
+    "mtime": 1786698640.1751301,
+    "ast_hash": "19ebdcc63367cda3d59674d48f653801",
     "semantic_hash": ""
   },
   "eslint.config.mjs": {
@@ -172,6 +172,11 @@
   "src/env/validation.ts": {
     "mtime": 1786698455.7380157,
     "ast_hash": "de57ac13a42d933dbdb8dc0f9559f2e1",
+    "semantic_hash": ""
+  },
+  "supabase/seed.sql": {
+    "mtime": 1786698640.1774416,
+    "ast_hash": "dbfcec891de21ba7a6c2afd5b070e822",
     "semantic_hash": ""
   }
 }

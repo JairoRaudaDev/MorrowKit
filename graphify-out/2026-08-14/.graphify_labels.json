@@ -3,7 +3,7 @@
   "1": "cn",
   "2": "components.json",
   "3": "compilerOptions",
-  "4": "package.json",
+  "4": "scripts",
   "5": "SaaSSeed",
   "6": "devDependencies",
   "7": "include",
@@ -16,5 +16,6 @@
   "14": "prettier.config.mjs",
   "15": "prettier-plugin-tailwindcss",
   "16": "prettier",
-  "17": "server.ts"
+  "17": "server.ts",
+  "18": "seed.sql"
 }
