@@ -18,5 +18,5 @@
   "16": "prettier",
   "17": "public.ts",
   "18": "seed.sql",
-  "19": "auth-page.tsx"
+  "19": "Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
 }
