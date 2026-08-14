@@ -1,16 +1,16 @@
 # Graph Report - SaaSSeed  (2026-08-14)
 
 ## Corpus Check
-- 72 files · ~19,770 words
+- 75 files · ~20,332 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 364 nodes · 622 edges · 23 communities (19 shown, 4 thin omitted)
+- 376 nodes · 649 edges · 24 communities (20 shown, 4 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2b1c6218`
+- Built from commit: `9544d973`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,19 +33,20 @@
 - Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations
 - marketing.tsx
 - 20260814010000_create_billing_tables.sql
+- Q: Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly
 - 20260814020000_add_stripe_webhook_processing.sql
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 49 edges
 2. `compilerOptions` - 16 edges
 3. `createClient()` - 15 edges
-4. `requireAuth()` - 12 edges
+4. `requireAuth()` - 14 edges
 5. `scripts` - 11 edges
-6. `Button()` - 10 edges
+6. `Button()` - 11 edges
 7. `safeNextPath()` - 10 edges
 8. `publicEnv` - 8 edges
 9. `createAdminClient()` - 8 edges
-10. `synchronizeSubscriptionEvent()` - 7 edges
+10. `Card()` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Agent Instruction Integration` --semantically_similar_to--> `Graphify First Codebase Workflow`  [INFERRED] [semantically similar]
@@ -66,7 +67,7 @@
 - **Graphify Extraction Flow** — _codex_skills_graphify_skill_file_detection, _codex_skills_graphify_skill_structural_extraction, _codex_skills_graphify_skill_semantic_extraction, _codex_skills_graphify_skill_graph_build_and_clustering [EXTRACTED 1.00]
 - **Scoped Graph Navigation Modes** — _codex_skills_graphify_references_query_constrained_query_expansion, _codex_skills_graphify_references_query_graph_traversal, _codex_skills_graphify_references_query_path_and_explain, agents_scoped_graph_navigation [INFERRED 0.85]
 
-## Communities (23 total, 4 thin omitted)
+## Communities (24 total, 4 thin omitted)
 
 ### Community 0 - "Graphify Pipeline"
 Cohesion: 0.08
@@ -105,16 +106,16 @@ Cohesion: 0.08
 Nodes (25): class-variance-authority, clsx, lucide-react, next, dependencies, class-variance-authority, clsx, lucide-react (+17 more)
 
 ### Community 11 - "billing/page.tsx"
-Cohesion: 0.16
-Nodes (19): BillingPage(), formatDate(), planLabels, statusLabels, stats, AuthPageProps, Card(), CardContent() (+11 more)
+Cohesion: 0.11
+Nodes (28): BillingPage(), formatDate(), planLabels, statusLabels, PremiumInsightsPage(), DashboardLayout(), stats, AccountSettingsPage() (+20 more)
 
 ### Community 13 - "20260814000000_create_profiles.sql"
 Cohesion: 0.33
 Nodes (4): profiles_set_updated_at, public.profiles, auth.users, public.set_updated_at
 
 ### Community 17 - "pricing/actions.ts"
-Cohesion: 0.09
-Nodes (32): handledEvents, POST(), createBillingPortalSession(), DashboardLayout(), AccountSettingsPage(), createCheckoutSession(), isPaidPlan(), PaidPlan (+24 more)
+Cohesion: 0.10
+Nodes (28): handledEvents, POST(), createBillingPortalSession(), createCheckoutSession(), isPaidPlan(), PaidPlan, paidPlans, publicEnv (+20 more)
 
 ### Community 19 - "Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
 Cohesion: 0.40
@@ -128,8 +129,12 @@ Nodes (11): metadata, Container(), ContainerProps, containerSizes, CTA(), Featur
 Cohesion: 0.32
 Nodes (7): public, billing_customers_set_updated_at, public.billing_customers, public.subscriptions, auth.users, public.set_updated_at, subscriptions_set_updated_at
 
+### Community 22 - "Q: Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly, Source Nodes
+
 ## Knowledge Gaps
-- **122 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+117 more)
+- **128 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+123 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -137,13 +142,13 @@ Nodes (7): public, billing_customers_set_updated_at, public.billing_customers, p
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `cn()` connect `cn` to `billing/page.tsx`, `marketing.tsx`, `auth/actions.ts`?**
-  _High betweenness centrality (0.060) - this node is a cross-community bridge._
+  _High betweenness centrality (0.058) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `scripts`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `devDependencies` to `scripts`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Button()` connect `cn` to `billing/page.tsx`, `marketing.tsx`, `auth/actions.ts`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _122 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _128 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07526881720430108 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**

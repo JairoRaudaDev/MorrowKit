@@ -280,8 +280,8 @@
     "semantic_hash": ""
   },
   "src/components/dashboard-shell.tsx": {
-    "mtime": 1786699968.9588509,
-    "ast_hash": "2c46174528b2d15d0f431e95a84ced3c",
+    "mtime": 1786727051.4496555,
+    "ast_hash": "0264e288ba18152cd2e24cb8dcd24ff6",
     "semantic_hash": ""
   },
   "graphify-out/memory/query_20260814_092941_create__dashboard_settings_with_display_name__futu.md": {
@@ -357,6 +357,21 @@
   "src/lib/entitlements.ts": {
     "mtime": 1786726825.7130003,
     "ast_hash": "bfb8056a9634c13d52bcff1094704649",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/insights/page.tsx": {
+    "mtime": 1786727051.4496555,
+    "ast_hash": "6bb59e9be34e94e69d9dfda913f94970",
+    "semantic_hash": ""
+  },
+  "src/lib/premium-insights.ts": {
+    "mtime": 1786727051.4440491,
+    "ast_hash": "3d1de7a1cd0522de6f1dadc8e1f0ada8",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260814_170051_create_a_centralized_entitlement_layer_that_conver.md": {
+    "mtime": 1786726851.3340118,
+    "ast_hash": "d20482dd0cb25dde78a464498b0c3f00",
     "semantic_hash": ""
   }
 }
