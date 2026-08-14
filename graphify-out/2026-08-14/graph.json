@@ -35,6 +35,160 @@
   },
   "nodes": [
     {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "package",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "package.json"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "package_description",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "description"
+    },
+    {
+      "label": "engines",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "package_engines",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "engines"
+    },
+    {
+      "label": "node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "package_engines_node",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "node"
+    },
+    {
+      "label": "pnpm",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "package_engines_pnpm",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "pnpm"
+    },
+    {
+      "label": "license",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "package_license",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "license"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "package_name",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "name"
+    },
+    {
+      "label": "packageManager",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "package_packagemanager",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "packagemanager"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "package_private",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "package_version",
+      "community": 4,
+      "community_name": "package.json",
+      "norm_label": "version"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 5,
+      "community_name": "SaaSSeed",
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "License",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "readme_license",
+      "community": 5,
+      "community_name": "SaaSSeed",
+      "norm_label": "license"
+    },
+    {
+      "label": "SaaSSeed",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_saasseed",
+      "community": 5,
+      "community_name": "SaaSSeed",
+      "norm_label": "saasseed"
+    },
+    {
+      "label": "Status",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "readme_status",
+      "community": 5,
+      "community_name": "SaaSSeed",
+      "norm_label": "status"
+    },
+    {
       "label": "Cross Repository Graph Merge",
       "file_type": "concept",
       "source_file": ".codex/skills/graphify/references/github-and-merge.md",
@@ -43,10 +197,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_github_and_merge_cross_repo_merge",
       "community": 0,
-      "community_name": "Continuous Graph Maintenance",
-      "norm_label": "cross repository graph merge"
+      "community_name": "Graphify Pipeline",
+      "norm_label": "cross repository graph merge",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_github_and_merge_cross_repo_merge"
     },
     {
       "label": "Graphify Pipeline",
@@ -57,10 +212,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_skill_graphify_pipeline",
       "community": 0,
-      "community_name": "Continuous Graph Maintenance",
-      "norm_label": "graphify pipeline"
+      "community_name": "Graphify Pipeline",
+      "norm_label": "graphify pipeline",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_skill_graphify_pipeline"
     },
     {
       "label": "Folder Watch Incremental Rebuild",
@@ -71,10 +227,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_add_watch_folder_watch",
       "community": 0,
-      "community_name": "Continuous Graph Maintenance",
-      "norm_label": "folder watch incremental rebuild"
+      "community_name": "Graphify Pipeline",
+      "norm_label": "folder watch incremental rebuild",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_add_watch_folder_watch"
     },
     {
       "label": "URL Ingestion",
@@ -85,10 +242,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_add_watch_url_ingestion",
       "community": 0,
-      "community_name": "Continuous Graph Maintenance",
-      "norm_label": "url ingestion"
+      "community_name": "Graphify Pipeline",
+      "norm_label": "url ingestion",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_add_watch_url_ingestion"
     },
     {
       "label": "GitHub Repository Clone",
@@ -99,10 +257,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_github_and_merge_github_clone",
       "community": 0,
-      "community_name": "Continuous Graph Maintenance",
-      "norm_label": "github repository clone"
+      "community_name": "Graphify Pipeline",
+      "norm_label": "github repository clone",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_github_and_merge_github_clone"
     },
     {
       "label": "Post Commit Graph Update Hook",
@@ -113,10 +272,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_hooks_post_commit_hook",
       "community": 0,
-      "community_name": "Continuous Graph Maintenance",
-      "norm_label": "post commit graph update hook"
+      "community_name": "Graphify Pipeline",
+      "norm_label": "post commit graph update hook",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_hooks_post_commit_hook"
     },
     {
       "label": "Incremental Graph Update",
@@ -127,10 +287,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_update_incremental_update",
       "community": 0,
-      "community_name": "Continuous Graph Maintenance",
-      "norm_label": "incremental graph update"
+      "community_name": "Graphify Pipeline",
+      "norm_label": "incremental graph update",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_update_incremental_update"
     },
     {
       "label": "Semantic Manifest Stamping",
@@ -141,10 +302,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_update_manifest_stamping",
       "community": 0,
-      "community_name": "Continuous Graph Maintenance",
-      "norm_label": "semantic manifest stamping"
+      "community_name": "Graphify Pipeline",
+      "norm_label": "semantic manifest stamping",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_update_manifest_stamping"
     },
     {
       "label": "Replace on Re-extraction",
@@ -155,10 +317,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_update_replace_on_reextract",
       "community": 0,
-      "community_name": "Continuous Graph Maintenance",
-      "norm_label": "replace on re-extraction"
+      "community_name": "Graphify Pipeline",
+      "norm_label": "replace on re-extraction",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_update_replace_on_reextract"
     },
     {
       "label": "Token Reduction Benchmark",
@@ -169,10 +332,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_exports_token_reduction_benchmark",
       "community": 1,
-      "community_name": "Graph Build and Outputs",
-      "norm_label": "token reduction benchmark"
+      "community_name": "Graph Build and Community Clustering",
+      "norm_label": "token reduction benchmark",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_exports_token_reduction_benchmark"
     },
     {
       "label": "Graph Build and Community Clustering",
@@ -183,10 +347,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_skill_graph_build_and_clustering",
       "community": 1,
-      "community_name": "Graph Build and Outputs",
-      "norm_label": "graph build and community clustering"
+      "community_name": "Graph Build and Community Clustering",
+      "norm_label": "graph build and community clustering",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_skill_graph_build_and_clustering"
     },
     {
       "label": "Graph Output Generation",
@@ -197,10 +362,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_skill_output_generation",
       "community": 1,
-      "community_name": "Graph Build and Outputs",
-      "norm_label": "graph output generation"
+      "community_name": "Graph Build and Community Clustering",
+      "norm_label": "graph output generation",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_skill_output_generation"
     },
     {
       "label": "Structural AST Extraction",
@@ -211,10 +377,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_skill_structural_extraction",
       "community": 1,
-      "community_name": "Graph Build and Outputs",
-      "norm_label": "structural ast extraction"
+      "community_name": "Graph Build and Community Clustering",
+      "norm_label": "structural ast extraction",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_skill_structural_extraction"
     },
     {
       "label": "Optional Graph Exports",
@@ -225,10 +392,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_exports_extra_exports",
       "community": 1,
-      "community_name": "Graph Build and Outputs",
-      "norm_label": "optional graph exports"
+      "community_name": "Graph Build and Community Clustering",
+      "norm_label": "optional graph exports",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_exports_extra_exports"
     },
     {
       "label": "Cluster Only Refresh",
@@ -239,10 +407,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_update_cluster_only",
       "community": 1,
-      "community_name": "Graph Build and Outputs",
-      "norm_label": "cluster only refresh"
+      "community_name": "Graph Build and Community Clustering",
+      "norm_label": "cluster only refresh",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_update_cluster_only"
     },
     {
       "label": "Graph Health Integrity Gate",
@@ -253,10 +422,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_skill_graph_health_check",
       "community": 1,
-      "community_name": "Graph Build and Outputs",
-      "norm_label": "graph health integrity gate"
+      "community_name": "Graph Build and Community Clustering",
+      "norm_label": "graph health integrity gate",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_skill_graph_health_check"
     },
     {
       "label": "Graph Honesty Rules",
@@ -267,10 +437,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_skill_honesty_rules",
       "community": 1,
-      "community_name": "Graph Build and Outputs",
-      "norm_label": "graph honesty rules"
+      "community_name": "Graph Build and Community Clustering",
+      "norm_label": "graph honesty rules",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_skill_honesty_rules"
     },
     {
       "label": "Semantic Extraction Cache",
@@ -281,10 +452,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_skill_extraction_cache",
       "community": 2,
-      "community_name": "Extraction and Data Integrity",
-      "norm_label": "semantic extraction cache"
+      "community_name": "Semantic Extraction",
+      "norm_label": "semantic extraction cache",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_skill_extraction_cache"
     },
     {
       "label": "Semantic Extraction",
@@ -295,10 +467,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_skill_semantic_extraction",
       "community": 2,
-      "community_name": "Extraction and Data Integrity",
-      "norm_label": "semantic extraction"
+      "community_name": "Semantic Extraction",
+      "norm_label": "semantic extraction",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_skill_semantic_extraction"
     },
     {
       "label": "Semantic Extraction JSON Schema",
@@ -309,10 +482,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_extraction_spec_semantic_schema",
       "community": 2,
-      "community_name": "Extraction and Data Integrity",
-      "norm_label": "semantic extraction json schema"
+      "community_name": "Semantic Extraction",
+      "norm_label": "semantic extraction json schema",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_extraction_spec_semantic_schema"
     },
     {
       "label": "Whisper Media Transcription",
@@ -323,10 +497,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_transcribe_whisper_transcription",
       "community": 2,
-      "community_name": "Extraction and Data Integrity",
-      "norm_label": "whisper media transcription"
+      "community_name": "Semantic Extraction",
+      "norm_label": "whisper media transcription",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_transcribe_whisper_transcription"
     },
     {
       "label": "Edge Confidence Rubric",
@@ -337,10 +512,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_extraction_spec_confidence_rubric",
       "community": 2,
-      "community_name": "Extraction and Data Integrity",
-      "norm_label": "edge confidence rubric"
+      "community_name": "Semantic Extraction",
+      "norm_label": "edge confidence rubric",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_extraction_spec_confidence_rubric"
     },
     {
       "label": "Deterministic Node IDs",
@@ -351,10 +527,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_extraction_spec_deterministic_node_ids",
       "community": 2,
-      "community_name": "Extraction and Data Integrity",
-      "norm_label": "deterministic node ids"
+      "community_name": "Semantic Extraction",
+      "norm_label": "deterministic node ids",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_extraction_spec_deterministic_node_ids"
     },
     {
       "label": "Corpus Derived Transcription Prompt",
@@ -365,10 +542,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_transcribe_domain_prompt",
       "community": 2,
-      "community_name": "Extraction and Data Integrity",
-      "norm_label": "corpus derived transcription prompt"
+      "community_name": "Semantic Extraction",
+      "norm_label": "corpus derived transcription prompt",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_transcribe_domain_prompt"
     },
     {
       "label": "Corpus File Detection",
@@ -379,10 +557,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_skill_file_detection",
       "community": 2,
-      "community_name": "Extraction and Data Integrity",
-      "norm_label": "corpus file detection"
+      "community_name": "Semantic Extraction",
+      "norm_label": "corpus file detection",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_skill_file_detection"
     },
     {
       "label": "Agent Instruction Integration",
@@ -393,10 +572,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_hooks_agent_instruction_integration",
       "community": 3,
-      "community_name": "Agent Graph Navigation",
-      "norm_label": "agent instruction integration"
+      "community_name": "Graphify First Codebase Workflow",
+      "norm_label": "agent instruction integration",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_hooks_agent_instruction_integration"
     },
     {
       "label": "Budget Aware Graph Traversal",
@@ -407,10 +587,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_query_graph_traversal",
       "community": 3,
-      "community_name": "Agent Graph Navigation",
-      "norm_label": "budget aware graph traversal"
+      "community_name": "Graphify First Codebase Workflow",
+      "norm_label": "budget aware graph traversal",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_query_graph_traversal"
     },
     {
       "label": "Path and Explain Queries",
@@ -421,10 +602,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_query_path_and_explain",
       "community": 3,
-      "community_name": "Agent Graph Navigation",
-      "norm_label": "path and explain queries"
+      "community_name": "Graphify First Codebase Workflow",
+      "norm_label": "path and explain queries",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_query_path_and_explain"
     },
     {
       "label": "Graphify First Codebase Workflow",
@@ -435,10 +617,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_graphify_first_workflow",
       "community": 3,
-      "community_name": "Agent Graph Navigation",
-      "norm_label": "graphify first codebase workflow"
+      "community_name": "Graphify First Codebase Workflow",
+      "norm_label": "graphify first codebase workflow",
+      "_origin": "semantic",
+      "id": "agents_graphify_first_workflow"
     },
     {
       "label": "Constrained Query Expansion",
@@ -449,10 +632,11 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "_codex_skills_graphify_references_query_constrained_query_expansion",
       "community": 3,
-      "community_name": "Agent Graph Navigation",
-      "norm_label": "constrained query expansion"
+      "community_name": "Graphify First Codebase Workflow",
+      "norm_label": "constrained query expansion",
+      "_origin": "semantic",
+      "id": "_codex_skills_graphify_references_query_constrained_query_expansion"
     },
     {
       "label": "Scoped Graph Navigation",
@@ -463,13 +647,146 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "agents_scoped_graph_navigation",
       "community": 3,
-      "community_name": "Agent Graph Navigation",
-      "norm_label": "scoped graph navigation"
+      "community_name": "Graphify First Codebase Workflow",
+      "norm_label": "scoped graph navigation",
+      "_origin": "semantic",
+      "id": "agents_scoped_graph_navigation"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_packagemanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package",
+      "target": "package_engines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_engines",
+      "target": "package_engines_pnpm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_engines",
+      "target": "package_engines_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "readme_saasseed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_saasseed",
+      "target": "readme_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_saasseed",
+      "target": "readme_status",
+      "confidence_score": 1.0
+    },
     {
       "relation": "conceptually_related_to",
       "confidence": "EXTRACTED",
@@ -477,6 +794,7 @@
       "source_file": ".codex/skills/graphify/references/query.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_query_graph_traversal",
       "target": "_codex_skills_graphify_references_query_path_and_explain"
     },
@@ -487,6 +805,7 @@
       "source_file": ".codex/skills/graphify/references/add-watch.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_add_watch_folder_watch",
       "target": "_codex_skills_graphify_references_update_incremental_update"
     },
@@ -497,6 +816,7 @@
       "source_file": ".codex/skills/graphify/references/exports.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_exports_extra_exports",
       "target": "_codex_skills_graphify_references_exports_token_reduction_benchmark"
     },
@@ -507,6 +827,7 @@
       "source_file": ".codex/skills/graphify/references/extraction-spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_extraction_spec_semantic_schema",
       "target": "_codex_skills_graphify_references_extraction_spec_confidence_rubric"
     },
@@ -517,6 +838,7 @@
       "source_file": ".codex/skills/graphify/references/extraction-spec.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_extraction_spec_semantic_schema",
       "target": "_codex_skills_graphify_references_extraction_spec_deterministic_node_ids"
     },
@@ -527,6 +849,7 @@
       "source_file": ".codex/skills/graphify/references/github-and-merge.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_github_and_merge_github_clone",
       "target": "_codex_skills_graphify_references_github_and_merge_cross_repo_merge"
     },
@@ -537,6 +860,7 @@
       "source_file": ".codex/skills/graphify/references/hooks.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_hooks_post_commit_hook",
       "target": "_codex_skills_graphify_references_update_incremental_update"
     },
@@ -547,6 +871,7 @@
       "source_file": ".codex/skills/graphify/references/update.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_update_cluster_only",
       "target": "_codex_skills_graphify_skill_graph_build_and_clustering"
     },
@@ -557,6 +882,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_graph_build_and_clustering",
       "target": "_codex_skills_graphify_skill_output_generation"
     },
@@ -567,6 +893,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_graphify_pipeline",
       "target": "_codex_skills_graphify_skill_file_detection"
     },
@@ -577,6 +904,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_graphify_pipeline",
       "target": "_codex_skills_graphify_skill_semantic_extraction"
     },
@@ -587,6 +915,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_graphify_pipeline",
       "target": "_codex_skills_graphify_skill_structural_extraction"
     },
@@ -597,6 +926,7 @@
       "source_file": ".codex/skills/graphify/references/query.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_query_constrained_query_expansion",
       "target": "_codex_skills_graphify_references_query_graph_traversal"
     },
@@ -607,6 +937,7 @@
       "source_file": ".codex/skills/graphify/references/transcribe.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_transcribe_domain_prompt",
       "target": "_codex_skills_graphify_references_transcribe_whisper_transcription"
     },
@@ -617,6 +948,7 @@
       "source_file": ".codex/skills/graphify/references/update.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_update_manifest_stamping",
       "target": "_codex_skills_graphify_references_update_incremental_update"
     },
@@ -627,6 +959,7 @@
       "source_file": ".codex/skills/graphify/references/update.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_update_replace_on_reextract",
       "target": "_codex_skills_graphify_references_update_incremental_update"
     },
@@ -637,6 +970,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_scoped_graph_navigation",
       "target": "agents_graphify_first_workflow"
     },
@@ -647,6 +981,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_file_detection",
       "target": "_codex_skills_graphify_references_transcribe_whisper_transcription"
     },
@@ -657,6 +992,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_graph_build_and_clustering",
       "target": "_codex_skills_graphify_skill_graph_health_check"
     },
@@ -667,6 +1003,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_graphify_pipeline",
       "target": "_codex_skills_graphify_references_add_watch_url_ingestion"
     },
@@ -677,6 +1014,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_graphify_pipeline",
       "target": "_codex_skills_graphify_references_github_and_merge_github_clone"
     },
@@ -687,6 +1025,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_graphify_pipeline",
       "target": "_codex_skills_graphify_references_query_constrained_query_expansion"
     },
@@ -697,6 +1036,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_graphify_pipeline",
       "target": "_codex_skills_graphify_references_update_incremental_update"
     },
@@ -707,6 +1047,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_output_generation",
       "target": "_codex_skills_graphify_references_exports_extra_exports"
     },
@@ -717,6 +1058,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_semantic_extraction",
       "target": "_codex_skills_graphify_references_extraction_spec_semantic_schema"
     },
@@ -727,6 +1069,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_graphify_first_workflow",
       "target": "_codex_skills_graphify_references_query_graph_traversal"
     },
@@ -737,6 +1080,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_graphify_first_workflow",
       "target": "_codex_skills_graphify_references_query_path_and_explain"
     },
@@ -747,6 +1091,7 @@
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "agents_graphify_first_workflow",
       "target": "_codex_skills_graphify_references_update_incremental_update"
     },
@@ -757,6 +1102,7 @@
       "source_file": ".codex/skills/graphify/references/transcribe.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_transcribe_whisper_transcription",
       "target": "_codex_skills_graphify_skill_semantic_extraction"
     },
@@ -767,6 +1113,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_semantic_extraction",
       "target": "_codex_skills_graphify_skill_extraction_cache"
     },
@@ -777,6 +1124,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_semantic_extraction",
       "target": "_codex_skills_graphify_skill_graph_build_and_clustering"
     },
@@ -787,6 +1135,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_structural_extraction",
       "target": "_codex_skills_graphify_skill_graph_build_and_clustering"
     },
@@ -797,6 +1146,7 @@
       "source_file": ".codex/skills/graphify/references/add-watch.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_add_watch_url_ingestion",
       "target": "_codex_skills_graphify_references_add_watch_folder_watch"
     },
@@ -807,6 +1157,7 @@
       "source_file": ".codex/skills/graphify/SKILL.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_skill_honesty_rules",
       "target": "_codex_skills_graphify_skill_graph_health_check"
     },
@@ -817,6 +1168,7 @@
       "source_file": ".codex/skills/graphify/references/hooks.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "_codex_skills_graphify_references_hooks_agent_instruction_integration",
       "target": "agents_graphify_first_workflow"
     }

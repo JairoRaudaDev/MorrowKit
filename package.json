@@ -4,9 +4,31 @@
   "private": true,
   "description": "An opinionated, production-ready starter for launching small SaaS products.",
   "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
   "packageManager": "pnpm@10.15.0",
   "engines": {
     "node": ">=22.0.0",
     "pnpm": ">=10.0.0"
+  },
+  "dependencies": {
+    "next": "^16.3.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.3.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
   }
 }

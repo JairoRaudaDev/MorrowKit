@@ -1,1 +1,8 @@
-{"0": "Continuous Graph Maintenance", "1": "Graph Build and Outputs", "2": "Extraction and Data Integrity", "3": "Agent Graph Navigation"}
+{
+  "0": "Graphify Pipeline",
+  "1": "Graph Build and Community Clustering",
+  "2": "Semantic Extraction",
+  "3": "Graphify First Codebase Workflow",
+  "4": "package.json",
+  "5": "SaaSSeed"
+}

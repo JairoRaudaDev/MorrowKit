@@ -1,8 +1,8 @@
 {
   ".codex/hooks.json": {
     "mtime": 1786695965.2509902,
-    "ast_hash": "b727ead222ca372aadf98b2fdde4bad9",
-    "semantic_hash": "b727ead222ca372aadf98b2fdde4bad9"
+    "ast_hash": "",
+    "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
     "mtime": 1786695965.2403765,
@@ -53,5 +53,15 @@
     "mtime": 1786695965.2463331,
     "ast_hash": "21ceb6533048be51308e69e7b74a35cf",
     "semantic_hash": "21ceb6533048be51308e69e7b74a35cf"
+  },
+  "package.json": {
+    "mtime": 1786696781.2831264,
+    "ast_hash": "e36637182933e1a2e67e6d1740435c42",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1786696781.279747,
+    "ast_hash": "7ae95096009eb5378080447acdd968ed",
+    "semantic_hash": ""
   }
 }
