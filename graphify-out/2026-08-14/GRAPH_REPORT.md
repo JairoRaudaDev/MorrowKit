@@ -1,16 +1,16 @@
 # Graph Report - SaaSSeed  (2026-08-14)
 
 ## Corpus Check
-- 64 files · ~18,077 words
+- 66 files · ~18,506 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 330 nodes · 527 edges · 22 communities (19 shown, 3 thin omitted)
+- 338 nodes · 553 edges · 22 communities (19 shown, 3 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `860b2630`
+- Built from commit: `d8ec5ef2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -29,7 +29,7 @@
 - settings/page.tsx
 - 20260814000000_create_profiles.sql
 - prettier.config.mjs
-- public.ts
+- pricing/actions.ts
 - Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations
 - marketing.tsx
 - 20260814010000_create_billing_tables.sql
@@ -41,22 +41,22 @@
 4. `scripts` - 11 edges
 5. `Button()` - 10 edges
 6. `safeNextPath()` - 10 edges
-7. `Graphify Pipeline` - 7 edges
-8. `tailwind` - 6 edges
-9. `aliases` - 6 edges
-10. `login()` - 6 edges
+7. `requireAuth()` - 8 edges
+8. `publicEnv` - 7 edges
+9. `Graphify Pipeline` - 7 edges
+10. `tailwind` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Agent Instruction Integration` --semantically_similar_to--> `Graphify First Codebase Workflow`  [INFERRED] [semantically similar]
   .codex/skills/graphify/references/hooks.md → AGENTS.md
 - `Graphify First Codebase Workflow` --references--> `Path and Explain Queries`  [EXTRACTED]
   AGENTS.md → .codex/skills/graphify/references/query.md
-- `CardAction()` --calls--> `cn()`  [EXTRACTED]
-  src/components/ui/card.tsx → src/lib/utils.ts
 - `Graphify First Codebase Workflow` --references--> `Budget Aware Graph Traversal`  [EXTRACTED]
   AGENTS.md → .codex/skills/graphify/references/query.md
 - `Graphify First Codebase Workflow` --references--> `Incremental Graph Update`  [EXTRACTED]
   AGENTS.md → .codex/skills/graphify/references/update.md
+- `DashboardLayout()` --calls--> `requireAuth()`  [EXTRACTED]
+  src/app/dashboard/layout.tsx → src/lib/auth/session.ts
 
 ## Import Cycles
 - None detected.
@@ -72,8 +72,8 @@ Cohesion: 0.08
 Nodes (31): Folder Watch Incremental Rebuild, URL Ingestion, Optional Graph Exports, Token Reduction Benchmark, Edge Confidence Rubric, Deterministic Node IDs, Semantic Extraction JSON Schema, Cross Repository Graph Merge (+23 more)
 
 ### Community 1 - "cn"
-Cohesion: 0.09
-Nodes (36): AppShell(), AppShellProps, navigation, Logo(), LogoProps, Avatar(), AvatarBadge(), AvatarFallback() (+28 more)
+Cohesion: 0.08
+Nodes (37): AppShell(), AppShellProps, navigation, Logo(), LogoProps, Avatar(), AvatarBadge(), AvatarFallback() (+29 more)
 
 ### Community 2 - "components.json"
 Cohesion: 0.11
@@ -96,24 +96,24 @@ Cohesion: 0.09
 Nodes (23): eslint, eslint-config-next, devDependencies, eslint, eslint-config-next, prettier, prettier-plugin-tailwindcss, supabase (+15 more)
 
 ### Community 7 - "auth/actions.ts"
-Cohesion: 0.18
-Nodes (18): authErrorMessage(), login(), logout(), signup(), GET(), DashboardLayout(), AccountSettingsPage(), LoginPage() (+10 more)
+Cohesion: 0.20
+Nodes (17): authErrorMessage(), login(), logout(), signup(), GET(), LoginPage(), LoginPageProps, SignupPage() (+9 more)
 
 ### Community 8 - "dependencies"
 Cohesion: 0.08
 Nodes (25): class-variance-authority, clsx, lucide-react, next, dependencies, class-variance-authority, clsx, lucide-react (+17 more)
 
 ### Community 11 - "settings/page.tsx"
-Cohesion: 0.15
-Nodes (18): stats, ProfileFormState, updateProfile(), initialState, ProfileForm(), AuthForm(), AuthFormProps, initialState (+10 more)
+Cohesion: 0.18
+Nodes (14): stats, ProfileFormState, updateProfile(), initialState, ProfileForm(), AuthPageProps, Card(), CardContent() (+6 more)
 
 ### Community 13 - "20260814000000_create_profiles.sql"
 Cohesion: 0.33
 Nodes (4): profiles_set_updated_at, public.profiles, auth.users, public.set_updated_at
 
-### Community 17 - "public.ts"
-Cohesion: 0.13
-Nodes (13): publicEnv, privateEnv, serverEnv, Environment, validateEnv(), stripe, stripeConfig, StripeClient (+5 more)
+### Community 17 - "pricing/actions.ts"
+Cohesion: 0.09
+Nodes (24): DashboardLayout(), AccountSettingsPage(), createCheckoutSession(), isPaidPlan(), PaidPlan, paidPlans, DashboardShell(), publicEnv (+16 more)
 
 ### Community 19 - "Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
 Cohesion: 0.40
@@ -128,7 +128,7 @@ Cohesion: 0.32
 Nodes (7): public, billing_customers_set_updated_at, public.billing_customers, public.subscriptions, auth.users, public.set_updated_at, subscriptions_set_updated_at
 
 ## Knowledge Gaps
-- **112 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+107 more)
+- **114 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+109 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -136,16 +136,16 @@ Nodes (7): public, billing_customers_set_updated_at, public.billing_customers, p
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `cn()` connect `cn` to `settings/page.tsx`, `marketing.tsx`?**
-  _High betweenness centrality (0.057) - this node is a cross-community bridge._
+  _High betweenness centrality (0.058) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `scripts`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
-- **Why does `publicEnv` connect `public.ts` to `auth/actions.ts`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `devDependencies` connect `devDependencies` to `scripts`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _112 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _114 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07526881720430108 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**
-  _Cohesion score 0.08549019607843138 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08295625942684766 - nodes in this community are weakly interconnected._
 - **Should `components.json` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._

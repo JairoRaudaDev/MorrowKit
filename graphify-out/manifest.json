@@ -328,5 +328,20 @@
     "mtime": 1786724775.0310285,
     "ast_hash": "3f46ca94184e96c29c6a145767062cc0",
     "semantic_hash": ""
+  },
+  "src/app/api/stripe/webhook/route.ts": {
+    "mtime": 1786725824.004788,
+    "ast_hash": "264df08102003c0f3315a4dbfe99ea88",
+    "semantic_hash": ""
+  },
+  "src/lib/stripe/webhook.ts": {
+    "mtime": 1786725824.0494013,
+    "ast_hash": "3d990c6c6faa3cb507088104e029567d",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql": {
+    "mtime": 1786725759.9253633,
+    "ast_hash": "6c03db2ae25c9b95275e868e57faa95a",
+    "semantic_hash": ""
   }
 }

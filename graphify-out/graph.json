@@ -100,19 +100,6 @@
       "norm_label": "paidplan"
     },
     {
-      "label": "Environment",
-      "file_type": "code",
-      "source_file": "src/env/validation.ts",
-      "source_location": "L1",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_env_validation_environment",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "environment"
-    },
-    {
       "label": "CustomerIdentity",
       "file_type": "code",
       "source_file": "src/lib/stripe/customer.ts",
@@ -176,6 +163,19 @@
       "community": 20,
       "community_name": "marketing.tsx",
       "norm_label": "containerprops"
+    },
+    {
+      "label": "Environment",
+      "file_type": "code",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L1",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_env_validation_environment",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "environment"
     },
     {
       "label": "LoginPageProps",
@@ -854,6 +854,18 @@
       "norm_label": "label()"
     },
     {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_api_stripe_webhook_route_post",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "post()"
+    },
+    {
       "label": "DashboardLayout()",
       "file_type": "code",
       "source_file": "src/app/dashboard/layout.tsx",
@@ -914,18 +926,6 @@
       "norm_label": "dashboardshell()"
     },
     {
-      "label": "validateEnv()",
-      "file_type": "code",
-      "source_file": "src/env/validation.ts",
-      "source_location": "L3",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_env_validation_validateenv",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "validateenv()"
-    },
-    {
       "label": "requireAuth()",
       "file_type": "code",
       "source_file": "src/lib/auth/session.ts",
@@ -950,6 +950,66 @@
       "norm_label": "getorcreatestripecustomer()"
     },
     {
+      "label": "ensureCustomerMapping()",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_stripe_webhook_ensurecustomermapping",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "ensurecustomermapping()"
+    },
+    {
+      "label": "stripeId()",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_stripe_webhook_stripeid",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "stripeid()"
+    },
+    {
+      "label": "subscriptionFromEvent()",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L61",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_stripe_webhook_subscriptionfromevent",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "subscriptionfromevent()"
+    },
+    {
+      "label": "synchronizeSubscriptionEvent()",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L83",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_stripe_webhook_synchronizesubscriptionevent",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "synchronizesubscriptionevent()"
+    },
+    {
+      "label": "toTimestamp()",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_stripe_webhook_totimestamp",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "totimestamp()"
+    },
+    {
       "label": "createAdminClient()",
       "file_type": "code",
       "source_file": "src/lib/supabase/admin.ts",
@@ -960,42 +1020,6 @@
       "community": 17,
       "community_name": "pricing/actions.ts",
       "norm_label": "createadminclient()"
-    },
-    {
-      "label": "createClient()",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/client.ts",
-      "source_location": "L13",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_supabase_client_createclient",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "createclient()"
-    },
-    {
-      "label": "updateSession()",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/middleware.ts",
-      "source_location": "L12",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_supabase_middleware_updatesession",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "updatesession()"
-    },
-    {
-      "label": "proxy()",
-      "file_type": "code",
-      "source_file": "src/proxy.ts",
-      "source_location": "L5",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_proxy_proxy",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "proxy()"
     },
     {
       "label": "Home()",
@@ -1104,6 +1128,54 @@
       "community": 20,
       "community_name": "marketing.tsx",
       "norm_label": "pricing()"
+    },
+    {
+      "label": "validateEnv()",
+      "file_type": "code",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_env_validation_validateenv",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "validateenv()"
+    },
+    {
+      "label": "createClient()",
+      "file_type": "code",
+      "source_file": "src/lib/supabase/client.ts",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_supabase_client_createclient",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "createclient()"
+    },
+    {
+      "label": "updateSession()",
+      "file_type": "code",
+      "source_file": "src/lib/supabase/middleware.ts",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_supabase_middleware_updatesession",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "updatesession()"
+    },
+    {
+      "label": "proxy()",
+      "file_type": "code",
+      "source_file": "src/proxy.ts",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_proxy_proxy",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "proxy()"
     },
     {
       "label": "authErrorMessage()",
@@ -1636,6 +1708,28 @@
       "norm_label": "prettier"
     },
     {
+      "label": "webhook/route.ts",
+      "file_type": "code",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_api_stripe_webhook_route",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "webhook/route.ts"
+    },
+    {
+      "label": "handledEvents",
+      "file_type": "code",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_app_api_stripe_webhook_route_handledevents",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "handledevents"
+    },
+    {
       "label": "dashboard/layout.tsx",
       "file_type": "code",
       "source_file": "src/app/dashboard/layout.tsx",
@@ -1667,72 +1761,6 @@
       "community": 17,
       "community_name": "pricing/actions.ts",
       "norm_label": "paidplans"
-    },
-    {
-      "label": "public.ts",
-      "file_type": "code",
-      "source_file": "src/env/public.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_env_public",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "public.ts"
-    },
-    {
-      "label": "publicEnv",
-      "file_type": "code",
-      "source_file": "src/env/public.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "src_env_public_publicenv",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "publicenv"
-    },
-    {
-      "label": "env/server.ts",
-      "file_type": "code",
-      "source_file": "src/env/server.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_env_server",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "env/server.ts"
-    },
-    {
-      "label": "privateEnv",
-      "file_type": "code",
-      "source_file": "src/env/server.ts",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "src_env_server_privateenv",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "privateenv"
-    },
-    {
-      "label": "serverEnv",
-      "file_type": "code",
-      "source_file": "src/env/server.ts",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "src_env_server_serverenv",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "serverenv"
-    },
-    {
-      "label": "env/validation.ts",
-      "file_type": "code",
-      "source_file": "src/env/validation.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_env_validation",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "env/validation.ts"
     },
     {
       "label": "session.ts",
@@ -1812,59 +1840,15 @@
       "norm_label": "types.ts"
     },
     {
-      "label": "admin.ts",
+      "label": "webhook.ts",
       "file_type": "code",
-      "source_file": "src/lib/supabase/admin.ts",
+      "source_file": "src/lib/stripe/webhook.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_supabase_admin",
+      "id": "src_lib_stripe_webhook",
       "community": 17,
       "community_name": "pricing/actions.ts",
-      "norm_label": "admin.ts"
-    },
-    {
-      "label": "supabase/client.ts",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/client.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_lib_supabase_client",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "supabase/client.ts"
-    },
-    {
-      "label": "middleware.ts",
-      "file_type": "code",
-      "source_file": "src/lib/supabase/middleware.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_lib_supabase_middleware",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "middleware.ts"
-    },
-    {
-      "label": "proxy.ts",
-      "file_type": "code",
-      "source_file": "src/proxy.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_proxy",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "proxy.ts"
-    },
-    {
-      "label": "config",
-      "file_type": "code",
-      "source_file": "src/proxy.ts",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "src_proxy_config",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "config"
+      "norm_label": "webhook.ts"
     },
     {
       "label": "seed.sql",
@@ -2294,6 +2278,160 @@
       "community": 21,
       "community_name": "20260814010000_create_billing_tables.sql",
       "norm_label": "subscriptions_set_updated_at"
+    },
+    {
+      "label": "public.ts",
+      "file_type": "code",
+      "source_file": "src/env/public.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_env_public",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "public.ts"
+    },
+    {
+      "label": "publicEnv",
+      "file_type": "code",
+      "source_file": "src/env/public.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_env_public_publicenv",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "publicenv"
+    },
+    {
+      "label": "env/server.ts",
+      "file_type": "code",
+      "source_file": "src/env/server.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_env_server",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "env/server.ts"
+    },
+    {
+      "label": "privateEnv",
+      "file_type": "code",
+      "source_file": "src/env/server.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_env_server_privateenv",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "privateenv"
+    },
+    {
+      "label": "serverEnv",
+      "file_type": "code",
+      "source_file": "src/env/server.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "src_env_server_serverenv",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "serverenv"
+    },
+    {
+      "label": "env/validation.ts",
+      "file_type": "code",
+      "source_file": "src/env/validation.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_env_validation",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "env/validation.ts"
+    },
+    {
+      "label": "admin.ts",
+      "file_type": "code",
+      "source_file": "src/lib/supabase/admin.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_supabase_admin",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "admin.ts"
+    },
+    {
+      "label": "supabase/client.ts",
+      "file_type": "code",
+      "source_file": "src/lib/supabase/client.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_supabase_client",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "supabase/client.ts"
+    },
+    {
+      "label": "middleware.ts",
+      "file_type": "code",
+      "source_file": "src/lib/supabase/middleware.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_supabase_middleware",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "middleware.ts"
+    },
+    {
+      "label": "proxy.ts",
+      "file_type": "code",
+      "source_file": "src/proxy.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_proxy",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "proxy.ts"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "src/proxy.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_proxy_config",
+      "community": 22,
+      "community_name": "public.ts",
+      "norm_label": "config"
+    },
+    {
+      "label": "20260814020000_add_stripe_webhook_processing.sql",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814020000_add_stripe_webhook_processing",
+      "community": 23,
+      "community_name": "20260814020000_add_stripe_webhook_processing.sql",
+      "norm_label": "20260814020000_add_stripe_webhook_processing.sql"
+    },
+    {
+      "label": "public.apply_stripe_subscription_event()",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814020000_add_stripe_webhook_processing_public_apply_stripe_subscription_event",
+      "community": 23,
+      "community_name": "20260814020000_add_stripe_webhook_processing.sql",
+      "norm_label": "public.apply_stripe_subscription_event()"
+    },
+    {
+      "label": "public.stripe_webhook_events",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814020000_add_stripe_webhook_processing_public_stripe_webhook_events",
+      "community": 23,
+      "community_name": "20260814020000_add_stripe_webhook_processing.sql",
+      "norm_label": "public.stripe_webhook_events"
     },
     {
       "label": "tsconfig.json",
@@ -3154,7 +3292,7 @@
       "norm_label": "auth/actions.ts"
     },
     {
-      "label": "route.ts",
+      "label": "callback/route.ts",
       "file_type": "code",
       "source_file": "src/app/auth/callback/route.ts",
       "source_location": "L1",
@@ -3162,7 +3300,7 @@
       "id": "src_app_auth_callback_route",
       "community": 7,
       "community_name": "auth/actions.ts",
-      "norm_label": "route.ts"
+      "norm_label": "callback/route.ts"
     },
     {
       "label": "login/page.tsx",
@@ -3999,6 +4137,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_api_stripe_webhook_route_post",
+      "target": "src_lib_stripe_webhook_synchronizesubscriptionevent"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "src/app/auth/actions.ts",
       "source_location": "L36",
       "weight": 1.0,
@@ -4718,6 +4868,90 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook_ensurecustomermapping",
+      "target": "src_lib_stripe_webhook_stripeid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook_ensurecustomermapping",
+      "target": "src_lib_supabase_admin_createadminclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook_subscriptionfromevent",
+      "target": "src_lib_stripe_webhook_stripeid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook_synchronizesubscriptionevent",
+      "target": "src_lib_stripe_webhook_subscriptionfromevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook_synchronizesubscriptionevent",
+      "target": "src_lib_stripe_webhook_ensurecustomermapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook_synchronizesubscriptionevent",
+      "target": "src_lib_supabase_admin_createadminclient"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook_synchronizesubscriptionevent",
+      "target": "src_lib_stripe_webhook_totimestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/proxy.ts",
       "source_location": "L6",
@@ -5108,6 +5342,42 @@
       "_origin": "ast",
       "source": "package_devdependencies_typescript",
       "target": "typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_api_stripe_webhook_route",
+      "target": "src_lib_stripe_client_stripe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_api_stripe_webhook_route",
+      "target": "src_lib_stripe_config_stripeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_api_stripe_webhook_route",
+      "target": "src_lib_stripe_webhook_synchronizesubscriptionevent",
       "confidence_score": 1.0
     },
     {
@@ -6518,6 +6788,30 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook",
+      "target": "src_lib_supabase_admin_createadminclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook",
+      "target": "src_lib_stripe_client_stripe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/lib/supabase/admin.ts",
       "source_location": "L5",
       "weight": 1.0,
@@ -6572,6 +6866,42 @@
       "_origin": "ast",
       "source": "src_proxy",
       "target": "src_lib_supabase_middleware_updatesession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_api_stripe_webhook_route",
+      "target": "src_lib_stripe_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_api_stripe_webhook_route",
+      "target": "src_lib_stripe_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_api_stripe_webhook_route",
+      "target": "src_lib_stripe_webhook",
       "confidence_score": 1.0
     },
     {
@@ -7502,6 +7832,30 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook",
+      "target": "src_lib_supabase_admin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook",
+      "target": "src_lib_stripe_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/lib/supabase/admin.ts",
       "source_location": "L5",
       "weight": 1.0,
@@ -8348,6 +8702,28 @@
       "_origin": "ast",
       "source": "readme_saasseed",
       "target": "readme_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_api_stripe_webhook_route",
+      "target": "src_app_api_stripe_webhook_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/stripe/webhook/route.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_api_stripe_webhook_route",
+      "target": "src_app_api_stripe_webhook_route_handledevents",
       "confidence_score": 1.0
     },
     {
@@ -9552,6 +9928,61 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook",
+      "target": "src_lib_stripe_webhook_totimestamp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook",
+      "target": "src_lib_stripe_webhook_ensurecustomermapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook",
+      "target": "src_lib_stripe_webhook_subscriptionfromevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook",
+      "target": "src_lib_stripe_webhook_synchronizesubscriptionevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/webhook.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_webhook",
+      "target": "src_lib_stripe_webhook_stripeid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/lib/supabase/admin.ts",
       "source_location": "L14",
       "weight": 1.0,
@@ -9701,6 +10132,28 @@
       "_origin": "ast",
       "source": "supabase_migrations_20260814010000_create_billing_tables",
       "target": "supabase_migrations_20260814010000_create_billing_tables_subscriptions_set_updated_at",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814020000_add_stripe_webhook_processing",
+      "target": "supabase_migrations_20260814020000_add_stripe_webhook_processing_public_stripe_webhook_events",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814020000_add_stripe_webhook_processing",
+      "target": "supabase_migrations_20260814020000_add_stripe_webhook_processing_public_apply_stripe_subscription_event",
       "confidence_score": 1.0
     },
     {
@@ -10406,5 +10859,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "d8ec5ef210f5ecc8993989037e2159d37a7b3078"
+  "built_at_commit": "a496412a16b30cb51c0aa53dc61c38bdfb298307"
 }

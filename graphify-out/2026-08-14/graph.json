@@ -74,19 +74,6 @@
       "norm_label": "profileformstate"
     },
     {
-      "label": "AuthFormProps",
-      "file_type": "code",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L14",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_components_auth_form_authformprops",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "authformprops"
-    },
-    {
       "label": "AuthPageProps",
       "file_type": "code",
       "source_file": "src/components/auth-page.tsx",
@@ -100,6 +87,19 @@
       "norm_label": "authpageprops"
     },
     {
+      "label": "PaidPlan",
+      "file_type": "code",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L12",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_app_pricing_actions_paidplan",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "paidplan"
+    },
+    {
       "label": "Environment",
       "file_type": "code",
       "source_file": "src/env/validation.ts",
@@ -109,20 +109,33 @@
       "_origin": "ast",
       "id": "src_env_validation_environment",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "environment"
+    },
+    {
+      "label": "CustomerIdentity",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L7",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_stripe_customer_customeridentity",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "customeridentity"
     },
     {
       "label": "StripeClient",
       "file_type": "code",
       "source_file": "src/lib/stripe/types.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_lib_stripe_types_stripeclient",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "stripeclient"
     },
     {
@@ -135,20 +148,20 @@
       "_origin": "ast",
       "id": "src_lib_stripe_types_stripeconfig",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "stripeconfig"
     },
     {
       "label": "StripeWebhookEvent",
       "file_type": "code",
       "source_file": "src/lib/stripe/types.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_lib_stripe_types_stripewebhookevent",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "stripewebhookevent"
     },
     {
@@ -189,6 +202,19 @@
       "community": 7,
       "community_name": "auth/actions.ts",
       "norm_label": "signuppageprops"
+    },
+    {
+      "label": "AuthFormProps",
+      "file_type": "code",
+      "source_file": "src/components/auth-form.tsx",
+      "source_location": "L14",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_auth_form_authformprops",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "authformprops"
     },
     {
       "label": "AuthFormState",
@@ -346,6 +372,18 @@
       "community": 1,
       "community_name": "cn",
       "norm_label": "button()"
+    },
+    {
+      "label": "CardAction()",
+      "file_type": "code",
+      "source_file": "src/components/ui/card.tsx",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_ui_card_cardaction",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "cardaction()"
     },
     {
       "label": "Dialog()",
@@ -720,18 +758,6 @@
       "norm_label": "profileform()"
     },
     {
-      "label": "AuthForm()",
-      "file_type": "code",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L19",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_auth_form_authform",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "authform()"
-    },
-    {
       "label": "Card()",
       "file_type": "code",
       "source_file": "src/components/ui/card.tsx",
@@ -742,18 +768,6 @@
       "community": 11,
       "community_name": "settings/page.tsx",
       "norm_label": "card()"
-    },
-    {
-      "label": "CardAction()",
-      "file_type": "code",
-      "source_file": "src/components/ui/card.tsx",
-      "source_location": "L51",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_ui_card_cardaction",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "cardaction()"
     },
     {
       "label": "CardContent()",
@@ -840,6 +854,66 @@
       "norm_label": "label()"
     },
     {
+      "label": "DashboardLayout()",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/layout.tsx",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_dashboard_layout_dashboardlayout",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "dashboardlayout()"
+    },
+    {
+      "label": "AccountSettingsPage()",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/page.tsx",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_page_accountsettingspage",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "accountsettingspage()"
+    },
+    {
+      "label": "createCheckoutSession()",
+      "file_type": "code",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_pricing_actions_createcheckoutsession",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "createcheckoutsession()"
+    },
+    {
+      "label": "isPaidPlan()",
+      "file_type": "code",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L14",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_pricing_actions_ispaidplan",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "ispaidplan()"
+    },
+    {
+      "label": "DashboardShell()",
+      "file_type": "code",
+      "source_file": "src/components/dashboard-shell.tsx",
+      "source_location": "L158",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_dashboard_shell_dashboardshell",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "dashboardshell()"
+    },
+    {
       "label": "validateEnv()",
       "file_type": "code",
       "source_file": "src/env/validation.ts",
@@ -848,8 +922,32 @@
       "_origin": "ast",
       "id": "src_env_validation_validateenv",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "validateenv()"
+    },
+    {
+      "label": "requireAuth()",
+      "file_type": "code",
+      "source_file": "src/lib/auth/session.ts",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_auth_session_requireauth",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "requireauth()"
+    },
+    {
+      "label": "getOrCreateStripeCustomer()",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_stripe_customer_getorcreatestripecustomer",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "getorcreatestripecustomer()"
     },
     {
       "label": "createAdminClient()",
@@ -860,7 +958,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_admin_createadminclient",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "createadminclient()"
     },
     {
@@ -872,7 +970,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_client_createclient",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "createclient()"
     },
     {
@@ -884,7 +982,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_middleware_updatesession",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "updatesession()"
     },
     {
@@ -896,7 +994,7 @@
       "_origin": "ast",
       "id": "src_proxy_proxy",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "proxy()"
     },
     {
@@ -939,7 +1037,7 @@
       "label": "CTA()",
       "file_type": "code",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L205",
+      "source_location": "L209",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_marketing_cta",
@@ -951,7 +1049,7 @@
       "label": "Features",
       "file_type": "code",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L177",
+      "source_location": "L181",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_marketing_features",
@@ -963,7 +1061,7 @@
       "label": "Footer()",
       "file_type": "code",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L298",
+      "source_location": "L311",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_marketing_footer",
@@ -975,7 +1073,7 @@
       "label": "Hero()",
       "file_type": "code",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L102",
+      "source_location": "L106",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_marketing_hero",
@@ -987,7 +1085,7 @@
       "label": "Navbar()",
       "file_type": "code",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L62",
+      "source_location": "L66",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_marketing_navbar",
@@ -999,7 +1097,7 @@
       "label": "Pricing()",
       "file_type": "code",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L229",
+      "source_location": "L233",
       "_callable": true,
       "_origin": "ast",
       "id": "src_components_marketing_pricing",
@@ -1068,30 +1166,6 @@
       "norm_label": "get()"
     },
     {
-      "label": "DashboardLayout()",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/layout.tsx",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_dashboard_layout_dashboardlayout",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "dashboardlayout()"
-    },
-    {
-      "label": "AccountSettingsPage()",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/page.tsx",
-      "source_location": "L17",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_page_accountsettingspage",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "accountsettingspage()"
-    },
-    {
       "label": "LoginPage()",
       "file_type": "code",
       "source_file": "src/app/login/page.tsx",
@@ -1116,6 +1190,18 @@
       "norm_label": "signuppage()"
     },
     {
+      "label": "AuthForm()",
+      "file_type": "code",
+      "source_file": "src/components/auth-form.tsx",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_auth_form_authform",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "authform()"
+    },
+    {
       "label": "AuthPage()",
       "file_type": "code",
       "source_file": "src/components/auth-page.tsx",
@@ -1126,30 +1212,6 @@
       "community": 7,
       "community_name": "auth/actions.ts",
       "norm_label": "authpage()"
-    },
-    {
-      "label": "DashboardShell()",
-      "file_type": "code",
-      "source_file": "src/components/dashboard-shell.tsx",
-      "source_location": "L158",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_dashboard_shell_dashboardshell",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "dashboardshell()"
-    },
-    {
-      "label": "requireAuth()",
-      "file_type": "code",
-      "source_file": "src/lib/auth/session.ts",
-      "source_location": "L11",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_auth_session_requireauth",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "requireauth()"
     },
     {
       "label": "safeNextPath()",
@@ -1409,28 +1471,6 @@
       "norm_label": "initialstate"
     },
     {
-      "label": "auth-form.tsx",
-      "file_type": "code",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_auth_form",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "auth-form.tsx"
-    },
-    {
-      "label": "initialState",
-      "file_type": "code",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_components_auth_form_initialstate",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "initialstate"
-    },
-    {
       "label": "auth-page.tsx",
       "file_type": "code",
       "source_file": "src/components/auth-page.tsx",
@@ -1596,6 +1636,39 @@
       "norm_label": "prettier"
     },
     {
+      "label": "dashboard/layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/layout.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_dashboard_layout",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "dashboard/layout.tsx"
+    },
+    {
+      "label": "pricing/actions.ts",
+      "file_type": "code",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_pricing_actions",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "pricing/actions.ts"
+    },
+    {
+      "label": "paidPlans",
+      "file_type": "code",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "src_app_pricing_actions_paidplans",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "paidplans"
+    },
+    {
       "label": "public.ts",
       "file_type": "code",
       "source_file": "src/env/public.ts",
@@ -1603,7 +1676,7 @@
       "_origin": "ast",
       "id": "src_env_public",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "public.ts"
     },
     {
@@ -1614,7 +1687,7 @@
       "_origin": "ast",
       "id": "src_env_public_publicenv",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "publicenv"
     },
     {
@@ -1625,7 +1698,7 @@
       "_origin": "ast",
       "id": "src_env_server",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "env/server.ts"
     },
     {
@@ -1636,18 +1709,18 @@
       "_origin": "ast",
       "id": "src_env_server_privateenv",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "privateenv"
     },
     {
       "label": "serverEnv",
       "file_type": "code",
       "source_file": "src/env/server.ts",
-      "source_location": "L12",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "src_env_server_serverenv",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "serverenv"
     },
     {
@@ -1658,8 +1731,19 @@
       "_origin": "ast",
       "id": "src_env_validation",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "env/validation.ts"
+    },
+    {
+      "label": "session.ts",
+      "file_type": "code",
+      "source_file": "src/lib/auth/session.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_auth_session",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "session.ts"
     },
     {
       "label": "stripe/client.ts",
@@ -1669,7 +1753,7 @@
       "_origin": "ast",
       "id": "src_lib_stripe_client",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "stripe/client.ts"
     },
     {
@@ -1680,7 +1764,7 @@
       "_origin": "ast",
       "id": "src_lib_stripe_client_stripe",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "stripe"
     },
     {
@@ -1691,7 +1775,7 @@
       "_origin": "ast",
       "id": "src_lib_stripe_config",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "config.ts"
     },
     {
@@ -1702,8 +1786,19 @@
       "_origin": "ast",
       "id": "src_lib_stripe_config_stripeconfig",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "stripeconfig"
+    },
+    {
+      "label": "customer.ts",
+      "file_type": "code",
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_stripe_customer",
+      "community": 17,
+      "community_name": "pricing/actions.ts",
+      "norm_label": "customer.ts"
     },
     {
       "label": "types.ts",
@@ -1713,7 +1808,7 @@
       "_origin": "ast",
       "id": "src_lib_stripe_types",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "types.ts"
     },
     {
@@ -1724,7 +1819,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_admin",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "admin.ts"
     },
     {
@@ -1735,7 +1830,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_client",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "supabase/client.ts"
     },
     {
@@ -1746,7 +1841,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_middleware",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "middleware.ts"
     },
     {
@@ -1757,7 +1852,7 @@
       "_origin": "ast",
       "id": "src_proxy",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "proxy.ts"
     },
     {
@@ -1768,7 +1863,7 @@
       "_origin": "ast",
       "id": "src_proxy_config",
       "community": 17,
-      "community_name": "public.ts",
+      "community_name": "pricing/actions.ts",
       "norm_label": "config"
     },
     {
@@ -2105,7 +2200,7 @@
       "label": "plans",
       "file_type": "code",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "src_components_marketing_plans",
       "community": 20,
@@ -3070,17 +3165,6 @@
       "norm_label": "route.ts"
     },
     {
-      "label": "dashboard/layout.tsx",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/layout.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_dashboard_layout",
-      "community": 7,
-      "community_name": "auth/actions.ts",
-      "norm_label": "dashboard/layout.tsx"
-    },
-    {
       "label": "login/page.tsx",
       "file_type": "code",
       "source_file": "src/app/login/page.tsx",
@@ -3103,15 +3187,26 @@
       "norm_label": "signup/page.tsx"
     },
     {
-      "label": "session.ts",
+      "label": "auth-form.tsx",
       "file_type": "code",
-      "source_file": "src/lib/auth/session.ts",
+      "source_file": "src/components/auth-form.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_auth_session",
+      "id": "src_components_auth_form",
       "community": 7,
       "community_name": "auth/actions.ts",
-      "norm_label": "session.ts"
+      "norm_label": "auth-form.tsx"
+    },
+    {
+      "label": "initialState",
+      "file_type": "code",
+      "source_file": "src/components/auth-form.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_components_auth_form_initialstate",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "initialstate"
     },
     {
       "label": "auth/validation.ts",
@@ -4096,6 +4191,42 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions_createcheckoutsession",
+      "target": "src_lib_auth_session_requireauth"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions_createcheckoutsession",
+      "target": "src_app_pricing_actions_ispaidplan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions_createcheckoutsession",
+      "target": "src_lib_stripe_customer_getorcreatestripecustomer"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "src/app/signup/page.tsx",
       "source_location": "L13",
       "weight": 1.0,
@@ -4570,6 +4701,18 @@
       "_origin": "ast",
       "source": "src_lib_auth_session_requireauth",
       "target": "src_lib_supabase_server_createclient"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_customer_getorcreatestripecustomer",
+      "target": "src_lib_supabase_admin_createadminclient"
     },
     {
       "relation": "calls",
@@ -5535,6 +5678,66 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_env_public_publicenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_auth_session_requireauth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_stripe_client_stripe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_stripe_config_stripeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_stripe_customer_getorcreatestripecustomer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/app/pricing/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
@@ -6044,7 +6247,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
-      "target": "src_components_container_container",
+      "target": "src_app_pricing_actions_createcheckoutsession",
       "confidence_score": 1.0
     },
     {
@@ -6056,7 +6259,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
-      "target": "src_components_logo_logo",
+      "target": "src_components_container_container",
       "confidence_score": 1.0
     },
     {
@@ -6065,6 +6268,18 @@
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing.tsx",
       "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_marketing",
+      "target": "src_components_logo_logo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/marketing.tsx",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
@@ -6273,6 +6488,30 @@
       "_origin": "ast",
       "source": "src_lib_stripe_config",
       "target": "src_lib_stripe_types_stripeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_customer",
+      "target": "src_lib_supabase_admin_createadminclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_customer",
+      "target": "src_lib_stripe_client_stripe",
       "confidence_score": 1.0
     },
     {
@@ -6663,6 +6902,66 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_env_public",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_auth_session",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_stripe_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_stripe_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_stripe_customer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/app/pricing/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
@@ -6932,7 +7231,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
-      "target": "src_components_container",
+      "target": "src_app_pricing_actions",
       "confidence_score": 1.0
     },
     {
@@ -6944,7 +7243,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
-      "target": "src_components_logo",
+      "target": "src_components_container",
       "confidence_score": 1.0
     },
     {
@@ -6953,6 +7252,18 @@
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing.tsx",
       "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_marketing",
+      "target": "src_components_logo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/marketing.tsx",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
@@ -7161,6 +7472,30 @@
       "_origin": "ast",
       "source": "src_lib_stripe_config",
       "target": "src_lib_stripe_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_customer",
+      "target": "src_lib_supabase_admin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_customer",
+      "target": "src_lib_stripe_client",
       "confidence_score": 1.0
     },
     {
@@ -8227,6 +8562,50 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_app_pricing_actions_paidplans",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_app_pricing_actions_paidplan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_app_pricing_actions_ispaidplan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_app_pricing_actions_createcheckoutsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/app/pricing/page.tsx",
       "source_location": "L10",
       "weight": 1.0,
@@ -8448,7 +8827,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L102",
+      "source_location": "L106",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
@@ -8459,7 +8838,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L177",
+      "source_location": "L181",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
@@ -8470,7 +8849,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L205",
+      "source_location": "L209",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
@@ -8481,7 +8860,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L229",
+      "source_location": "L233",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
@@ -8492,7 +8871,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L298",
+      "source_location": "L311",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
@@ -8503,7 +8882,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
@@ -8514,7 +8893,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing.tsx",
-      "source_location": "L62",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing",
@@ -9009,7 +9388,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/env/server.ts",
-      "source_location": "L12",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_env_server",
@@ -9118,8 +9497,30 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_customer",
+      "target": "src_lib_stripe_customer_getorcreatestripecustomer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/stripe/customer.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_stripe_customer",
+      "target": "src_lib_stripe_customer_customeridentity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/lib/stripe/types.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_stripe_types",
@@ -9130,7 +9531,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/stripe/types.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_stripe_types",
@@ -10005,5 +10406,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "860b2630dbe405ae9c3012b0945ae0ea4cff2d50"
+  "built_at_commit": "d8ec5ef210f5ecc8993989037e2159d37a7b3078"
 }
