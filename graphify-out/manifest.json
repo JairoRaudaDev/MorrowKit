@@ -270,8 +270,8 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/billing/page.tsx": {
-    "mtime": 1786699969.022061,
-    "ast_hash": "7b0612ccedb08016e634e25423f57bf8",
+    "mtime": 1786726505.9008672,
+    "ast_hash": "43934857c2106edb0604b999a83a5583",
     "semantic_hash": ""
   },
   "src/app/dashboard/layout.tsx": {
@@ -342,6 +342,16 @@
   "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql": {
     "mtime": 1786725759.9253633,
     "ast_hash": "6c03db2ae25c9b95275e868e57faa95a",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/billing/actions.ts": {
+    "mtime": 1786726499.3642864,
+    "ast_hash": "dcd11b9bb7255975e302599603bea493",
+    "semantic_hash": ""
+  },
+  "src/lib/stripe/subscription.ts": {
+    "mtime": 1786726499.3687177,
+    "ast_hash": "0ff6295370b7289a47f8fba62672736c",
     "semantic_hash": ""
   }
 }
