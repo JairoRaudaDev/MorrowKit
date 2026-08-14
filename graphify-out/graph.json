@@ -933,6 +933,72 @@
       "norm_label": "eslint.config.mjs"
     },
     {
+      "label": "auth.users",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "auth_users",
+      "community": 13,
+      "community_name": "20260814000000_create_profiles.sql",
+      "norm_label": "auth.users"
+    },
+    {
+      "label": "public.set_updated_at",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "public_set_updated_at",
+      "community": 13,
+      "community_name": "20260814000000_create_profiles.sql",
+      "norm_label": "public.set_updated_at"
+    },
+    {
+      "label": "20260814000000_create_profiles.sql",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814000000_create_profiles",
+      "community": 13,
+      "community_name": "20260814000000_create_profiles.sql",
+      "norm_label": "20260814000000_create_profiles.sql"
+    },
+    {
+      "label": "profiles_set_updated_at",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814000000_create_profiles_profiles_set_updated_at",
+      "community": 13,
+      "community_name": "20260814000000_create_profiles.sql",
+      "norm_label": "profiles_set_updated_at"
+    },
+    {
+      "label": "public.profiles",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814000000_create_profiles_public_profiles",
+      "community": 13,
+      "community_name": "20260814000000_create_profiles.sql",
+      "norm_label": "public.profiles"
+    },
+    {
+      "label": "public.set_updated_at()",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814000000_create_profiles_public_set_updated_at",
+      "community": 13,
+      "community_name": "20260814000000_create_profiles.sql",
+      "norm_label": "public.set_updated_at()"
+    },
+    {
       "label": "prettier.config.mjs",
       "file_type": "code",
       "source_file": "prettier.config.mjs",
@@ -5729,6 +5795,39 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814000000_create_profiles",
+      "target": "supabase_migrations_20260814000000_create_profiles_public_profiles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814000000_create_profiles",
+      "target": "supabase_migrations_20260814000000_create_profiles_public_set_updated_at",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814000000_create_profiles",
+      "target": "supabase_migrations_20260814000000_create_profiles_profiles_set_updated_at",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tsconfig.json",
       "source_location": "L2",
       "weight": 1.0,
@@ -5922,6 +6021,28 @@
       "_origin": "ast",
       "source": "tsconfig_compileroptions",
       "target": "tsconfig_compileroptions_esmoduleinterop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814000000_create_profiles_public_profiles",
+      "target": "auth_users",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "triggers",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814000000_create_profiles_profiles_set_updated_at",
+      "target": "public_set_updated_at",
       "confidence_score": 1.0
     },
     {
@@ -6340,5 +6461,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "cf72b75f9db98ce03f7e2ace1d48e2666bdd3a40"
+  "built_at_commit": "a050210a5ce077f8c9190bdfaec5796a7cb54250"
 }

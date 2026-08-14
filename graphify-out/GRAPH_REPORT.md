@@ -1,16 +1,16 @@
 # Graph Report - SaaSSeed  (2026-08-14)
 
 ## Corpus Check
-- 41 files · ~13,762 words
+- 42 files · ~13,930 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 244 nodes · 299 edges · 18 communities (15 shown, 3 thin omitted)
+- 250 nodes · 304 edges · 19 communities (16 shown, 3 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cf72b75f`
+- Built from commit: `a050210a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -27,6 +27,7 @@
 - layout.tsx
 - postcss.config.mjs
 - page.tsx
+- 20260814000000_create_profiles.sql
 - prettier.config.mjs
 - public.ts
 
@@ -61,7 +62,7 @@
 - **Graphify Extraction Flow** — _codex_skills_graphify_skill_file_detection, _codex_skills_graphify_skill_structural_extraction, _codex_skills_graphify_skill_semantic_extraction, _codex_skills_graphify_skill_graph_build_and_clustering [EXTRACTED 1.00]
 - **Scoped Graph Navigation Modes** — _codex_skills_graphify_references_query_constrained_query_expansion, _codex_skills_graphify_references_query_graph_traversal, _codex_skills_graphify_references_query_path_and_explain, agents_scoped_graph_navigation [INFERRED 0.85]
 
-## Communities (18 total, 3 thin omitted)
+## Communities (19 total, 3 thin omitted)
 
 ### Community 0 - "Graphify Pipeline"
 Cohesion: 0.08
@@ -103,6 +104,10 @@ Nodes (23): class-variance-authority, clsx, lucide-react, next, dependencies, cl
 Cohesion: 0.21
 Nodes (7): AppShell(), AppShellProps, Container(), ContainerProps, containerSizes, Logo(), LogoProps
 
+### Community 13 - "20260814000000_create_profiles.sql"
+Cohesion: 0.33
+Nodes (4): auth.users, public.set_updated_at, profiles_set_updated_at, public.profiles
+
 ### Community 17 - "public.ts"
 Cohesion: 0.16
 Nodes (8): publicEnv, privateEnv, serverEnv, Environment, validateEnv(), updateSession(), config, proxy()
@@ -116,11 +121,11 @@ Nodes (8): publicEnv, privateEnv, serverEnv, Environment, validateEnv(), updateS
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `cn()` connect `cn` to `page.tsx`?**
-  _High betweenness centrality (0.053) - this node is a cross-community bridge._
+  _High betweenness centrality (0.051) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `scripts`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
   _97 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Pipeline` be split into smaller, more focused modules?**

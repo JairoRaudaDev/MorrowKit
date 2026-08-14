@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1786698640.1741261,
-    "ast_hash": "8bd6b2b4eb75202122e40b0a8f464e89",
+    "mtime": 1786698771.7351623,
+    "ast_hash": "63bb87b8a3e2dcb4768339d413f09d99",
     "semantic_hash": ""
   },
   "README.md": {
@@ -177,6 +177,31 @@
   "supabase/seed.sql": {
     "mtime": 1786698640.1774416,
     "ast_hash": "dbfcec891de21ba7a6c2afd5b070e822",
+    "semantic_hash": ""
+  },
+  "src/lib/supabase/admin.ts": {
+    "mtime": 1786698799.6154778,
+    "ast_hash": "ce624a8764da7e5d45a79da5420f0f7f",
+    "semantic_hash": ""
+  },
+  "src/lib/supabase/client.ts": {
+    "mtime": 1786698799.613471,
+    "ast_hash": "f66c43a36322d47e69c96ed47f06764c",
+    "semantic_hash": ""
+  },
+  "src/lib/supabase/middleware.ts": {
+    "mtime": 1786698799.6164708,
+    "ast_hash": "11e6074bc0a2832f7adf8b95f2dc2009",
+    "semantic_hash": ""
+  },
+  "src/lib/supabase/server.ts": {
+    "mtime": 1786698799.6144788,
+    "ast_hash": "613da6a68204702616505bd5078649f8",
+    "semantic_hash": ""
+  },
+  "src/proxy.ts": {
+    "mtime": 1786698799.617477,
+    "ast_hash": "0a92fce8be2517634aa58cecd6bc7942",
     "semantic_hash": ""
   }
 }

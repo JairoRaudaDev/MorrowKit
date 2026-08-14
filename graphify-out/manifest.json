@@ -203,5 +203,10 @@
     "mtime": 1786698799.617477,
     "ast_hash": "0a92fce8be2517634aa58cecd6bc7942",
     "semantic_hash": ""
+  },
+  "supabase/migrations/20260814000000_create_profiles.sql": {
+    "mtime": 1786698999.9969182,
+    "ast_hash": "23d0a22b4f1ecbd724be7df329d366a2",
+    "semantic_hash": ""
   }
 }
