@@ -16,7 +16,7 @@
   "14": "prettier.config.mjs",
   "15": "prettier-plugin-tailwindcss",
   "16": "prettier",
-  "17": "public.ts",
+  "17": "pricing/actions.ts",
   "18": "seed.sql",
   "19": "Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations",
   "20": "marketing.tsx",

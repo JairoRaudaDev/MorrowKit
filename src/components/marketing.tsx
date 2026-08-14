@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { createCheckoutSession } from "@/app/pricing/actions";
 import { Container } from "@/components/container";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
@@ -40,6 +41,7 @@ const plans = [
     features: ["One workspace", "Core product features", "Community support"],
     cta: "Start free",
     featured: false,
+    plan: null,
   },
   {
     name: "Pro",
@@ -48,6 +50,7 @@ const plans = [
     features: ["Unlimited projects", "Team collaboration", "Priority support"],
     cta: "Choose Pro",
     featured: true,
+    plan: "pro",
   },
   {
     name: "Business",
@@ -56,6 +59,7 @@ const plans = [
     features: ["Advanced permissions", "Usage insights", "Dedicated support"],
     cta: "Choose Business",
     featured: false,
+    plan: "business",
   },
 ];
 
@@ -279,13 +283,22 @@ export function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <Button
-                  asChild
-                  variant={plan.featured ? "default" : "outline"}
-                  className="mt-auto"
-                >
-                  <Link href="/signup">{plan.cta}</Link>
-                </Button>
+                {plan.plan ? (
+                  <form action={createCheckoutSession} className="mt-auto">
+                    <input type="hidden" name="plan" value={plan.plan} />
+                    <Button
+                      type="submit"
+                      variant={plan.featured ? "default" : "outline"}
+                      className="w-full"
+                    >
+                      {plan.cta}
+                    </Button>
+                  </form>
+                ) : (
+                  <Button asChild variant="outline" className="mt-auto">
+                    <Link href="/signup">{plan.cta}</Link>
+                  </Button>
+                )}
               </article>
             ))}
           </div>
