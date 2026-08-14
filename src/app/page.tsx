@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center px-6 py-24">
       <div className="max-w-2xl text-center">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+        <p className="mb-4 text-sm font-semibold tracking-[0.2em] text-slate-500 uppercase">
           SaaSSeed
         </p>
         <h1 className="text-4xl font-bold tracking-tight text-slate-950 sm:text-6xl">

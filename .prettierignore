@@ -1,0 +1,7 @@
+.codex
+.next
+AGENTS.md
+coverage
+graphify-out
+node_modules
+pnpm-lock.yaml
