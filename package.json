@@ -1,0 +1,12 @@
+{
+  "name": "saasseed",
+  "version": "0.0.0",
+  "private": true,
+  "description": "An opinionated, production-ready starter for launching small SaaS products.",
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  }
+}
