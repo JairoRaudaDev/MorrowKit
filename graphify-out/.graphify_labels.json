@@ -6,7 +6,7 @@
   "4": "scripts",
   "5": "SaaSSeed",
   "6": "devDependencies",
-  "7": "settings/page.tsx",
+  "7": "auth/actions.ts",
   "8": "dependencies",
   "9": "layout.tsx",
   "10": "postcss.config.mjs",

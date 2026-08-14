@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { requireAuth } from "@/lib/auth/session";
-import { stripeConfig } from "@/lib/stripe/config";
+import { getEntitlements, type Plan } from "@/lib/entitlements";
 import { getCurrentSubscription } from "@/lib/stripe/subscription";
 
 import { createBillingPortalSession } from "./actions";
@@ -25,6 +25,12 @@ const statusLabels: Record<string, string> = {
   paused: "Paused",
   trialing: "Trialing",
   unpaid: "Unpaid",
+};
+
+const planLabels: Record<Plan, string> = {
+  free: "Free",
+  pro: "Pro",
+  business: "Business",
 };
 
 function formatDate(value: string | null) {
@@ -44,14 +50,11 @@ export default async function BillingPage() {
     throw new Error("Authenticated user is missing an identifier");
   }
 
-  const subscription = await getCurrentSubscription(userId);
-  const plan = subscription
-    ? subscription.priceId === stripeConfig.priceIds.business
-      ? "Business"
-      : subscription.priceId === stripeConfig.priceIds.pro
-        ? "Pro"
-        : "Paid plan"
-    : "Free";
+  const [entitlements, subscription] = await Promise.all([
+    getEntitlements(userId),
+    getCurrentSubscription(userId),
+  ]);
+  const plan = planLabels[entitlements.plan];
   const status = subscription
     ? (statusLabels[subscription.status] ?? subscription.status)
     : "No subscription";
