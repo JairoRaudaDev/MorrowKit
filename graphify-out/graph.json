@@ -297,6 +297,18 @@
       "norm_label": "avatarimage()"
     },
     {
+      "label": "Button()",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L41",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_ui_button_button",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "button()"
+    },
+    {
       "label": "CardAction()",
       "file_type": "code",
       "source_file": "src/components/ui/card.tsx",
@@ -691,18 +703,6 @@
       "community": 11,
       "community_name": "settings/page.tsx",
       "norm_label": "authform()"
-    },
-    {
-      "label": "Button()",
-      "file_type": "code",
-      "source_file": "src/components/ui/button.tsx",
-      "source_location": "L41",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_ui_button_button",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "button()"
     },
     {
       "label": "Card()",
@@ -1205,6 +1205,28 @@
       "norm_label": "avatar.tsx"
     },
     {
+      "label": "button.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_button",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "button.tsx"
+    },
+    {
+      "label": "buttonVariants",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_components_ui_button_buttonvariants",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "buttonvariants"
+    },
+    {
       "label": "dialog.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/dialog.tsx",
@@ -1381,28 +1403,6 @@
       "norm_label": "auth-page.tsx"
     },
     {
-      "label": "button.tsx",
-      "file_type": "code",
-      "source_file": "src/components/ui/button.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_ui_button",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "button.tsx"
-    },
-    {
-      "label": "buttonVariants",
-      "file_type": "code",
-      "source_file": "src/components/ui/button.tsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_components_ui_button_buttonvariants",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "buttonvariants"
-    },
-    {
       "label": "card.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/card.tsx",
@@ -1447,28 +1447,6 @@
       "norm_label": "eslint.config.mjs"
     },
     {
-      "label": "auth.users",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "auth_users",
-      "community": 13,
-      "community_name": "20260814000000_create_profiles.sql",
-      "norm_label": "auth.users"
-    },
-    {
-      "label": "public.set_updated_at",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "public_set_updated_at",
-      "community": 13,
-      "community_name": "20260814000000_create_profiles.sql",
-      "norm_label": "public.set_updated_at"
-    },
-    {
       "label": "20260814000000_create_profiles.sql",
       "file_type": "code",
       "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
@@ -1511,6 +1489,28 @@
       "community": 13,
       "community_name": "20260814000000_create_profiles.sql",
       "norm_label": "public.set_updated_at()"
+    },
+    {
+      "label": "auth.users",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814000000_create_profiles_sql_auth_users",
+      "community": 13,
+      "community_name": "20260814000000_create_profiles.sql",
+      "norm_label": "auth.users"
+    },
+    {
+      "label": "public.set_updated_at",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814000000_create_profiles_sql_public_set_updated_at",
+      "community": 13,
+      "community_name": "20260814000000_create_profiles.sql",
+      "norm_label": "public.set_updated_at"
     },
     {
       "label": "prettier.config.mjs",
@@ -2017,6 +2017,94 @@
       "community": 20,
       "community_name": "marketing.tsx",
       "norm_label": "plans"
+    },
+    {
+      "label": "public",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "public",
+      "community": 21,
+      "community_name": "20260814010000_create_billing_tables.sql",
+      "norm_label": "public"
+    },
+    {
+      "label": "20260814010000_create_billing_tables.sql",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814010000_create_billing_tables",
+      "community": 21,
+      "community_name": "20260814010000_create_billing_tables.sql",
+      "norm_label": "20260814010000_create_billing_tables.sql"
+    },
+    {
+      "label": "billing_customers_set_updated_at",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814010000_create_billing_tables_billing_customers_set_updated_at",
+      "community": 21,
+      "community_name": "20260814010000_create_billing_tables.sql",
+      "norm_label": "billing_customers_set_updated_at"
+    },
+    {
+      "label": "public.billing_customers",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814010000_create_billing_tables_public_billing_customers",
+      "community": 21,
+      "community_name": "20260814010000_create_billing_tables.sql",
+      "norm_label": "public.billing_customers"
+    },
+    {
+      "label": "public.subscriptions",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814010000_create_billing_tables_public_subscriptions",
+      "community": 21,
+      "community_name": "20260814010000_create_billing_tables.sql",
+      "norm_label": "public.subscriptions"
+    },
+    {
+      "label": "auth.users",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814010000_create_billing_tables_sql_auth_users",
+      "community": 21,
+      "community_name": "20260814010000_create_billing_tables.sql",
+      "norm_label": "auth.users"
+    },
+    {
+      "label": "public.set_updated_at",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814010000_create_billing_tables_sql_public_set_updated_at",
+      "community": 21,
+      "community_name": "20260814010000_create_billing_tables.sql",
+      "norm_label": "public.set_updated_at"
+    },
+    {
+      "label": "subscriptions_set_updated_at",
+      "file_type": "code",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "supabase_migrations_20260814010000_create_billing_tables_subscriptions_set_updated_at",
+      "community": 21,
+      "community_name": "20260814010000_create_billing_tables.sql",
+      "norm_label": "subscriptions_set_updated_at"
     },
     {
       "label": "tsconfig.json",
@@ -8883,6 +8971,50 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814010000_create_billing_tables",
+      "target": "supabase_migrations_20260814010000_create_billing_tables_public_billing_customers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814010000_create_billing_tables",
+      "target": "supabase_migrations_20260814010000_create_billing_tables_billing_customers_set_updated_at",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814010000_create_billing_tables",
+      "target": "supabase_migrations_20260814010000_create_billing_tables_public_subscriptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814010000_create_billing_tables",
+      "target": "supabase_migrations_20260814010000_create_billing_tables_subscriptions_set_updated_at",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tsconfig.json",
       "source_location": "L2",
       "weight": 1.0,
@@ -9086,7 +9218,40 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "supabase_migrations_20260814000000_create_profiles_public_profiles",
-      "target": "auth_users",
+      "target": "supabase_migrations_20260814000000_create_profiles_sql_auth_users",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814010000_create_billing_tables_public_billing_customers",
+      "target": "supabase_migrations_20260814010000_create_billing_tables_sql_auth_users",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814010000_create_billing_tables_public_subscriptions",
+      "target": "public",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814010000_create_billing_tables_public_subscriptions",
+      "target": "supabase_migrations_20260814010000_create_billing_tables_public_billing_customers",
       "confidence_score": 1.0
     },
     {
@@ -9097,7 +9262,29 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "supabase_migrations_20260814000000_create_profiles_profiles_set_updated_at",
-      "target": "public_set_updated_at",
+      "target": "supabase_migrations_20260814000000_create_profiles_sql_public_set_updated_at",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "triggers",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814010000_create_billing_tables_billing_customers_set_updated_at",
+      "target": "supabase_migrations_20260814010000_create_billing_tables_sql_public_set_updated_at",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "triggers",
+      "confidence": "EXTRACTED",
+      "source_file": "supabase/migrations/20260814010000_create_billing_tables.sql",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "supabase_migrations_20260814010000_create_billing_tables_subscriptions_set_updated_at",
+      "target": "supabase_migrations_20260814010000_create_billing_tables_sql_public_set_updated_at",
       "confidence_score": 1.0
     },
     {
@@ -9528,5 +9715,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "5889e2e98d8fbddbee2211f2cd2bae1c068d0e10"
+  "built_at_commit": "21b95718ce3b7d24f4770a2a3682686a780ecdc2"
 }

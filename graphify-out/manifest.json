@@ -298,5 +298,10 @@
     "mtime": 1786700184.2645602,
     "ast_hash": "aedeb00a10bfcca1c1392737a7392f9c",
     "semantic_hash": ""
+  },
+  "supabase/migrations/20260814010000_create_billing_tables.sql": {
+    "mtime": 1786700988.2101326,
+    "ast_hash": "f3063ac1e499d37c7836aa35300fde7b",
+    "semantic_hash": ""
   }
 }

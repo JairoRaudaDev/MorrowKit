@@ -75,13 +75,13 @@
     "semantic_hash": ""
   },
   "src/app/layout.tsx": {
-    "mtime": 1786697239.5162666,
-    "ast_hash": "5ac82033965c790f25af2a4309a34da1",
+    "mtime": 1786700179.1705115,
+    "ast_hash": "289f771a92f75248bd9c43e2e220bf47",
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1786699256.048872,
-    "ast_hash": "9d8d84475f1054d3819dde66b28e98ba",
+    "mtime": 1786700179.1685116,
+    "ast_hash": "6915993eb86b4dbde2138e89b53db48a",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -287,6 +287,16 @@
   "graphify-out/memory/query_20260814_092941_create__dashboard_settings_with_display_name__futu.md": {
     "mtime": 1786699781.0188918,
     "ast_hash": "66fdbbc57706c5a79d915fff2ac4ab36",
+    "semantic_hash": ""
+  },
+  "src/app/pricing/page.tsx": {
+    "mtime": 1786700179.1695106,
+    "ast_hash": "9825790eea8033c03be373d7558256d7",
+    "semantic_hash": ""
+  },
+  "src/components/marketing.tsx": {
+    "mtime": 1786700184.2645602,
+    "ast_hash": "aedeb00a10bfcca1c1392737a7392f9c",
     "semantic_hash": ""
   }
 }
