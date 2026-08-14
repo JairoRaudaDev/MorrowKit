@@ -240,8 +240,18 @@
     "semantic_hash": ""
   },
   "src/lib/auth/validation.ts": {
-    "mtime": 1786699256.1353514,
-    "ast_hash": "92c0330eab165679fa566805f935659b",
+    "mtime": 1786699506.735815,
+    "ast_hash": "57f5ef7463a4de9991f45d15639130af",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/page.tsx": {
+    "mtime": 1786699506.7378285,
+    "ast_hash": "b62df5b689fc8937de082730c2d78a5e",
+    "semantic_hash": ""
+  },
+  "src/lib/auth/session.ts": {
+    "mtime": 1786699506.7368312,
+    "ast_hash": "b96c73a559b8e510e8a8b182686a5a2c",
     "semantic_hash": ""
   }
 }

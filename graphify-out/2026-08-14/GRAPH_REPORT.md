@@ -1,11 +1,11 @@
 # Graph Report - SaaSSeed  (2026-08-14)
 
 ## Corpus Check
-- 49 files · ~15,178 words
+- 49 files · ~15,146 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 274 nodes · 386 edges · 20 communities (17 shown, 3 thin omitted)
+- 274 nodes · 388 edges · 20 communities (17 shown, 3 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 

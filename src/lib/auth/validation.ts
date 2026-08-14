@@ -36,11 +36,14 @@ export function validateCredentials(
   };
 }
 
-export function safeNextPath(value: FormDataEntryValue | string | null) {
+export function safeNextPath(
+  value: FormDataEntryValue | string | null,
+  fallback = "/dashboard",
+) {
   const path = typeof value === "string" ? value : null;
 
   if (!path || !path.startsWith("/") || path.startsWith("//")) {
-    return "/";
+    return fallback;
   }
 
   return path;

@@ -210,8 +210,8 @@
     "semantic_hash": ""
   },
   "src/app/auth/actions.ts": {
-    "mtime": 1786699255.9232776,
-    "ast_hash": "660f31da76d36188fcb492a745781d8d",
+    "mtime": 1786699322.615547,
+    "ast_hash": "400c5e19a457122b926339500f1acf63",
     "semantic_hash": ""
   },
   "src/app/auth/callback/route.ts": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "src/app/signup/page.tsx": {
-    "mtime": 1786699256.015261,
-    "ast_hash": "b6ca932275199c2e4947fe8e279dcf75",
+    "mtime": 1786699322.6170764,
+    "ast_hash": "3ca201df694eb3012f1d9ba3ef45f051",
     "semantic_hash": ""
   },
   "src/components/auth-form.tsx": {
