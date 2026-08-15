@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1786830745.81595,
-    "ast_hash": "8b8a913c296c08cd6f594b8110d071e0",
+    "mtime": 1786831818.986997,
+    "ast_hash": "1da832410848badc6bf60aeb3988ff3b",
     "semantic_hash": ""
   },
   "README.md": {
@@ -532,6 +532,21 @@
   "src/components/form-feedback.tsx": {
     "mtime": 1786831565.57091,
     "ast_hash": "ed8dfc4d1f42f11078561b26f595b6de",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/20260815000000_harden_rls_privileges.sql": {
+    "mtime": 1786831818.971111,
+    "ast_hash": "12ba95381c4f8a49ac0dfd5bfc7743c6",
+    "semantic_hash": ""
+  },
+  "supabase/tests/database/rls_policies.test.sql": {
+    "mtime": 1786831871.6742191,
+    "ast_hash": "10d2b45d191a5429e999d432dc487173",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260815_220728_add_consistent_pending__success__validation__and_e.md": {
+    "mtime": 1786831648.757971,
+    "ast_hash": "0b889b9055efa8f274f4fc8b25a842dd",
     "semantic_hash": ""
   }
 }
