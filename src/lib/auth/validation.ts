@@ -1,40 +1,16 @@
-export type AuthFormState = {
-  errors?: Partial<Record<"email" | "password" | "confirmPassword", string[]>>;
-  message?: string;
-  values?: { email?: string };
-};
+import { z } from "zod";
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+export const credentialsSchema = z.object({
+  email: z.string().trim().toLowerCase().email("Enter a valid email address."),
+  password: z.string().min(8, "Password must be at least 8 characters."),
+});
 
-export function validateCredentials(
-  formData: FormData,
-  options: { confirmPassword?: boolean } = {},
-) {
-  const email = String(formData.get("email") ?? "")
-    .trim()
-    .toLowerCase();
-  const password = String(formData.get("password") ?? "");
-  const confirmPassword = String(formData.get("confirmPassword") ?? "");
-  const errors: NonNullable<AuthFormState["errors"]> = {};
-
-  if (!EMAIL_PATTERN.test(email)) {
-    errors.email = ["Enter a valid email address."];
-  }
-
-  if (password.length < 8) {
-    errors.password = ["Password must be at least 8 characters."];
-  }
-
-  if (options.confirmPassword && password !== confirmPassword) {
-    errors.confirmPassword = ["Passwords do not match."];
-  }
-
-  return {
-    data: { email, password },
-    errors,
-    success: Object.keys(errors).length === 0,
-  };
-}
+export const signupSchema = credentialsSchema
+  .extend({ confirmPassword: z.string() })
+  .refine((value) => value.password === value.confirmPassword, {
+    message: "Passwords do not match.",
+    path: ["confirmPassword"],
+  });
 
 export function safeNextPath(
   value: FormDataEntryValue | string | null,

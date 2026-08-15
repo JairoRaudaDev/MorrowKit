@@ -28,6 +28,7 @@ build
 button
 cache
 callback
+can
 card
 centralized
 check
@@ -80,6 +81,7 @@ directly
 display
 dom
 dropdown
+dsn
 edge
 email
 emit
@@ -119,10 +121,12 @@ gate
 generation
 get
 git
+global
 graph
 graphify
 group
 handled
+has
 header
 health
 hero
@@ -143,6 +147,7 @@ input
 insight
 insights
 instruction
+instrumentation
 integration
 integrity
 interop
@@ -168,6 +173,7 @@ lucide
 manager
 manifest
 mapping
+maps
 marketing
 media
 menu
@@ -183,6 +189,7 @@ name
 navbar
 navigation
 next
+nextjs
 node
 nodes
 only
@@ -234,8 +241,10 @@ readme
 rebuild
 reduction
 refresh
+register
 replace
 repository
+request
 require
 resend
 reset
@@ -244,6 +253,7 @@ resolve
 result
 root
 route
+router
 rsc
 rubric
 rules
@@ -256,6 +266,7 @@ secure
 seed
 semantic
 send
+sentry
 separate
 separator
 server
@@ -269,7 +280,6 @@ side
 signup
 sizes
 skip
-snapshot
 source
 specific
 sql
@@ -302,6 +312,7 @@ token
 track
 transactional
 transcription
+transition
 traversal
 trigger
 tsconfig
@@ -311,6 +322,7 @@ types
 typescript
 update
 updated
+upload
 url
 user
 users

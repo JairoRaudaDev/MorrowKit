@@ -35,6 +35,19 @@
   },
   "nodes": [
     {
+      "label": "AuthFormState",
+      "file_type": "code",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L23",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_app_auth_actions_authformstate",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "authformstate"
+    },
+    {
       "label": "AppShellProps",
       "file_type": "code",
       "source_file": "src/components/app-shell.tsx",
@@ -48,17 +61,17 @@
       "norm_label": "appshellprops"
     },
     {
-      "label": "ContainerProps",
+      "label": "AuthFormProps",
       "file_type": "code",
-      "source_file": "src/components/container.tsx",
+      "source_file": "src/components/auth-form.tsx",
       "source_location": "L13",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_components_container_containerprops",
+      "id": "src_components_auth_form_authformprops",
       "community": 1,
       "community_name": "cn",
-      "norm_label": "containerprops"
+      "norm_label": "authformprops"
     },
     {
       "label": "LogoProps",
@@ -83,34 +96,8 @@
       "_origin": "ast",
       "id": "src_components_auth_page_authpageprops",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "authpageprops"
-    },
-    {
-      "label": "Profile",
-      "file_type": "code",
-      "source_file": "src/lib/db/queries.ts",
-      "source_location": "L9",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_lib_db_queries_profile",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "profile"
-    },
-    {
-      "label": "Subscription",
-      "file_type": "code",
-      "source_file": "src/lib/db/queries.ts",
-      "source_location": "L15",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_lib_db_queries_subscription",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "subscription"
     },
     {
       "label": "Entitlements",
@@ -122,7 +109,7 @@
       "_origin": "ast",
       "id": "src_lib_entitlements_entitlements",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "entitlements"
     },
     {
@@ -135,7 +122,7 @@
       "_origin": "ast",
       "id": "src_lib_entitlements_plan",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "plan"
     },
     {
@@ -148,7 +135,7 @@
       "_origin": "ast",
       "id": "src_lib_premium_insights_premiuminsight",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "premiuminsight"
     },
     {
@@ -161,21 +148,8 @@
       "_origin": "ast",
       "id": "src_lib_premium_insights_premiuminsightsresult",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "premiuminsightsresult"
-    },
-    {
-      "label": "PaidPlan",
-      "file_type": "code",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L13",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_app_pricing_actions_paidplan",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "paidplan"
     },
     {
       "label": "CustomerIdentity",
@@ -228,6 +202,19 @@
       "community": 17,
       "community_name": "pricing/actions.ts",
       "norm_label": "stripewebhookevent"
+    },
+    {
+      "label": "ContainerProps",
+      "file_type": "code",
+      "source_file": "src/components/container.tsx",
+      "source_location": "L13",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_container_containerprops",
+      "community": 20,
+      "community_name": "marketing.tsx",
+      "norm_label": "containerprops"
     },
     {
       "label": "WelcomeEmailProps",
@@ -360,16 +347,42 @@
       "norm_label": "analyticsprovider"
     },
     {
+      "label": "AuthField",
+      "file_type": "code",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L21",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_app_auth_actions_authfield",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "authfield"
+    },
+    {
+      "label": "AuthValues",
+      "file_type": "code",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L22",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_app_auth_actions_authvalues",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "authvalues"
+    },
+    {
       "label": "ProfileFormState",
       "file_type": "code",
       "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L7",
+      "source_location": "L22",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_app_dashboard_settings_actions_profileformstate",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "profileformstate"
     },
     {
@@ -382,7 +395,7 @@
       "_origin": "ast",
       "id": "src_app_login_page_loginpageprops",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "loginpageprops"
     },
     {
@@ -395,34 +408,111 @@
       "_origin": "ast",
       "id": "src_app_signup_page_signuppageprops",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "signuppageprops"
     },
     {
-      "label": "AuthFormProps",
+      "label": "Profile",
       "file_type": "code",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L14",
+      "source_file": "src/lib/db/queries.ts",
+      "source_location": "L9",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_components_auth_form_authformprops",
+      "id": "src_lib_db_queries_profile",
       "community": 7,
-      "community_name": "createClient",
-      "norm_label": "authformprops"
+      "community_name": "auth/actions.ts",
+      "norm_label": "profile"
     },
     {
-      "label": "AuthFormState",
+      "label": "Subscription",
       "file_type": "code",
-      "source_file": "src/lib/auth/validation.ts",
-      "source_location": "L1",
+      "source_file": "src/lib/db/queries.ts",
+      "source_location": "L15",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_lib_auth_validation_authformstate",
+      "id": "src_lib_db_queries_subscription",
       "community": 7,
-      "community_name": "createClient",
-      "norm_label": "authformstate"
+      "community_name": "auth/actions.ts",
+      "norm_label": "subscription"
+    },
+    {
+      "label": "MutationContext",
+      "file_type": "code",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L43",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_server_mutation_mutationcontext",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "mutationcontext"
+    },
+    {
+      "label": "MutationError",
+      "file_type": "code",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L32",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_server_mutation_mutationerror",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "mutationerror"
+    },
+    {
+      "label": "MutationErrorCode",
+      "file_type": "code",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L9",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_server_mutation_mutationerrorcode",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "mutationerrorcode"
+    },
+    {
+      "label": "MutationResult",
+      "file_type": "code",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L16",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_server_mutation_mutationresult",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "mutationresult"
+    },
+    {
+      "label": "RunMutationOptions",
+      "file_type": "code",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L45",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_server_mutation_runmutationoptions",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "runmutationoptions"
+    },
+    {
+      "label": "ProfileForm()",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/profile-form.tsx",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_profile_form_profileform",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "profileform()"
     },
     {
       "label": "AppShell()",
@@ -437,16 +527,16 @@
       "norm_label": "appshell()"
     },
     {
-      "label": "Container()",
+      "label": "AuthForm()",
       "file_type": "code",
-      "source_file": "src/components/container.tsx",
+      "source_file": "src/components/auth-form.tsx",
       "source_location": "L18",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_components_container_container",
+      "id": "src_components_auth_form_authform",
       "community": 1,
       "community_name": "cn",
-      "norm_label": "container()"
+      "norm_label": "authform()"
     },
     {
       "label": "Breadcrumbs()",
@@ -567,6 +657,18 @@
       "community": 1,
       "community_name": "cn",
       "norm_label": "avatarimage()"
+    },
+    {
+      "label": "Button()",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L41",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_ui_button_button",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "button()"
     },
     {
       "label": "Dialog()",
@@ -869,6 +971,18 @@
       "norm_label": "dropdownmenutrigger()"
     },
     {
+      "label": "Input()",
+      "file_type": "code",
+      "source_file": "src/components/ui/input.tsx",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_ui_input_input",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "input()"
+    },
+    {
       "label": "Label()",
       "file_type": "code",
       "source_file": "src/components/ui/label.tsx",
@@ -913,7 +1027,7 @@
       "_origin": "ast",
       "id": "src_app_dashboard_billing_page_billingpage",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "billingpage()"
     },
     {
@@ -925,7 +1039,7 @@
       "_origin": "ast",
       "id": "src_app_dashboard_billing_page_formatdate",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "formatdate()"
     },
     {
@@ -937,8 +1051,20 @@
       "_origin": "ast",
       "id": "src_app_dashboard_insights_page_premiuminsightspage",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "premiuminsightspage()"
+    },
+    {
+      "label": "DashboardLayout()",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/layout.tsx",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_dashboard_layout_dashboardlayout",
+      "community": 11,
+      "community_name": "billing/page.tsx",
+      "norm_label": "dashboardlayout()"
     },
     {
       "label": "DashboardPage()",
@@ -949,32 +1075,20 @@
       "_origin": "ast",
       "id": "src_app_dashboard_page_dashboardpage",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "dashboardpage()"
     },
     {
-      "label": "AccountSettingsPage()",
+      "label": "DashboardShell()",
       "file_type": "code",
-      "source_file": "src/app/dashboard/settings/page.tsx",
-      "source_location": "L17",
+      "source_file": "src/components/dashboard-shell.tsx",
+      "source_location": "L164",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_app_dashboard_settings_page_accountsettingspage",
+      "id": "src_components_dashboard_shell_dashboardshell",
       "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "accountsettingspage()"
-    },
-    {
-      "label": "Button()",
-      "file_type": "code",
-      "source_file": "src/components/ui/button.tsx",
-      "source_location": "L41",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_ui_button_button",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "button()"
+      "community_name": "billing/page.tsx",
+      "norm_label": "dashboardshell()"
     },
     {
       "label": "Card()",
@@ -985,7 +1099,7 @@
       "_origin": "ast",
       "id": "src_components_ui_card_card",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "card()"
     },
     {
@@ -997,7 +1111,7 @@
       "_origin": "ast",
       "id": "src_components_ui_card_cardaction",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "cardaction()"
     },
     {
@@ -1009,7 +1123,7 @@
       "_origin": "ast",
       "id": "src_components_ui_card_cardcontent",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "cardcontent()"
     },
     {
@@ -1021,7 +1135,7 @@
       "_origin": "ast",
       "id": "src_components_ui_card_carddescription",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "carddescription()"
     },
     {
@@ -1033,7 +1147,7 @@
       "_origin": "ast",
       "id": "src_components_ui_card_cardfooter",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "cardfooter()"
     },
     {
@@ -1045,7 +1159,7 @@
       "_origin": "ast",
       "id": "src_components_ui_card_cardheader",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "cardheader()"
     },
     {
@@ -1057,8 +1171,20 @@
       "_origin": "ast",
       "id": "src_components_ui_card_cardtitle",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "cardtitle()"
+    },
+    {
+      "label": "requireAuth()",
+      "file_type": "code",
+      "source_file": "src/lib/auth/session.ts",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_auth_session_requireauth",
+      "community": 11,
+      "community_name": "billing/page.tsx",
+      "norm_label": "requireauth()"
     },
     {
       "label": "getEntitlements()",
@@ -1069,7 +1195,7 @@
       "_origin": "ast",
       "id": "src_lib_entitlements_getentitlements",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "getentitlements()"
     },
     {
@@ -1081,7 +1207,7 @@
       "_origin": "ast",
       "id": "src_lib_premium_insights_getpremiuminsights",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "getpremiuminsights()"
     },
     {
@@ -1100,85 +1226,13 @@
       "label": "createBillingPortalSession()",
       "file_type": "code",
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "_callable": true,
       "_origin": "ast",
       "id": "src_app_dashboard_billing_actions_createbillingportalsession",
       "community": 17,
       "community_name": "pricing/actions.ts",
       "norm_label": "createbillingportalsession()"
-    },
-    {
-      "label": "DashboardLayout()",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/layout.tsx",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_dashboard_layout_dashboardlayout",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "dashboardlayout()"
-    },
-    {
-      "label": "createCheckoutSession()",
-      "file_type": "code",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L19",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_pricing_actions_createcheckoutsession",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "createcheckoutsession()"
-    },
-    {
-      "label": "isPaidPlan()",
-      "file_type": "code",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L15",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_pricing_actions_ispaidplan",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "ispaidplan()"
-    },
-    {
-      "label": "DashboardShell()",
-      "file_type": "code",
-      "source_file": "src/components/dashboard-shell.tsx",
-      "source_location": "L164",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_dashboard_shell_dashboardshell",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "dashboardshell()"
-    },
-    {
-      "label": "track()",
-      "file_type": "code",
-      "source_file": "src/lib/analytics/track.ts",
-      "source_location": "L9",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_analytics_track_track",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "track()"
-    },
-    {
-      "label": "requireAuth()",
-      "file_type": "code",
-      "source_file": "src/lib/auth/session.ts",
-      "source_location": "L11",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_auth_session_requireauth",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "requireauth()"
     },
     {
       "label": "getOrCreateStripeCustomer()",
@@ -1299,6 +1353,18 @@
       "community": 20,
       "community_name": "marketing.tsx",
       "norm_label": "pricingpage()"
+    },
+    {
+      "label": "Container()",
+      "file_type": "code",
+      "source_file": "src/components/container.tsx",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_container_container",
+      "community": 20,
+      "community_name": "marketing.tsx",
+      "norm_label": "container()"
     },
     {
       "label": "CTA()",
@@ -1529,51 +1595,51 @@
       "norm_label": "globalerror()"
     },
     {
-      "label": "authErrorMessage()",
+      "label": "authError()",
       "file_type": "code",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L14",
+      "source_location": "L25",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_app_auth_actions_autherrormessage",
+      "id": "src_app_auth_actions_autherror",
       "community": 7,
-      "community_name": "createClient",
-      "norm_label": "autherrormessage()"
+      "community_name": "auth/actions.ts",
+      "norm_label": "autherror()"
     },
     {
       "label": "login()",
       "file_type": "code",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L33",
+      "source_location": "L56",
       "_callable": true,
       "_origin": "ast",
       "id": "src_app_auth_actions_login",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "login()"
     },
     {
       "label": "logout()",
       "file_type": "code",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L94",
+      "source_location": "L106",
       "_callable": true,
       "_origin": "ast",
       "id": "src_app_auth_actions_logout",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "logout()"
     },
     {
       "label": "signup()",
       "file_type": "code",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L56",
+      "source_location": "L75",
       "_callable": true,
       "_origin": "ast",
       "id": "src_app_auth_actions_signup",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "signup()"
     },
     {
@@ -1585,32 +1651,32 @@
       "_origin": "ast",
       "id": "src_app_auth_callback_route_get",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "get()"
     },
     {
       "label": "updateProfile()",
       "file_type": "code",
       "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L13",
+      "source_location": "L27",
       "_callable": true,
       "_origin": "ast",
       "id": "src_app_dashboard_settings_actions_updateprofile",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "updateprofile()"
     },
     {
-      "label": "ProfileForm()",
+      "label": "AccountSettingsPage()",
       "file_type": "code",
-      "source_file": "src/app/dashboard/settings/profile-form.tsx",
-      "source_location": "L12",
+      "source_file": "src/app/dashboard/settings/page.tsx",
+      "source_location": "L17",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_app_dashboard_settings_profile_form_profileform",
+      "id": "src_app_dashboard_settings_page_accountsettingspage",
       "community": 7,
-      "community_name": "createClient",
-      "norm_label": "profileform()"
+      "community_name": "auth/actions.ts",
+      "norm_label": "accountsettingspage()"
     },
     {
       "label": "LoginPage()",
@@ -1621,8 +1687,20 @@
       "_origin": "ast",
       "id": "src_app_login_page_loginpage",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "loginpage()"
+    },
+    {
+      "label": "createCheckoutSession()",
+      "file_type": "code",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_pricing_actions_createcheckoutsession",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "createcheckoutsession()"
     },
     {
       "label": "SignupPage()",
@@ -1633,20 +1711,8 @@
       "_origin": "ast",
       "id": "src_app_signup_page_signuppage",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "signuppage()"
-    },
-    {
-      "label": "AuthForm()",
-      "file_type": "code",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L19",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_auth_form_authform",
-      "community": 7,
-      "community_name": "createClient",
-      "norm_label": "authform()"
     },
     {
       "label": "AuthPage()",
@@ -1657,44 +1723,68 @@
       "_origin": "ast",
       "id": "src_components_auth_page_authpage",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "authpage()"
     },
     {
-      "label": "Input()",
+      "label": "track()",
       "file_type": "code",
-      "source_file": "src/components/ui/input.tsx",
-      "source_location": "L5",
+      "source_file": "src/lib/analytics/track.ts",
+      "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_components_ui_input_input",
+      "id": "src_lib_analytics_track_track",
       "community": 7,
-      "community_name": "createClient",
-      "norm_label": "input()"
+      "community_name": "auth/actions.ts",
+      "norm_label": "track()"
     },
     {
       "label": "safeNextPath()",
       "file_type": "code",
       "source_file": "src/lib/auth/validation.ts",
-      "source_location": "L39",
+      "source_location": "L15",
       "_callable": true,
       "_origin": "ast",
       "id": "src_lib_auth_validation_safenextpath",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "safenextpath()"
     },
     {
-      "label": "validateCredentials()",
+      "label": "formDataToObject()",
       "file_type": "code",
-      "source_file": "src/lib/auth/validation.ts",
-      "source_location": "L9",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L54",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_auth_validation_validatecredentials",
+      "id": "src_lib_server_mutation_formdatatoobject",
       "community": 7,
-      "community_name": "createClient",
-      "norm_label": "validatecredentials()"
+      "community_name": "auth/actions.ts",
+      "norm_label": "formdatatoobject()"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L33",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_server_mutation_mutationerror_constructor",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "runMutation()",
+      "file_type": "code",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L58",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_server_mutation_runmutation",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "runmutation()"
     },
     {
       "label": "createClient()",
@@ -1705,7 +1795,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_server_createclient",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "createclient()"
     },
     {
@@ -1721,6 +1811,39 @@
       "norm_label": "rootlayout()"
     },
     {
+      "label": "settings/page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_page",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "settings/page.tsx"
+    },
+    {
+      "label": "profile-form.tsx",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/profile-form.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_profile_form",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "profile-form.tsx"
+    },
+    {
+      "label": "initialState",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/settings/profile-form.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_app_dashboard_settings_profile_form_initialstate",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "initialstate"
+    },
+    {
       "label": "app-shell.tsx",
       "file_type": "code",
       "source_file": "src/components/app-shell.tsx",
@@ -1732,26 +1855,26 @@
       "norm_label": "app-shell.tsx"
     },
     {
-      "label": "container.tsx",
+      "label": "auth-form.tsx",
       "file_type": "code",
-      "source_file": "src/components/container.tsx",
+      "source_file": "src/components/auth-form.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_container",
+      "id": "src_components_auth_form",
       "community": 1,
       "community_name": "cn",
-      "norm_label": "container.tsx"
+      "norm_label": "auth-form.tsx"
     },
     {
-      "label": "containerSizes",
+      "label": "initialState",
       "file_type": "code",
-      "source_file": "src/components/container.tsx",
-      "source_location": "L5",
+      "source_file": "src/components/auth-form.tsx",
+      "source_location": "L11",
       "_origin": "ast",
-      "id": "src_components_container_containersizes",
+      "id": "src_components_auth_form_initialstate",
       "community": 1,
       "community_name": "cn",
-      "norm_label": "containersizes"
+      "norm_label": "initialstate"
     },
     {
       "label": "dashboard-shell.tsx",
@@ -1787,6 +1910,28 @@
       "norm_label": "avatar.tsx"
     },
     {
+      "label": "button.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_button",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "button.tsx"
+    },
+    {
+      "label": "buttonVariants",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_components_ui_button_buttonvariants",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "buttonvariants"
+    },
+    {
       "label": "dialog.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/dialog.tsx",
@@ -1807,6 +1952,17 @@
       "community": 1,
       "community_name": "cn",
       "norm_label": "dropdown-menu.tsx"
+    },
+    {
+      "label": "input.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/input.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_input",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "input.tsx"
     },
     {
       "label": "label.tsx",
@@ -1871,7 +2027,7 @@
       "_origin": "ast",
       "id": "src_app_dashboard_billing_page",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "billing/page.tsx"
     },
     {
@@ -1882,7 +2038,7 @@
       "_origin": "ast",
       "id": "src_app_dashboard_billing_page_planlabels",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "planlabels"
     },
     {
@@ -1893,7 +2049,7 @@
       "_origin": "ast",
       "id": "src_app_dashboard_billing_page_statuslabels",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "statuslabels"
     },
     {
@@ -1904,8 +2060,19 @@
       "_origin": "ast",
       "id": "src_app_dashboard_insights_page",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "insights/page.tsx"
+    },
+    {
+      "label": "dashboard/layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/dashboard/layout.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_app_dashboard_layout",
+      "community": 11,
+      "community_name": "billing/page.tsx",
+      "norm_label": "dashboard/layout.tsx"
     },
     {
       "label": "dashboard/page.tsx",
@@ -1915,7 +2082,7 @@
       "_origin": "ast",
       "id": "src_app_dashboard_page",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "dashboard/page.tsx"
     },
     {
@@ -1926,19 +2093,8 @@
       "_origin": "ast",
       "id": "src_app_dashboard_page_stats",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "stats"
-    },
-    {
-      "label": "settings/page.tsx",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_page",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "settings/page.tsx"
     },
     {
       "label": "auth-page.tsx",
@@ -1948,30 +2104,8 @@
       "_origin": "ast",
       "id": "src_components_auth_page",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "auth-page.tsx"
-    },
-    {
-      "label": "button.tsx",
-      "file_type": "code",
-      "source_file": "src/components/ui/button.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_ui_button",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "button.tsx"
-    },
-    {
-      "label": "buttonVariants",
-      "file_type": "code",
-      "source_file": "src/components/ui/button.tsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_components_ui_button_buttonvariants",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "buttonvariants"
     },
     {
       "label": "card.tsx",
@@ -1981,41 +2115,19 @@
       "_origin": "ast",
       "id": "src_components_ui_card",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "card.tsx"
     },
     {
-      "label": "queries.ts",
+      "label": "session.ts",
       "file_type": "code",
-      "source_file": "src/lib/db/queries.ts",
+      "source_file": "src/lib/auth/session.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_db_queries",
+      "id": "src_lib_auth_session",
       "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "queries.ts"
-    },
-    {
-      "label": "getCurrentUser",
-      "file_type": "code",
-      "source_file": "src/lib/db/queries.ts",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "src_lib_db_queries_getcurrentuser",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "getcurrentuser"
-    },
-    {
-      "label": "getProfile",
-      "file_type": "code",
-      "source_file": "src/lib/db/queries.ts",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "src_lib_db_queries_getprofile",
-      "community": 11,
-      "community_name": "settings/page.tsx",
-      "norm_label": "getprofile"
+      "community_name": "billing/page.tsx",
+      "norm_label": "session.ts"
     },
     {
       "label": "getSubscription",
@@ -2025,7 +2137,7 @@
       "_origin": "ast",
       "id": "src_lib_db_queries_getsubscription",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "getsubscription"
     },
     {
@@ -2036,7 +2148,7 @@
       "_origin": "ast",
       "id": "src_lib_entitlements",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "entitlements.ts"
     },
     {
@@ -2047,7 +2159,7 @@
       "_origin": "ast",
       "id": "src_lib_entitlements_entitledsubscriptionstatuses",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "entitledsubscriptionstatuses"
     },
     {
@@ -2058,7 +2170,7 @@
       "_origin": "ast",
       "id": "src_lib_entitlements_freeentitlements",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "freeentitlements"
     },
     {
@@ -2069,7 +2181,7 @@
       "_origin": "ast",
       "id": "src_lib_premium_insights",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "premium-insights.ts"
     },
     {
@@ -2080,7 +2192,7 @@
       "_origin": "ast",
       "id": "src_lib_premium_insights_demoinsights",
       "community": 11,
-      "community_name": "settings/page.tsx",
+      "community_name": "billing/page.tsx",
       "norm_label": "demoinsights"
     },
     {
@@ -2238,17 +2350,6 @@
       "norm_label": "billing/actions.ts"
     },
     {
-      "label": "dashboard/layout.tsx",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/layout.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_dashboard_layout",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "dashboard/layout.tsx"
-    },
-    {
       "label": "pricing/actions.ts",
       "file_type": "code",
       "source_file": "src/app/pricing/actions.ts",
@@ -2260,26 +2361,15 @@
       "norm_label": "pricing/actions.ts"
     },
     {
-      "label": "paidPlans",
+      "label": "checkoutSchema",
       "file_type": "code",
       "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L12",
+      "source_location": "L17",
       "_origin": "ast",
-      "id": "src_app_pricing_actions_paidplans",
+      "id": "src_app_pricing_actions_checkoutschema",
       "community": 17,
       "community_name": "pricing/actions.ts",
-      "norm_label": "paidplans"
-    },
-    {
-      "label": "session.ts",
-      "file_type": "code",
-      "source_file": "src/lib/auth/session.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_lib_auth_session",
-      "community": 17,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "session.ts"
+      "norm_label": "checkoutschema"
     },
     {
       "label": "stripe/client.ts",
@@ -2654,6 +2744,28 @@
       "community": 20,
       "community_name": "marketing.tsx",
       "norm_label": "metadata"
+    },
+    {
+      "label": "container.tsx",
+      "file_type": "code",
+      "source_file": "src/components/container.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_container",
+      "community": 20,
+      "community_name": "marketing.tsx",
+      "norm_label": "container.tsx"
+    },
+    {
+      "label": "containerSizes",
+      "file_type": "code",
+      "source_file": "src/components/container.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_components_container_containersizes",
+      "community": 20,
+      "community_name": "marketing.tsx",
+      "norm_label": "containersizes"
     },
     {
       "label": "marketing.tsx",
@@ -3770,7 +3882,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 6,
@@ -3781,7 +3893,7 @@
       "label": "eslint",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "package_devdependencies_eslint",
       "community": 6,
@@ -3792,7 +3904,7 @@
       "label": "eslint-config-next",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "package_devdependencies_eslint_config_next",
       "community": 6,
@@ -3803,7 +3915,7 @@
       "label": "prettier",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "package_devdependencies_prettier",
       "community": 6,
@@ -3814,7 +3926,7 @@
       "label": "prettier-plugin-tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "package_devdependencies_prettier_plugin_tailwindcss",
       "community": 6,
@@ -3825,7 +3937,7 @@
       "label": "supabase",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "package_devdependencies_supabase",
       "community": 6,
@@ -3836,7 +3948,7 @@
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
       "community": 6,
@@ -3847,7 +3959,7 @@
       "label": "@tailwindcss/postcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_postcss",
       "community": 6,
@@ -3858,7 +3970,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "package_devdependencies_types_node",
       "community": 6,
@@ -3869,7 +3981,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 6,
@@ -3880,7 +3992,7 @@
       "label": "@types/react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "package_devdependencies_types_react_dom",
       "community": 6,
@@ -3891,7 +4003,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 6,
@@ -3902,7 +4014,7 @@
       "label": "eslint",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "eslint",
       "community": 6,
@@ -3913,7 +4025,7 @@
       "label": "eslint-config-next",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "eslint_config_next",
       "community": 6,
@@ -3924,7 +4036,7 @@
       "label": "prettier",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "package_json_prettier",
       "community": 6,
@@ -3935,7 +4047,7 @@
       "label": "prettier-plugin-tailwindcss",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "package_json_prettier_plugin_tailwindcss",
       "community": 6,
@@ -3946,7 +4058,7 @@
       "label": "supabase",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "supabase",
       "community": 6,
@@ -3957,7 +4069,7 @@
       "label": "tailwindcss",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "tailwindcss",
       "community": 6,
@@ -3968,7 +4080,7 @@
       "label": "@tailwindcss/postcss",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "tailwindcss_postcss",
       "community": 6,
@@ -3979,7 +4091,7 @@
       "label": "@types/node",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "types_node",
       "community": 6,
@@ -3990,7 +4102,7 @@
       "label": "@types/react",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "types_react",
       "community": 6,
@@ -4001,7 +4113,7 @@
       "label": "@types/react-dom",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "types_react_dom",
       "community": 6,
@@ -4012,7 +4124,7 @@
       "label": "typescript",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "typescript",
       "community": 6,
@@ -4027,7 +4139,7 @@
       "_origin": "ast",
       "id": "src_app_auth_actions",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "auth/actions.ts"
     },
     {
@@ -4038,7 +4150,7 @@
       "_origin": "ast",
       "id": "src_app_auth_callback_route",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "callback/route.ts"
     },
     {
@@ -4049,30 +4161,19 @@
       "_origin": "ast",
       "id": "src_app_dashboard_settings_actions",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "settings/actions.ts"
     },
     {
-      "label": "profile-form.tsx",
+      "label": "profileSchema",
       "file_type": "code",
-      "source_file": "src/app/dashboard/settings/profile-form.tsx",
-      "source_location": "L1",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L14",
       "_origin": "ast",
-      "id": "src_app_dashboard_settings_profile_form",
+      "id": "src_app_dashboard_settings_actions_profileschema",
       "community": 7,
-      "community_name": "createClient",
-      "norm_label": "profile-form.tsx"
-    },
-    {
-      "label": "initialState",
-      "file_type": "code",
-      "source_file": "src/app/dashboard/settings/profile-form.tsx",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "src_app_dashboard_settings_profile_form_initialstate",
-      "community": 7,
-      "community_name": "createClient",
-      "norm_label": "initialstate"
+      "community_name": "auth/actions.ts",
+      "norm_label": "profileschema"
     },
     {
       "label": "login/page.tsx",
@@ -4082,7 +4183,7 @@
       "_origin": "ast",
       "id": "src_app_login_page",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "login/page.tsx"
     },
     {
@@ -4093,41 +4194,8 @@
       "_origin": "ast",
       "id": "src_app_signup_page",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "signup/page.tsx"
-    },
-    {
-      "label": "auth-form.tsx",
-      "file_type": "code",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_auth_form",
-      "community": 7,
-      "community_name": "createClient",
-      "norm_label": "auth-form.tsx"
-    },
-    {
-      "label": "initialState",
-      "file_type": "code",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_components_auth_form_initialstate",
-      "community": 7,
-      "community_name": "createClient",
-      "norm_label": "initialstate"
-    },
-    {
-      "label": "input.tsx",
-      "file_type": "code",
-      "source_file": "src/components/ui/input.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_ui_input",
-      "community": 7,
-      "community_name": "createClient",
-      "norm_label": "input.tsx"
     },
     {
       "label": "auth/validation.ts",
@@ -4137,8 +4205,74 @@
       "_origin": "ast",
       "id": "src_lib_auth_validation",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "auth/validation.ts"
+    },
+    {
+      "label": "credentialsSchema",
+      "file_type": "code",
+      "source_file": "src/lib/auth/validation.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_lib_auth_validation_credentialsschema",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "credentialsschema"
+    },
+    {
+      "label": "signupSchema",
+      "file_type": "code",
+      "source_file": "src/lib/auth/validation.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_lib_auth_validation_signupschema",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "signupschema"
+    },
+    {
+      "label": "queries.ts",
+      "file_type": "code",
+      "source_file": "src/lib/db/queries.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_db_queries",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "queries.ts"
+    },
+    {
+      "label": "getCurrentUser",
+      "file_type": "code",
+      "source_file": "src/lib/db/queries.ts",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "src_lib_db_queries_getcurrentuser",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "getcurrentuser"
+    },
+    {
+      "label": "getProfile",
+      "file_type": "code",
+      "source_file": "src/lib/db/queries.ts",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "src_lib_db_queries_getprofile",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "getprofile"
+    },
+    {
+      "label": "mutation.ts",
+      "file_type": "code",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_lib_server_mutation",
+      "community": 7,
+      "community_name": "auth/actions.ts",
+      "norm_label": "mutation.ts"
     },
     {
       "label": "supabase/server.ts",
@@ -4148,7 +4282,7 @@
       "_origin": "ast",
       "id": "src_lib_supabase_server",
       "community": 7,
-      "community_name": "createClient",
+      "community_name": "auth/actions.ts",
       "norm_label": "supabase/server.ts"
     },
     {
@@ -4339,6 +4473,17 @@
       "norm_label": "tw-animate-css"
     },
     {
+      "label": "zod",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "package_dependencies_zod",
+      "community": 8,
+      "community_name": "dependencies",
+      "norm_label": "zod"
+    },
+    {
       "label": "class-variance-authority",
       "file_type": "concept",
       "source_file": "package.json",
@@ -4513,6 +4658,17 @@
       "community": 8,
       "community_name": "dependencies",
       "norm_label": "tw-animate-css"
+    },
+    {
+      "label": "zod",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "zod",
+      "community": 8,
+      "community_name": "dependencies",
+      "norm_label": "zod"
     },
     {
       "label": "app/layout.tsx",
@@ -5021,11 +5177,11 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L37",
+      "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions_login",
-      "target": "src_lib_auth_validation_validatecredentials"
+      "target": "src_lib_server_mutation_runmutation"
     },
     {
       "relation": "calls",
@@ -5033,7 +5189,19 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L43",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions_login",
+      "target": "src_lib_server_mutation_formdatatoobject"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions_login",
@@ -5044,11 +5212,11 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L48",
+      "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions_login",
-      "target": "src_app_auth_actions_autherrormessage",
+      "target": "src_app_auth_actions_autherror",
       "confidence_score": 1.0
     },
     {
@@ -5057,7 +5225,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L53",
+      "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions_login",
@@ -5069,7 +5237,19 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L95",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions_logout",
+      "target": "src_lib_server_mutation_runmutation"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L112",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions_logout",
@@ -5079,13 +5259,13 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L60",
+      "source_location": "L114",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_app_auth_actions_signup",
-      "target": "src_lib_auth_validation_validatecredentials"
+      "source": "src_app_auth_actions_logout",
+      "target": "src_app_auth_actions_autherror",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -5093,7 +5273,31 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L66",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions_signup",
+      "target": "src_lib_server_mutation_runmutation"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions_signup",
+      "target": "src_lib_server_mutation_formdatatoobject"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L85",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions_signup",
@@ -5105,7 +5309,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L67",
+      "source_location": "L86",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions_signup",
@@ -5116,11 +5320,11 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L78",
+      "source_location": "L93",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions_signup",
-      "target": "src_app_auth_actions_autherrormessage",
+      "target": "src_app_auth_actions_autherror",
       "confidence_score": 1.0
     },
     {
@@ -5129,7 +5333,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L83",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions_signup",
@@ -5165,11 +5369,11 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions_createbillingportalsession",
-      "target": "src_lib_auth_session_requireauth"
+      "target": "src_lib_server_mutation_runmutation"
     },
     {
       "relation": "calls",
@@ -5177,7 +5381,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L18",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions_createbillingportalsession",
@@ -5261,7 +5465,31 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L17",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_dashboard_settings_actions_updateprofile",
+      "target": "src_lib_server_mutation_runmutation"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_dashboard_settings_actions_updateprofile",
+      "target": "src_lib_server_mutation_formdatatoobject"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_settings_actions_updateprofile",
@@ -5325,19 +5553,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_pricing_actions_createcheckoutsession",
-      "target": "src_lib_auth_session_requireauth"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions_createcheckoutsession",
-      "target": "src_app_pricing_actions_ispaidplan",
-      "confidence_score": 1.0
+      "target": "src_lib_server_mutation_runmutation"
     },
     {
       "relation": "calls",
@@ -5345,7 +5561,19 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L32",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions_createcheckoutsession",
+      "target": "src_lib_server_mutation_formdatatoobject"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_pricing_actions_createcheckoutsession",
@@ -5357,7 +5585,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L59",
+      "source_location": "L53",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_pricing_actions_createcheckoutsession",
@@ -5956,6 +6184,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation_runmutation",
+      "target": "src_lib_supabase_server_createclient"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "src/lib/stripe/customer.ts",
       "source_location": "L23",
       "weight": 1.0,
@@ -6413,7 +6653,19 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L41",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast",
+      "source": "package_dependencies_zod",
+      "target": "zod",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L48",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6425,7 +6677,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L49",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6437,7 +6689,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6449,7 +6701,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6461,7 +6713,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6473,7 +6725,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L53",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6485,7 +6737,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6497,7 +6749,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6509,7 +6761,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6521,7 +6773,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6533,7 +6785,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L54",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -6582,7 +6834,55 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L12",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions",
+      "target": "src_lib_server_mutation_formdatatoobject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions",
+      "target": "src_lib_server_mutation_mutationerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions",
+      "target": "src_lib_server_mutation_mutationresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions",
+      "target": "src_lib_server_mutation_runmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
@@ -6594,7 +6894,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
@@ -6606,7 +6906,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
@@ -6618,11 +6918,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
-      "target": "src_lib_auth_validation_authformstate",
+      "target": "src_lib_auth_validation_credentialsschema",
       "confidence_score": 1.0
     },
     {
@@ -6630,7 +6930,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
@@ -6642,11 +6942,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
-      "target": "src_lib_auth_validation_validatecredentials",
+      "target": "src_lib_auth_validation_signupschema",
       "confidence_score": 1.0
     },
     {
@@ -6678,7 +6978,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions",
@@ -6690,11 +6990,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions",
-      "target": "src_lib_auth_session_requireauth",
+      "target": "src_lib_server_mutation_mutationerror",
       "confidence_score": 1.0
     },
     {
@@ -6706,7 +7006,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions",
-      "target": "src_lib_stripe_client_stripe",
+      "target": "src_lib_server_mutation_runmutation",
       "confidence_score": 1.0
     },
     {
@@ -6715,6 +7015,18 @@
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/billing/actions.ts",
       "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_dashboard_billing_actions",
+      "target": "src_lib_stripe_client_stripe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/dashboard/billing/actions.ts",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions",
@@ -7026,11 +7338,59 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L5",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_settings_actions",
       "target": "src_lib_supabase_server_createclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_dashboard_settings_actions",
+      "target": "src_lib_server_mutation_formdatatoobject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_dashboard_settings_actions",
+      "target": "src_lib_server_mutation_mutationerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_dashboard_settings_actions",
+      "target": "src_lib_server_mutation_mutationresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_dashboard_settings_actions",
+      "target": "src_lib_server_mutation_runmutation",
       "confidence_score": 1.0
     },
     {
@@ -7362,55 +7722,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L10",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_lib_stripe_customer_getorcreatestripecustomer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_env_public_publicenv",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_lib_analytics_track_track",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_lib_auth_session_requireauth",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L8",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_pricing_actions",
@@ -7422,11 +7734,83 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L9",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_pricing_actions",
       "target": "src_lib_stripe_config_stripeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_stripe_customer_getorcreatestripecustomer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_env_public_publicenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_analytics_track_track",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_server_mutation_formdatatoobject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_server_mutation_mutationerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_server_mutation_runmutation",
       "confidence_score": 1.0
     },
     {
@@ -7530,11 +7914,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/auth-form.tsx",
-      "source_location": "L10",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_auth_form",
-      "target": "src_lib_auth_validation_authformstate",
+      "target": "src_app_auth_actions_authformstate",
       "confidence_score": 1.0
     },
     {
@@ -8345,6 +8729,18 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation",
+      "target": "src_lib_supabase_server_createclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/lib/stripe/client.ts",
       "source_location": "L5",
       "weight": 1.0,
@@ -8562,7 +8958,19 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L12",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions",
+      "target": "src_lib_server_mutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
@@ -8574,7 +8982,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
@@ -8586,7 +8994,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
@@ -8598,7 +9006,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
@@ -8634,7 +9042,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions",
@@ -8646,11 +9054,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions",
-      "target": "src_lib_auth_session",
+      "target": "src_lib_server_mutation",
       "confidence_score": 1.0
     },
     {
@@ -8658,7 +9066,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions",
@@ -8670,7 +9078,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions",
@@ -8826,11 +9234,23 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L5",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_settings_actions",
       "target": "src_lib_supabase_server",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_dashboard_settings_actions",
+      "target": "src_lib_server_mutation",
       "confidence_score": 1.0
     },
     {
@@ -9030,55 +9450,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L10",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_lib_stripe_customer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_env_public",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_lib_analytics_track",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_lib_auth_session",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L8",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_pricing_actions",
@@ -9090,11 +9462,59 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L9",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_pricing_actions",
       "target": "src_lib_stripe_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_stripe_customer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_env_public",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_analytics_track",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/pricing/actions.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_pricing_actions",
+      "target": "src_lib_server_mutation",
       "confidence_score": 1.0
     },
     {
@@ -9155,18 +9575,6 @@
       "_origin": "ast",
       "source": "src_components_app_shell",
       "target": "src_lib_utils",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/auth-form.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_auth_form",
-      "target": "src_lib_auth_validation",
       "confidence_score": 1.0
     },
     {
@@ -9731,6 +10139,18 @@
       "_origin": "ast",
       "source": "src_lib_premium_insights",
       "target": "src_lib_entitlements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation",
+      "target": "src_lib_supabase_server",
       "confidence_score": 1.0
     },
     {
@@ -10303,7 +10723,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package",
@@ -10523,11 +10943,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_postcss",
+      "source": "package_dependencies",
+      "target": "package_dependencies_zod",
       "confidence_score": 1.0
     },
     {
@@ -10538,7 +10958,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
+      "target": "package_devdependencies_tailwindcss_postcss",
       "confidence_score": 1.0
     },
     {
@@ -10549,7 +10969,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
+      "target": "package_devdependencies_types_node",
       "confidence_score": 1.0
     },
     {
@@ -10560,7 +10980,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
+      "target": "package_devdependencies_types_react",
       "confidence_score": 1.0
     },
     {
@@ -10571,7 +10991,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint",
+      "target": "package_devdependencies_types_react_dom",
       "confidence_score": 1.0
     },
     {
@@ -10582,7 +11002,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_config_next",
+      "target": "package_devdependencies_eslint",
       "confidence_score": 1.0
     },
     {
@@ -10593,7 +11013,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_prettier",
+      "target": "package_devdependencies_eslint_config_next",
       "confidence_score": 1.0
     },
     {
@@ -10604,7 +11024,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_prettier_plugin_tailwindcss",
+      "target": "package_devdependencies_prettier",
       "confidence_score": 1.0
     },
     {
@@ -10615,7 +11035,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_supabase",
+      "target": "package_devdependencies_prettier_plugin_tailwindcss",
       "confidence_score": 1.0
     },
     {
@@ -10626,7 +11046,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
+      "target": "package_devdependencies_supabase",
       "confidence_score": 1.0
     },
     {
@@ -10634,6 +11054,17 @@
       "confidence": "EXTRACTED",
       "source_file": "package.json",
       "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
@@ -10875,22 +11306,55 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L14",
+      "source_location": "L106",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
-      "target": "src_app_auth_actions_autherrormessage",
+      "target": "src_app_auth_actions_logout",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L33",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
-      "target": "src_app_auth_actions_login",
+      "target": "src_app_auth_actions_authfield",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions",
+      "target": "src_app_auth_actions_authvalues",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions",
+      "target": "src_app_auth_actions_authformstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/auth/actions.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_auth_actions",
+      "target": "src_app_auth_actions_autherror",
       "confidence_score": 1.0
     },
     {
@@ -10901,18 +11365,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
-      "target": "src_app_auth_actions_signup",
+      "target": "src_app_auth_actions_login",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/auth/actions.ts",
-      "source_location": "L94",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_auth_actions",
-      "target": "src_app_auth_actions_logout",
+      "target": "src_app_auth_actions_signup",
       "confidence_score": 1.0
     },
     {
@@ -10930,7 +11394,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/billing/actions.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_billing_actions",
@@ -11029,22 +11493,33 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_settings_actions",
-      "target": "src_app_dashboard_settings_actions_updateprofile",
+      "target": "src_app_dashboard_settings_actions_profileschema",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/dashboard/settings/actions.ts",
-      "source_location": "L7",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_dashboard_settings_actions",
       "target": "src_app_dashboard_settings_actions_profileformstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/dashboard/settings/actions.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_app_dashboard_settings_actions",
+      "target": "src_app_dashboard_settings_actions_updateprofile",
       "confidence_score": 1.0
     },
     {
@@ -11150,33 +11625,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L12",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_pricing_actions",
-      "target": "src_app_pricing_actions_paidplans",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_app_pricing_actions_paidplan",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/pricing/actions.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_pricing_actions",
-      "target": "src_app_pricing_actions_ispaidplan",
+      "target": "src_app_pricing_actions_checkoutschema",
       "confidence_score": 1.0
     },
     {
@@ -11260,7 +11713,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/auth-form.tsx",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_auth_form",
@@ -11271,7 +11724,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/auth-form.tsx",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_auth_form",
@@ -11282,7 +11735,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/auth-form.tsx",
-      "source_location": "L19",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_auth_form",
@@ -12151,18 +12604,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/auth/validation.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_auth_validation",
-      "target": "src_lib_auth_validation_authformstate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/auth/validation.ts",
-      "source_location": "L39",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_auth_validation",
@@ -12173,11 +12615,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/auth/validation.ts",
-      "source_location": "L9",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_auth_validation",
-      "target": "src_lib_auth_validation_validatecredentials",
+      "target": "src_lib_auth_validation_credentialsschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/auth/validation.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_auth_validation",
+      "target": "src_lib_auth_validation_signupschema",
       "confidence_score": 1.0
     },
     {
@@ -12409,6 +12862,83 @@
       "_origin": "ast",
       "source": "src_lib_premium_insights",
       "target": "src_lib_premium_insights_premiuminsight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation",
+      "target": "src_lib_server_mutation_mutationresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation",
+      "target": "src_lib_server_mutation_mutationerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation",
+      "target": "src_lib_server_mutation_mutationcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation",
+      "target": "src_lib_server_mutation_runmutationoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation",
+      "target": "src_lib_server_mutation_formdatatoobject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation",
+      "target": "src_lib_server_mutation_runmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation",
+      "target": "src_lib_server_mutation_mutationerrorcode",
       "confidence_score": 1.0
     },
     {
@@ -12958,6 +13488,17 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/server/mutation.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_server_mutation_mutationerror",
+      "target": "src_lib_server_mutation_mutationerror_constructor",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
@@ -13462,5 +14003,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "e0fa2eb2c49d290f6d8a2a170070c46a0a6504fc"
+  "built_at_commit": "ae0ee186f8b2a1f164e170e6a8ec68b0620e87ca"
 }

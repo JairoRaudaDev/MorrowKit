@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const initialState: ProfileFormState = {};
+const initialState: ProfileFormState = { ok: true, data: undefined };
 
 export function ProfileForm({ displayName }: { displayName: string }) {
   const [state, action, pending] = useActionState(updateProfile, initialState);
@@ -22,15 +22,19 @@ export function ProfileForm({ displayName }: { displayName: string }) {
           autoComplete="name"
           defaultValue={displayName}
           maxLength={80}
-          aria-invalid={Boolean(state.errors?.displayName)}
+          aria-invalid={
+            !state.ok && Boolean(state.error.fieldErrors?.displayName)
+          }
           aria-describedby={
-            state.errors?.displayName ? "display-name-error" : undefined
+            !state.ok && state.error.fieldErrors?.displayName
+              ? "display-name-error"
+              : undefined
           }
           required
         />
-        {state.errors?.displayName ? (
+        {!state.ok && state.error.fieldErrors?.displayName ? (
           <p id="display-name-error" className="text-sm text-destructive">
-            {state.errors.displayName[0]}
+            {state.error.fieldErrors.displayName[0]}
           </p>
         ) : (
           <p className="text-sm text-muted-foreground">
@@ -39,19 +43,25 @@ export function ProfileForm({ displayName }: { displayName: string }) {
         )}
       </div>
 
-      {state.message ? (
+      {state.ok ? (
+        state.message ? (
+          <p
+            role="status"
+            aria-live="polite"
+            className="text-sm text-foreground"
+          >
+            {state.message}
+          </p>
+        ) : null
+      ) : (
         <p
           role="status"
           aria-live="polite"
-          className={
-            state.status === "success"
-              ? "text-sm text-foreground"
-              : "text-sm text-destructive"
-          }
+          className="text-sm text-destructive"
         >
-          {state.message}
+          {state.error.message}
         </p>
-      ) : null}
+      )}
 
       <Button type="submit" disabled={pending}>
         {pending ? "Saving…" : "Save changes"}

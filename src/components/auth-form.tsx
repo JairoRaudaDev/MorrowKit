@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { useActionState } from "react";
 
-import { login, signup } from "@/app/auth/actions";
+import { login, signup, type AuthFormState } from "@/app/auth/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import type { AuthFormState } from "@/lib/auth/validation";
 
-const initialState: AuthFormState = {};
+const initialState: AuthFormState = { ok: true, data: undefined };
 
 type AuthFormProps = {
   mode: "login" | "signup";
@@ -27,12 +26,12 @@ export function AuthForm({ mode, next }: AuthFormProps) {
     <form action={action} className="space-y-5" noValidate>
       <input type="hidden" name="next" value={next} />
 
-      {state.message && (
+      {!state.ok && state.error.message && (
         <div
           role="alert"
           className="rounded-md border border-destructive/30 bg-destructive/10 px-3 py-2 text-sm text-destructive"
         >
-          {state.message}
+          {state.error.message}
         </div>
       )}
 
@@ -43,14 +42,18 @@ export function AuthForm({ mode, next }: AuthFormProps) {
           name="email"
           type="email"
           autoComplete="email"
-          defaultValue={state.values?.email}
-          aria-invalid={Boolean(state.errors?.email)}
-          aria-describedby={state.errors?.email ? "email-error" : undefined}
+          defaultValue={!state.ok ? state.values?.email : undefined}
+          aria-invalid={!state.ok && Boolean(state.error.fieldErrors?.email)}
+          aria-describedby={
+            !state.ok && state.error.fieldErrors?.email
+              ? "email-error"
+              : undefined
+          }
           required
         />
-        {state.errors?.email && (
+        {!state.ok && state.error.fieldErrors?.email && (
           <p id="email-error" className="text-sm text-destructive">
-            {state.errors.email[0]}
+            {state.error.fieldErrors.email[0]}
           </p>
         )}
       </div>
@@ -62,15 +65,17 @@ export function AuthForm({ mode, next }: AuthFormProps) {
           name="password"
           type="password"
           autoComplete={isSignup ? "new-password" : "current-password"}
-          aria-invalid={Boolean(state.errors?.password)}
+          aria-invalid={!state.ok && Boolean(state.error.fieldErrors?.password)}
           aria-describedby={
-            state.errors?.password ? "password-error" : undefined
+            !state.ok && state.error.fieldErrors?.password
+              ? "password-error"
+              : undefined
           }
           required
         />
-        {state.errors?.password && (
+        {!state.ok && state.error.fieldErrors?.password && (
           <p id="password-error" className="text-sm text-destructive">
-            {state.errors.password[0]}
+            {state.error.fieldErrors.password[0]}
           </p>
         )}
       </div>
@@ -83,17 +88,19 @@ export function AuthForm({ mode, next }: AuthFormProps) {
             name="confirmPassword"
             type="password"
             autoComplete="new-password"
-            aria-invalid={Boolean(state.errors?.confirmPassword)}
+            aria-invalid={
+              !state.ok && Boolean(state.error.fieldErrors?.confirmPassword)
+            }
             aria-describedby={
-              state.errors?.confirmPassword
+              !state.ok && state.error.fieldErrors?.confirmPassword
                 ? "confirm-password-error"
                 : undefined
             }
             required
           />
-          {state.errors?.confirmPassword && (
+          {!state.ok && state.error.fieldErrors?.confirmPassword && (
             <p id="confirm-password-error" className="text-sm text-destructive">
-              {state.errors.confirmPassword[0]}
+              {state.error.fieldErrors.confirmPassword[0]}
             </p>
           )}
         </div>
