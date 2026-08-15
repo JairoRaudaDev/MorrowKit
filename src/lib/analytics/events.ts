@@ -6,6 +6,14 @@ export type AnalyticsEvents = {
     plan?: "pro" | "business";
     userId?: string;
   };
+  subscription_started: {
+    plan?: "pro" | "business";
+    userId: string;
+  };
+  subscription_ended: {
+    plan?: "pro" | "business";
+    userId: string;
+  };
 };
 
 export type AnalyticsEventName = keyof AnalyticsEvents;

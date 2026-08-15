@@ -8,7 +8,7 @@ import { analyticsProvider } from "@/lib/analytics/provider";
 
 export async function track<Name extends AnalyticsEventName>(
   name: Name,
-  properties?: AnalyticsEvents[Name],
+  properties: AnalyticsEvents[Name],
 ): Promise<void> {
-  await analyticsProvider.track(name, properties ?? {});
+  await analyticsProvider.track(name, properties);
 }
