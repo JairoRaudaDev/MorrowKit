@@ -10,19 +10,23 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { requireAuth } from "@/lib/auth/session";
+import { getCurrentUser, getProfile } from "@/lib/db/queries";
 
 import { ProfileForm } from "./profile-form";
 
 export default async function AccountSettingsPage() {
-  const claims = await requireAuth();
-  const email = typeof claims.email === "string" ? claims.email : "Unavailable";
-  const metadata =
-    claims.user_metadata && typeof claims.user_metadata === "object"
-      ? (claims.user_metadata as Record<string, unknown>)
-      : {};
+  const user = await getCurrentUser();
+
+  if (!user) {
+    throw new Error("Authenticated user is unavailable");
+  }
+
+  const profile = await getProfile(user.id);
+  const email = user.email ?? "Unavailable";
+  const metadataDisplayName = user.user_metadata.display_name;
   const displayName =
-    typeof metadata.display_name === "string" ? metadata.display_name : "";
+    profile?.displayName ??
+    (typeof metadataDisplayName === "string" ? metadataDisplayName : "");
   const initial = (displayName || email).trim().charAt(0).toUpperCase() || "A";
 
   return (

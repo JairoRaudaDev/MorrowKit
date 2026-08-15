@@ -260,8 +260,8 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/settings/page.tsx": {
-    "mtime": 1786699969.0479846,
-    "ast_hash": "f5581daf9e0a1728683ffde3e8893edd",
+    "mtime": 1786830365.6425922,
+    "ast_hash": "9af525f80af5b37347468ed8b0415cc0",
     "semantic_hash": ""
   },
   "src/app/dashboard/settings/profile-form.tsx": {
@@ -270,8 +270,8 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/billing/page.tsx": {
-    "mtime": 1786726782.9695928,
-    "ast_hash": "8175c855b887949e2a421f25acaf97df",
+    "mtime": 1786830365.6425922,
+    "ast_hash": "aeecefeb7adda3eceaabbbac659857e8",
     "semantic_hash": ""
   },
   "src/app/dashboard/layout.tsx": {
@@ -349,14 +349,9 @@
     "ast_hash": "dcd11b9bb7255975e302599603bea493",
     "semantic_hash": ""
   },
-  "src/lib/stripe/subscription.ts": {
-    "mtime": 1786726499.3687177,
-    "ast_hash": "0ff6295370b7289a47f8fba62672736c",
-    "semantic_hash": ""
-  },
   "src/lib/entitlements.ts": {
-    "mtime": 1786726825.7130003,
-    "ast_hash": "bfb8056a9634c13d52bcff1094704649",
+    "mtime": 1786830365.6421516,
+    "ast_hash": "fc1131168c8056363328c11fa42e250b",
     "semantic_hash": ""
   },
   "src/app/dashboard/insights/page.tsx": {
@@ -437,6 +432,11 @@
   "src/sentry.server.config.ts": {
     "mtime": 1786825862.774053,
     "ast_hash": "0aa37935f4cf86f9695508470e18c640",
+    "semantic_hash": ""
+  },
+  "src/lib/db/queries.ts": {
+    "mtime": 1786830408.875846,
+    "ast_hash": "f66983b455b42fdc0ae7af802aadbd78",
     "semantic_hash": ""
   }
 }

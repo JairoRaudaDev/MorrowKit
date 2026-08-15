@@ -11,8 +11,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { requireAuth } from "@/lib/auth/session";
+import { getSubscription } from "@/lib/db/queries";
 import { getEntitlements, type Plan } from "@/lib/entitlements";
-import { getCurrentSubscription } from "@/lib/stripe/subscription";
 
 import { createBillingPortalSession } from "./actions";
 
@@ -52,7 +52,7 @@ export default async function BillingPage() {
 
   const [entitlements, subscription] = await Promise.all([
     getEntitlements(userId),
-    getCurrentSubscription(userId),
+    getSubscription(userId),
   ]);
   const plan = planLabels[entitlements.plan];
   const status = subscription

@@ -1,7 +1,7 @@
 import "server-only";
 
+import { getSubscription } from "@/lib/db/queries";
 import { stripeConfig } from "@/lib/stripe/config";
-import { getCurrentSubscription } from "@/lib/stripe/subscription";
 
 export type Plan = "free" | "pro" | "business";
 
@@ -22,7 +22,7 @@ const freeEntitlements: Entitlements = {
 const entitledSubscriptionStatuses = new Set(["active", "trialing"]);
 
 export async function getEntitlements(userId: string): Promise<Entitlements> {
-  const subscription = await getCurrentSubscription(userId);
+  const subscription = await getSubscription(userId);
 
   if (!subscription || !entitledSubscriptionStatuses.has(subscription.status)) {
     return freeEntitlements;
