@@ -2,6 +2,8 @@ import Link from "next/link";
 import { CreditCard } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { ActionForm } from "@/components/action-form";
+import { FormFeedback } from "@/components/form-feedback";
 import {
   Card,
   CardContent,
@@ -42,7 +44,12 @@ function formatDate(value: string | null) {
   }).format(new Date(value));
 }
 
-export default async function BillingPage() {
+type BillingPageProps = {
+  searchParams: Promise<{ checkout?: string }>;
+};
+
+export default async function BillingPage({ searchParams }: BillingPageProps) {
+  const { checkout } = await searchParams;
   const claims = await requireAuth();
   const userId = claims.sub;
 
@@ -71,6 +78,19 @@ export default async function BillingPage() {
           View your subscription and manage billing securely through Stripe.
         </p>
       </div>
+
+      {checkout === "success" && (
+        <FormFeedback
+          kind="success"
+          message="Checkout completed. Your subscription details will update shortly."
+        />
+      )}
+      {checkout === "canceled" && (
+        <FormFeedback
+          kind="error"
+          message="Checkout was canceled. Your plan was not changed."
+        />
+      )}
 
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
@@ -129,11 +149,13 @@ export default async function BillingPage() {
             </div>
           </CardContent>
           <CardFooter className="border-t">
-            <form action={createBillingPortalSession}>
-              <Button type="submit" variant="outline">
-                Manage subscription
-              </Button>
-            </form>
+            <ActionForm
+              action={createBillingPortalSession}
+              label="Manage subscription"
+              pendingLabel="Opening billing…"
+              pendingMessage="Connecting securely to Stripe…"
+              variant="outline"
+            />
           </CardFooter>
         </Card>
       </div>

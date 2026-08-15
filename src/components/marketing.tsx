@@ -8,6 +8,7 @@ import {
 import Link from "next/link";
 
 import { createCheckoutSession } from "@/app/pricing/actions";
+import { ActionForm } from "@/components/action-form";
 import { Container } from "@/components/container";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
@@ -284,16 +285,16 @@ export function Pricing() {
                   ))}
                 </ul>
                 {plan.plan ? (
-                  <form action={createCheckoutSession} className="mt-auto">
-                    <input type="hidden" name="plan" value={plan.plan} />
-                    <Button
-                      type="submit"
-                      variant={plan.featured ? "default" : "outline"}
-                      className="w-full"
-                    >
-                      {plan.cta}
-                    </Button>
-                  </form>
+                  <ActionForm
+                    action={createCheckoutSession}
+                    label={plan.cta}
+                    pendingLabel="Opening checkout…"
+                    pendingMessage={`Preparing secure checkout for ${plan.name}.`}
+                    fields={{ plan: plan.plan }}
+                    variant={plan.featured ? "default" : "outline"}
+                    className="mt-auto"
+                    buttonClassName="w-full"
+                  />
                 ) : (
                   <Button asChild variant="outline" className="mt-auto">
                     <Link href="/signup">{plan.cta}</Link>

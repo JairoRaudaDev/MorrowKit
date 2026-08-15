@@ -1,4 +1,5 @@
 import { logout } from "@/app/auth/actions";
+import { ActionForm } from "@/components/action-form";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -85,11 +86,13 @@ export default async function AccountSettingsPage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form action={logout}>
-              <Button type="submit" variant="outline">
-                Sign out
-              </Button>
-            </form>
+            <ActionForm
+              action={logout}
+              label="Sign out"
+              pendingLabel="Signing out…"
+              pendingMessage="Ending your session…"
+              variant="outline"
+            />
           </CardContent>
         </Card>
       </div>

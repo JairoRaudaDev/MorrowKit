@@ -103,8 +103,16 @@ export async function signup(
   return result.ok ? result : { ...result, values };
 }
 
-export async function logout() {
-  const result = await runMutation({
+export type LogoutFormState = MutationResult<undefined>;
+
+export async function logout(
+  _state: LogoutFormState,
+  _formData: FormData,
+): Promise<LogoutFormState> {
+  void _state;
+  void _formData;
+
+  return runMutation({
     input: {},
     schema: z.object({}),
     auth: "required",
@@ -115,6 +123,4 @@ export async function logout() {
       redirect("/login?status=signed-out");
     },
   });
-
-  if (!result.ok) throw new Error(result.error.message);
 }

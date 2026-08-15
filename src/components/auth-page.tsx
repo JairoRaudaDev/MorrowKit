@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Logo } from "@/components/logo";
+import { FormFeedback } from "@/components/form-feedback";
 
 type AuthPageProps = {
   mode: "login" | "signup";
@@ -40,12 +41,7 @@ export function AuthPage({ mode, next, notice }: AuthPageProps) {
           </CardHeader>
           <CardContent>
             {notice && (
-              <div
-                role="status"
-                className="mb-5 rounded-md border bg-muted px-3 py-2 text-sm"
-              >
-                {notice}
-              </div>
+              <FormFeedback kind="success" message={notice} className="mb-5" />
             )}
             <AuthForm mode={mode} next={next} />
           </CardContent>

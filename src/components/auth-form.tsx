@@ -5,6 +5,7 @@ import { useActionState } from "react";
 
 import { login, signup, type AuthFormState } from "@/app/auth/actions";
 import { Button } from "@/components/ui/button";
+import { FormFeedback } from "@/components/form-feedback";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
@@ -27,12 +28,14 @@ export function AuthForm({ mode, next }: AuthFormProps) {
       <input type="hidden" name="next" value={next} />
 
       {!state.ok && state.error.message && (
-        <div
-          role="alert"
-          className="rounded-md border border-destructive/30 bg-destructive/10 px-3 py-2 text-sm text-destructive"
-        >
-          {state.error.message}
-        </div>
+        <FormFeedback kind="error" message={state.error.message} />
+      )}
+
+      {pending && (
+        <FormFeedback
+          kind="pending"
+          message={isSignup ? "Creating your account…" : "Signing you in…"}
+        />
       )}
 
       <div className="space-y-2">

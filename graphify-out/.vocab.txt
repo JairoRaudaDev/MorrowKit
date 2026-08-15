@@ -51,8 +51,10 @@ components
 confidence
 config
 constrained
+constructor
 container
 content
+context
 conver
 converts
 corpus
@@ -66,6 +68,7 @@ current
 customer
 customers
 dashboard
+data
 date
 delivery
 demo
@@ -85,6 +88,7 @@ dsn
 edge
 email
 emit
+empty
 engines
 ensure
 entitled
@@ -104,6 +108,7 @@ exports
 extraction
 fallback
 features
+field
 fields
 file
 first
@@ -113,6 +118,7 @@ footer
 for
 form
 format
+found
 free
 from
 futu
@@ -165,6 +171,7 @@ lib
 library
 license
 lint
+loading
 local
 login
 logo
@@ -178,12 +185,12 @@ marketing
 media
 menu
 merge
-message
 metadata
 middleware
 mjs
 module
 modules
+mutation
 mutations
 name
 navbar
@@ -192,6 +199,8 @@ next
 nextjs
 node
 nodes
+not
+object
 only
 optional
 options
@@ -200,7 +209,6 @@ output
 overlay
 package
 page
-paid
 password
 path
 paths
@@ -257,6 +265,7 @@ router
 rsc
 rubric
 rules
+run
 saa
 safe
 schema
@@ -279,6 +288,7 @@ should
 side
 signup
 sizes
+skeleton
 skip
 source
 specific
@@ -329,6 +339,7 @@ users
 utils
 validate
 validation
+values
 variables
 variance
 variants
@@ -339,3 +350,4 @@ welcome
 whisper
 with
 workflow
+zod

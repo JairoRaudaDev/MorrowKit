@@ -6,13 +6,13 @@ import {
   ChartNoAxesCombined,
   CreditCard,
   LayoutDashboard,
-  LogOut,
   Menu,
   Settings,
   UserRound,
 } from "lucide-react";
 
 import { logout } from "@/app/auth/actions";
+import { ActionForm } from "@/components/action-form";
 import { Logo } from "@/components/logo";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -149,13 +149,15 @@ function UserMenu({ email }: { email: string }) {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <form action={logout}>
-          <DropdownMenuItem asChild>
-            <button type="submit" className="w-full">
-              <LogOut /> Sign out
-            </button>
-          </DropdownMenuItem>
-        </form>
+        <ActionForm
+          action={logout}
+          label="Sign out"
+          pendingLabel="Signing out…"
+          pendingMessage="Ending your session…"
+          variant="ghost"
+          className="p-1"
+          buttonClassName="w-full justify-start"
+        />
       </DropdownMenuContent>
     </DropdownMenu>
   );

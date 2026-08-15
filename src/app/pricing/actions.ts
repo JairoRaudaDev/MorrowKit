@@ -8,6 +8,7 @@ import { track } from "@/lib/analytics/track";
 import {
   formDataToObject,
   MutationError,
+  type MutationResult,
   runMutation,
 } from "@/lib/server/mutation";
 import { stripe } from "@/lib/stripe/client";
@@ -16,13 +17,18 @@ import { getOrCreateStripeCustomer } from "@/lib/stripe/customer";
 
 const checkoutSchema = z.object({ plan: z.enum(["pro", "business"]) });
 
-export async function createCheckoutSession(formData: FormData) {
-  const result = await runMutation({
+export type CheckoutFormState = MutationResult<undefined, "plan">;
+
+export async function createCheckoutSession(
+  _state: CheckoutFormState,
+  formData: FormData,
+): Promise<CheckoutFormState> {
+  return runMutation({
     input: formDataToObject(formData),
     schema: checkoutSchema,
     auth: "required",
     unexpectedErrorMessage: "We couldn't start checkout. Please try again.",
-    handler: async ({ plan }, { user }): Promise<void> => {
+    handler: async ({ plan }, { user }): Promise<undefined> => {
       if (!user) {
         throw new MutationError("UNAUTHENTICATED", "Sign in to continue.");
       }
@@ -54,6 +60,4 @@ export async function createCheckoutSession(formData: FormData) {
       redirect(session.url);
     },
   });
-
-  if (!result.ok) throw new Error(result.error.message);
 }

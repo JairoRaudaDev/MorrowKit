@@ -490,8 +490,8 @@
     "semantic_hash": ""
   },
   "src/components/dashboard-loading.tsx": {
-    "mtime": 1786831273.5697637,
-    "ast_hash": "27f315e9738ebb24a42eaeedc47e5bc6",
+    "mtime": 1786831356.6315289,
+    "ast_hash": "14608558a4057b4af8c4ac610569a45f",
     "semantic_hash": ""
   },
   "src/components/empty-state.tsx": {
@@ -507,6 +507,21 @@
   "src/components/ui/skeleton.tsx": {
     "mtime": 1786831273.5683794,
     "ast_hash": "caebcbfca1acae8355932afe704409d2",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/billing/loading.tsx": {
+    "mtime": 1786831344.185176,
+    "ast_hash": "f37e24f94fe910713ac239a6303b87b6",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/insights/loading.tsx": {
+    "mtime": 1786831344.184424,
+    "ast_hash": "f37e24f94fe910713ac239a6303b87b6",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/settings/loading.tsx": {
+    "mtime": 1786831344.185176,
+    "ast_hash": "bb4ac1cc12e8a9944fd44fd69c86bf31",
     "semantic_hash": ""
   }
 }

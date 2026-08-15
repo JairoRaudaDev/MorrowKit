@@ -4,6 +4,7 @@ import { useActionState } from "react";
 
 import { updateProfile, type ProfileFormState } from "./actions";
 import { Button } from "@/components/ui/button";
+import { FormFeedback } from "@/components/form-feedback";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
@@ -43,24 +44,14 @@ export function ProfileForm({ displayName }: { displayName: string }) {
         )}
       </div>
 
-      {state.ok ? (
+      {pending ? (
+        <FormFeedback kind="pending" message="Saving your profile…" />
+      ) : state.ok ? (
         state.message ? (
-          <p
-            role="status"
-            aria-live="polite"
-            className="text-sm text-foreground"
-          >
-            {state.message}
-          </p>
+          <FormFeedback kind="success" message={state.message} />
         ) : null
       ) : (
-        <p
-          role="status"
-          aria-live="polite"
-          className="text-sm text-destructive"
-        >
-          {state.error.message}
-        </p>
+        <FormFeedback kind="error" message={state.error.message} />
       )}
 
       <Button type="submit" disabled={pending}>
