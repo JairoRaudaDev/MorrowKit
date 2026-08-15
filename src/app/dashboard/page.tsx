@@ -1,6 +1,7 @@
 import { Activity, ArrowUpRight, CreditCard, Users } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { EmptyState } from "@/components/empty-state";
 
 const stats = [
   { label: "Active users", value: "2,420", change: "+12.5%", icon: Users },
@@ -55,15 +56,11 @@ export default function DashboardPage() {
           <CardTitle>Activity</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid h-64 place-items-center rounded-lg border border-dashed bg-muted/30 text-center">
-            <div>
-              <Activity className="mx-auto mb-3 size-6 text-muted-foreground" />
-              <p className="text-sm font-medium">Your chart goes here</p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Connect your data source to populate this area.
-              </p>
-            </div>
-          </div>
+          <EmptyState
+            icon={Activity}
+            title="No activity to show yet"
+            description="Connect your first data source and activity will appear here as your workspace gets moving."
+          />
         </CardContent>
       </Card>
     </div>

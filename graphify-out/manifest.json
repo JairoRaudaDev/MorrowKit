@@ -245,8 +245,8 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/page.tsx": {
-    "mtime": 1786699968.9953387,
-    "ast_hash": "8679f0f82f9d454344d5691159479234",
+    "mtime": 1786831273.5737655,
+    "ast_hash": "4135b0b01ee859a6a04f1b56a27dcf7f",
     "semantic_hash": ""
   },
   "src/lib/auth/session.ts": {
@@ -355,8 +355,8 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/insights/page.tsx": {
-    "mtime": 1786727051.4496555,
-    "ast_hash": "6bb59e9be34e94e69d9dfda913f94970",
+    "mtime": 1786831280.564759,
+    "ast_hash": "c6f09cc1ae7efd6b61079ae54ec763a5",
     "semantic_hash": ""
   },
   "src/lib/premium-insights.ts": {
@@ -410,8 +410,8 @@
     "semantic_hash": ""
   },
   "src/app/global-error.tsx": {
-    "mtime": 1786825890.725735,
-    "ast_hash": "316158d93e7df759dff886d807ea4f45",
+    "mtime": 1786831280.4718595,
+    "ast_hash": "47c827f410b20349271e35662ebf5b64",
     "semantic_hash": ""
   },
   "src/instrumentation-client.ts": {
@@ -442,6 +442,86 @@
   "src/lib/server/mutation.ts": {
     "mtime": 1786830961.2135015,
     "ast_hash": "0b684d5cf592c289776bf97aa35d27c7",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/error.tsx": {
+    "mtime": 1786831280.512875,
+    "ast_hash": "d07b436933bb56eab5e3be39fd04512a",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/loading.tsx": {
+    "mtime": 1786831273.5727725,
+    "ast_hash": "0ccc77f31ac458b0715144b397c3b8e6",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/not-found.tsx": {
+    "mtime": 1786831273.5737655,
+    "ast_hash": "60f21e2fcc2f191d95e0b1da4844e9c7",
+    "semantic_hash": ""
+  },
+  "src/app/error.tsx": {
+    "mtime": 1786831291.8683643,
+    "ast_hash": "7828264a5cca77eb4cf82b5ebcd04491",
+    "semantic_hash": ""
+  },
+  "src/app/loading.tsx": {
+    "mtime": 1786831280.4192822,
+    "ast_hash": "04472420820cf81683213c9b21534967",
+    "semantic_hash": ""
+  },
+  "src/app/login/loading.tsx": {
+    "mtime": 1786831273.5717762,
+    "ast_hash": "d48398d7d0f74209f69fd02d4bb39d82",
+    "semantic_hash": ""
+  },
+  "src/app/not-found.tsx": {
+    "mtime": 1786831273.5707633,
+    "ast_hash": "70ed396c8b244d0d534bfd3402dd82e1",
+    "semantic_hash": ""
+  },
+  "src/app/signup/loading.tsx": {
+    "mtime": 1786831273.5717762,
+    "ast_hash": "d48398d7d0f74209f69fd02d4bb39d82",
+    "semantic_hash": ""
+  },
+  "src/components/auth-loading.tsx": {
+    "mtime": 1786831273.5683794,
+    "ast_hash": "54b6e89c9ecc0bba0f239c2dce1cf409",
+    "semantic_hash": ""
+  },
+  "src/components/dashboard-loading.tsx": {
+    "mtime": 1786831356.6315289,
+    "ast_hash": "14608558a4057b4af8c4ac610569a45f",
+    "semantic_hash": ""
+  },
+  "src/components/empty-state.tsx": {
+    "mtime": 1786831273.5683794,
+    "ast_hash": "15fa8c391caa634f69419cc4669e56f4",
+    "semantic_hash": ""
+  },
+  "src/components/state-page.tsx": {
+    "mtime": 1786831280.618743,
+    "ast_hash": "ebc73d57212c088daca461bcec2ad3d2",
+    "semantic_hash": ""
+  },
+  "src/components/ui/skeleton.tsx": {
+    "mtime": 1786831273.5683794,
+    "ast_hash": "caebcbfca1acae8355932afe704409d2",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/billing/loading.tsx": {
+    "mtime": 1786831344.185176,
+    "ast_hash": "f37e24f94fe910713ac239a6303b87b6",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/insights/loading.tsx": {
+    "mtime": 1786831344.184424,
+    "ast_hash": "f37e24f94fe910713ac239a6303b87b6",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/settings/loading.tsx": {
+    "mtime": 1786831344.185176,
+    "ast_hash": "bb4ac1cc12e8a9944fd44fd69c86bf31",
     "semantic_hash": ""
   }
 }

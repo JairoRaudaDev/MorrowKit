@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, ChartNoAxesCombined, LockKeyhole } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { EmptyState } from "@/components/empty-state";
 import {
   Card,
   CardContent,
@@ -35,19 +36,27 @@ export default async function PremiumInsightsPage() {
             <ChartNoAxesCombined className="size-4" aria-hidden="true" />
             Available on your {result.plan} plan
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {result.insights.map((insight) => (
-              <Card key={insight.label}>
-                <CardHeader>
-                  <CardDescription>{insight.label}</CardDescription>
-                  <CardTitle className="text-3xl">{insight.value}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  {insight.detail}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          {result.insights.length > 0 ? (
+            <div className="grid gap-4 md:grid-cols-3">
+              {result.insights.map((insight) => (
+                <Card key={insight.label}>
+                  <CardHeader>
+                    <CardDescription>{insight.label}</CardDescription>
+                    <CardTitle className="text-3xl">{insight.value}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground">
+                    {insight.detail}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <EmptyState
+              icon={ChartNoAxesCombined}
+              title="No insights yet"
+              description="Insights will appear here once your workspace has enough activity to surface meaningful trends."
+            />
+          )}
         </>
       ) : (
         <Card className="overflow-hidden">

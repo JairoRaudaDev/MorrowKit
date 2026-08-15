@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-15T21:51:32.643622+00:00",
+  "generated_at": "2026-08-15T21:59:17.794085+00:00",
   "nodes": {
     "src_app_auth_actions_logout": {
-      "code_fingerprint": "100d503865aa7965e8c577cc0546a957132f0195cafc33054f610afa2cd48986",
+      "code_fingerprint": "5a4650f92eaf46305d514eb2ca04f23d8528ba875bc4689d22089118e652c205",
       "label": "logout()",
       "last": "2026-08-14T09:29:41.023268+00:00",
       "provenance": [
@@ -12,7 +12,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.965597585,
+      "score": 0.965477483,
       "source_file": "src/app/auth/actions.ts",
       "status": "tentative",
       "uses": 1
@@ -28,7 +28,7 @@
           "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
         }
       ],
-      "score": 0.972612991,
+      "score": 0.972492016,
       "source_file": "src/app/dashboard/billing/page.tsx",
       "status": "tentative",
       "uses": 1
@@ -44,7 +44,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.965597585,
+      "score": 0.965477483,
       "source_file": "src/app/dashboard/page.tsx",
       "status": "tentative",
       "uses": 1
@@ -60,7 +60,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.965597585,
+      "score": 0.965477483,
       "source_file": "src/lib/auth/session.ts",
       "status": "tentative",
       "uses": 1
@@ -76,7 +76,7 @@
           "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
         }
       ],
-      "score": 0.972612991,
+      "score": 0.972492016,
       "source_file": "src/lib/stripe/config.ts",
       "status": "tentative",
       "uses": 1
