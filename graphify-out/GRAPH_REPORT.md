@@ -1,16 +1,16 @@
 # Graph Report - SaaSSeed  (2026-08-15)
 
 ## Corpus Check
-- 82 files · ~21,165 words
+- 88 files · ~21,443 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 407 nodes · 707 edges · 26 communities (22 shown, 4 thin omitted)
+- 422 nodes · 720 edges · 30 communities (24 shown, 6 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f0fcc9e4`
+- Built from commit: `005757dd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,8 +35,11 @@
 - 20260814010000_create_billing_tables.sql
 - Q: Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly
 - 20260814020000_add_stripe_webhook_processing.sql
-- welcome.tsx
+- public.ts
 - track.ts
+- instrumentation.ts
+- next.config.ts
+- instrumentation-client.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 49 edges
@@ -69,7 +72,7 @@
 - **Graphify Extraction Flow** — _codex_skills_graphify_skill_file_detection, _codex_skills_graphify_skill_structural_extraction, _codex_skills_graphify_skill_semantic_extraction, _codex_skills_graphify_skill_graph_build_and_clustering [EXTRACTED 1.00]
 - **Scoped Graph Navigation Modes** — _codex_skills_graphify_references_query_constrained_query_expansion, _codex_skills_graphify_references_query_graph_traversal, _codex_skills_graphify_references_query_path_and_explain, agents_scoped_graph_navigation [INFERRED 0.85]
 
-## Communities (26 total, 4 thin omitted)
+## Communities (30 total, 6 thin omitted)
 
 ### Community 0 - "Graphify Pipeline"
 Cohesion: 0.08
@@ -100,15 +103,15 @@ Cohesion: 0.09
 Nodes (23): eslint, eslint-config-next, devDependencies, eslint, eslint-config-next, prettier, prettier-plugin-tailwindcss, supabase (+15 more)
 
 ### Community 7 - "auth/actions.ts"
-Cohesion: 0.19
-Nodes (18): authErrorMessage(), login(), logout(), signup(), GET(), LoginPage(), LoginPageProps, SignupPage() (+10 more)
+Cohesion: 0.22
+Nodes (16): authErrorMessage(), login(), logout(), signup(), GET(), LoginPage(), LoginPageProps, SignupPage() (+8 more)
 
 ### Community 8 - "dependencies"
 Cohesion: 0.06
-Nodes (31): class-variance-authority, clsx, lucide-react, next, dependencies, class-variance-authority, clsx, lucide-react (+23 more)
+Nodes (33): class-variance-authority, clsx, lucide-react, next, dependencies, class-variance-authority, clsx, lucide-react (+25 more)
 
 ### Community 11 - "billing/page.tsx"
-Cohesion: 0.10
+Cohesion: 0.11
 Nodes (29): BillingPage(), formatDate(), planLabels, statusLabels, PremiumInsightsPage(), DashboardLayout(), stats, AccountSettingsPage() (+21 more)
 
 ### Community 13 - "20260814000000_create_profiles.sql"
@@ -116,8 +119,8 @@ Cohesion: 0.33
 Nodes (4): profiles_set_updated_at, public.profiles, auth.users, public.set_updated_at
 
 ### Community 17 - "pricing/actions.ts"
-Cohesion: 0.10
-Nodes (27): handledEvents, POST(), createBillingPortalSession(), createCheckoutSession(), isPaidPlan(), PaidPlan, paidPlans, publicEnv (+19 more)
+Cohesion: 0.13
+Nodes (24): handledEvents, POST(), createBillingPortalSession(), createCheckoutSession(), isPaidPlan(), PaidPlan, paidPlans, serverEnv (+16 more)
 
 ### Community 19 - "Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
 Cohesion: 0.40
@@ -135,30 +138,34 @@ Nodes (7): public, billing_customers_set_updated_at, public.billing_customers, p
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly, Source Nodes
 
-### Community 24 - "welcome.tsx"
-Cohesion: 0.18
-Nodes (11): WelcomeEmail(), WelcomeEmailProps, Environment, validateEnv(), EmailDeliveryResult, ProviderEmail, sendWithProvider(), sendEmail() (+3 more)
+### Community 24 - "public.ts"
+Cohesion: 0.12
+Nodes (16): WelcomeEmail(), WelcomeEmailProps, publicEnv, privateEnv, Environment, validateEnv(), EmailDeliveryResult, ProviderEmail (+8 more)
 
 ### Community 25 - "track.ts"
 Cohesion: 0.42
 Nodes (4): AnalyticsEvent, AnalyticsEventName, AnalyticsEvents, AnalyticsProvider
 
+### Community 27 - "next.config.ts"
+Cohesion: 0.50
+Nodes (3): canUploadSourceMaps, hasSentryDsn, nextConfig
+
 ## Knowledge Gaps
-- **138 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+133 more)
+- **143 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+138 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `cn()` connect `cn` to `billing/page.tsx`, `marketing.tsx`?**
-  _High betweenness centrality (0.051) - this node is a cross-community bridge._
-- **Why does `publicEnv` connect `pricing/actions.ts` to `welcome.tsx`, `auth/actions.ts`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+  _High betweenness centrality (0.048) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `scripts`?**
   _High betweenness centrality (0.021) - this node is a cross-community bridge._
+- **Why does `publicEnv` connect `public.ts` to `pricing/actions.ts`, `auth/actions.ts`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _138 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _143 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07526881720430108 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**

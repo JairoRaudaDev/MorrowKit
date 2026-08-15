@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1786825595.2240958,
-    "ast_hash": "ab18f4f9f84fb12527af501ec47daa51",
+    "mtime": 1786825813.5996885,
+    "ast_hash": "bc6ca5cdb3e72b1125c60a576881aa91",
     "semantic_hash": ""
   },
   "README.md": {
@@ -407,6 +407,36 @@
   "src/lib/analytics/track.ts": {
     "mtime": 1786825618.0505495,
     "ast_hash": "7ae901179ce5ef87e6a05d7111786b48",
+    "semantic_hash": ""
+  },
+  "next.config.ts": {
+    "mtime": 1786825959.3462505,
+    "ast_hash": "88f004521de339a303e934dab24fff61",
+    "semantic_hash": ""
+  },
+  "src/app/global-error.tsx": {
+    "mtime": 1786825890.725735,
+    "ast_hash": "316158d93e7df759dff886d807ea4f45",
+    "semantic_hash": ""
+  },
+  "src/instrumentation-client.ts": {
+    "mtime": 1786825862.773057,
+    "ast_hash": "d46990e69b1f46df1b78ad2a27a7a942",
+    "semantic_hash": ""
+  },
+  "src/instrumentation.ts": {
+    "mtime": 1786825862.7720397,
+    "ast_hash": "ea32907ee5e32c76904b6271b76de120",
+    "semantic_hash": ""
+  },
+  "src/sentry.edge.config.ts": {
+    "mtime": 1786825862.7750587,
+    "ast_hash": "0aa37935f4cf86f9695508470e18c640",
+    "semantic_hash": ""
+  },
+  "src/sentry.server.config.ts": {
+    "mtime": 1786825862.774053,
+    "ast_hash": "0aa37935f4cf86f9695508470e18c640",
     "semantic_hash": ""
   }
 }
