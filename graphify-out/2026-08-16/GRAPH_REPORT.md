@@ -1,16 +1,16 @@
-# Graph Report - SaaSSeed  (2026-08-15)
+# Graph Report - SaaSSeed  (2026-08-16)
 
 ## Corpus Check
-- 110 files · ~24,668 words
+- 110 files · ~24,974 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 485 nodes · 884 edges · 35 communities (28 shown, 7 thin omitted)
+- 487 nodes · 887 edges · 34 communities (28 shown, 6 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f675f0f7`
+- Built from commit: `2ed171c0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -29,24 +29,23 @@
 - billing/page.tsx
 - 20260814000000_create_profiles.sql
 - prettier.config.mjs
-- pricing/actions.ts
+- webhook.ts
 - Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations
 - marketing.tsx
 - 20260814010000_create_billing_tables.sql
 - Q: Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly
 - 20260814020000_add_stripe_webhook_processing.sql
-- public.ts
+- welcome.tsx
 - track.ts
 - instrumentation.ts
 - next.config.ts
 - instrumentation-client.ts
-- settings/page.tsx
-- dashboard-loading.tsx
+- middleware.ts
 - Q: Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms.
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 59 edges
-2. `createClient()` - 20 edges
+2. `createClient()` - 21 edges
 3. `Button()` - 16 edges
 4. `compilerOptions` - 16 edges
 5. `scripts` - 12 edges
@@ -61,12 +60,12 @@
   .codex/skills/graphify/references/hooks.md → AGENTS.md
 - `Graphify First Codebase Workflow` --references--> `Path and Explain Queries`  [EXTRACTED]
   AGENTS.md → .codex/skills/graphify/references/query.md
-- `ProfileForm()` --indirect_call--> `updateProfile()`  [INFERRED]
-  src/app/dashboard/settings/profile-form.tsx → src/app/dashboard/settings/actions.ts
-- `CardAction()` --calls--> `cn()`  [EXTRACTED]
-  src/components/ui/card.tsx → src/lib/utils.ts
 - `Graphify First Codebase Workflow` --references--> `Budget Aware Graph Traversal`  [EXTRACTED]
   AGENTS.md → .codex/skills/graphify/references/query.md
+- `Graphify First Codebase Workflow` --references--> `Incremental Graph Update`  [EXTRACTED]
+  AGENTS.md → .codex/skills/graphify/references/update.md
+- `PremiumInsightsPage()` --calls--> `getPremiumInsights()`  [EXTRACTED]
+  src/app/dashboard/insights/page.tsx → src/lib/premium-insights.ts
 
 ## Import Cycles
 - None detected.
@@ -75,15 +74,15 @@
 - **Graphify Extraction Flow** — _codex_skills_graphify_skill_file_detection, _codex_skills_graphify_skill_structural_extraction, _codex_skills_graphify_skill_semantic_extraction, _codex_skills_graphify_skill_graph_build_and_clustering [EXTRACTED 1.00]
 - **Scoped Graph Navigation Modes** — _codex_skills_graphify_references_query_constrained_query_expansion, _codex_skills_graphify_references_query_graph_traversal, _codex_skills_graphify_references_query_path_and_explain, agents_scoped_graph_navigation [INFERRED 0.85]
 
-## Communities (35 total, 7 thin omitted)
+## Communities (34 total, 6 thin omitted)
 
 ### Community 0 - "Graphify Pipeline"
 Cohesion: 0.08
 Nodes (31): Folder Watch Incremental Rebuild, URL Ingestion, Optional Graph Exports, Token Reduction Benchmark, Edge Confidence Rubric, Deterministic Node IDs, Semantic Extraction JSON Schema, Cross Repository Graph Merge (+23 more)
 
 ### Community 1 - "cn"
-Cohesion: 0.09
-Nodes (32): AppShell(), AppShellProps, navigation, Avatar(), AvatarBadge(), AvatarFallback(), AvatarGroup(), AvatarGroupCount() (+24 more)
+Cohesion: 0.06
+Nodes (40): AppShell(), AppShellProps, Container(), ContainerProps, containerSizes, DashboardLoading(), navigation, LogoProps (+32 more)
 
 ### Community 2 - "components.json"
 Cohesion: 0.11
@@ -106,8 +105,8 @@ Cohesion: 0.09
 Nodes (23): eslint, eslint-config-next, devDependencies, eslint, eslint-config-next, prettier, prettier-plugin-tailwindcss, supabase (+15 more)
 
 ### Community 7 - "auth/actions.ts"
-Cohesion: 0.14
-Nodes (26): authError(), AuthField, AuthValues, login(), logout(), LogoutFormState, signup(), GET() (+18 more)
+Cohesion: 0.10
+Nodes (37): authError(), AuthField, AuthValues, login(), logout(), LogoutFormState, signup(), GET() (+29 more)
 
 ### Community 8 - "dependencies"
 Cohesion: 0.06
@@ -115,15 +114,15 @@ Nodes (35): class-variance-authority, clsx, lucide-react, next, dependencies, cl
 
 ### Community 11 - "billing/page.tsx"
 Cohesion: 0.09
-Nodes (30): BillingPage(), BillingPageProps, formatDate(), planLabels, statusLabels, PremiumInsightsPage(), DashboardLayout(), stats (+22 more)
+Nodes (35): BillingPage(), BillingPageProps, formatDate(), planLabels, statusLabels, PremiumInsightsPage(), DashboardLayout(), stats (+27 more)
 
 ### Community 13 - "20260814000000_create_profiles.sql"
 Cohesion: 0.33
 Nodes (4): profiles_set_updated_at, public.profiles, auth.users, public.set_updated_at
 
-### Community 17 - "pricing/actions.ts"
-Cohesion: 0.14
-Nodes (23): handledEvents, POST(), BillingPortalFormState, createBillingPortalSession(), CheckoutFormState, checkoutSchema, createCheckoutSession(), serverEnv (+15 more)
+### Community 17 - "webhook.ts"
+Cohesion: 0.16
+Nodes (18): handledEvents, POST(), readWebhookBody(), privateEnv, serverEnv, stripe, stripeConfig, CustomerIdentity (+10 more)
 
 ### Community 19 - "Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
 Cohesion: 0.40
@@ -131,7 +130,7 @@ Nodes (4): Answer, Outcome, Q: Create /dashboard/settings with display name, fut
 
 ### Community 20 - "marketing.tsx"
 Cohesion: 0.10
-Nodes (17): metadata, Container(), ContainerProps, containerSizes, Logo(), LogoProps, CTA(), Features (+9 more)
+Nodes (20): AuthFormState, metadata, ActionForm(), ActionFormProps, AuthForm(), AuthFormProps, initialState, FormFeedback() (+12 more)
 
 ### Community 21 - "20260814010000_create_billing_tables.sql"
 Cohesion: 0.32
@@ -141,9 +140,9 @@ Nodes (7): public, billing_customers_set_updated_at, public.billing_customers, p
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly, Source Nodes
 
-### Community 24 - "public.ts"
-Cohesion: 0.12
-Nodes (16): WelcomeEmail(), WelcomeEmailProps, publicEnv, privateEnv, Environment, validateEnv(), EmailDeliveryResult, ProviderEmail (+8 more)
+### Community 24 - "welcome.tsx"
+Cohesion: 0.18
+Nodes (11): WelcomeEmail(), WelcomeEmailProps, Environment, validateEnv(), EmailDeliveryResult, ProviderEmail, sendWithProvider(), sendEmail() (+3 more)
 
 ### Community 25 - "track.ts"
 Cohesion: 0.42
@@ -153,9 +152,9 @@ Nodes (4): AnalyticsEvent, AnalyticsEventName, AnalyticsEvents, AnalyticsProvide
 Cohesion: 0.50
 Nodes (3): canUploadSourceMaps, hasSentryDsn, nextConfig
 
-### Community 30 - "settings/page.tsx"
-Cohesion: 0.14
-Nodes (18): AuthFormState, ProfileFormState, AccountSettingsPage(), initialState, ProfileForm(), ActionFormProps, AuthForm(), AuthFormProps (+10 more)
+### Community 30 - "middleware.ts"
+Cohesion: 0.60
+Nodes (3): updateSession(), config, proxy()
 
 ### Community 32 - "Q: Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
 Cohesion: 0.40
@@ -164,14 +163,14 @@ Nodes (4): Answer, Outcome, Q: Add consistent pending, success, validation, and 
 ## Knowledge Gaps
 - **160 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+155 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `cn` to `billing/page.tsx`, `marketing.tsx`, `settings/page.tsx`, `dashboard-loading.tsx`?**
+- **Why does `cn()` connect `cn` to `billing/page.tsx`, `marketing.tsx`?**
   _High betweenness centrality (0.060) - this node is a cross-community bridge._
-- **Why does `publicEnv` connect `public.ts` to `pricing/actions.ts`, `auth/actions.ts`?**
+- **Why does `publicEnv` connect `auth/actions.ts` to `welcome.tsx`, `webhook.ts`, `middleware.ts`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `scripts`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
@@ -180,6 +179,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Graphify Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07526881720430108 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**
-  _Cohesion score 0.08985200845665962 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `components.json` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._

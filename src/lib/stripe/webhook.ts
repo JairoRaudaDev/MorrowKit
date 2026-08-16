@@ -7,17 +7,10 @@ import { createAdminClient } from "@/lib/supabase/admin";
 
 import { stripe } from "./client";
 import { stripeConfig } from "./config";
+import { planForPrice, stripeId, stripeTimestamp } from "./mapping";
 
 const userIdPattern =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/iu;
-
-function stripeId(value: string | { id: string } | null): string | null {
-  return typeof value === "string" ? value : (value?.id ?? null);
-}
-
-function toTimestamp(value: number | null | undefined): string | null {
-  return value == null ? null : new Date(value * 1000).toISOString();
-}
 
 async function ensureCustomerMapping(subscription: Stripe.Subscription) {
   const stripeCustomerId = stripeId(subscription.customer);
@@ -86,12 +79,6 @@ async function ensureCustomerMapping(subscription: Stripe.Subscription) {
   return { stripeCustomerId, userId };
 }
 
-function planForPrice(priceId: string): "pro" | "business" | undefined {
-  if (priceId === stripeConfig.priceIds.pro) return "pro";
-  if (priceId === stripeConfig.priceIds.business) return "business";
-  return undefined;
-}
-
 async function subscriptionFromEvent(event: Stripe.Event) {
   let subscriptionId: string | null;
   switch (event.type) {
@@ -131,13 +118,13 @@ export async function synchronizeSubscriptionEvent(event: Stripe.Event) {
     {
       p_event_id: event.id,
       p_event_type: event.type,
-      p_event_created_at: toTimestamp(event.created),
+      p_event_created_at: stripeTimestamp(event.created),
       p_subscription_id: subscription.id,
       p_stripe_customer_id: stripeCustomerId,
       p_price_id: item.price.id,
       p_status: subscription.status,
-      p_current_period_start: toTimestamp(item.current_period_start),
-      p_current_period_end: toTimestamp(item.current_period_end),
+      p_current_period_start: stripeTimestamp(item.current_period_start),
+      p_current_period_end: stripeTimestamp(item.current_period_end),
       p_cancel_at_period_end: subscription.cancel_at_period_end,
     },
   );
@@ -152,7 +139,7 @@ export async function synchronizeSubscriptionEvent(event: Stripe.Event) {
 
   const properties = {
     userId: String(userId),
-    plan: planForPrice(item.price.id),
+    plan: planForPrice(item.price.id, stripeConfig.priceIds),
   };
   if (event.type === "checkout.session.completed") {
     await track("subscription_started", properties);

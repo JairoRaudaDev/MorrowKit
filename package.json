@@ -11,6 +11,8 @@
     "supabase:start": "supabase start",
     "supabase:stop": "supabase stop",
     "supabase:reset": "supabase db reset",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "test:db": "supabase test db supabase/tests/database",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
@@ -52,6 +54,7 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "supabase": "^2.114.0",
     "tailwindcss": "^4.3.3",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
   }
 }
