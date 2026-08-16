@@ -3,7 +3,6 @@ import "server-only";
 import type { User } from "@supabase/supabase-js";
 import { cache } from "react";
 
-import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 
 export type Profile = Readonly<{
@@ -62,8 +61,8 @@ export const getProfile = cache(
 /** Returns the user's most recently updated subscription, if one exists. */
 export const getSubscription = cache(
   async (userId: string): Promise<Subscription | null> => {
-    const admin = createAdminClient();
-    const { data: customer, error: customerError } = await admin
+    const supabase = await createClient();
+    const { data: customer, error: customerError } = await supabase
       .from("billing_customers")
       .select("id")
       .eq("user_id", userId)
@@ -79,7 +78,7 @@ export const getSubscription = cache(
       return null;
     }
 
-    const { data: subscription, error: subscriptionError } = await admin
+    const { data: subscription, error: subscriptionError } = await supabase
       .from("subscriptions")
       .select("price_id,status,current_period_end,cancel_at_period_end")
       .eq("customer_id", customer.id)

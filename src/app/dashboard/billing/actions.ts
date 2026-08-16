@@ -10,6 +10,7 @@ import {
   runMutation,
 } from "@/lib/server/mutation";
 import { stripe } from "@/lib/stripe/client";
+import { stripeConfig } from "@/lib/stripe/config";
 import { getOrCreateStripeCustomer } from "@/lib/stripe/customer";
 
 export type BillingPortalFormState = MutationResult<undefined>;
@@ -23,7 +24,7 @@ export async function createBillingPortalSession(
 
   return runMutation({
     input: {},
-    schema: z.object({}),
+    schema: z.object({}).strict(),
     auth: "required",
     unexpectedErrorMessage: "We couldn't open billing. Please try again.",
     handler: async (_, { user }): Promise<undefined> => {
@@ -42,7 +43,7 @@ export async function createBillingPortalSession(
         customer: customerId,
         return_url: returnUrl,
       });
-      redirect(session.url);
+      redirect(stripeConfig.portalRedirect(session.url));
     },
   });
 }

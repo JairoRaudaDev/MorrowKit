@@ -11,13 +11,18 @@ import {
 } from "@/lib/server/mutation";
 import { createClient } from "@/lib/supabase/server";
 
-const profileSchema = z.object({
-  displayName: z
-    .string()
-    .trim()
-    .min(1, "Enter a display name.")
-    .max(80, "Display name must be 80 characters or fewer."),
-});
+const profileSchema = z
+  .object({
+    displayName: z
+      .string()
+      .trim()
+      .min(1, "Enter a display name.")
+      .max(80, "Display name must be 80 characters or fewer.")
+      .refine((value) => !/[\u0000-\u001f\u007f]/u.test(value), {
+        message: "Display name contains unsupported characters.",
+      }),
+  })
+  .strict();
 
 export type ProfileFormState = MutationResult<
   undefined,

@@ -114,7 +114,7 @@ export async function logout(
 
   return runMutation({
     input: {},
-    schema: z.object({}),
+    schema: z.object({}).strict(),
     auth: "required",
     handler: async () => {
       const supabase = await createClient();

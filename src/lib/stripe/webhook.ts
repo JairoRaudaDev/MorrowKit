@@ -8,6 +8,9 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { stripe } from "./client";
 import { stripeConfig } from "./config";
 
+const userIdPattern =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/iu;
+
 function stripeId(value: string | { id: string } | null): string | null {
   return typeof value === "string" ? value : (value?.id ?? null);
 }
@@ -45,6 +48,27 @@ async function ensureCustomerMapping(subscription: Stripe.Subscription) {
   }
   if (!userId) {
     throw new Error(`Stripe customer ${stripeCustomerId} has no user mapping`);
+  }
+  if (!userIdPattern.test(userId)) {
+    throw new Error(
+      `Stripe customer ${stripeCustomerId} has an invalid user mapping`,
+    );
+  }
+
+  const { data: userMapping, error: userReadError } = await admin
+    .from("billing_customers")
+    .select("stripe_customer_id")
+    .eq("user_id", userId)
+    .maybeSingle();
+  if (userReadError) {
+    throw new Error("Unable to verify the billing customer owner", {
+      cause: userReadError,
+    });
+  }
+  if (userMapping && userMapping.stripe_customer_id !== stripeCustomerId) {
+    throw new Error(
+      `User ${userId} is already mapped to another Stripe customer`,
+    );
   }
 
   const { error: writeError } = await admin

@@ -15,7 +15,7 @@ import { stripe } from "@/lib/stripe/client";
 import { stripeConfig } from "@/lib/stripe/config";
 import { getOrCreateStripeCustomer } from "@/lib/stripe/customer";
 
-const checkoutSchema = z.object({ plan: z.enum(["pro", "business"]) });
+const checkoutSchema = z.object({ plan: z.enum(["pro", "business"]) }).strict();
 
 export type CheckoutFormState = MutationResult<undefined, "plan">;
 
@@ -57,7 +57,7 @@ export async function createCheckoutSession(
         );
       }
       await track("checkout_started", { plan, userId: user.id });
-      redirect(session.url);
+      redirect(stripeConfig.checkoutRedirect(session.url));
     },
   });
 }

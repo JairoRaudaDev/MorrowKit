@@ -210,8 +210,8 @@
     "semantic_hash": ""
   },
   "src/app/auth/actions.ts": {
-    "mtime": 1786912348.859023,
-    "ast_hash": "2007b86e390a9da23bea2e2791b2149a",
+    "mtime": 1786831585.15528,
+    "ast_hash": "c3da0b53185af415c242428947eb7f02",
     "semantic_hash": ""
   },
   "src/app/auth/callback/route.ts": {
@@ -240,8 +240,8 @@
     "semantic_hash": ""
   },
   "src/lib/auth/validation.ts": {
-    "mtime": 1786912415.1127968,
-    "ast_hash": "7dca129192da913777735f4f834d5147",
+    "mtime": 1786830777.0524168,
+    "ast_hash": "9b5482c14311fc04017597aae3a9eb91",
     "semantic_hash": ""
   },
   "src/app/dashboard/page.tsx": {
@@ -255,8 +255,8 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/settings/actions.ts": {
-    "mtime": 1786912391.4163542,
-    "ast_hash": "2c3b269c9e23de232e2a66ec7e40c59d",
+    "mtime": 1786830961.2135015,
+    "ast_hash": "22893025810aafdefab42fdc469bb233",
     "semantic_hash": ""
   },
   "src/app/dashboard/settings/page.tsx": {
@@ -310,18 +310,18 @@
     "semantic_hash": ""
   },
   "src/lib/stripe/config.ts": {
-    "mtime": 1786912348.8606522,
-    "ast_hash": "bb1bb24aad03f226c815e242c767d0d9",
+    "mtime": 1786724775.0290215,
+    "ast_hash": "a1b3e9d2ff37d17e6f25c72c3385c672",
     "semantic_hash": ""
   },
   "src/lib/stripe/types.ts": {
-    "mtime": 1786912348.8606522,
-    "ast_hash": "a1c50bd60181bacbed90bbf59f527bb3",
+    "mtime": 1786724775.0290215,
+    "ast_hash": "c6271652218c21317931af4ce530ef75",
     "semantic_hash": ""
   },
   "src/app/pricing/actions.ts": {
-    "mtime": 1786912391.3426683,
-    "ast_hash": "9c235fabf547310140a8a5c53f3d4983",
+    "mtime": 1786831585.15528,
+    "ast_hash": "f9b2642a2946d2909d1a92e7fa7ecb13",
     "semantic_hash": ""
   },
   "src/lib/stripe/customer.ts": {
@@ -330,13 +330,13 @@
     "semantic_hash": ""
   },
   "src/app/api/stripe/webhook/route.ts": {
-    "mtime": 1786912366.616026,
-    "ast_hash": "d2c42a2032ea024e93c5ed79064e2e19",
+    "mtime": 1786725824.004788,
+    "ast_hash": "264df08102003c0f3315a4dbfe99ea88",
     "semantic_hash": ""
   },
   "src/lib/stripe/webhook.ts": {
-    "mtime": 1786912366.6185927,
-    "ast_hash": "d43283cb8ba7272fd54c297047f56688",
+    "mtime": 1786825618.052053,
+    "ast_hash": "4b5e4d7314559d5be526995ea46953d8",
     "semantic_hash": ""
   },
   "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql": {
@@ -345,8 +345,8 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/billing/actions.ts": {
-    "mtime": 1786912348.8564775,
-    "ast_hash": "b7d5662658da50f54fbc68a4c75c459f",
+    "mtime": 1786831585.15528,
+    "ast_hash": "0462ce266787ace1135e583072fc451f",
     "semantic_hash": ""
   },
   "src/lib/entitlements.ts": {
@@ -435,8 +435,8 @@
     "semantic_hash": ""
   },
   "src/lib/db/queries.ts": {
-    "mtime": 1786912348.8564775,
-    "ast_hash": "692fcf1b3f5f2d0e19645156e73d33f9",
+    "mtime": 1786830408.875846,
+    "ast_hash": "f66983b455b42fdc0ae7af802aadbd78",
     "semantic_hash": ""
   },
   "src/lib/server/mutation.ts": {
@@ -535,8 +535,8 @@
     "semantic_hash": ""
   },
   "supabase/migrations/20260815000000_harden_rls_privileges.sql": {
-    "mtime": 1786831922.0552351,
-    "ast_hash": "5cd455f9c0fa0289b26ae59a1a34e830",
+    "mtime": 1786831818.971111,
+    "ast_hash": "12ba95381c4f8a49ac0dfd5bfc7743c6",
     "semantic_hash": ""
   },
   "supabase/tests/database/rls_policies.test.sql": {
