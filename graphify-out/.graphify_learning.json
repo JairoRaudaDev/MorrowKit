@@ -1,24 +1,45 @@
 {
-  "generated_at": "2026-08-15T22:04:00.595911+00:00",
+  "generated_at": "2026-08-16T20:46:25.576125+00:00",
   "nodes": {
     "src_app_auth_actions_logout": {
-      "code_fingerprint": "5a4650f92eaf46305d514eb2ca04f23d8528ba875bc4689d22089118e652c205",
+      "code_fingerprint": "7308fbd92121f3694d8cf3f86e0c04d3745eb13be191c5a9d1ad5210f378cd66",
       "label": "logout()",
-      "last": "2026-08-14T09:29:41.023268+00:00",
+      "last": "2026-08-15T22:07:28.770718+00:00",
       "provenance": [
+        {
+          "date": "2026-08-15T22:07:28.770718+00:00",
+          "outcome": "useful",
+          "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
+        },
         {
           "date": "2026-08-14T09:29:41.023268+00:00",
           "outcome": "useful",
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.96540447,
+      "score": 1.922961251,
       "source_file": "src/app/auth/actions.ts",
+      "status": "preferred",
+      "uses": 2
+    },
+    "src_app_dashboard_billing_actions_createbillingportalsession": {
+      "code_fingerprint": "7890c2f8eee78411ade3767bca44364ee99460e011d8773b434ceb0a92df1cde",
+      "label": "createBillingPortalSession()",
+      "last": "2026-08-15T22:07:28.770718+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-15T22:07:28.770718+00:00",
+          "outcome": "useful",
+          "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
+        }
+      ],
+      "score": 0.978431597,
+      "source_file": "src/app/dashboard/billing/actions.ts",
       "status": "tentative",
       "uses": 1
     },
     "src_app_dashboard_billing_page_billingpage": {
-      "code_fingerprint": "094f1aaac81114d64eb60c895bd9625017c849fe55597bce2051ac892a392f34",
+      "code_fingerprint": "674e3c2a53c445f4a39175d39c8d504138adaf6776db1e052b55d9e86f75df05",
       "label": "BillingPage()",
       "last": "2026-08-14T17:00:51.334745+00:00",
       "provenance": [
@@ -28,7 +49,7 @@
           "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
         }
       ],
-      "score": 0.972418472,
+      "score": 0.951391994,
       "source_file": "src/app/dashboard/billing/page.tsx",
       "status": "tentative",
       "uses": 1
@@ -44,8 +65,56 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.96540447,
+      "score": 0.944529654,
       "source_file": "src/app/dashboard/page.tsx",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_app_dashboard_settings_profile_form_profileform": {
+      "code_fingerprint": "b349888e0a0247852bb1d89d356e8bbd18c4a6d18ffd0b521b998d64d52593fb",
+      "label": "ProfileForm()",
+      "last": "2026-08-15T22:07:28.770718+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-15T22:07:28.770718+00:00",
+          "outcome": "useful",
+          "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
+        }
+      ],
+      "score": 0.978431597,
+      "source_file": "src/app/dashboard/settings/profile-form.tsx",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_app_pricing_actions_createcheckoutsession": {
+      "code_fingerprint": "828daa364b1d5f49b95656b783dd61310f6c34189d00581f80769321a084ca44",
+      "label": "createCheckoutSession()",
+      "last": "2026-08-15T22:07:28.770718+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-15T22:07:28.770718+00:00",
+          "outcome": "useful",
+          "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
+        }
+      ],
+      "score": 0.978431597,
+      "source_file": "src/app/pricing/actions.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_components_auth_form": {
+      "code_fingerprint": "ee3d993e9e71dea440a7acf5c72b0f534691d992b2d5debc3ed5d5e93aa13cb9",
+      "label": "auth-form.tsx",
+      "last": "2026-08-15T22:07:28.770718+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-15T22:07:28.770718+00:00",
+          "outcome": "useful",
+          "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
+        }
+      ],
+      "score": 0.978431597,
+      "source_file": "src/components/auth-form.tsx",
       "status": "tentative",
       "uses": 1
     },
@@ -60,13 +129,13 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.96540447,
+      "score": 0.944529654,
       "source_file": "src/lib/auth/session.ts",
       "status": "tentative",
       "uses": 1
     },
     "src_lib_stripe_config_stripeconfig": {
-      "code_fingerprint": "9e9e55b6e9ce965b662b7f6f1198f3fed2b90a5572c797fc064ef991ae5e7907",
+      "code_fingerprint": "6a6318c22e7f3fa13b3640e3f0eb324810d682bb8b9dbfa3d745c09399300a0f",
       "label": "stripeConfig",
       "last": "2026-08-14T17:00:51.334745+00:00",
       "provenance": [
@@ -76,7 +145,7 @@
           "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
         }
       ],
-      "score": 0.972418472,
+      "score": 0.951391994,
       "source_file": "src/lib/stripe/config.ts",
       "status": "tentative",
       "uses": 1

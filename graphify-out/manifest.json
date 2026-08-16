@@ -583,5 +583,10 @@
     "mtime": 1786912769.4433062,
     "ast_hash": "70f9df59fbf41a46e59e5f7f4d47e2b0",
     "semantic_hash": ""
+  },
+  "supabase/tests/database/auth_profile_subscription.test.sql": {
+    "mtime": 1786913260.9949932,
+    "ast_hash": "953e3be2be74f47eabfb75895e47f689",
+    "semantic_hash": ""
   }
 }

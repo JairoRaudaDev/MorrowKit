@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1786831818.986997,
-    "ast_hash": "1da832410848badc6bf60aeb3988ff3b",
+    "mtime": 1786912780.3342566,
+    "ast_hash": "1062043617b9a22038cab4a5fe5cc361",
     "semantic_hash": ""
   },
   "README.md": {
@@ -335,8 +335,8 @@
     "semantic_hash": ""
   },
   "src/lib/stripe/webhook.ts": {
-    "mtime": 1786912366.6185927,
-    "ast_hash": "d43283cb8ba7272fd54c297047f56688",
+    "mtime": 1786912720.5060372,
+    "ast_hash": "81e53d011d3b40c85e2b5e49a7ea4116",
     "semantic_hash": ""
   },
   "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql": {
@@ -350,8 +350,8 @@
     "semantic_hash": ""
   },
   "src/lib/entitlements.ts": {
-    "mtime": 1786830365.6421516,
-    "ast_hash": "fc1131168c8056363328c11fa42e250b",
+    "mtime": 1786912720.5042813,
+    "ast_hash": "e6ce3715aa70a8072418ad3f8d317215",
     "semantic_hash": ""
   },
   "src/app/dashboard/insights/page.tsx": {
@@ -547,6 +547,41 @@
   "graphify-out/memory/query_20260815_220728_add_consistent_pending__success__validation__and_e.md": {
     "mtime": 1786831648.757971,
     "ast_hash": "0b889b9055efa8f274f4fc8b25a842dd",
+    "semantic_hash": ""
+  },
+  "src/lib/auth/validation.test.ts": {
+    "mtime": 1786912720.5060372,
+    "ast_hash": "af24e1c95c8365bfa69c912e91915980",
+    "semantic_hash": ""
+  },
+  "src/lib/entitlements.logic.test.ts": {
+    "mtime": 1786912737.9677505,
+    "ast_hash": "d18e7ca177acb27ff94af87fe9d28651",
+    "semantic_hash": ""
+  },
+  "src/lib/entitlements.logic.ts": {
+    "mtime": 1786912720.4999783,
+    "ast_hash": "c602d60ce734a3e6d85cd0674437f5ae",
+    "semantic_hash": ""
+  },
+  "src/lib/stripe/mapping.test.ts": {
+    "mtime": 1786912720.5060372,
+    "ast_hash": "462285bf172b7cc62c079cba7b7b4b09",
+    "semantic_hash": ""
+  },
+  "src/lib/stripe/mapping.ts": {
+    "mtime": 1786912738.0234158,
+    "ast_hash": "a3b80dd05a41321170612db8cefdde75",
+    "semantic_hash": ""
+  },
+  "src/lib/utils.test.ts": {
+    "mtime": 1786912720.5060372,
+    "ast_hash": "ded1cd50bdbea02854bb2be1396fe3ae",
+    "semantic_hash": ""
+  },
+  "vitest.config.mts": {
+    "mtime": 1786912769.4433062,
+    "ast_hash": "70f9df59fbf41a46e59e5f7f4d47e2b0",
     "semantic_hash": ""
   }
 }

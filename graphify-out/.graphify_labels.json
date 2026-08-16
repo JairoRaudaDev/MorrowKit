@@ -34,5 +34,6 @@
   "32": "Q: Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms.",
   "33": "20260815000000_harden_rls_privileges.sql",
   "34": "rls_policies.test.sql",
-  "35": "vitest.config.mts"
+  "35": "vitest.config.mts",
+  "36": "auth_profile_subscription.test.sql"
 }

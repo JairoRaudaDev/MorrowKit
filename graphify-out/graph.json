@@ -4177,6 +4177,17 @@
       "norm_label": "vitest.config.mts"
     },
     {
+      "label": "auth_profile_subscription.test.sql",
+      "file_type": "code",
+      "source_file": "supabase/tests/database/auth_profile_subscription.test.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "supabase_tests_database_auth_profile_subscription_test",
+      "community": 36,
+      "community_name": "auth_profile_subscription.test.sql",
+      "norm_label": "auth_profile_subscription.test.sql"
+    },
+    {
       "label": "package.json",
       "file_type": "code",
       "source_file": "package.json",
@@ -16554,5 +16565,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "9408fecd72e3b503ced4077c077c99ebb42a5a1f"
+  "built_at_commit": "d72f81c1309c6b733837165c2795e5de04c396ae"
 }

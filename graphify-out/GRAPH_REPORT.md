@@ -1,16 +1,16 @@
 # Graph Report - SaaSSeed  (2026-08-16)
 
 ## Corpus Check
-- 117 files · ~25,418 words
+- 118 files · ~26,064 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 502 nodes · 916 edges · 36 communities (30 shown, 6 thin omitted)
+- 503 nodes · 916 edges · 37 communities (31 shown, 6 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9408fecd`
+- Built from commit: `d72f81c1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -75,7 +75,7 @@
 - **Graphify Extraction Flow** — _codex_skills_graphify_skill_file_detection, _codex_skills_graphify_skill_structural_extraction, _codex_skills_graphify_skill_semantic_extraction, _codex_skills_graphify_skill_graph_build_and_clustering [EXTRACTED 1.00]
 - **Scoped Graph Navigation Modes** — _codex_skills_graphify_references_query_constrained_query_expansion, _codex_skills_graphify_references_query_graph_traversal, _codex_skills_graphify_references_query_path_and_explain, agents_scoped_graph_navigation [INFERRED 0.85]
 
-## Communities (36 total, 6 thin omitted)
+## Communities (37 total, 6 thin omitted)
 
 ### Community 0 - "Graphify Pipeline"
 Cohesion: 0.08
@@ -170,11 +170,16 @@ Nodes (4): Answer, Outcome, Q: Add consistent pending, success, validation, and 
   These have ≤1 connection - possible missing edges or undocumented components.
 - **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
+## Work-memory lessons
+
+**Preferred sources** — corroborated by past sessions; start here.
+- `logout()` (2× useful, score=1.922961251)
+
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `cn()` connect `cn` to `settings/page.tsx`, `marketing.tsx`, `auth/actions.ts`?**
-  _High betweenness centrality (0.060) - this node is a cross-community bridge._
+  _High betweenness centrality (0.059) - this node is a cross-community bridge._
 - **Why does `publicEnv` connect `auth/actions.ts` to `welcome.tsx`, `webhook.ts`, `middleware.ts`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `scripts`?**
