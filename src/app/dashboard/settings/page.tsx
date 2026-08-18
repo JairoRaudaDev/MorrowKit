@@ -19,7 +19,7 @@ export default async function AccountSettingsPage() {
   const user = await getCurrentUser();
 
   if (!user) {
-    throw new Error("Authenticated user is unavailable");
+    redirect("/login");
   }
 
   const profile = await getProfile(user.id);
@@ -99,3 +99,4 @@ export default async function AccountSettingsPage() {
     </div>
   );
 }
+import { redirect } from "next/navigation";

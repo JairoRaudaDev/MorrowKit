@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1786912780.3342566,
-    "ast_hash": "1062043617b9a22038cab4a5fe5cc361",
+    "mtime": 1786913503.076047,
+    "ast_hash": "c01cca2bec552d144650c23f5458d116",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786727947.2843766,
-    "ast_hash": "e9398bc8168f1328c102f4bc6c4c81ef",
+    "mtime": 1786914473.4281445,
+    "ast_hash": "c24ac822f4f95d9d9efc71e046fdb719",
     "semantic_hash": ""
   },
   "eslint.config.mjs": {
@@ -235,8 +235,8 @@
     "semantic_hash": ""
   },
   "src/components/auth-page.tsx": {
-    "mtime": 1786831541.893301,
-    "ast_hash": "15b4419a54ed4896123cc774c3c38f11",
+    "mtime": 1786914339.2877853,
+    "ast_hash": "4a703c8822df6c2189d474916a2831df",
     "semantic_hash": ""
   },
   "src/lib/auth/validation.ts": {
@@ -260,8 +260,8 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/settings/page.tsx": {
-    "mtime": 1786831541.893301,
-    "ast_hash": "4e59fc806286386bac4612bf58bb3797",
+    "mtime": 1786914339.2949088,
+    "ast_hash": "51f2663a03f5aa12cd2317deb76150af",
     "semantic_hash": ""
   },
   "src/app/dashboard/settings/profile-form.tsx": {
@@ -587,6 +587,36 @@
   "supabase/tests/database/auth_profile_subscription.test.sql": {
     "mtime": 1786913260.9949932,
     "ast_hash": "953e3be2be74f47eabfb75895e47f689",
+    "semantic_hash": ""
+  },
+  "playwright.config.ts": {
+    "mtime": 1786914256.7948344,
+    "ast_hash": "e16e5293c409f2ed7f92c2444af8e384",
+    "semantic_hash": ""
+  },
+  "tests/e2e/auth-journey.spec.ts": {
+    "mtime": 1786914473.4210863,
+    "ast_hash": "dad7ed236d08ccc013f7e481e35744e3",
+    "semantic_hash": ""
+  },
+  "tests/e2e/dashboard-protection.spec.ts": {
+    "mtime": 1786914473.4210863,
+    "ast_hash": "5e064283dfa04f66853cb5c984669f3a",
+    "semantic_hash": ""
+  },
+  "tests/e2e/pricing.spec.ts": {
+    "mtime": 1786914473.4249618,
+    "ast_hash": "48abc50c63fd793815a198cb7a000434",
+    "semantic_hash": ""
+  },
+  "tests/e2e/public-site.spec.ts": {
+    "mtime": 1786914543.491302,
+    "ast_hash": "613a8af4d6036c667f1b9f8c900db578",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260816_204822_add_integration_tests_covering_authentication_depe.md": {
+    "mtime": 1786913302.3496387,
+    "ast_hash": "3cb7a49fe8399bed62ff328adc31c78d",
     "semantic_hash": ""
   }
 }

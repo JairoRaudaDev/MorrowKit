@@ -38,6 +38,25 @@ pnpm supabase:stop   # Stop the local stack
 pnpm supabase:reset  # Rebuild the database from migrations and seed.sql
 ```
 
+## Browser smoke tests
+
+The Playwright suite covers the public site, auth forms, protected dashboard
+routes, account settings protection, and pricing. Stripe credentials are replaced
+with inert test values when Playwright starts the app, and the default suite does
+not create checkout sessions.
+
+```bash
+pnpm test:e2e
+```
+
+The stateful signup, settings, logout, and login journey needs the configured
+Supabase instance. Start local Supabase, then opt in to that test:
+
+```powershell
+$env:PLAYWRIGHT_TEST_AUTH = "true"
+pnpm test:e2e
+```
+
 Add schema changes as SQL migrations under `supabase/migrations/`. Keep repeatable development data in `supabase/seed.sql`; it is applied after migrations when the database is reset.
 
 ## License

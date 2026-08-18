@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { AuthForm } from "@/components/auth-form";
 import {
   Card,
@@ -24,9 +22,7 @@ export function AuthPage({ mode, next, notice }: AuthPageProps) {
     <main className="flex min-h-svh items-center justify-center bg-muted/30 px-page py-12">
       <div className="w-full max-w-md space-y-8">
         <div className="flex justify-center">
-          <Link href="/" aria-label="SaaSSeed home">
-            <Logo />
-          </Link>
+          <Logo name="SaaSSeed" />
         </div>
         <Card>
           <CardHeader className="text-center">
