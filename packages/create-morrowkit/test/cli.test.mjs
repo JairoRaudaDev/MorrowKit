@@ -1,10 +1,22 @@
 import assert from "node:assert/strict";
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
+import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 
 import { createApp } from "../src/index.mjs";
+
+const packageRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
+const cliPath = join(packageRoot, "src", "index.mjs");
 
 test("creates a project from the packaged template", () => {
   const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
@@ -16,6 +28,73 @@ test("creates a project from the packaged template", () => {
     );
     assert.equal(packageJson.name, "morrowkit");
     assert.equal(packageJson.scripts.dev, "next dev");
+    assert.equal(
+      existsSync(join(result.target, "src", "app", "page.tsx")),
+      true,
+    );
+    assert.equal(existsSync(join(result.target, ".env.example")), true);
+    assert.equal(existsSync(join(result.target, ".gitignore")), true);
+    assert.equal(existsSync(join(result.target, "node_modules")), false);
+  } finally {
+    rmSync(workspace, { force: true, recursive: true });
+  }
+});
+
+test("accepts an existing empty directory", () => {
+  const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
+  const target = join(workspace, "example");
+  mkdirSync(target);
+
+  try {
+    createApp(target, workspace);
+    assert.equal(existsSync(join(target, "package.json")), true);
+  } finally {
+    rmSync(workspace, { force: true, recursive: true });
+  }
+});
+
+test("rejects missing, current, non-directory, and non-empty targets", () => {
+  const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
+  const fileTarget = join(workspace, "file");
+  const nonEmptyTarget = join(workspace, "not-empty");
+  writeFileSync(fileTarget, "content");
+  mkdirSync(nonEmptyTarget);
+  writeFileSync(join(nonEmptyTarget, "keep.txt"), "content");
+
+  try {
+    assert.throws(
+      () => createApp(undefined, workspace),
+      /provide a project directory/,
+    );
+    assert.throws(() => createApp(".", workspace), /new project directory/);
+    assert.throws(() => createApp(fileTarget, workspace), /not a directory/);
+    assert.throws(() => createApp(nonEmptyTarget, workspace), /not empty/);
+  } finally {
+    rmSync(workspace, { force: true, recursive: true });
+  }
+});
+
+test("CLI creates a project without prompts and rejects extra arguments", () => {
+  const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
+
+  try {
+    const created = spawnSync(process.execPath, [cliPath, "my-app"], {
+      cwd: workspace,
+      encoding: "utf8",
+      timeout: 10_000,
+    });
+    assert.equal(created.status, 0, created.stderr);
+    assert.match(created.stdout, /Created my-app/);
+    assert.equal(existsSync(join(workspace, "my-app", "package.json")), true);
+
+    const invalid = spawnSync(process.execPath, [cliPath, "one", "two"], {
+      cwd: workspace,
+      encoding: "utf8",
+      timeout: 10_000,
+    });
+    assert.equal(invalid.status, 1);
+    assert.match(invalid.stderr, /exactly one project directory/);
+    assert.equal(existsSync(join(workspace, "one")), false);
   } finally {
     rmSync(workspace, { force: true, recursive: true });
   }

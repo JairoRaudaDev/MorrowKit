@@ -29,7 +29,7 @@
 - marketing.tsx
 - Production deployment
 - scripts
-- create-saasseed/package.json
+- create-morrowkit/package.json
 - components.json
 - track.ts
 - Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations
@@ -50,7 +50,7 @@
 - postcss.config.mjs
 - prettier.config.mjs
 - instrumentation-client.ts
-- create-saasseed/README.md
+- create-morrowkit/README.md
 - renovate.json
 - pull_request_template.md
 
@@ -143,9 +143,9 @@ Nodes (28): 10. Release and rollback, 1. Choose the environment model, 2. Pass t
 Cohesion: 0.07
 Nodes (26): description, engines, node, pnpm, license, name, packageManager, private (+18 more)
 
-### Community 14 - "create-saasseed/package.json"
+### Community 14 - "create-morrowkit/package.json"
 Cohesion: 0.08
-Nodes (23): bin, create-saasseed, description, devDependencies, prettier, engines, node, files (+15 more)
+Nodes (23): bin, create-morrowkit, description, devDependencies, prettier, engines, node, files (+15 more)
 
 ### Community 17 - "components.json"
 Cohesion: 0.11

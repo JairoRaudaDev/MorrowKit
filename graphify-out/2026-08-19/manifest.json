@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1787160133.9674356,
-    "ast_hash": "a2a53c495d17643231092ddd97b26cb8",
+    "mtime": 1787160806.7347074,
+    "ast_hash": "2d529a749eac4c80db3e6ff5b81029f2",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787160133.972823,
-    "ast_hash": "3e2b899ec959094ec703497e1b8d9d71",
+    "mtime": 1787160806.7352235,
+    "ast_hash": "0c8aa35ad95f9a75dfdaf0dfa034fa8a",
     "semantic_hash": ""
   },
   "graphify-out/memory/query_20260814_092941_create__dashboard_settings_with_display_name__futu.md": {
@@ -669,29 +669,9 @@
     "ast_hash": "3ad001f0c6866b3d841bb5ea96a914e5",
     "semantic_hash": ""
   },
-  "packages/create-saasseed/package.json": {
-    "mtime": 1787160522.2708397,
-    "ast_hash": "7505bde6baab1f47cc754b95167e8460",
-    "semantic_hash": ""
-  },
-  "packages/create-saasseed/scripts/build.mjs": {
-    "mtime": 1787160510.812745,
-    "ast_hash": "de0d95eb53a34fe141238d29daa5b79a",
-    "semantic_hash": ""
-  },
-  "packages/create-saasseed/src/index.mjs": {
-    "mtime": 1787160510.812745,
-    "ast_hash": "ef3391dc0bae8e84495124abcf273dc3",
-    "semantic_hash": ""
-  },
-  "packages/create-saasseed/test/cli.test.mjs": {
-    "mtime": 1787160133.9738283,
-    "ast_hash": "de4080c337d23aabb389872c8c90a28e",
-    "semantic_hash": ""
-  },
   "apps/template/README.md": {
-    "mtime": 1787159804.4490733,
-    "ast_hash": "6ad78e8d0afce59da77814890f2aea55",
+    "mtime": 1787160806.7421076,
+    "ast_hash": "2457deabfc3561098563fb2cf6ace36e",
     "semantic_hash": ""
   },
   "apps/template/docs/production-deployment.md": {
@@ -699,14 +679,34 @@
     "ast_hash": "4c2c76ce57307c6e9a562e01f135455c",
     "semantic_hash": ""
   },
-  "packages/create-saasseed/README.md": {
-    "mtime": 1787160149.7911046,
-    "ast_hash": "952acc1125115a3ce467b610d2925bca",
-    "semantic_hash": ""
-  },
   "pnpm-workspace.yaml": {
     "mtime": 1787160133.972823,
     "ast_hash": "94959a14ffe26db859e218b25f9b1f52",
+    "semantic_hash": ""
+  },
+  "packages/create-morrowkit/package.json": {
+    "mtime": 1787160806.7352235,
+    "ast_hash": "f81a6b567b7b559a9026be2f2a545434",
+    "semantic_hash": ""
+  },
+  "packages/create-morrowkit/scripts/build.mjs": {
+    "mtime": 1787160806.7381213,
+    "ast_hash": "45fc74e2e6893b5e5ab4e7d44ca20a34",
+    "semantic_hash": ""
+  },
+  "packages/create-morrowkit/src/index.mjs": {
+    "mtime": 1787160806.7381213,
+    "ast_hash": "b59eb791a2e5f0f7e838092590c58183",
+    "semantic_hash": ""
+  },
+  "packages/create-morrowkit/test/cli.test.mjs": {
+    "mtime": 1787160806.7402513,
+    "ast_hash": "30d1faf13cbf1263ecbba5378e46f232",
+    "semantic_hash": ""
+  },
+  "packages/create-morrowkit/README.md": {
+    "mtime": 1787160806.7381213,
+    "ast_hash": "77cb797a3d8b1e69f475f1994f9de81b",
     "semantic_hash": ""
   }
 }

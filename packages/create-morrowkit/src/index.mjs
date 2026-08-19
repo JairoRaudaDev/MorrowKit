@@ -3,6 +3,7 @@
 import {
   cpSync,
   existsSync,
+  lstatSync,
   mkdirSync,
   readdirSync,
   renameSync,
@@ -27,16 +28,24 @@ const excludedTemplateEntries = new Set([
 ]);
 
 export function createApp(targetArgument, cwd = process.cwd()) {
-  if (!targetArgument) throw new Error("Please provide a project directory.");
+  if (typeof targetArgument !== "string" || targetArgument.trim() === "") {
+    throw new Error("Please provide a project directory.");
+  }
 
-  const target = resolve(cwd, targetArgument);
-  if (target === cwd) {
+  const workingDirectory = resolve(cwd);
+  const target = resolve(workingDirectory, targetArgument);
+  if (target === workingDirectory) {
     throw new Error(
       "Choose a new project directory instead of the current directory.",
     );
   }
-  if (existsSync(target) && readdirSync(target).length > 0) {
-    throw new Error(`The target directory is not empty: ${target}`);
+  if (existsSync(target)) {
+    if (!lstatSync(target).isDirectory()) {
+      throw new Error(`The target path is not a directory: ${target}`);
+    }
+    if (readdirSync(target).length > 0) {
+      throw new Error(`The target directory is not empty: ${target}`);
+    }
   }
   if (!existsSync(templateRoot)) {
     throw new Error(
@@ -67,13 +76,17 @@ if (
   process.argv[1] &&
   resolve(process.argv[1]) === fileURLToPath(import.meta.url)
 ) {
-  const argument = process.argv[2];
+  const arguments_ = process.argv.slice(2);
+  const argument = arguments_[0];
   if (argument === "--help" || argument === "-h") {
     printHelp();
     process.exit(0);
   }
 
   try {
+    if (arguments_.length > 1) {
+      throw new Error("Accepts exactly one project directory and no options.");
+    }
     const result = createApp(argument);
     console.log(`Created ${result.name} in ${result.target}`);
     console.log(`Next: cd ${result.name} && pnpm install && pnpm setup`);
