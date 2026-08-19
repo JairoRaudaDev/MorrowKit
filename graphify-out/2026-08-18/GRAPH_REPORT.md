@@ -1,7 +1,7 @@
 # Graph Report - SaaSSeed  (2026-08-18)
 
 ## Corpus Check
-- 125 files · ~28,557 words
+- 125 files · ~28,589 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
