@@ -6,9 +6,11 @@
   "4": "scripts",
   "5": "MorrowKit",
   "6": "devDependencies",
+  "7": "billing/page.tsx",
   "8": "dependencies",
   "9": "auth/actions.ts",
-  "10": "billing/page.tsx",
+  "10": "product.ts",
+  "11": "marketing.tsx",
   "12": "Production deployment",
   "13": "scripts",
   "14": "create-morrowkit/package.json",
@@ -35,7 +37,7 @@
   "35": "prettier.config.mjs",
   "36": "global-error.tsx",
   "37": "instrumentation-client.ts",
-  "38": "create-morrowkit/README.md",
+  "38": "utils.ts",
   "39": "eslint.config.mjs",
   "40": "20260815000000_harden_rls_privileges.sql",
   "41": "seed.sql",
@@ -47,5 +49,8 @@
   "47": "dashboard-protection.spec.ts",
   "48": "pricing.spec.ts",
   "49": "public-site.spec.ts",
-  "50": "vitest.config.mts"
+  "50": "vitest.config.mts",
+  "51": "auth-loading.tsx",
+  "52": "dashboard-loading.tsx",
+  "55": "Q: Polish create-morrowkit output with concise progress indicators, useful validation errors, clean cancellation behavior, and clear next-step instructions."
 }
