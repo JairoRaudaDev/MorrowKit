@@ -92,6 +92,8 @@ const stripeModulePaths = [
 
 const emailModulePaths = ["src/emails", "src/lib/email", "pnpm-lock.yaml"];
 
+const analyticsModulePaths = ["src/lib/analytics", "pnpm-lock.yaml"];
+
 function replaceFile(target, relativePath, transform) {
   const path = resolve(target, relativePath);
   writeFileSync(path, transform(readFileSync(path, "utf8")));
@@ -312,6 +314,79 @@ export function removeEmailModule(target) {
   );
 }
 
+export function removeAnalyticsModule(target) {
+  for (const relativePath of analyticsModulePaths) {
+    rmSync(resolve(target, relativePath), { force: true, recursive: true });
+  }
+
+  const packageJsonPath = resolve(target, "package.json");
+  const packageJson = JSON.parse(readFileSync(packageJsonPath, "utf8"));
+  delete packageJson.dependencies?.["posthog-node"];
+  writeFileSync(packageJsonPath, `${JSON.stringify(packageJson, null, 2)}\n`);
+
+  replaceFile(target, ".env.example", (source) =>
+    source
+      .split(/\r?\n/u)
+      .filter(
+        (line) =>
+          !line.startsWith("POSTHOG_") &&
+          line !==
+            "# Analytics (optional; disabled when POSTHOG_API_KEY is unset)",
+      )
+      .join("\n"),
+  );
+
+  for (const relativePath of [
+    "src/app/auth/actions.ts",
+    "src/app/pricing/actions.ts",
+    "src/lib/stripe/webhook.ts",
+  ]) {
+    const path = resolve(target, relativePath);
+    if (!existsSync(path)) continue;
+    replaceFile(target, relativePath, (source) =>
+      source
+        .replace(
+          /import \{ track \} from "@\/lib\/analytics\/track";\r?\n/u,
+          "",
+        )
+        .replace(/^\s*await track\([^;]+;\r?\n/gmu, ""),
+    );
+  }
+
+  replaceFile(target, "README.md", (source) =>
+    source
+      .replace(", email, analytics, and deployment", ", email, and deployment")
+      .replace(
+        ", transactional email, analytics, monitoring",
+        ", transactional email, monitoring",
+      )
+      .replace(/^\| `POSTHOG_API_KEY`.*\r?\n/mu, "")
+      .replace(/^\| `POSTHOG_HOST`.*\r?\n/mu, "")
+      .replace(
+        ", monitoring, analytics, legal pages",
+        ", monitoring, legal pages",
+      )
+      .replace(/^\s*├─ PostHog .*\r?\n/mu, "")
+      .replace(", and `src/lib/analytics/`", "")
+      .replace(" and domain events.", ".")
+      .split(/\r?\n/u)
+      .filter((line) => !/analytics|posthog|POSTHOG_/iu.test(line))
+      .join("\n"),
+  );
+
+  replaceFile(target, "docs/production-deployment.md", (source) =>
+    source
+      .replace(", analytics, and monitoring", ", and monitoring")
+      .replace("### Monitoring and analytics", "### Monitoring")
+      .replace(/^.*Product analytics.*\r?\n/gmu, "")
+      .replace(/^.*analytics events.*\r?\n/gmu, "")
+      .replace(/^.*configured analytics.*\r?\n/gmu, "")
+      .split(/\r?\n/u)
+      .filter((line) => !/analytics|posthog|POSTHOG_/iu.test(line))
+      .join("\n"),
+  );
+}
+
 const packageManagers = ["pnpm", "npm", "yarn", "bun"];
 
 function normalizePackageName(name) {
@@ -365,6 +440,7 @@ export function finishProject(
 
 function parseArguments(arguments_) {
   const options = {
+    analytics: "posthog",
     git: true,
     install: true,
     packageManager: "pnpm",
@@ -377,7 +453,11 @@ function parseArguments(arguments_) {
   for (let index = 0; index < arguments_.length; index += 1) {
     const argument = arguments_[index];
     if (argument === "--yes" || argument === "-y") options.yes = true;
-    else if (argument === "--no-email") options.email = false;
+    else if (argument === "--no-analytics") options.analytics = "none";
+    else if (argument === "--analytics") {
+      options.analytics = arguments_[index + 1];
+      index += 1;
+    } else if (argument === "--no-email") options.email = false;
     else if (argument === "--no-stripe") options.stripe = false;
     else if (argument === "--no-install") options.install = false;
     else if (argument === "--no-git") options.git = false;
@@ -395,6 +475,9 @@ function parseArguments(arguments_) {
     throw new Error(
       `Package manager must be one of: ${packageManagers.join(", ")}.`,
     );
+  }
+  if (!["posthog", "none"].includes(options.analytics)) {
+    throw new Error("Analytics provider must be one of: posthog, none.");
   }
   return options;
 }
@@ -443,7 +526,25 @@ async function promptForOptions(defaults) {
       await prompts.question("Include transactional email? (Y/n) "),
       true,
     );
-    return { ...defaults, email, git, install, packageManager, stripe, target };
+    const analyticsAnswer = (
+      await prompts.question("Analytics provider? (posthog/none) [posthog] ")
+    )
+      .trim()
+      .toLowerCase();
+    const analytics = analyticsAnswer || defaults.analytics;
+    if (!["posthog", "none"].includes(analytics)) {
+      throw new Error("Analytics provider must be one of: posthog, none.");
+    }
+    return {
+      ...defaults,
+      analytics,
+      email,
+      git,
+      install,
+      packageManager,
+      stripe,
+      target,
+    };
   } finally {
     prompts.close();
   }
@@ -461,6 +562,8 @@ Options:
   --no-git                    Skip Git initialization
   --no-stripe                 Exclude Stripe and billing features
   --no-email                  Exclude transactional email features
+  --analytics <provider>      posthog or none (default: posthog)
+  --no-analytics              Exclude analytics (alias for --analytics none)
   -h, --help                  Show help`);
 }
 
@@ -483,6 +586,7 @@ if (
     const result = createApp(options.target);
     if (!options.stripe) removeStripeModule(result.target);
     if (!options.email) removeEmailModule(result.target);
+    if (options.analytics === "none") removeAnalyticsModule(result.target);
     configureProject(result.target, result.name, options.packageManager);
     finishProject(result.target, options);
     console.log(`Created ${result.name} in ${result.target}`);

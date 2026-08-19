@@ -18,6 +18,7 @@ import {
   createApp,
   finishProject,
   removeEmailModule,
+  removeAnalyticsModule,
   removeStripeModule,
 } from "../src/index.mjs";
 
@@ -152,6 +153,50 @@ test("removes the complete transactional email module when disabled", () => {
   }
 });
 
+test("removes analytics without leaving imports or environment requirements", () => {
+  const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
+  try {
+    const result = createApp("without-analytics", workspace);
+    removeAnalyticsModule(result.target);
+
+    const packageJson = JSON.parse(
+      readFileSync(join(result.target, "package.json"), "utf8"),
+    );
+    assert.equal(packageJson.dependencies["posthog-node"], undefined);
+    assert.equal(existsSync(join(result.target, "pnpm-lock.yaml")), false);
+    assert.equal(
+      existsSync(join(result.target, "src", "lib", "analytics")),
+      false,
+    );
+    assert.doesNotMatch(
+      readFileSync(join(result.target, ".env.example"), "utf8"),
+      /POSTHOG_/u,
+    );
+
+    for (const relativePath of [
+      ["src", "app", "auth", "actions.ts"],
+      ["src", "app", "pricing", "actions.ts"],
+      ["src", "lib", "stripe", "webhook.ts"],
+    ]) {
+      const source = readFileSync(join(result.target, ...relativePath), "utf8");
+      assert.doesNotMatch(source, /analytics|\btrack\(/u);
+    }
+    assert.doesNotMatch(
+      readFileSync(join(result.target, "README.md"), "utf8"),
+      /PostHog|POSTHOG_|analytics/iu,
+    );
+    assert.doesNotMatch(
+      readFileSync(
+        join(result.target, "docs", "production-deployment.md"),
+        "utf8",
+      ),
+      /PostHog|POSTHOG_|analytics/iu,
+    );
+  } finally {
+    rmSync(workspace, { force: true, recursive: true });
+  }
+});
+
 test("installs dependencies and initializes Git when selected", () => {
   const calls = [];
   finishProject(
@@ -222,6 +267,26 @@ test("CLI uses non-interactive defaults and rejects extra arguments", () => {
     assert.equal(withoutEmail.status, 0, withoutEmail.stderr);
     assert.equal(
       existsSync(join(workspace, "without-email", "src", "lib", "email")),
+      false,
+    );
+
+    const withoutAnalytics = spawnSync(
+      process.execPath,
+      [
+        cliPath,
+        "without-analytics",
+        "--analytics",
+        "none",
+        "--no-install",
+        "--no-git",
+      ],
+      { cwd: workspace, encoding: "utf8", timeout: 10_000 },
+    );
+    assert.equal(withoutAnalytics.status, 0, withoutAnalytics.stderr);
+    assert.equal(
+      existsSync(
+        join(workspace, "without-analytics", "src", "lib", "analytics"),
+      ),
       false,
     );
 
