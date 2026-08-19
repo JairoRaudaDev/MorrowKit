@@ -12,7 +12,7 @@ import {
   writeFileSync,
 } from "node:fs";
 import { spawnSync } from "node:child_process";
-import { basename, dirname, resolve } from "node:path";
+import { basename, dirname, relative, resolve } from "node:path";
 import { createInterface } from "node:readline/promises";
 import { fileURLToPath } from "node:url";
 
@@ -32,24 +32,44 @@ const excludedTemplateEntries = new Set([
   "tsconfig.tsbuildinfo",
 ]);
 
+class CancellationError extends Error {
+  constructor() {
+    super("Cancelled.");
+    this.name = "CancellationError";
+  }
+}
+
+function isCancellation(error) {
+  return (
+    error instanceof CancellationError ||
+    (error instanceof Error && error.name === "AbortError")
+  );
+}
+
 export function createApp(targetArgument, cwd = process.cwd()) {
   if (typeof targetArgument !== "string" || targetArgument.trim() === "") {
-    throw new Error("Please provide a project directory.");
+    throw new Error(
+      "Provide a project directory, for example: create-morrowkit my-app.",
+    );
   }
 
   const workingDirectory = resolve(cwd);
   const target = resolve(workingDirectory, targetArgument);
   if (target === workingDirectory) {
     throw new Error(
-      "Choose a new project directory instead of the current directory.",
+      "The project directory cannot be the current directory. Choose a new directory, such as ./my-app.",
     );
   }
   if (existsSync(target)) {
     if (!lstatSync(target).isDirectory()) {
-      throw new Error(`The target path is not a directory: ${target}`);
+      throw new Error(
+        `The target path is not a directory: ${target}. Choose a different project directory.`,
+      );
     }
     if (readdirSync(target).length > 0) {
-      throw new Error(`The target directory is not empty: ${target}`);
+      throw new Error(
+        `The target directory is not empty: ${target}. Choose an empty directory or a different project name.`,
+      );
     }
   }
   if (!existsSync(templateRoot)) {
@@ -433,11 +453,28 @@ function runCommand(command, arguments_, cwd) {
     cwd,
     encoding: "utf8",
     shell: process.platform === "win32",
-    stdio: "inherit",
+    stdio: ["inherit", "pipe", "pipe"],
   });
-  if (result.error) throw result.error;
+  if (result.signal === "SIGINT") throw new CancellationError();
+  if (result.error) {
+    if (result.error.code === "ENOENT") {
+      throw new Error(
+        `Could not find ${command}. Install it and make sure it is available on PATH.`,
+      );
+    }
+    throw result.error;
+  }
   if (result.status !== 0) {
-    throw new Error(`Command failed: ${command} ${arguments_.join(" ")}`);
+    const commandOutput = [result.stderr, result.stdout]
+      .filter(Boolean)
+      .join("\n")
+      .trim()
+      .split(/\r?\n/u)
+      .slice(-8)
+      .join("\n");
+    throw new Error(
+      `Command failed with exit code ${result.status}: ${command} ${arguments_.join(" ")}${commandOutput ? `\n${commandOutput}` : ""}`,
+    );
   }
 }
 
@@ -445,12 +482,39 @@ export function finishProject(
   target,
   { packageManager = "pnpm", install = true, git = true } = {},
   commandRunner = runCommand,
+  progress = undefined,
 ) {
-  if (install) commandRunner(packageManager, ["install"], target);
-  if (git) commandRunner("git", ["init"], target);
+  if (install) {
+    progress?.start("Installing dependencies");
+    try {
+      commandRunner(packageManager, ["install"], target);
+      progress?.succeed("Dependencies installed");
+    } catch (error) {
+      progress?.stop(error);
+      throw error;
+    }
+  }
+  if (git) {
+    progress?.start("Initializing Git");
+    try {
+      commandRunner("git", ["init"], target);
+      progress?.succeed("Git initialized");
+    } catch (error) {
+      progress?.stop(error);
+      throw error;
+    }
+  }
 }
 
-function parseArguments(arguments_) {
+function requireOptionValue(arguments_, index, option) {
+  const value = arguments_[index + 1];
+  if (!value || value.startsWith("-")) {
+    throw new Error(`${option} requires a value. Run with --help for usage.`);
+  }
+  return value;
+}
+
+export function parseArguments(arguments_) {
   const options = {
     analytics: "posthog",
     git: true,
@@ -467,19 +531,23 @@ function parseArguments(arguments_) {
     if (argument === "--yes" || argument === "-y") options.yes = true;
     else if (argument === "--no-analytics") options.analytics = "none";
     else if (argument === "--analytics") {
-      options.analytics = arguments_[index + 1];
+      options.analytics = requireOptionValue(arguments_, index, argument);
       index += 1;
     } else if (argument === "--no-email") options.email = false;
     else if (argument === "--no-stripe") options.stripe = false;
     else if (argument === "--no-install") options.install = false;
     else if (argument === "--no-git") options.git = false;
     else if (argument === "--package-manager") {
-      options.packageManager = arguments_[index + 1];
+      options.packageManager = requireOptionValue(arguments_, index, argument);
       index += 1;
     } else if (argument.startsWith("-")) {
-      throw new Error(`Unknown option: ${argument}`);
+      throw new Error(
+        `Unknown option: ${argument}. Run with --help for usage.`,
+      );
     } else if (options.target) {
-      throw new Error("Accepts one project directory.");
+      throw new Error(
+        `Expected one project directory, but received "${options.target}" and "${argument}".`,
+      );
     } else options.target = argument;
   }
 
@@ -497,7 +565,9 @@ function parseArguments(arguments_) {
 function parseYesNo(value, defaultValue) {
   const answer = value.trim().toLowerCase();
   if (!answer) return defaultValue;
-  return answer === "y" || answer === "yes";
+  if (answer === "y" || answer === "yes") return true;
+  if (answer === "n" || answer === "no") return false;
+  return undefined;
 }
 
 async function promptForOptions(defaults) {
@@ -505,48 +575,57 @@ async function promptForOptions(defaults) {
     input: process.stdin,
     output: process.stdout,
   });
+  const cancellation = new AbortController();
+  prompts.on("SIGINT", () => cancellation.abort());
+
+  const ask = async (question) => {
+    try {
+      return await prompts.question(question, {
+        signal: cancellation.signal,
+      });
+    } catch (error) {
+      if (cancellation.signal.aborted || isCancellation(error)) {
+        throw new CancellationError();
+      }
+      throw error;
+    }
+  };
+
+  const askChoice = async (question, choices, defaultValue) => {
+    while (true) {
+      const answer = (await ask(question)).trim().toLowerCase();
+      const value = answer || defaultValue;
+      if (choices.includes(value)) return value;
+      console.error(`Please choose one of: ${choices.join(", ")}.`);
+    }
+  };
+
+  const askYesNo = async (question, defaultValue) => {
+    while (true) {
+      const value = parseYesNo(await ask(question), defaultValue);
+      if (value !== undefined) return value;
+      console.error("Please answer yes or no.");
+    }
+  };
+
   try {
     const target =
-      (await prompts.question(`Project name? (${defaults.target}) `)).trim() ||
+      (await ask(`Project name? (${defaults.target}) `)).trim() ||
       defaults.target;
-    const managerAnswer = (
-      await prompts.question(
-        `Package manager? (${packageManagers.join("/")}) [${defaults.packageManager}] `,
-      )
-    )
-      .trim()
-      .toLowerCase();
-    const packageManager = managerAnswer || defaults.packageManager;
-    if (!packageManagers.includes(packageManager)) {
-      throw new Error(
-        `Package manager must be one of: ${packageManagers.join(", ")}.`,
-      );
-    }
-    const git = parseYesNo(
-      await prompts.question("Initialize git? (Y/n) "),
-      true,
+    const packageManager = await askChoice(
+      `Package manager? (${packageManagers.join("/")}) [${defaults.packageManager}] `,
+      packageManagers,
+      defaults.packageManager,
     );
-    const install = parseYesNo(
-      await prompts.question("Install dependencies? (Y/n) "),
-      true,
+    const git = await askYesNo("Initialize git? (Y/n) ", true);
+    const install = await askYesNo("Install dependencies? (Y/n) ", true);
+    const stripe = await askYesNo("Include Stripe? (Y/n) ", true);
+    const email = await askYesNo("Include transactional email? (Y/n) ", true);
+    const analytics = await askChoice(
+      "Analytics provider? (posthog/none) [posthog] ",
+      ["posthog", "none"],
+      defaults.analytics,
     );
-    const stripe = parseYesNo(
-      await prompts.question("Include Stripe? (Y/n) "),
-      true,
-    );
-    const email = parseYesNo(
-      await prompts.question("Include transactional email? (Y/n) "),
-      true,
-    );
-    const analyticsAnswer = (
-      await prompts.question("Analytics provider? (posthog/none) [posthog] ")
-    )
-      .trim()
-      .toLowerCase();
-    const analytics = analyticsAnswer || defaults.analytics;
-    if (!["posthog", "none"].includes(analytics)) {
-      throw new Error("Analytics provider must be one of: posthog, none.");
-    }
     return {
       ...defaults,
       analytics,
@@ -560,6 +639,50 @@ async function promptForOptions(defaults) {
   } finally {
     prompts.close();
   }
+}
+
+function createProgress(output = process.stdout) {
+  let pending = false;
+  const replacePending = (message) => {
+    if (output.isTTY && pending) output.write(`\r\u001b[2K${message}\n`);
+    else output.write(`${message}\n`);
+    pending = false;
+  };
+
+  return {
+    start(message) {
+      if (output.isTTY) {
+        output.write(`\u2026 ${message}`);
+        pending = true;
+      }
+    },
+    succeed(message) {
+      replacePending(`\u2714 ${message}`);
+    },
+    stop(error) {
+      if (isCancellation(error)) {
+        if (output.isTTY && pending) output.write("\r\u001b[2K");
+        pending = false;
+      } else {
+        replacePending("\u2716 Setup failed");
+      }
+    },
+  };
+}
+
+function shellPath(path) {
+  return /\s/u.test(path) ? `"${path.replaceAll('"', '\\"')}"` : path;
+}
+
+export function nextSteps(result, options, cwd = process.cwd()) {
+  const targetFromCwd = relative(resolve(cwd), result.target) || result.name;
+  const steps = [
+    `cd ${shellPath(targetFromCwd)}`,
+    "cp .env.example .env.local",
+  ];
+  if (!options.install) steps.push(`${options.packageManager} install`);
+  steps.push(`${options.packageManager} dev`);
+  return steps;
 }
 
 function printHelp() {
@@ -595,16 +718,35 @@ if (
     const interactive =
       process.stdin.isTTY && process.stdout.isTTY && !defaults.yes;
     const options = interactive ? await promptForOptions(defaults) : defaults;
-    const result = createApp(options.target);
-    if (!options.stripe) removeStripeModule(result.target);
-    if (!options.email) removeEmailModule(result.target);
-    if (options.analytics === "none") removeAnalyticsModule(result.target);
-    configureProject(result.target, result.name, options.packageManager);
-    finishProject(result.target, options);
-    console.log(`Created ${result.name} in ${result.target}`);
-    console.log(`Next: cd ${result.name} && ${options.packageManager} setup`);
+    const progress = createProgress();
+
+    console.log("\u2600\ufe0f MorrowKit\n");
+    progress.start("Creating project");
+    let result;
+    try {
+      result = createApp(options.target);
+      if (!options.stripe) removeStripeModule(result.target);
+      if (!options.email) removeEmailModule(result.target);
+      if (options.analytics === "none") removeAnalyticsModule(result.target);
+      configureProject(result.target, result.name, options.packageManager);
+      progress.succeed("Project created");
+    } catch (error) {
+      progress.stop(error);
+      throw error;
+    }
+
+    finishProject(result.target, options, runCommand, progress);
+    console.log("\nNext:\n");
+    console.log(nextSteps(result, options).join("\n"));
   } catch (error) {
-    console.error(error instanceof Error ? error.message : error);
-    process.exit(1);
+    if (isCancellation(error)) {
+      console.log("\nCancelled.");
+      process.exitCode = 130;
+    } else {
+      console.error(
+        `\nError: ${error instanceof Error ? error.message : String(error)}`,
+      );
+      process.exitCode = 1;
+    }
   }
 }

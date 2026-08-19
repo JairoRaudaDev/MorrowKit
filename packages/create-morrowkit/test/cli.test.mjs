@@ -17,6 +17,8 @@ import {
   configureProject,
   createApp,
   finishProject,
+  nextSteps,
+  parseArguments,
   removeEmailModule,
   removeAnalyticsModule,
   removeStripeModule,
@@ -231,6 +233,50 @@ test("installs dependencies and initializes Git when selected", () => {
   ]);
 });
 
+test("reports dependency and Git progress after each completed step", () => {
+  const calls = [];
+  const progress = [];
+  finishProject(
+    "/project",
+    { packageManager: "pnpm", install: true, git: true },
+    () => {},
+    {
+      start: (message) => calls.push(message),
+      stop: () => {},
+      succeed: (message) => progress.push(message),
+    },
+  );
+  assert.deepEqual(calls, ["Installing dependencies", "Initializing Git"]);
+  assert.deepEqual(progress, ["Dependencies installed", "Git initialized"]);
+});
+
+test("validates option values with actionable errors", () => {
+  assert.throws(
+    () => parseArguments(["app", "--package-manager"]),
+    /--package-manager requires a value.*--help/u,
+  );
+  assert.throws(
+    () => parseArguments(["app", "--analytics", "--no-git"]),
+    /--analytics requires a value.*--help/u,
+  );
+  assert.throws(
+    () => parseArguments(["app", "--wat"]),
+    /Unknown option: --wat.*--help/u,
+  );
+});
+
+test("prints copy-pasteable next steps", () => {
+  const result = { name: "acme", target: join("workspace", "acme") };
+  assert.deepEqual(
+    nextSteps(result, { install: true, packageManager: "pnpm" }, "workspace"),
+    ["cd acme", "cp .env.example .env.local", "pnpm dev"],
+  );
+  assert.deepEqual(
+    nextSteps(result, { install: false, packageManager: "npm" }, "workspace"),
+    ["cd acme", "cp .env.example .env.local", "npm install", "npm dev"],
+  );
+});
+
 test("rejects missing, current, non-directory, and non-empty targets", () => {
   const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
   const fileTarget = join(workspace, "file");
@@ -242,9 +288,9 @@ test("rejects missing, current, non-directory, and non-empty targets", () => {
   try {
     assert.throws(
       () => createApp(undefined, workspace),
-      /provide a project directory/,
+      /Provide a project directory/,
     );
-    assert.throws(() => createApp(".", workspace), /new project directory/);
+    assert.throws(() => createApp(".", workspace), /current directory/);
     assert.throws(() => createApp(fileTarget, workspace), /not a directory/);
     assert.throws(() => createApp(nonEmptyTarget, workspace), /not empty/);
   } finally {
@@ -266,7 +312,20 @@ test("CLI uses non-interactive defaults and rejects extra arguments", () => {
       },
     );
     assert.equal(created.status, 0, created.stderr);
-    assert.match(created.stdout, /Created my-app/);
+    assert.equal(
+      created.stdout.replaceAll("\r\n", "\n"),
+      `\u2600\ufe0f MorrowKit
+
+\u2714 Project created
+
+Next:
+
+cd my-app
+cp .env.example .env.local
+pnpm install
+pnpm dev
+`,
+    );
     assert.equal(existsSync(join(workspace, "my-app", "package.json")), true);
 
     const withoutStripe = spawnSync(
@@ -317,7 +376,7 @@ test("CLI uses non-interactive defaults and rejects extra arguments", () => {
       timeout: 10_000,
     });
     assert.equal(invalid.status, 1);
-    assert.match(invalid.stderr, /one project directory/);
+    assert.match(invalid.stderr, /Expected one project directory/);
     assert.equal(existsSync(join(workspace, "one")), false);
   } finally {
     rmSync(workspace, { force: true, recursive: true });

@@ -695,13 +695,13 @@
     "semantic_hash": ""
   },
   "packages/create-morrowkit/src/index.mjs": {
-    "mtime": 1787163277.5999348,
-    "ast_hash": "4ab8dbc374676049475d9fc2ce78c5a3",
+    "mtime": 1787164623.660627,
+    "ast_hash": "3525a5e8ad95f953445e7cc7bfd1d927",
     "semantic_hash": ""
   },
   "packages/create-morrowkit/test/cli.test.mjs": {
-    "mtime": 1787163277.5999348,
-    "ast_hash": "b5c60aa0d0f61fd3274bc2ae7565af34",
+    "mtime": 1787164628.608081,
+    "ast_hash": "18d65481a80a06a6967cf4c5ceac1092",
     "semantic_hash": ""
   },
   "packages/create-morrowkit/README.md": {

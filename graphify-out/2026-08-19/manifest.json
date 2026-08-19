@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   ".github/workflows/ci.yml": {
-    "mtime": 1787160133.9738283,
-    "ast_hash": "0ca1e13512a184592c88ea97c882c794",
+    "mtime": 1787163178.9498749,
+    "ast_hash": "e04439eaba08fb39057fd743702e8a61",
     "semantic_hash": ""
   },
   "renovate.json": {
@@ -695,13 +695,13 @@
     "semantic_hash": ""
   },
   "packages/create-morrowkit/src/index.mjs": {
-    "mtime": 1787162952.4498348,
-    "ast_hash": "c5d2c3fce7b0ccbc090870df0015960b",
+    "mtime": 1787163277.5999348,
+    "ast_hash": "4ab8dbc374676049475d9fc2ce78c5a3",
     "semantic_hash": ""
   },
   "packages/create-morrowkit/test/cli.test.mjs": {
-    "mtime": 1787162927.961738,
-    "ast_hash": "deee11281717c5237b68a21f72f2ddfb",
+    "mtime": 1787163277.5999348,
+    "ast_hash": "b5c60aa0d0f61fd3274bc2ae7565af34",
     "semantic_hash": ""
   },
   "packages/create-morrowkit/README.md": {
