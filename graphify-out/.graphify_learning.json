@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T00:16:00.328306+00:00",
+  "generated_at": "2026-08-19T00:24:08.024123+00:00",
   "nodes": {
     "src_app_auth_actions_logout": {
       "code_fingerprint": "7308fbd92121f3694d8cf3f86e0c04d3745eb13be191c5a9d1ad5210f378cd66",
@@ -17,7 +17,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 1.829959417,
+      "score": 1.829720772,
       "source_file": "src/app/auth/actions.ts",
       "status": "preferred",
       "uses": 2
@@ -33,7 +33,7 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.931110866,
+      "score": 0.930989439,
       "source_file": "src/app/dashboard/billing/actions.ts",
       "status": "tentative",
       "uses": 1
@@ -49,7 +49,7 @@
           "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
         }
       ],
-      "score": 0.905379002,
+      "score": 0.905260932,
       "source_file": "src/app/dashboard/billing/page.tsx",
       "status": "tentative",
       "uses": 1
@@ -65,7 +65,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.898848552,
+      "score": 0.898731333,
       "source_file": "src/app/dashboard/page.tsx",
       "status": "tentative",
       "uses": 1
@@ -81,7 +81,7 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.931110866,
+      "score": 0.930989439,
       "source_file": "src/app/dashboard/settings/profile-form.tsx",
       "status": "tentative",
       "uses": 1
@@ -97,7 +97,7 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.931110866,
+      "score": 0.930989439,
       "source_file": "src/app/pricing/actions.ts",
       "status": "tentative",
       "uses": 1
@@ -113,7 +113,7 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.931110866,
+      "score": 0.930989439,
       "source_file": "src/components/auth-form.tsx",
       "status": "tentative",
       "uses": 1
@@ -129,7 +129,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.898848552,
+      "score": 0.898731333,
       "source_file": "src/lib/auth/session.ts",
       "status": "tentative",
       "uses": 1
@@ -145,7 +145,7 @@
           "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
         }
       ],
-      "score": 0.905379002,
+      "score": 0.905260932,
       "source_file": "src/lib/stripe/config.ts",
       "status": "tentative",
       "uses": 1
@@ -161,7 +161,7 @@
           "q": "Add integration tests covering authentication-dependent data access, profile operations, subscription persistence, and important Supabase RLS behavior"
         }
       ],
-      "score": 0.951665855,
+      "score": 0.951541748,
       "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
       "status": "tentative",
       "uses": 1
@@ -177,7 +177,7 @@
           "q": "Add integration tests covering authentication-dependent data access, profile operations, subscription persistence, and important Supabase RLS behavior"
         }
       ],
-      "score": 0.951665855,
+      "score": 0.951541748,
       "source_file": "supabase/tests/database/rls_policies.test.sql",
       "status": "tentative",
       "uses": 1
