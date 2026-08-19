@@ -623,10 +623,5 @@
     "mtime": 1787097514.367619,
     "ast_hash": "c19d3204994e57dfc55ded79eab352ca",
     "semantic_hash": ""
-  },
-  "renovate.json": {
-    "mtime": 1787097684.7584417,
-    "ast_hash": "4aa4bac4fc8f976db3d4a5a6a2ab8429",
-    "semantic_hash": ""
   }
 }
