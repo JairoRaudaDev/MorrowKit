@@ -1,3 +1,5 @@
+import { productConfig } from "@/config/product";
+
 type WelcomeEmailProps = {
   name?: string;
   appUrl: string;
@@ -30,7 +32,7 @@ export function WelcomeEmail({ name, appUrl }: WelcomeEmailProps) {
           <h1
             style={{ fontSize: "28px", lineHeight: "36px", margin: "24px 0" }}
           >
-            Welcome to MorrowKit
+            Welcome to {productConfig.name}
           </h1>
           <p style={{ fontSize: "16px", lineHeight: "24px" }}>
             Your account is ready. You can now open your dashboard and start

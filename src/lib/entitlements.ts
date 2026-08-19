@@ -1,7 +1,7 @@
 import "server-only";
 
 import { getSubscription } from "@/lib/db/queries";
-import { stripeConfig } from "@/lib/stripe/config";
+import { getStripeConfig } from "@/lib/stripe/config";
 import {
   entitlementsForSubscription,
   type Entitlements,
@@ -13,5 +13,5 @@ export type { Entitlements, Plan };
 export async function getEntitlements(userId: string): Promise<Entitlements> {
   const subscription = await getSubscription(userId);
 
-  return entitlementsForSubscription(subscription, stripeConfig.priceIds);
+  return entitlementsForSubscription(subscription, getStripeConfig().priceIds);
 }

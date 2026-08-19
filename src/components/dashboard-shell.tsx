@@ -34,6 +34,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { productConfig } from "@/config/product";
 
 const navigation = [
   { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
@@ -178,12 +179,12 @@ export function DashboardShell({
         </div>
         <div className="flex-1 overflow-y-auto p-4">
           <p className="mb-2 px-3 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-            Workspace
+            {productConfig.dashboardLabel}
           </p>
           <Navigation />
         </div>
         <div className="border-t p-4 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Your Company
+          © {new Date().getFullYear()} {productConfig.companyName}
         </div>
       </aside>
 

@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
+    "setup": "node scripts/setup.mjs",
     "build": "next build",
     "start": "next start",
     "supabase:start": "supabase start",

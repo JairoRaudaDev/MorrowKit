@@ -68,17 +68,14 @@ MorrowKit makes a deliberate trade: choose a focused stack and encode sound defa
 git clone <your-fork-url>
 cd MorrowKit
 pnpm install
-cp .env.example .env.local
-pnpm supabase:start
+pnpm setup
 ```
 
-PowerShell users can copy the environment file with:
-
-```powershell
-Copy-Item .env.example .env.local
-```
-
-Run `pnpm exec supabase status`, then put its API URL, anonymous key, and service-role key in `.env.local`. For UI development without billing, the placeholder Stripe test values are sufficient.
+`pnpm setup` creates `.env.local` if needed, starts local Supabase, and refreshes
+only its local URL and keys while keeping the rest of an existing environment
+file. For UI development without billing, the placeholder Stripe test values
+are sufficient. If setup cannot start Supabase, make sure Docker Desktop is
+running and retry.
 
 ```bash
 pnpm dev
@@ -92,7 +89,7 @@ Stop the local stack with `pnpm supabase:stop`.
 
 Copy `.env.example` to `.env.local`; never commit the latter.
 
-### Required application configuration
+### Core application configuration
 
 | Variable                        | Scope  | Purpose                                                        |
 | ------------------------------- | ------ | -------------------------------------------------------------- |
@@ -100,12 +97,19 @@ Copy `.env.example` to `.env.local`; never commit the latter.
 | `NEXT_PUBLIC_SUPABASE_URL`      | Public | Supabase API URL.                                              |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Public | Anonymous/publishable key; authorization still depends on RLS. |
 | `SUPABASE_SERVICE_ROLE_KEY`     | Server | Trusted key used by billing synchronization. Never expose it.  |
-| `STRIPE_SECRET_KEY`             | Server | Stripe secret key; use `sk_test_...` outside production.       |
-| `STRIPE_WEBHOOK_SECRET`         | Server | Webhook endpoint signing secret.                               |
-| `STRIPE_PRO_PRICE_ID`           | Server | Recurring Stripe Price mapped to Pro.                          |
-| `STRIPE_BUSINESS_PRICE_ID`      | Server | Recurring Stripe Price mapped to Business.                     |
 
-Required variables are validated when their modules load so configuration errors fail early.
+### Billing configuration
+
+| Variable                   | Scope  | Purpose                                                  |
+| -------------------------- | ------ | -------------------------------------------------------- |
+| `STRIPE_SECRET_KEY`        | Server | Stripe secret key; use `sk_test_...` outside production. |
+| `STRIPE_WEBHOOK_SECRET`    | Server | Webhook endpoint signing secret.                         |
+| `STRIPE_PRO_PRICE_ID`      | Server | Recurring Stripe Price mapped to Pro.                    |
+| `STRIPE_BUSINESS_PRICE_ID` | Server | Recurring Stripe Price mapped to Business.               |
+
+Core variables fail fast when the application starts. Optional integrations
+validate their own variables only when used, so an unconfigured Stripe or email
+provider does not block unrelated development and production builds.
 
 ### Production email
 
@@ -252,6 +256,8 @@ Stripe ── signed webhook ──> Next.js API route ──> service-role Supa
 ```
 
 - `src/app/`: public, auth, dashboard, pricing, callback, and webhook routes.
+- `src/config/product.ts`: the product name, company label, and customer-facing
+  plan presentation to change when starting the next product.
 - `src/components/`: shells, states, forms, and UI primitives.
 - `src/env/`: public/server configuration and validation.
 - `src/lib/auth/`: sessions and credential validation.
@@ -270,7 +276,7 @@ The trust boundary is deliberate: browser code uses the anonymous key plus RLS; 
 Issues and pull requests are welcome.
 
 1. Fork the repository and create a focused branch.
-2. Install dependencies, create `.env.local`, and start local Supabase.
+2. Install dependencies and run `pnpm setup`.
 3. Make the smallest coherent change and add tests where the behavior lives.
 4. For database changes, add a new migration rather than editing an already-shared one; update pgTAP tests and seed data as needed.
 5. Run the relevant suites and core checks from [Development](#development).

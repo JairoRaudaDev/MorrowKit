@@ -2,7 +2,7 @@ import "server-only";
 
 import { createAdminClient } from "@/lib/supabase/admin";
 
-import { stripe } from "./client";
+import { getStripe } from "./client";
 
 type CustomerIdentity = Readonly<{
   userId: string;
@@ -37,7 +37,7 @@ export async function getOrCreateStripeCustomer({
     return existing.stripe_customer_id;
   }
 
-  const customer = await stripe.customers.create(
+  const customer = await getStripe().customers.create(
     {
       ...(email ? { email } : {}),
       metadata: { user_id: userId },

@@ -11,7 +11,6 @@ import {
   signupSchema,
 } from "@/lib/auth/validation";
 import {
-  formDataToObject,
   MutationError,
   type MutationResult,
   runMutation,
@@ -59,7 +58,7 @@ export async function login(
 ): Promise<AuthFormState> {
   const values = { email: String(formData.get("email") ?? "") };
   const result = await runMutation({
-    input: formDataToObject(formData),
+    input: Object.fromEntries(formData),
     schema: credentialsSchema,
     handler: async (credentials) => {
       const supabase = await createClient();
@@ -78,7 +77,7 @@ export async function signup(
 ): Promise<AuthFormState> {
   const values = { email: String(formData.get("email") ?? "") };
   const result = await runMutation({
-    input: formDataToObject(formData),
+    input: Object.fromEntries(formData),
     schema: signupSchema,
     handler: async (input) => {
       const credentials = { email: input.email, password: input.password };

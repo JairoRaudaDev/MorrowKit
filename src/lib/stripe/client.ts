@@ -2,11 +2,18 @@ import "server-only";
 
 import Stripe from "stripe";
 
-import { stripeConfig } from "./config";
+import { productConfig } from "@/config/product";
+
+import { getStripeConfig } from "./config";
 import type { StripeClient } from "./types";
 
-export const stripe: StripeClient = new Stripe(stripeConfig.secretKey, {
-  appInfo: {
-    name: "MorrowKit",
-  },
-});
+let client: StripeClient | undefined;
+
+export function getStripe(): StripeClient {
+  if (client) return client;
+
+  client = new Stripe(getStripeConfig().secretKey, {
+    appInfo: { name: productConfig.name },
+  });
+  return client;
+}

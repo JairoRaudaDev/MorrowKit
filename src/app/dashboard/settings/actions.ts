@@ -4,7 +4,6 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
 import {
-  formDataToObject,
   MutationError,
   type MutationResult,
   runMutation,
@@ -34,7 +33,7 @@ export async function updateProfile(
   formData: FormData,
 ): Promise<ProfileFormState> {
   return runMutation({
-    input: formDataToObject(formData),
+    input: Object.fromEntries(formData),
     schema: profileSchema,
     auth: "required",
     successMessage: "Profile updated.",

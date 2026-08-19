@@ -1,5 +1,5 @@
-import { stripe } from "@/lib/stripe/client";
-import { stripeConfig } from "@/lib/stripe/config";
+import { getStripe } from "@/lib/stripe/client";
+import { getStripeConfig } from "@/lib/stripe/config";
 import { synchronizeSubscriptionEvent } from "@/lib/stripe/webhook";
 
 const handledEvents = new Set([
@@ -53,10 +53,10 @@ export async function POST(request: Request) {
   let event;
   try {
     const body = await readWebhookBody(request);
-    event = stripe.webhooks.constructEvent(
+    event = getStripe().webhooks.constructEvent(
       body,
       signature,
-      stripeConfig.webhookSecret,
+      getStripeConfig().webhookSecret,
     );
   } catch (error) {
     return Response.json(

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { FormFeedback } from "@/components/form-feedback";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { productConfig } from "@/config/product";
 
 const initialState: AuthFormState = { ok: true, data: undefined };
 
@@ -120,7 +121,9 @@ export function AuthForm({ mode, next }: AuthFormProps) {
       </Button>
 
       <p className="text-center text-sm text-muted-foreground">
-        {isSignup ? "Already have an account?" : "New to MorrowKit?"}{" "}
+        {isSignup
+          ? "Already have an account?"
+          : `New to ${productConfig.name}?`}{" "}
         <Link
           className="font-medium text-foreground underline-offset-4 hover:underline"
           href={`${isSignup ? "/login" : "/signup"}${next !== "/" ? `?next=${encodeURIComponent(next)}` : ""}`}

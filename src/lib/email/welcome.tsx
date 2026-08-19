@@ -1,6 +1,7 @@
 import "server-only";
 
 import { WelcomeEmail } from "@/emails/welcome-email";
+import { productConfig } from "@/config/product";
 import { publicEnv } from "@/env/public";
 
 import { sendEmail } from "./send";
@@ -18,8 +19,8 @@ export function sendWelcomeEmail({ to, name }: SendWelcomeEmailOptions) {
 
   return sendEmail({
     to,
-    subject: "Welcome to MorrowKit",
+    subject: `Welcome to ${productConfig.name}`,
     react: <WelcomeEmail name={name} appUrl={dashboardUrl} />,
-    text: `${name?.trim() ? `Hi ${name.trim()},` : "Hi there,"}\n\nWelcome to MorrowKit. Your account is ready. Open your dashboard: ${dashboardUrl}`,
+    text: `${name?.trim() ? `Hi ${name.trim()},` : "Hi there,"}\n\nWelcome to ${productConfig.name}. Your account is ready. Open your dashboard: ${dashboardUrl}`,
   });
 }

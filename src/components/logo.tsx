@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { productConfig } from "@/config/product";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -15,7 +16,7 @@ type LogoProps = Omit<
 function Logo({
   className,
   href = "/",
-  name = "Your Company",
+  name = productConfig.name,
   mark,
   ...props
 }: LogoProps) {

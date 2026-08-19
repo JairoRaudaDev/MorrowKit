@@ -12,6 +12,7 @@ import { ActionForm } from "@/components/action-form";
 import { Container } from "@/components/container";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
+import { productConfig } from "@/config/product";
 
 const features = [
   {
@@ -34,41 +35,11 @@ const features = [
   },
 ];
 
-const plans = [
-  {
-    name: "Starter",
-    price: "$0",
-    description: "For trying the product and validating an idea.",
-    features: ["One workspace", "Core product features", "Community support"],
-    cta: "Start free",
-    featured: false,
-    plan: null,
-  },
-  {
-    name: "Pro",
-    price: "$29",
-    description: "For individuals and small teams building momentum.",
-    features: ["Unlimited projects", "Team collaboration", "Priority support"],
-    cta: "Choose Pro",
-    featured: true,
-    plan: "pro",
-  },
-  {
-    name: "Business",
-    price: "$99",
-    description: "For growing teams that need more control.",
-    features: ["Advanced permissions", "Usage insights", "Dedicated support"],
-    cta: "Choose Business",
-    featured: false,
-    plan: "business",
-  },
-];
-
 export function Navbar() {
   return (
     <header className="border-b bg-background/90 backdrop-blur">
       <Container className="flex h-16 items-center justify-between gap-6">
-        <Logo name="MorrowKit" />
+        <Logo name={productConfig.name} />
         <nav
           className="hidden items-center gap-7 text-sm text-muted-foreground sm:flex"
           aria-label="Main navigation"
@@ -116,7 +87,7 @@ export function Hero() {
             Build what matters. Leave the busywork behind.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
-            MorrowKit gives your team a calm, capable place to plan,
+            {productConfig.name} gives your team a calm, capable place to plan,
             collaborate, and ship—with less setup and fewer distractions.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -249,7 +220,7 @@ export function Pricing() {
             </p>
           </div>
           <div className="mt-14 grid gap-5 lg:grid-cols-3">
-            {plans.map((plan) => (
+            {productConfig.plans.map((plan) => (
               <article
                 key={plan.name}
                 className={`flex flex-col rounded-2xl border p-7 ${plan.featured ? "border-foreground shadow-lg" : ""}`}
@@ -284,13 +255,13 @@ export function Pricing() {
                     </li>
                   ))}
                 </ul>
-                {plan.plan ? (
+                {plan.id !== "free" ? (
                   <ActionForm
                     action={createCheckoutSession}
                     label={plan.cta}
                     pendingLabel="Opening checkout…"
                     pendingMessage={`Preparing secure checkout for ${plan.name}.`}
-                    fields={{ plan: plan.plan }}
+                    fields={{ plan: plan.id }}
                     variant={plan.featured ? "default" : "outline"}
                     className="mt-auto"
                     buttonClassName="w-full"
@@ -313,9 +284,10 @@ export function Footer() {
   return (
     <footer className="border-t">
       <Container className="flex flex-col gap-5 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-        <Logo name="MorrowKit" className="text-foreground" />
+        <Logo name={productConfig.name} className="text-foreground" />
         <p>
-          © {new Date().getFullYear()} MorrowKit. Built to be made your own.
+          © {new Date().getFullYear()} {productConfig.companyName}. Built to be
+          made your own.
         </p>
         <div className="flex gap-5">
           <Link className="hover:text-foreground" href="/pricing">

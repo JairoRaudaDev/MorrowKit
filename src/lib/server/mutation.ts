@@ -40,29 +40,39 @@ export class MutationError extends Error {
   }
 }
 
-type MutationContext = { user: User | null };
+type AuthMode = "none" | "required";
+type MutationContext<Auth extends AuthMode> = Auth extends "required"
+  ? { user: User }
+  : { user: null };
 
-type RunMutationOptions<Schema extends z.ZodType, Data> = {
+type RunMutationOptions<
+  Schema extends z.ZodType,
+  Data,
+  Auth extends AuthMode,
+> = {
   input: unknown;
   schema: Schema;
-  auth?: "none" | "required";
-  handler: (input: z.output<Schema>, context: MutationContext) => Promise<Data>;
+  auth?: Auth;
+  handler: (
+    input: z.output<Schema>,
+    context: MutationContext<Auth>,
+  ) => Promise<Data>;
   successMessage?: string;
   unexpectedErrorMessage?: string;
 };
 
-export function formDataToObject(formData: FormData) {
-  return Object.fromEntries(formData.entries());
-}
-
-export async function runMutation<Schema extends z.ZodType, Data>({
+export async function runMutation<
+  Schema extends z.ZodType,
+  Data,
+  Auth extends AuthMode = "none",
+>({
   input,
   schema,
-  auth = "none",
+  auth,
   handler,
   successMessage,
   unexpectedErrorMessage = "Something went wrong. Please try again.",
-}: RunMutationOptions<Schema, Data>): Promise<
+}: RunMutationOptions<Schema, Data, Auth>): Promise<
   MutationResult<Data, Extract<keyof z.input<Schema>, string>>
 > {
   const parsed = schema.safeParse(input);
@@ -83,7 +93,7 @@ export async function runMutation<Schema extends z.ZodType, Data>({
   try {
     let user: User | null = null;
 
-    if (auth === "required") {
+    if ((auth ?? "none") === "required") {
       const supabase = await createClient();
       const { data, error } = await supabase.auth.getUser();
 
@@ -102,7 +112,7 @@ export async function runMutation<Schema extends z.ZodType, Data>({
 
     return {
       ok: true,
-      data: await handler(parsed.data, { user }),
+      data: await handler(parsed.data, { user } as MutationContext<Auth>),
       message: successMessage,
     };
   } catch (error) {

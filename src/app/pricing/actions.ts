@@ -4,18 +4,18 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 
 import { publicEnv } from "@/env/public";
+import { paidPlanIds } from "@/config/product";
 import { track } from "@/lib/analytics/track";
 import {
-  formDataToObject,
   MutationError,
   type MutationResult,
   runMutation,
 } from "@/lib/server/mutation";
-import { stripe } from "@/lib/stripe/client";
-import { stripeConfig } from "@/lib/stripe/config";
+import { getStripe } from "@/lib/stripe/client";
+import { getStripeConfig } from "@/lib/stripe/config";
 import { getOrCreateStripeCustomer } from "@/lib/stripe/customer";
 
-const checkoutSchema = z.object({ plan: z.enum(["pro", "business"]) }).strict();
+const checkoutSchema = z.object({ plan: z.enum(paidPlanIds) }).strict();
 
 export type CheckoutFormState = MutationResult<undefined, "plan">;
 
@@ -24,23 +24,21 @@ export async function createCheckoutSession(
   formData: FormData,
 ): Promise<CheckoutFormState> {
   return runMutation({
-    input: formDataToObject(formData),
+    input: Object.fromEntries(formData),
     schema: checkoutSchema,
     auth: "required",
     unexpectedErrorMessage: "We couldn't start checkout. Please try again.",
     handler: async ({ plan }, { user }): Promise<undefined> => {
-      if (!user) {
-        throw new MutationError("UNAUTHENTICATED", "Sign in to continue.");
-      }
       const customerId = await getOrCreateStripeCustomer({
         userId: user.id,
         email: user.email,
       });
+      const stripeConfig = getStripeConfig();
       const billingUrl = new URL(
         "/dashboard/billing",
         publicEnv.NEXT_PUBLIC_APP_URL,
       );
-      const session = await stripe.checkout.sessions.create({
+      const session = await getStripe().checkout.sessions.create({
         mode: "subscription",
         customer: customerId,
         line_items: [{ price: stripeConfig.priceIds[plan], quantity: 1 }],

@@ -1,4 +1,6 @@
-export type Plan = "free" | "pro" | "business";
+import type { PaidPlan, Plan } from "@/config/product";
+
+export type { Plan } from "@/config/product";
 
 export type Entitlements = Readonly<{
   plan: Plan;
@@ -12,7 +14,7 @@ type Subscription = Readonly<{
   status: string;
 }>;
 
-type PriceIds = Readonly<Record<Exclude<Plan, "free">, string>>;
+type PriceIds = Readonly<Record<PaidPlan, string>>;
 
 const entitledSubscriptionStatuses = new Set(["active", "trialing"]);
 

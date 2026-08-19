@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 import { CTA, Footer, Navbar, Pricing } from "@/components/marketing";
+import { productConfig } from "@/config/product";
 
 export const metadata: Metadata = {
-  title: "Pricing | MorrowKit",
+  title: `Pricing | ${productConfig.name}`,
   description: "Simple plans for individuals and growing teams.",
 };
 

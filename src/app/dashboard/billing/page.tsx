@@ -15,6 +15,7 @@ import {
 import { requireAuth } from "@/lib/auth/session";
 import { getSubscription } from "@/lib/db/queries";
 import { getEntitlements, type Plan } from "@/lib/entitlements";
+import { productConfig } from "@/config/product";
 
 import { createBillingPortalSession } from "./actions";
 
@@ -29,11 +30,9 @@ const statusLabels: Record<string, string> = {
   unpaid: "Unpaid",
 };
 
-const planLabels: Record<Plan, string> = {
-  free: "Free",
-  pro: "Pro",
-  business: "Business",
-};
+const planLabels = Object.fromEntries(
+  productConfig.plans.map((plan) => [plan.id, plan.name]),
+) as Record<Plan, string>;
 
 function formatDate(value: string | null) {
   if (!value) return null;

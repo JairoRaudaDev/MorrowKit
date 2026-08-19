@@ -6,10 +6,10 @@ Security updates are provided for the latest released version of this project.
 Until a release is published, only the current version on the `main` branch is
 supported. Older versions and other branches may not receive security fixes.
 
-| Version | Supported |
-| --- | --- |
-| Latest release / `main` | Yes |
-| Older versions | No |
+| Version                 | Supported |
+| ----------------------- | --------- |
+| Latest release / `main` | Yes       |
+| Older versions          | No        |
 
 ## Reporting a Vulnerability
 

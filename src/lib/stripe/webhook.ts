@@ -5,8 +5,8 @@ import type Stripe from "stripe";
 import { track } from "@/lib/analytics/track";
 import { createAdminClient } from "@/lib/supabase/admin";
 
-import { stripe } from "./client";
-import { stripeConfig } from "./config";
+import { getStripe } from "./client";
+import { getStripeConfig } from "./config";
 import { planForPrice, stripeId, stripeTimestamp } from "./mapping";
 
 const userIdPattern =
@@ -36,7 +36,7 @@ async function ensureCustomerMapping(subscription: Stripe.Subscription) {
 
   let userId = subscription.metadata.user_id;
   if (!userId) {
-    const customer = await stripe.customers.retrieve(stripeCustomerId);
+    const customer = await getStripe().customers.retrieve(stripeCustomerId);
     if (!customer.deleted) userId = customer.metadata.user_id;
   }
   if (!userId) {
@@ -97,7 +97,7 @@ async function subscriptionFromEvent(event: Stripe.Event) {
   // Always read Stripe's current snapshot. This prevents a delayed event from
   // restoring stale fields even before the database timestamp guard runs.
   return subscriptionId
-    ? await stripe.subscriptions.retrieve(subscriptionId)
+    ? await getStripe().subscriptions.retrieve(subscriptionId)
     : null;
 }
 
@@ -139,7 +139,7 @@ export async function synchronizeSubscriptionEvent(event: Stripe.Event) {
 
   const properties = {
     userId: String(userId),
-    plan: planForPrice(item.price.id, stripeConfig.priceIds),
+    plan: planForPrice(item.price.id, getStripeConfig().priceIds),
   };
   if (event.type === "checkout.session.completed") {
     await track("subscription_started", properties);
