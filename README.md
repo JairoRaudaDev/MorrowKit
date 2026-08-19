@@ -1,10 +1,10 @@
 # MorrowKit
 
 <p align="center">
-  <a href="https://github.com/JairoRaudaDev/SaaSSeed"><img src="https://img.shields.io/badge/GitHub-MorrowKit-181717?logo=github" alt="MorrowKit on GitHub"></a>
+  <a href="https://github.com/JairoRaudaDev/MorrowKit"><img src="https://img.shields.io/badge/GitHub-MorrowKit-181717?logo=github" alt="MorrowKit on GitHub"></a>
   <a href="https://github.com/JairoRaudaDev"><img src="https://img.shields.io/badge/Author-JairoRaudaDev-181717?logo=github" alt="JairoRaudaDev on GitHub"></a>
-  <a href="https://github.com/JairoRaudaDev/SaaSSeed/issues"><img src="https://img.shields.io/github/issues/JairoRaudaDev/SaaSSeed" alt="GitHub issues"></a>
-  <a href="https://github.com/JairoRaudaDev/SaaSSeed/blob/main/LICENSE"><img src="https://img.shields.io/github/license/JairoRaudaDev/SaaSSeed" alt="MIT license"></a>
+  <a href="https://github.com/JairoRaudaDev/MorrowKit/issues"><img src="https://img.shields.io/github/issues/JairoRaudaDev/MorrowKit" alt="GitHub issues"></a>
+  <a href="https://github.com/JairoRaudaDev/MorrowKit/blob/main/LICENSE"><img src="https://img.shields.io/github/license/JairoRaudaDev/MorrowKit" alt="MIT license"></a>
   <a href="https://buymeacoffee.com/jairoraudadev"><img src="https://img.shields.io/badge/Buy_Me_a_Coffee-support-FFDD00?logo=buymeacoffee&logoColor=000000" alt="Buy me a coffee"></a>
 </p>
 

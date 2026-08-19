@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1787160806.7347074,
-    "ast_hash": "2d529a749eac4c80db3e6ff5b81029f2",
+    "mtime": 1787166666.7470093,
+    "ast_hash": "e726100f08567c98d81ea2186b3f3f9f",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787165567.6636877,
-    "ast_hash": "d25fcbc329cf66807820cd6b4e138569",
+    "mtime": 1787166666.7525582,
+    "ast_hash": "9ab9ef0c0e77b6e49bc1cad7012e2d58",
     "semantic_hash": ""
   },
   "graphify-out/memory/query_20260814_092941_create__dashboard_settings_with_display_name__futu.md": {
@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   "apps/template/package.json": {
-    "mtime": 1787160200.8776767,
-    "ast_hash": "aae0815bff94a0eec2ca19dfdf31f0b1",
+    "mtime": 1787166666.7470093,
+    "ast_hash": "09d07843efa8fbd748d570807b5d3a30",
     "semantic_hash": ""
   },
   "apps/template/playwright.config.ts": {
@@ -685,8 +685,8 @@
     "semantic_hash": ""
   },
   "packages/create-morrowkit/package.json": {
-    "mtime": 1787160806.7352235,
-    "ast_hash": "f81a6b567b7b559a9026be2f2a545434",
+    "mtime": 1787166666.7470093,
+    "ast_hash": "272f60d42c9d7eb2487fbc62c5cba183",
     "semantic_hash": ""
   },
   "packages/create-morrowkit/scripts/build.mjs": {
@@ -705,8 +705,8 @@
     "semantic_hash": ""
   },
   "packages/create-morrowkit/README.md": {
-    "mtime": 1787165128.3392475,
-    "ast_hash": "14994fd2ded53fca3c469e1ec8742bca",
+    "mtime": 1787166666.7525582,
+    "ast_hash": "f9283215866b5c0faf18feece3ba0d7e",
     "semantic_hash": ""
   },
   "graphify-out/memory/query_20260819_183733_polish_create_morrowkit_output_with_concise_progre.md": {

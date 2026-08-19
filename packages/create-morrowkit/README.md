@@ -204,3 +204,12 @@ pnpm cli -- my-app --no-install --no-git --yes
 ```
 
 Build the publishable CLI package with `pnpm build` from the repository root.
+
+## Support
+
+Report bugs and request features in the
+[MorrowKit issue tracker](https://github.com/JairoRaudaDev/MorrowKit/issues).
+
+## License
+
+`create-morrowkit` is available under the [MIT License](LICENSE).
