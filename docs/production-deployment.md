@@ -8,6 +8,73 @@ Use these placeholders consistently:
 - `<project-ref>`: the Supabase project reference
 - `<vercel-project>`: the Vercel project name
 
+## Production launch checklist
+
+Treat every unchecked item as a release blocker or record an owner, reason, and follow-up date for accepting the risk. Complete the detailed deployment steps below before signing off this checklist.
+
+### Security and access
+
+- [ ] Production secrets are stored only in the hosting provider or team secret manager, never in source control, client bundles, logs, or screenshots.
+- [ ] Production access for Vercel, Supabase, Stripe, DNS, email, analytics, and monitoring uses team-owned accounts with MFA and least-privilege roles.
+- [ ] Preview and development deployments cannot reach production Supabase or Stripe resources.
+- [ ] Secret rotation, incident response, database recovery, and rollback owners are documented.
+- [ ] Dependency, lint, type, test, and production-build checks pass for the release commit.
+
+### Supabase
+
+- [ ] A dedicated production project exists in the intended organization and region.
+- [ ] Every committed migration has been reviewed, dry-run, and applied; no production-only schema changes live solely in the dashboard.
+- [ ] RLS is enabled and reviewed for every exposed table, including negative tests proving users cannot access another user's rows.
+- [ ] Auth Site URL and exact callback URLs use `<production-origin>` and do not point to localhost or a preview deployment.
+- [ ] Backups, point-in-time recovery expectations, database credentials, and restore responsibility are documented.
+
+### Stripe
+
+- [ ] Production uses live secret keys and live recurring price IDs; no test-mode identifiers remain.
+- [ ] Products, prices, tax behavior, currencies, intervals, cancellation rules, and Customer Portal settings match the intended offer.
+- [ ] The live webhook targets `<production-origin>/api/stripe/webhook`, has the correct signing secret, and subscribes only to handled events.
+- [ ] Successful delivery, signature rejection, retries, and idempotency have been verified without granting entitlements from the checkout redirect alone.
+
+### Email
+
+- [ ] The sending domain is verified with the email provider and required SPF, DKIM, and DMARC records pass validation.
+- [ ] `EMAIL_FROM` uses the verified domain, replies reach a monitored mailbox, and production sending limits are sufficient.
+- [ ] Supabase Auth SMTP is configured separately when confirmation, recovery, or magic-link email is enabled.
+- [ ] Sign-up, confirmation, recovery, and application emails render correctly and link only to `<production-origin>`.
+
+### Monitoring and analytics
+
+- [ ] Error monitoring is enabled for browser, server, and edge runtimes; a controlled test error arrives with the correct environment and release.
+- [ ] Source maps are uploaded without exposing source-map credentials to the browser.
+- [ ] Alerts cover elevated errors and critical auth, checkout, webhook, and email failures, with a named responder.
+- [ ] Product analytics receives the expected lifecycle events in the production project without sensitive personal or payment data.
+- [ ] Consent, retention, deletion, and opt-out behavior match the published privacy policy and applicable requirements.
+
+### Legal and customer-facing content
+
+- [ ] Published Privacy Policy and Terms of Service pages are linked from the site and use the final business identity and contact details.
+- [ ] Billing terms clearly state pricing, renewal, cancellation, refund, and trial behavior where applicable.
+- [ ] Cookie or tracking consent is implemented where required for the launch audience and configured analytics.
+- [ ] Support, privacy, and security contact channels are monitored.
+
+### Domain and SEO
+
+- [ ] The canonical domain resolves to the production deployment over HTTPS; alternate hosts redirect to one canonical origin.
+- [ ] DNS ownership, renewal, registrar access, and TLS status have been verified, and no stale preview URLs appear in production configuration.
+- [ ] Global and page metadata use the production name, description, canonical URL, and social sharing image.
+- [ ] Favicon and platform icons load correctly; `robots.txt` and `sitemap.xml` return the intended production content.
+- [ ] Private dashboard and auth pages are excluded from indexing while public marketing pages remain crawlable.
+
+### Production smoke tests
+
+- [ ] Homepage, pricing, legal pages, favicon, robots file, sitemap, and unknown-route handling work on the canonical domain.
+- [ ] A new user can sign up, confirm email when enabled, log in, refresh the session, log out, and recover access.
+- [ ] Unauthenticated users cannot open protected routes, and two test users cannot access each other's data.
+- [ ] A real low-cost purchase (or an explicitly approved staging substitute) completes, synchronizes by webhook, updates entitlements, opens the Customer Portal, and can be changed or cancelled.
+- [ ] Transactional email, analytics events, error reporting, logs, and alerts are visible in their production systems.
+- [ ] Mobile and desktop checks show no broken layout, mixed content, console errors, failed requests, or leaked secrets.
+- [ ] The deployed commit, validation owner, launch time, known risks, and rollback target are recorded.
+
 ## 1. Choose the environment model
 
 Keep production and non-production resources separate.

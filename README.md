@@ -231,7 +231,7 @@ Before a pull request, run `pnpm format:check`, `pnpm lint`, `pnpm typecheck`, `
 
 ## Deployment
 
-MorrowKit works on any Node.js host supporting Next.js. For the complete Vercel production sequence—including Supabase migrations and Auth URLs, environment scoping, build settings, a custom domain, Stripe's live webhook, validation, and rollback—follow the [production deployment runbook](docs/production-deployment.md).
+MorrowKit works on any Node.js host supporting Next.js. For the production launch checklist and complete Vercel deployment sequence—including security, Supabase migrations and Auth URLs, Stripe live mode, email, monitoring, analytics, legal pages, SEO, a custom domain, smoke tests, and rollback—follow the [production deployment runbook](docs/production-deployment.md).
 
 Elsewhere, build with `pnpm build` and serve with `pnpm start`. Keep server secrets out of logs and browser-prefixed variables. A successful frontend build is not a complete deployment: hosted Supabase and a reachable Stripe webhook are also required.
 
