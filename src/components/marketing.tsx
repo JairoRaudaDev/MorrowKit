@@ -68,7 +68,7 @@ export function Navbar() {
   return (
     <header className="border-b bg-background/90 backdrop-blur">
       <Container className="flex h-16 items-center justify-between gap-6">
-        <Logo name="SaaSSeed" />
+        <Logo name="MorrowKit" />
         <nav
           className="hidden items-center gap-7 text-sm text-muted-foreground sm:flex"
           aria-label="Main navigation"
@@ -116,8 +116,8 @@ export function Hero() {
             Build what matters. Leave the busywork behind.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
-            SaaSSeed gives your team a calm, capable place to plan, collaborate,
-            and ship—with less setup and fewer distractions.
+            MorrowKit gives your team a calm, capable place to plan,
+            collaborate, and ship—with less setup and fewer distractions.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
@@ -313,8 +313,10 @@ export function Footer() {
   return (
     <footer className="border-t">
       <Container className="flex flex-col gap-5 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-        <Logo name="SaaSSeed" className="text-foreground" />
-        <p>© {new Date().getFullYear()} SaaSSeed. Built to be made your own.</p>
+        <Logo name="MorrowKit" className="text-foreground" />
+        <p>
+          © {new Date().getFullYear()} MorrowKit. Built to be made your own.
+        </p>
         <div className="flex gap-5">
           <Link className="hover:text-foreground" href="/pricing">
             Pricing

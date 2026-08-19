@@ -18,8 +18,8 @@ export function sendWelcomeEmail({ to, name }: SendWelcomeEmailOptions) {
 
   return sendEmail({
     to,
-    subject: "Welcome to SaaSSeed",
+    subject: "Welcome to MorrowKit",
     react: <WelcomeEmail name={name} appUrl={dashboardUrl} />,
-    text: `${name?.trim() ? `Hi ${name.trim()},` : "Hi there,"}\n\nWelcome to SaaSSeed. Your account is ready. Open your dashboard: ${dashboardUrl}`,
+    text: `${name?.trim() ? `Hi ${name.trim()},` : "Hi there,"}\n\nWelcome to MorrowKit. Your account is ready. Open your dashboard: ${dashboardUrl}`,
   });
 }

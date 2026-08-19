@@ -22,7 +22,7 @@ export function AuthPage({ mode, next, notice }: AuthPageProps) {
     <main className="flex min-h-svh items-center justify-center bg-muted/30 px-page py-12">
       <div className="w-full max-w-md space-y-8">
         <div className="flex justify-center">
-          <Logo name="SaaSSeed" />
+          <Logo name="MorrowKit" />
         </div>
         <Card>
           <CardHeader className="text-center">

@@ -120,7 +120,7 @@ export function AuthForm({ mode, next }: AuthFormProps) {
       </Button>
 
       <p className="text-center text-sm text-muted-foreground">
-        {isSignup ? "Already have an account?" : "New to SaaSSeed?"}{" "}
+        {isSignup ? "Already have an account?" : "New to MorrowKit?"}{" "}
         <Link
           className="font-medium text-foreground underline-offset-4 hover:underline"
           href={`${isSignup ? "/login" : "/signup"}${next !== "/" ? `?next=${encodeURIComponent(next)}` : ""}`}

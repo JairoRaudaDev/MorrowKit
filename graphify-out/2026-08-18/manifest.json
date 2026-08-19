@@ -643,5 +643,20 @@
     "mtime": 1787099273.888052,
     "ast_hash": "2a12c59ef986f6e06db4a58766f94355",
     "semantic_hash": ""
+  },
+  ".github/ISSUE_TEMPLATE/bug.yml": {
+    "mtime": 1787099408.0578108,
+    "ast_hash": "290585422e1cb8f03f93a833f60e0f85",
+    "semantic_hash": ""
+  },
+  ".github/ISSUE_TEMPLATE/feature.yml": {
+    "mtime": 1787099408.0578108,
+    "ast_hash": "b7a6b1c8656dcca138230fc3d519ece1",
+    "semantic_hash": ""
+  },
+  ".github/pull_request_template.md": {
+    "mtime": 1787099408.0588126,
+    "ast_hash": "939b7d5bdf7d2323753d8d673858eb0c",
+    "semantic_hash": ""
   }
 }

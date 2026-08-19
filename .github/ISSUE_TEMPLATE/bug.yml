@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a reproducible problem in SaaSSeed
+description: Report a reproducible problem in MorrowKit
 title: "[Bug]: "
 labels:
   - bug
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve SaaSSeed. Please search existing issues before filing a new report and remove any secrets from logs or screenshots.
+        Thanks for helping improve MorrowKit. Please search existing issues before filing a new report and remove any secrets from logs or screenshots.
 
   - type: textarea
     id: summary
@@ -45,7 +45,7 @@ body:
       label: Environment
       description: Include the details relevant to reproducing the problem.
       placeholder: |
-        - SaaSSeed commit/version:
+        - MorrowKit commit/version:
         - OS:
         - Browser and version:
         - Node.js version:

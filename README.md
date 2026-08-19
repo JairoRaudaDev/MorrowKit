@@ -1,7 +1,7 @@
-# SaaSSeed
+# MorrowKit
 
 <p align="center">
-  <a href="https://github.com/JairoRaudaDev/SaaSSeed"><img src="https://img.shields.io/badge/GitHub-SaaSSeed-181717?logo=github" alt="SaaSSeed on GitHub"></a>
+  <a href="https://github.com/JairoRaudaDev/SaaSSeed"><img src="https://img.shields.io/badge/GitHub-MorrowKit-181717?logo=github" alt="MorrowKit on GitHub"></a>
   <a href="https://github.com/JairoRaudaDev"><img src="https://img.shields.io/badge/Author-JairoRaudaDev-181717?logo=github" alt="JairoRaudaDev on GitHub"></a>
   <a href="https://github.com/JairoRaudaDev/SaaSSeed/issues"><img src="https://img.shields.io/github/issues/JairoRaudaDev/SaaSSeed" alt="GitHub issues"></a>
   <a href="https://github.com/JairoRaudaDev/SaaSSeed/blob/main/LICENSE"><img src="https://img.shields.io/github/license/JairoRaudaDev/SaaSSeed" alt="MIT license"></a>
@@ -10,13 +10,13 @@
 
 > Build → launch → measure → grow or kill.
 
-SaaSSeed is an opinionated, open-source starter for shipping small SaaS products without rebuilding authentication, billing, email, analytics, and deployment plumbing for every idea.
+MorrowKit is an opinionated, open-source starter for shipping small SaaS products without rebuilding authentication, billing, email, analytics, and deployment plumbing for every idea.
 
-It supports a portfolio approach to product development: validate an idea, build the smallest useful version, launch it, distribute it, measure what happens, then invest or stop. SaaSSeed handles the recurring foundation so product work begins sooner—and experiments remain cheap enough to end.
+It supports a portfolio approach to product development: validate an idea, build the smallest useful version, launch it, distribute it, measure what happens, then invest or stop. MorrowKit handles the recurring foundation so product work begins sooner—and experiments remain cheap enough to end.
 
 ## What it is
 
-SaaSSeed is a production-oriented Next.js template with email/password authentication, protected dashboards, RLS-secured user data, subscription billing, transactional email, analytics, monitoring, and tests.
+MorrowKit is a production-oriented Next.js template with email/password authentication, protected dashboards, RLS-secured user data, subscription billing, transactional email, analytics, monitoring, and tests.
 
 It is a starter, not a hosted platform or framework. Fork it, rename it, change its plans, and replace the example product surface with your own.
 
@@ -24,7 +24,7 @@ It is a starter, not a hosted platform or framework. Fork it, rename it, change 
 
 Most small SaaS products need the same unglamorous foundation. Rebuilding it delays the first customer conversation; skipping it creates security, billing, and operational debt when a product starts to work.
 
-SaaSSeed makes a deliberate trade: choose a focused stack and encode sound defaults once. Its job is to shorten the path from idea to evidence while keeping each product understandable enough to maintain, transfer, or shut down.
+MorrowKit makes a deliberate trade: choose a focused stack and encode sound defaults once. Its job is to shorten the path from idea to evidence while keeping each product understandable enough to maintain, transfer, or shut down.
 
 ## Features
 
@@ -66,7 +66,7 @@ SaaSSeed makes a deliberate trade: choose a focused stack and encode sound defau
 
 ```bash
 git clone <your-fork-url>
-cd SaaSSeed
+cd MorrowKit
 pnpm install
 cp .env.example .env.local
 pnpm supabase:start
@@ -109,10 +109,10 @@ Required variables are validated when their modules load so configuration errors
 
 ### Production email
 
-| Variable         | Purpose                                                  |
-| ---------------- | -------------------------------------------------------- |
-| `RESEND_API_KEY` | Resend API key; required only for production delivery.   |
-| `EMAIL_FROM`     | Verified sender, such as `SaaSSeed <hello@example.com>`. |
+| Variable         | Purpose                                                   |
+| ---------------- | --------------------------------------------------------- |
+| `RESEND_API_KEY` | Resend API key; required only for production delivery.    |
+| `EMAIL_FROM`     | Verified sender, such as `MorrowKit <hello@example.com>`. |
 
 ### Optional services
 
@@ -231,7 +231,7 @@ Before a pull request, run `pnpm format:check`, `pnpm lint`, `pnpm typecheck`, `
 
 ## Deployment
 
-SaaSSeed works on any Node.js host supporting Next.js. Vercel is the simplest default:
+MorrowKit works on any Node.js host supporting Next.js. Vercel is the simplest default:
 
 1. Import your fork and keep the detected Next.js/pnpm settings.
 2. Add required variables for Preview and Production, using test Stripe keys outside production.
@@ -288,4 +288,4 @@ Keep secrets, generated output, and local environment files out of commits. Pref
 
 ## License
 
-SaaSSeed is available under the [MIT License](LICENSE).
+MorrowKit is available under the [MIT License](LICENSE).

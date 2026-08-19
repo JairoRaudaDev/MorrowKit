@@ -7,6 +7,6 @@ import type { StripeClient } from "./types";
 
 export const stripe: StripeClient = new Stripe(stripeConfig.secretKey, {
   appInfo: {
-    name: "SaaSSeed",
+    name: "MorrowKit",
   },
 });

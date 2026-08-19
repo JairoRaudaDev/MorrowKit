@@ -1,6 +1,6 @@
-# Contributing to SaaSSeed
+# Contributing to MorrowKit
 
-Thanks for helping improve SaaSSeed. Keep changes focused, secure, and easy to review.
+Thanks for helping improve MorrowKit. Keep changes focused, secure, and easy to review.
 
 ## Setup
 
