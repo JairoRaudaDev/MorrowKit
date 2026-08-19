@@ -231,7 +231,7 @@ $env:PLAYWRIGHT_TEST_AUTH = "true"
 pnpm test:e2e
 ```
 
-Before a pull request, run `pnpm format:check`, `pnpm lint`, `pnpm typecheck`, `pnpm test`, and `pnpm build`. Also run database tests for schema/policy changes and E2E tests for user journeys. CI runs the core checks on pushes and pull requests.
+Before a pull request, run `pnpm format:check`, `pnpm lint`, `pnpm typecheck`, `pnpm test`, and `pnpm build`. Also run database tests for schema/policy changes and E2E tests for user journeys. CI smoke-tests every push and pull request from a fresh checkout by installing the frozen lockfile, creating `.env.local` from `.env.example`, type checking, testing, and producing a production build. The workflow can also be started manually from GitHub Actions.
 
 ## Deployment
 
