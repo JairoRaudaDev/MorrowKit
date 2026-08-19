@@ -580,8 +580,8 @@
     "semantic_hash": ""
   },
   "vitest.config.mts": {
-    "mtime": 1786912769.4433062,
-    "ast_hash": "70f9df59fbf41a46e59e5f7f4d47e2b0",
+    "mtime": 1787097514.3665946,
+    "ast_hash": "3ad001f0c6866b3d841bb5ea96a914e5",
     "semantic_hash": ""
   },
   "supabase/tests/database/auth_profile_subscription.test.sql": {
@@ -617,6 +617,11 @@
   "graphify-out/memory/query_20260816_204822_add_integration_tests_covering_authentication_depe.md": {
     "mtime": 1786913302.3496387,
     "ast_hash": "3cb7a49fe8399bed62ff328adc31c78d",
+    "semantic_hash": ""
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1787097514.367619,
+    "ast_hash": "c19d3204994e57dfc55ded79eab352ca",
     "semantic_hash": ""
   }
 }
