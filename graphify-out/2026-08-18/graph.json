@@ -3539,15 +3539,15 @@
       "norm_label": "commit convention"
     },
     {
-      "label": "Contributing to SaaSSeed",
+      "label": "Contributing to MorrowKit",
       "file_type": "document",
       "source_file": "CONTRIBUTING.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "contributing_contributing_to_saasseed",
+      "id": "contributing_contributing_to_morrowkit",
       "community": 24,
       "community_name": "Contributor Covenant Code of Conduct",
-      "norm_label": "contributing to saasseed"
+      "norm_label": "contributing to morrowkit"
     },
     {
       "label": "Pull requests",
@@ -5251,7 +5251,7 @@
       "_origin": "ast",
       "id": "readme",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "readme.md"
     },
     {
@@ -5262,7 +5262,7 @@
       "_origin": "ast",
       "id": "readme_architecture",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "architecture"
     },
     {
@@ -5273,7 +5273,7 @@
       "_origin": "ast",
       "id": "readme_contributing",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "contributing"
     },
     {
@@ -5284,7 +5284,7 @@
       "_origin": "ast",
       "id": "readme_deployment",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "deployment"
     },
     {
@@ -5295,7 +5295,7 @@
       "_origin": "ast",
       "id": "readme_development",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "development"
     },
     {
@@ -5306,7 +5306,7 @@
       "_origin": "ast",
       "id": "readme_email",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "email"
     },
     {
@@ -5317,7 +5317,7 @@
       "_origin": "ast",
       "id": "readme_environment_variables",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "environment variables"
     },
     {
@@ -5328,7 +5328,7 @@
       "_origin": "ast",
       "id": "readme_features",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "features"
     },
     {
@@ -5339,7 +5339,7 @@
       "_origin": "ast",
       "id": "readme_hosted_project",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "hosted project"
     },
     {
@@ -5350,7 +5350,7 @@
       "_origin": "ast",
       "id": "readme_license",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "license"
     },
     {
@@ -5361,8 +5361,19 @@
       "_origin": "ast",
       "id": "readme_local",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "local"
+    },
+    {
+      "label": "MorrowKit",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_morrowkit",
+      "community": 5,
+      "community_name": "MorrowKit",
+      "norm_label": "morrowkit"
     },
     {
       "label": "Optional services",
@@ -5372,7 +5383,7 @@
       "_origin": "ast",
       "id": "readme_optional_services",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "optional services"
     },
     {
@@ -5383,7 +5394,7 @@
       "_origin": "ast",
       "id": "readme_prerequisites",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "prerequisites"
     },
     {
@@ -5394,7 +5405,7 @@
       "_origin": "ast",
       "id": "readme_production_email",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "production email"
     },
     {
@@ -5405,7 +5416,7 @@
       "_origin": "ast",
       "id": "readme_quick_start",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "quick start"
     },
     {
@@ -5416,7 +5427,7 @@
       "_origin": "ast",
       "id": "readme_required_application_configuration",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "required application configuration"
     },
     {
@@ -5427,19 +5438,8 @@
       "_origin": "ast",
       "id": "readme_run_locally",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "run locally"
-    },
-    {
-      "label": "SaaSSeed",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "readme_saasseed",
-      "community": 5,
-      "community_name": "SaaSSeed",
-      "norm_label": "saasseed"
     },
     {
       "label": "Stripe setup",
@@ -5449,7 +5449,7 @@
       "_origin": "ast",
       "id": "readme_stripe_setup",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "stripe setup"
     },
     {
@@ -5460,7 +5460,7 @@
       "_origin": "ast",
       "id": "readme_supabase_setup",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "supabase setup"
     },
     {
@@ -5471,7 +5471,7 @@
       "_origin": "ast",
       "id": "readme_tech_stack",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "tech stack"
     },
     {
@@ -5482,7 +5482,7 @@
       "_origin": "ast",
       "id": "readme_what_it_is",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "what it is"
     },
     {
@@ -5493,7 +5493,7 @@
       "_origin": "ast",
       "id": "readme_why_it_exists",
       "community": 5,
-      "community_name": "SaaSSeed",
+      "community_name": "MorrowKit",
       "norm_label": "why it exists"
     },
     {
@@ -13803,7 +13803,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "contributing",
-      "target": "contributing_contributing_to_saasseed",
+      "target": "contributing_contributing_to_morrowkit",
       "confidence_score": 1.0
     },
     {
@@ -13813,7 +13813,7 @@
       "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "contributing_contributing_to_saasseed",
+      "source": "contributing_contributing_to_morrowkit",
       "target": "contributing_branch_strategy",
       "confidence_score": 1.0
     },
@@ -13824,7 +13824,7 @@
       "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "contributing_contributing_to_saasseed",
+      "source": "contributing_contributing_to_morrowkit",
       "target": "contributing_commit_convention",
       "confidence_score": 1.0
     },
@@ -13835,7 +13835,7 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "contributing_contributing_to_saasseed",
+      "source": "contributing_contributing_to_morrowkit",
       "target": "contributing_tests_and_checks",
       "confidence_score": 1.0
     },
@@ -13846,7 +13846,7 @@
       "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "contributing_contributing_to_saasseed",
+      "source": "contributing_contributing_to_morrowkit",
       "target": "contributing_pull_requests",
       "confidence_score": 1.0
     },
@@ -13857,7 +13857,7 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "contributing_contributing_to_saasseed",
+      "source": "contributing_contributing_to_morrowkit",
       "target": "contributing_setup",
       "confidence_score": 1.0
     },
@@ -14793,7 +14793,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "readme_saasseed",
+      "target": "readme_morrowkit",
       "confidence_score": 1.0
     },
     {
@@ -14833,6 +14833,160 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_supabase_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_stripe_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_what_it_is",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L185",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_email",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L202",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_development",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_why_it_exists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L232",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_deployment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L246",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L276",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_contributing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L289",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_tech_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_quick_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_morrowkit",
+      "target": "readme_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
@@ -14849,160 +15003,6 @@
       "_origin": "ast",
       "source": "readme_quick_start",
       "target": "readme_run_locally",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L129",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_supabase_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L165",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_stripe_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L17",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_what_it_is",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L185",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_email",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L202",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_development",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L23",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_why_it_exists",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L232",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_deployment",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L246",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_architecture",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L276",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_contributing",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L289",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_license",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L29",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_features",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L43",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_tech_stack",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L57",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_quick_start",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L91",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_saasseed",
-      "target": "readme_environment_variables",
       "confidence_score": 1.0
     },
     {
@@ -18300,5 +18300,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "b560e776ff2aec110a92d8a03e5cd6645a5ab1a7"
+  "built_at_commit": "d97e426c93b6bb1fac8cc50cbebb3f9d95e6e8fc"
 }

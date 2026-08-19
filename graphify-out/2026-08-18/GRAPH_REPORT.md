@@ -1,7 +1,7 @@
 # Graph Report - SaaSSeed  (2026-08-18)
 
 ## Corpus Check
-- 129 files · ~30,063 words
+- 129 files · ~30,065 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b560e776`
+- Built from commit: `d97e426c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - components.json
 - compilerOptions
 - scripts
-- SaaSSeed
+- MorrowKit
 - devDependencies
 - auth/actions.ts
 - dependencies
@@ -54,7 +54,7 @@
 3. `scripts` - 16 edges
 4. `Button()` - 16 edges
 5. `compilerOptions` - 16 edges
-6. `SaaSSeed` - 15 edges
+6. `MorrowKit` - 15 edges
 7. `runMutation()` - 12 edges
 8. `safeNextPath()` - 11 edges
 9. `Card()` - 9 edges
@@ -101,7 +101,7 @@ Nodes (27): dom, dom.iterable, esnext, .next/dev/types/**/*.ts, next-env.d.ts, .
 Cohesion: 0.08
 Nodes (25): description, engines, node, pnpm, license, name, packageManager, private (+17 more)
 
-### Community 5 - "SaaSSeed"
+### Community 5 - "MorrowKit"
 Cohesion: 0.09
 Nodes (22): Architecture, Contributing, Deployment, Development, Email, Environment variables, Features, Hosted project (+14 more)
 
@@ -185,7 +185,7 @@ Nodes (5): How to reproduce or verify, Reviewer notes, Screenshots or recordings
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `logout()` (2× useful, score=1.829720772)
+- `logout()` (2× useful, score=1.829408473)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
