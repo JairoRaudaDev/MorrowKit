@@ -527,22 +527,55 @@ export function parseArguments(arguments_) {
   };
 
   for (let index = 0; index < arguments_.length; index += 1) {
-    const argument = arguments_[index];
+    const rawArgument = arguments_[index];
+    const equalsIndex = rawArgument.startsWith("--")
+      ? rawArgument.indexOf("=")
+      : -1;
+    const argument =
+      equalsIndex === -1 ? rawArgument : rawArgument.slice(0, equalsIndex);
+    const inlineValue =
+      equalsIndex === -1 ? undefined : rawArgument.slice(equalsIndex + 1);
+    const optionValue = () => {
+      if (inlineValue !== undefined) {
+        if (!inlineValue) {
+          throw new Error(
+            `${argument} requires a value. Run with --help for usage.`,
+          );
+        }
+        return inlineValue;
+      }
+      const value = requireOptionValue(arguments_, index, argument);
+      index += 1;
+      return value;
+    };
+
+    if (
+      inlineValue !== undefined &&
+      argument !== "--analytics" &&
+      argument !== "--package-manager"
+    ) {
+      throw new Error(
+        `Unknown option: ${rawArgument}. Run with --help for usage.`,
+      );
+    }
+
     if (argument === "--yes" || argument === "-y") options.yes = true;
     else if (argument === "--no-analytics") options.analytics = "none";
     else if (argument === "--analytics") {
-      options.analytics = requireOptionValue(arguments_, index, argument);
-      index += 1;
-    } else if (argument === "--no-email") options.email = false;
+      options.analytics = optionValue();
+    } else if (argument === "--email") options.email = true;
+    else if (argument === "--no-email") options.email = false;
+    else if (argument === "--stripe") options.stripe = true;
     else if (argument === "--no-stripe") options.stripe = false;
+    else if (argument === "--install") options.install = true;
     else if (argument === "--no-install") options.install = false;
+    else if (argument === "--git") options.git = true;
     else if (argument === "--no-git") options.git = false;
     else if (argument === "--package-manager") {
-      options.packageManager = requireOptionValue(arguments_, index, argument);
-      index += 1;
+      options.packageManager = optionValue();
     } else if (argument.startsWith("-")) {
       throw new Error(
-        `Unknown option: ${argument}. Run with --help for usage.`,
+        `Unknown option: ${rawArgument}. Run with --help for usage.`,
       );
     } else if (options.target) {
       throw new Error(
@@ -693,10 +726,10 @@ Create a new application from the MorrowKit template.
 Options:
   -y, --yes                    Use defaults without prompting
   --package-manager <manager> pnpm, npm, yarn, or bun (default: pnpm)
-  --no-install                Skip dependency installation
-  --no-git                    Skip Git initialization
-  --no-stripe                 Exclude Stripe and billing features
-  --no-email                  Exclude transactional email features
+  --install, --no-install     Install or skip dependencies (default: install)
+  --git, --no-git             Initialize or skip Git (default: git)
+  --stripe, --no-stripe       Include or exclude Stripe (default: include)
+  --email, --no-email         Include or exclude email (default: include)
   --analytics <provider>      posthog or none (default: posthog)
   --no-analytics              Exclude analytics (alias for --analytics none)
   -h, --help                  Show help`);

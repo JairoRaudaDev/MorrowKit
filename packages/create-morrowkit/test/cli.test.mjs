@@ -265,6 +265,52 @@ test("validates option values with actionable errors", () => {
   );
 });
 
+test("parses documented non-interactive flags", () => {
+  assert.deepEqual(
+    parseArguments([
+      "my-app",
+      "--stripe",
+      "--email",
+      "--analytics=posthog",
+      "--package-manager=pnpm",
+      "--install",
+      "--git",
+    ]),
+    {
+      analytics: "posthog",
+      email: true,
+      git: true,
+      install: true,
+      packageManager: "pnpm",
+      stripe: true,
+      target: "my-app",
+      yes: false,
+    },
+  );
+
+  assert.deepEqual(
+    parseArguments([
+      "minimal",
+      "--no-stripe",
+      "--no-email",
+      "--no-analytics",
+      "--no-install",
+      "--no-git",
+      "--package-manager=npm",
+    ]),
+    {
+      analytics: "none",
+      email: false,
+      git: false,
+      install: false,
+      packageManager: "npm",
+      stripe: false,
+      target: "minimal",
+      yes: false,
+    },
+  );
+});
+
 test("prints copy-pasteable next steps", () => {
   const result = { name: "acme", target: join("workspace", "acme") };
   assert.deepEqual(

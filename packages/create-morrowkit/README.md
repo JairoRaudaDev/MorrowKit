@@ -16,11 +16,31 @@ For scripts and CI, pass a project directory with `--yes` to accept the defaults
 npx create-morrowkit my-app --yes
 ```
 
-The non-interactive defaults use pnpm, install dependencies, and initialize Git.
-Use `--package-manager`, `--no-install`, `--no-git`, `--no-stripe`, or
-`--no-email`, `--analytics none`, or `--no-analytics` to override them.
-Disabling an integration removes its source, dependencies, documentation,
-configuration, and environment variables.
+Every interactive choice also has a non-interactive flag. Value flags accept
+both `--flag value` and `--flag=value` syntax:
+
+| Prompt                      | Flags                                         | Default    |
+| --------------------------- | --------------------------------------------- | ---------- |
+| Package manager             | `--package-manager=pnpm\|npm\|yarn\|bun`      | `pnpm`     |
+| Install dependencies        | `--install`, `--no-install`                   | install    |
+| Initialize Git              | `--git`, `--no-git`                           | initialize |
+| Include Stripe              | `--stripe`, `--no-stripe`                     | include    |
+| Include transactional email | `--email`, `--no-email`                       | include    |
+| Analytics provider          | `--analytics=posthog\|none`, `--no-analytics` | `posthog`  |
+
+For example, this command is suitable for a non-interactive shell:
+
+```bash
+create-morrowkit my-app \
+  --stripe \
+  --email \
+  --analytics=posthog \
+  --package-manager=pnpm
+```
+
+Use `--yes` when invoking the command from a TTY to suppress prompts for any
+choices you did not specify. Disabling an integration removes its source,
+dependencies, documentation, configuration, and environment variables.
 
 Inside this repository, use `pnpm cli -- my-app` to run the source CLI and
 `pnpm build` to create the publishable package contents.
