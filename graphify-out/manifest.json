@@ -160,8 +160,8 @@
     "semantic_hash": ""
   },
   "apps/template/scripts/setup.mjs": {
-    "mtime": 1787158778.3237007,
-    "ast_hash": "097010f782bedda4a789679776ff7d39",
+    "mtime": 1787161853.9495096,
+    "ast_hash": "9c264ff483b7a62ed1ed733d10e3e499",
     "semantic_hash": ""
   },
   "apps/template/src/app/api/stripe/webhook/route.ts": {
@@ -695,18 +695,18 @@
     "semantic_hash": ""
   },
   "packages/create-morrowkit/src/index.mjs": {
-    "mtime": 1787161473.811198,
-    "ast_hash": "495ae0cb478fd85409c1140445835467",
+    "mtime": 1787161853.9495096,
+    "ast_hash": "f293482743538995eb5f8bcb8380a576",
     "semantic_hash": ""
   },
   "packages/create-morrowkit/test/cli.test.mjs": {
-    "mtime": 1787161491.3073463,
-    "ast_hash": "1ffe8eae9160ffde9a76dd65a1a5d1d5",
+    "mtime": 1787161853.9495096,
+    "ast_hash": "645ad09e5e24496a7354a4072496989f",
     "semantic_hash": ""
   },
   "packages/create-morrowkit/README.md": {
-    "mtime": 1787161473.8190427,
-    "ast_hash": "332664e3d456400e76d650214593f4e6",
+    "mtime": 1787161853.9495096,
+    "ast_hash": "4c6dfc3e78f8f25bf3fea6aa36370c53",
     "semantic_hash": ""
   }
 }

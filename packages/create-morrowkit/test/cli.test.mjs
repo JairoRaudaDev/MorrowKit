@@ -13,7 +13,7 @@ import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
-import { createApp } from "../src/index.mjs";
+import { configureProject, createApp, finishProject } from "../src/index.mjs";
 
 const packageRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const cliPath = join(packageRoot, "src", "index.mjs");
@@ -53,6 +53,35 @@ test("accepts an existing empty directory", () => {
   }
 });
 
+test("configures the project name and package manager", () => {
+  const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
+  try {
+    const result = createApp("My App", workspace);
+    configureProject(result.target, result.name, "npm");
+    const packageJson = JSON.parse(
+      readFileSync(join(result.target, "package.json"), "utf8"),
+    );
+    assert.equal(packageJson.name, "my-app");
+    assert.equal(packageJson.packageManager, undefined);
+    assert.equal(existsSync(join(result.target, "pnpm-lock.yaml")), false);
+  } finally {
+    rmSync(workspace, { force: true, recursive: true });
+  }
+});
+
+test("installs dependencies and initializes Git when selected", () => {
+  const calls = [];
+  finishProject(
+    "/project",
+    { packageManager: "yarn", install: true, git: true },
+    (...arguments_) => calls.push(arguments_),
+  );
+  assert.deepEqual(calls, [
+    ["yarn", ["install"], "/project"],
+    ["git", ["init"], "/project"],
+  ]);
+});
+
 test("rejects missing, current, non-directory, and non-empty targets", () => {
   const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
   const fileTarget = join(workspace, "file");
@@ -74,15 +103,19 @@ test("rejects missing, current, non-directory, and non-empty targets", () => {
   }
 });
 
-test("CLI creates a project without prompts and rejects extra arguments", () => {
+test("CLI uses non-interactive defaults and rejects extra arguments", () => {
   const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
 
   try {
-    const created = spawnSync(process.execPath, [cliPath, "my-app"], {
-      cwd: workspace,
-      encoding: "utf8",
-      timeout: 10_000,
-    });
+    const created = spawnSync(
+      process.execPath,
+      [cliPath, "my-app", "--no-install", "--no-git"],
+      {
+        cwd: workspace,
+        encoding: "utf8",
+        timeout: 10_000,
+      },
+    );
     assert.equal(created.status, 0, created.stderr);
     assert.match(created.stdout, /Created my-app/);
     assert.equal(existsSync(join(workspace, "my-app", "package.json")), true);
@@ -93,7 +126,7 @@ test("CLI creates a project without prompts and rejects extra arguments", () => 
       timeout: 10_000,
     });
     assert.equal(invalid.status, 1);
-    assert.match(invalid.stderr, /exactly one project directory/);
+    assert.match(invalid.stderr, /one project directory/);
     assert.equal(existsSync(join(workspace, "one")), false);
   } finally {
     rmSync(workspace, { force: true, recursive: true });

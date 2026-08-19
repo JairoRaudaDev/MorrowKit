@@ -1,16 +1,16 @@
 # Graph Report - SaaSSeed  (2026-08-19)
 
 ## Corpus Check
-- 138 files · ~34,095 words
+- 138 files · ~34,673 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 698 nodes · 1129 edges · 50 communities (43 shown, 7 thin omitted)
+- 706 nodes · 1141 edges · 56 communities (48 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c5c9e643`
+- Built from commit: `adb86ad9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,9 +22,10 @@
 - scripts
 - MorrowKit
 - devDependencies
+- auth-page.tsx
 - dependencies
 - auth/actions.ts
-- billing/page.tsx
+- entitlements.ts
 - marketing.tsx
 - Production deployment
 - scripts
@@ -52,6 +53,11 @@
 - create-morrowkit/README.md
 - renovate.json
 - pull_request_template.md
+- button.tsx
+- dashboard-loading.tsx
+- billing/page.tsx
+- settings/page.tsx
+- utils.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 60 edges
@@ -70,12 +76,12 @@
   .codex/skills/graphify/references/hooks.md → AGENTS.md
 - `Graphify First Codebase Workflow` --references--> `Path and Explain Queries`  [EXTRACTED]
   AGENTS.md → .codex/skills/graphify/references/query.md
-- `ProfileForm()` --indirect_call--> `updateProfile()`  [INFERRED]
-  apps/template/src/app/dashboard/settings/profile-form.tsx → apps/template/src/app/dashboard/settings/actions.ts
+- `AppShell()` --calls--> `cn()`  [EXTRACTED]
+  apps/template/src/components/app-shell.tsx → apps/template/src/lib/utils.ts
 - `CardAction()` --calls--> `cn()`  [EXTRACTED]
   apps/template/src/components/ui/card.tsx → apps/template/src/lib/utils.ts
-- `Graphify First Codebase Workflow` --references--> `Budget Aware Graph Traversal`  [EXTRACTED]
-  AGENTS.md → .codex/skills/graphify/references/query.md
+- `Separator()` --calls--> `cn()`  [EXTRACTED]
+  apps/template/src/components/ui/separator.tsx → apps/template/src/lib/utils.ts
 
 ## Import Cycles
 - None detected.
@@ -84,19 +90,19 @@
 - **Graphify Extraction Flow** — _codex_skills_graphify_skill_file_detection, _codex_skills_graphify_skill_structural_extraction, _codex_skills_graphify_skill_semantic_extraction, _codex_skills_graphify_skill_graph_build_and_clustering [EXTRACTED 1.00]
 - **Scoped Graph Navigation Modes** — _codex_skills_graphify_references_query_constrained_query_expansion, _codex_skills_graphify_references_query_graph_traversal, _codex_skills_graphify_references_query_path_and_explain, agents_scoped_graph_navigation [INFERRED 0.85]
 
-## Communities (50 total, 7 thin omitted)
+## Communities (56 total, 8 thin omitted)
 
 ### Community 0 - "Graphify Pipeline"
 Cohesion: 0.08
 Nodes (31): Folder Watch Incremental Rebuild, URL Ingestion, Optional Graph Exports, Token Reduction Benchmark, Edge Confidence Rubric, Deterministic Node IDs, Semantic Extraction JSON Schema, Cross Repository Graph Merge (+23 more)
 
 ### Community 1 - "pricing/actions.ts"
-Cohesion: 0.10
-Nodes (34): handledEvents, POST(), readWebhookBody(), BillingPortalFormState, createBillingPortalSession(), CheckoutFormState, checkoutSchema, createCheckoutSession() (+26 more)
+Cohesion: 0.11
+Nodes (31): handledEvents, POST(), readWebhookBody(), BillingPortalFormState, createBillingPortalSession(), CheckoutFormState, checkoutSchema, createCheckoutSession() (+23 more)
 
 ### Community 2 - "cn"
-Cohesion: 0.05
-Nodes (54): AuthFormState, ProfileFormState, initialState, ProfileForm(), ActionForm(), ActionFormProps, AppShell(), AppShellProps (+46 more)
+Cohesion: 0.11
+Nodes (29): navigation, Avatar(), AvatarBadge(), AvatarFallback(), AvatarGroup(), AvatarGroupCount(), AvatarImage(), Dialog() (+21 more)
 
 ### Community 3 - "compilerOptions"
 Cohesion: 0.07
@@ -114,21 +120,25 @@ Nodes (25): Architecture, Billing configuration, Contributing, Core application 
 Cohesion: 0.07
 Nodes (27): devDependencies, eslint, eslint-config-next, @playwright/test, prettier, prettier-plugin-tailwindcss, supabase, tailwindcss (+19 more)
 
+### Community 7 - "auth-page.tsx"
+Cohesion: 0.22
+Nodes (11): stats, AuthForm(), AuthLoading(), AuthPageProps, EmptyState(), Card(), CardAction(), CardContent() (+3 more)
+
 ### Community 8 - "dependencies"
 Cohesion: 0.06
 Nodes (35): dependencies, class-variance-authority, clsx, lucide-react, next, posthog-node, radix-ui, react (+27 more)
 
 ### Community 9 - "auth/actions.ts"
-Cohesion: 0.13
-Nodes (26): authError(), AuthField, AuthValues, login(), logout(), LogoutFormState, signup(), GET() (+18 more)
+Cohesion: 0.10
+Nodes (33): authError(), AuthField, AuthValues, login(), logout(), LogoutFormState, signup(), GET() (+25 more)
 
-### Community 10 - "billing/page.tsx"
-Cohesion: 0.07
-Nodes (39): BillingPage(), BillingPageProps, formatDate(), planLabels, statusLabels, PremiumInsightsPage(), DashboardLayout(), stats (+31 more)
+### Community 10 - "entitlements.ts"
+Cohesion: 0.13
+Nodes (19): BillingPage(), formatDate(), PremiumInsightsPage(), DashboardLayout(), DashboardShell(), Plan, requireAuth(), getSubscription (+11 more)
 
 ### Community 11 - "marketing.tsx"
-Cohesion: 0.12
-Nodes (17): metadata, metadata, CTA(), Features, Footer(), Hero(), Navbar(), Pricing() (+9 more)
+Cohesion: 0.08
+Nodes (26): metadata, metadata, Container(), ContainerProps, containerSizes, Logo(), LogoProps, CTA() (+18 more)
 
 ### Community 12 - "Production deployment"
 Cohesion: 0.07
@@ -155,8 +165,8 @@ Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations, Source Nodes
 
 ### Community 20 - "index.mjs"
-Cohesion: 0.20
-Nodes (8): createApp(), entryDirectory, excludedTemplateEntries, packagedTemplate, packageRoot, workspaceTemplate, cliPath, packageRoot
+Cohesion: 0.13
+Nodes (14): configureProject(), createApp(), entryDirectory, excludedTemplateEntries, finishProject(), normalizePackageName(), packagedTemplate, packageManagers (+6 more)
 
 ### Community 21 - "20260814010000_create_billing_tables.sql"
 Cohesion: 0.32
@@ -206,10 +216,26 @@ Nodes (25): before 6am on monday, before 6am on the first day of the month, conf
 Cohesion: 0.33
 Nodes (5): How to reproduce or verify, Reviewer notes, Screenshots or recordings, Tests, What changed
 
+### Community 51 - "button.tsx"
+Cohesion: 0.31
+Nodes (3): StatePage(), Button(), buttonVariants
+
+### Community 53 - "billing/page.tsx"
+Cohesion: 0.25
+Nodes (8): BillingPageProps, planLabels, statusLabels, ActionForm(), ActionFormProps, FormFeedback(), FormFeedbackProps, CardFooter()
+
+### Community 54 - "settings/page.tsx"
+Cohesion: 0.36
+Nodes (5): AuthFormState, AuthFormProps, initialState, Input(), Label()
+
+### Community 55 - "utils.ts"
+Cohesion: 0.29
+Nodes (3): AppShell(), AppShellProps, Separator()
+
 ## Knowledge Gaps
-- **306 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+301 more)
+- **307 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+302 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
@@ -219,17 +245,17 @@ Nodes (5): How to reproduce or verify, Reviewer notes, Screenshots or recordings
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `cn` to `billing/page.tsx`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **Why does `cn()` connect `cn` to `auth-page.tsx`, `marketing.tsx`, `button.tsx`, `dashboard-loading.tsx`, `billing/page.tsx`, `settings/page.tsx`, `utils.ts`?**
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `scripts`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `productConfig` connect `marketing.tsx` to `pricing/actions.ts`, `billing/page.tsx`, `cn`?**
+- **Why does `productConfig` connect `marketing.tsx` to `pricing/actions.ts`, `cn`, `auth-page.tsx`, `billing/page.tsx`, `settings/page.tsx`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _306 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _307 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07526881720430108 - nodes in this community are weakly interconnected._
 - **Should `pricing/actions.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.09577677224736049 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10726950354609929 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**
-  _Cohesion score 0.05030643513789581 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._

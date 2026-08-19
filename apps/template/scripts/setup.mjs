@@ -10,23 +10,28 @@ if (!existsSync(envFile)) {
   console.log(`${envFile} already exists; keeping it unchanged.`);
 }
 
-const command = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
-const start = spawnSync(command, ["exec", "supabase", "start"], {
+const packageManager = process.env.npm_config_user_agent?.split("/")[0] || "pnpm";
+const command =
+  process.platform === "win32" ? `${packageManager}.cmd` : packageManager;
+const execArguments = packageManager === "npm" ? ["exec", "--"] : ["exec"];
+const start = spawnSync(command, [...execArguments, "supabase", "start"], {
   stdio: "inherit",
 });
 
 if (start.status !== 0) {
   console.error(
-    "Supabase did not start. Make sure Docker Desktop is running, then run pnpm setup again.",
+    `Supabase did not start. Make sure Docker Desktop is running, then run ${packageManager} setup again.`,
   );
   process.exit(start.status ?? 1);
 }
 
 if (!existsSync(envFile)) process.exit(0);
 
-const status = spawnSync(command, ["exec", "supabase", "status", "-o", "env"], {
-  encoding: "utf8",
-});
+const status = spawnSync(
+  command,
+  [...execArguments, "supabase", "status", "-o", "env"],
+  { encoding: "utf8" },
+);
 
 if (status.status !== 0) {
   console.error(
@@ -59,4 +64,4 @@ for (const [name, value] of Object.entries(replacements)) {
 }
 writeFileSync(envFile, environment);
 
-console.log("Local Supabase credentials are ready. Run pnpm dev.");
+console.log(`Local Supabase credentials are ready. Run ${packageManager} dev.`);

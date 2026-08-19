@@ -74,19 +74,6 @@
       "norm_label": "paidplan"
     },
     {
-      "label": "WelcomeEmailProps",
-      "file_type": "code",
-      "source_file": "apps/template/src/emails/welcome-email.tsx",
-      "source_location": "L3",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_emails_welcome_email_welcomeemailprops",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "welcomeemailprops"
-    },
-    {
       "label": "Environment",
       "file_type": "code",
       "source_file": "apps/template/src/env/validation.ts",
@@ -98,45 +85,6 @@
       "community": 1,
       "community_name": "pricing/actions.ts",
       "norm_label": "environment"
-    },
-    {
-      "label": "EmailDeliveryResult",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/email/send.ts",
-      "source_location": "L17",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_lib_email_send_emaildeliveryresult",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "emaildeliveryresult"
-    },
-    {
-      "label": "SendEmailOptions",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/email/send.ts",
-      "source_location": "L8",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_lib_email_send_sendemailoptions",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "sendemailoptions"
-    },
-    {
-      "label": "SendWelcomeEmailOptions",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/email/welcome.tsx",
-      "source_location": "L9",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_lib_email_welcome_sendwelcomeemailoptions",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "sendwelcomeemailoptions"
     },
     {
       "label": "CustomerIdentity",
@@ -204,6 +152,19 @@
       "norm_label": "billingpageprops"
     },
     {
+      "label": "AuthPageProps",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/auth-page.tsx",
+      "source_location": "L13",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_auth_page_authpageprops",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "authpageprops"
+    },
+    {
       "label": "Plan",
       "file_type": "code",
       "source_file": "apps/template/src/config/product.ts",
@@ -215,6 +176,32 @@
       "community": 10,
       "community_name": "billing/page.tsx",
       "norm_label": "plan"
+    },
+    {
+      "label": "Profile",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/db/queries.ts",
+      "source_location": "L8",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_lib_db_queries_profile",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "profile"
+    },
+    {
+      "label": "Subscription",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/db/queries.ts",
+      "source_location": "L14",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_lib_db_queries_subscription",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "subscription"
     },
     {
       "label": "Entitlements",
@@ -282,6 +269,58 @@
       "norm_label": "premiuminsightsresult"
     },
     {
+      "label": "WelcomeEmailProps",
+      "file_type": "code",
+      "source_file": "apps/template/src/emails/welcome-email.tsx",
+      "source_location": "L3",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_emails_welcome_email_welcomeemailprops",
+      "community": 11,
+      "community_name": "marketing.tsx",
+      "norm_label": "welcomeemailprops"
+    },
+    {
+      "label": "EmailDeliveryResult",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/email/send.ts",
+      "source_location": "L17",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_lib_email_send_emaildeliveryresult",
+      "community": 11,
+      "community_name": "marketing.tsx",
+      "norm_label": "emaildeliveryresult"
+    },
+    {
+      "label": "SendEmailOptions",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/email/send.ts",
+      "source_location": "L8",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_lib_email_send_sendemailoptions",
+      "community": 11,
+      "community_name": "marketing.tsx",
+      "norm_label": "sendemailoptions"
+    },
+    {
+      "label": "SendWelcomeEmailOptions",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/email/welcome.tsx",
+      "source_location": "L9",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_lib_email_welcome_sendwelcomeemailoptions",
+      "community": 11,
+      "community_name": "marketing.tsx",
+      "norm_label": "sendwelcomeemailoptions"
+    },
+    {
       "label": "AnalyticsEvent",
       "file_type": "code",
       "source_file": "apps/template/src/lib/analytics/events.ts",
@@ -334,6 +373,45 @@
       "norm_label": "analyticsprovider"
     },
     {
+      "label": "AuthFormState",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/auth/actions.ts",
+      "source_location": "L22",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_auth_actions_authformstate",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "authformstate"
+    },
+    {
+      "label": "ProfileFormState",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/settings/actions.ts",
+      "source_location": "L26",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_settings_actions_profileformstate",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "profileformstate"
+    },
+    {
+      "label": "ActionFormProps",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/action-form.tsx",
+      "source_location": "L10",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_action_form_actionformprops",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "actionformprops"
+    },
+    {
       "label": "AppShellProps",
       "file_type": "code",
       "source_file": "apps/template/src/components/app-shell.tsx",
@@ -345,6 +423,19 @@
       "community": 2,
       "community_name": "cn",
       "norm_label": "appshellprops"
+    },
+    {
+      "label": "AuthFormProps",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/auth-form.tsx",
+      "source_location": "L15",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_auth_form_authformprops",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "authformprops"
     },
     {
       "label": "ContainerProps",
@@ -360,6 +451,19 @@
       "norm_label": "containerprops"
     },
     {
+      "label": "FormFeedbackProps",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/form-feedback.tsx",
+      "source_location": "L7",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_form_feedback_formfeedbackprops",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "formfeedbackprops"
+    },
+    {
       "label": "LogoProps",
       "file_type": "code",
       "source_file": "apps/template/src/components/logo.tsx",
@@ -371,84 +475,6 @@
       "community": 2,
       "community_name": "cn",
       "norm_label": "logoprops"
-    },
-    {
-      "label": "AuthFormState",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/auth/actions.ts",
-      "source_location": "L22",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_auth_actions_authformstate",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "authformstate"
-    },
-    {
-      "label": "ProfileFormState",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/settings/actions.ts",
-      "source_location": "L26",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_settings_actions_profileformstate",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "profileformstate"
-    },
-    {
-      "label": "ActionFormProps",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/action-form.tsx",
-      "source_location": "L10",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_action_form_actionformprops",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "actionformprops"
-    },
-    {
-      "label": "AuthFormProps",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/auth-form.tsx",
-      "source_location": "L15",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_auth_form_authformprops",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "authformprops"
-    },
-    {
-      "label": "AuthPageProps",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/auth-page.tsx",
-      "source_location": "L13",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_auth_page_authpageprops",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "authpageprops"
-    },
-    {
-      "label": "FormFeedbackProps",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/form-feedback.tsx",
-      "source_location": "L7",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_form_feedback_formfeedbackprops",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "formfeedbackprops"
     },
     {
       "label": "AuthField",
@@ -514,32 +540,6 @@
       "community": 9,
       "community_name": "auth/actions.ts",
       "norm_label": "signuppageprops"
-    },
-    {
-      "label": "Profile",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/db/queries.ts",
-      "source_location": "L8",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_lib_db_queries_profile",
-      "community": 9,
-      "community_name": "auth/actions.ts",
-      "norm_label": "profile"
-    },
-    {
-      "label": "Subscription",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/db/queries.ts",
-      "source_location": "L14",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_template_src_lib_db_queries_subscription",
-      "community": 9,
-      "community_name": "auth/actions.ts",
-      "norm_label": "subscription"
     },
     {
       "label": "AuthMode",
@@ -668,18 +668,6 @@
       "norm_label": "createcheckoutsession()"
     },
     {
-      "label": "WelcomeEmail()",
-      "file_type": "code",
-      "source_file": "apps/template/src/emails/welcome-email.tsx",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_emails_welcome_email_welcomeemail",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "welcomeemail()"
-    },
-    {
       "label": "validateEnv()",
       "file_type": "code",
       "source_file": "apps/template/src/env/validation.ts",
@@ -702,30 +690,6 @@
       "community": 1,
       "community_name": "pricing/actions.ts",
       "norm_label": "track()"
-    },
-    {
-      "label": "sendEmail()",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/email/send.ts",
-      "source_location": "L20",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_lib_email_send_sendemail",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "sendemail()"
-    },
-    {
-      "label": "sendWelcomeEmail()",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/email/welcome.tsx",
-      "source_location": "L14",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_lib_email_welcome_sendwelcomeemail",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "sendwelcomeemail()"
     },
     {
       "label": "getStripe()",
@@ -896,6 +860,18 @@
       "norm_label": "proxy()"
     },
     {
+      "label": "Loading()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/billing/loading.tsx",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_billing_loading_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "loading()"
+    },
+    {
       "label": "BillingPage()",
       "file_type": "code",
       "source_file": "apps/template/src/app/dashboard/billing/page.tsx",
@@ -918,6 +894,18 @@
       "community": 10,
       "community_name": "billing/page.tsx",
       "norm_label": "formatdate()"
+    },
+    {
+      "label": "Loading()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/insights/loading.tsx",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_insights_loading_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "loading()"
     },
     {
       "label": "PremiumInsightsPage()",
@@ -944,6 +932,66 @@
       "norm_label": "dashboardlayout()"
     },
     {
+      "label": "DashboardPage()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/page.tsx",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_page_dashboardpage",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "dashboardpage()"
+    },
+    {
+      "label": "Loading()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/settings/loading.tsx",
+      "source_location": "L3",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_settings_loading_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "loading()"
+    },
+    {
+      "label": "AccountSettingsPage()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/settings/page.tsx",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_settings_page_accountsettingspage",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "accountsettingspage()"
+    },
+    {
+      "label": "AuthLoading()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/auth-loading.tsx",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_auth_loading_authloading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "authloading()"
+    },
+    {
+      "label": "DashboardLoading()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/dashboard-loading.tsx",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_dashboard_loading_dashboardloading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "dashboardloading()"
+    },
+    {
       "label": "DashboardShell()",
       "file_type": "code",
       "source_file": "apps/template/src/components/dashboard-shell.tsx",
@@ -956,6 +1004,66 @@
       "norm_label": "dashboardshell()"
     },
     {
+      "label": "EmptyState()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/empty-state.tsx",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_empty_state_emptystate",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "emptystate()"
+    },
+    {
+      "label": "Card()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/card.tsx",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_card_card",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "card()"
+    },
+    {
+      "label": "CardAction()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/card.tsx",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_card_cardaction",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "cardaction()"
+    },
+    {
+      "label": "CardContent()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/card.tsx",
+      "source_location": "L64",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_card_cardcontent",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "cardcontent()"
+    },
+    {
+      "label": "CardDescription()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/card.tsx",
+      "source_location": "L41",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_card_carddescription",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "carddescription()"
+    },
+    {
       "label": "CardFooter()",
       "file_type": "code",
       "source_file": "apps/template/src/components/ui/card.tsx",
@@ -966,6 +1074,30 @@
       "community": 10,
       "community_name": "billing/page.tsx",
       "norm_label": "cardfooter()"
+    },
+    {
+      "label": "CardHeader()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/card.tsx",
+      "source_location": "L18",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_card_cardheader",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "cardheader()"
+    },
+    {
+      "label": "CardTitle()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/card.tsx",
+      "source_location": "L31",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_card_cardtitle",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "cardtitle()"
     },
     {
       "label": "requireAuth()",
@@ -1016,42 +1148,6 @@
       "norm_label": "getpremiuminsights()"
     },
     {
-      "label": "DashboardError()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/error.tsx",
-      "source_location": "L11",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_error_dashboarderror",
-      "community": 11,
-      "community_name": "marketing.tsx",
-      "norm_label": "dashboarderror()"
-    },
-    {
-      "label": "DashboardNotFound()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/not-found.tsx",
-      "source_location": "L7",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_not_found_dashboardnotfound",
-      "community": 11,
-      "community_name": "marketing.tsx",
-      "norm_label": "dashboardnotfound()"
-    },
-    {
-      "label": "Error()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/error.tsx",
-      "source_location": "L12",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_error_error",
-      "community": 11,
-      "community_name": "marketing.tsx",
-      "norm_label": "error()"
-    },
-    {
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "apps/template/src/app/layout.tsx",
@@ -1062,18 +1158,6 @@
       "community": 11,
       "community_name": "marketing.tsx",
       "norm_label": "rootlayout()"
-    },
-    {
-      "label": "NotFound()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/not-found.tsx",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_not_found_notfound",
-      "community": 11,
-      "community_name": "marketing.tsx",
-      "norm_label": "notfound()"
     },
     {
       "label": "Home()",
@@ -1172,28 +1256,40 @@
       "norm_label": "pricing()"
     },
     {
-      "label": "StatePage()",
+      "label": "WelcomeEmail()",
       "file_type": "code",
-      "source_file": "apps/template/src/components/state-page.tsx",
-      "source_location": "L5",
+      "source_file": "apps/template/src/emails/welcome-email.tsx",
+      "source_location": "L8",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_template_src_components_state_page_statepage",
+      "id": "apps_template_src_emails_welcome_email_welcomeemail",
       "community": 11,
       "community_name": "marketing.tsx",
-      "norm_label": "statepage()"
+      "norm_label": "welcomeemail()"
     },
     {
-      "label": "Button()",
+      "label": "sendEmail()",
       "file_type": "code",
-      "source_file": "apps/template/src/components/ui/button.tsx",
-      "source_location": "L41",
+      "source_file": "apps/template/src/lib/email/send.ts",
+      "source_location": "L20",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_template_src_components_ui_button_button",
+      "id": "apps_template_src_lib_email_send_sendemail",
       "community": 11,
       "community_name": "marketing.tsx",
-      "norm_label": "button()"
+      "norm_label": "sendemail()"
+    },
+    {
+      "label": "sendWelcomeEmail()",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/email/welcome.tsx",
+      "source_location": "L14",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_lib_email_welcome_sendwelcomeemail",
+      "community": 11,
+      "community_name": "marketing.tsx",
+      "norm_label": "sendwelcomeemail()"
     },
     {
       "label": ".track()",
@@ -1220,6 +1316,54 @@
       "norm_label": "getposthog()"
     },
     {
+      "label": "DashboardError()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/error.tsx",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_error_dashboarderror",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "dashboarderror()"
+    },
+    {
+      "label": "DashboardNotFound()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/not-found.tsx",
+      "source_location": "L7",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_not_found_dashboardnotfound",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "dashboardnotfound()"
+    },
+    {
+      "label": "ProfileForm()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/settings/profile-form.tsx",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_settings_profile_form_profileform",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "profileform()"
+    },
+    {
+      "label": "Error()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/error.tsx",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_error_error",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "error()"
+    },
+    {
       "label": "Loading()",
       "file_type": "code",
       "source_file": "apps/template/src/app/loading.tsx",
@@ -1230,6 +1374,30 @@
       "community": 2,
       "community_name": "cn",
       "norm_label": "loading()"
+    },
+    {
+      "label": "NotFound()",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/not-found.tsx",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_app_not_found_notfound",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "notfound()"
+    },
+    {
+      "label": "ActionForm()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/action-form.tsx",
+      "source_location": "L24",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_action_form_actionform",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "actionform()"
     },
     {
       "label": "AppShell()",
@@ -1244,16 +1412,16 @@
       "norm_label": "appshell()"
     },
     {
-      "label": "AuthLoading()",
+      "label": "AuthForm()",
       "file_type": "code",
-      "source_file": "apps/template/src/components/auth-loading.tsx",
-      "source_location": "L5",
+      "source_file": "apps/template/src/components/auth-form.tsx",
+      "source_location": "L20",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_template_src_components_auth_loading_authloading",
+      "id": "apps_template_src_components_auth_form_authform",
       "community": 2,
       "community_name": "cn",
-      "norm_label": "authloading()"
+      "norm_label": "authform()"
     },
     {
       "label": "Container()",
@@ -1304,6 +1472,18 @@
       "norm_label": "usermenu()"
     },
     {
+      "label": "FormFeedback()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/form-feedback.tsx",
+      "source_location": "L13",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_form_feedback_formfeedback",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "formfeedback()"
+    },
+    {
       "label": "Logo()",
       "file_type": "code",
       "source_file": "apps/template/src/components/logo.tsx",
@@ -1314,6 +1494,18 @@
       "community": 2,
       "community_name": "cn",
       "norm_label": "logo()"
+    },
+    {
+      "label": "StatePage()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/state-page.tsx",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_state_page_statepage",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "statepage()"
     },
     {
       "label": "Avatar()",
@@ -1388,16 +1580,16 @@
       "norm_label": "avatarimage()"
     },
     {
-      "label": "CardAction()",
+      "label": "Button()",
       "file_type": "code",
-      "source_file": "apps/template/src/components/ui/card.tsx",
-      "source_location": "L51",
+      "source_file": "apps/template/src/components/ui/button.tsx",
+      "source_location": "L41",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_template_src_components_ui_card_cardaction",
+      "id": "apps_template_src_components_ui_button_button",
       "community": 2,
       "community_name": "cn",
-      "norm_label": "cardaction()"
+      "norm_label": "button()"
     },
     {
       "label": "Dialog()",
@@ -1700,6 +1892,30 @@
       "norm_label": "dropdownmenutrigger()"
     },
     {
+      "label": "Input()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/input.tsx",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_input_input",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "input()"
+    },
+    {
+      "label": "Label()",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/label.tsx",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_label_label",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "label()"
+    },
+    {
       "label": "Separator()",
       "file_type": "code",
       "source_file": "apps/template/src/components/ui/separator.tsx",
@@ -1739,7 +1955,7 @@
       "label": "createApp()",
       "file_type": "code",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L29",
+      "source_location": "L30",
       "_callable": true,
       "_origin": "ast",
       "id": "packages_create_morrowkit_src_index_createapp",
@@ -1751,7 +1967,7 @@
       "label": "printHelp()",
       "file_type": "code",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L60",
+      "source_location": "L69",
       "_callable": true,
       "_origin": "ast",
       "id": "packages_create_morrowkit_src_index_printhelp",
@@ -1794,210 +2010,6 @@
       "community": 36,
       "community_name": "global-error.tsx",
       "norm_label": "globalerror()"
-    },
-    {
-      "label": "Loading()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/billing/loading.tsx",
-      "source_location": "L3",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_billing_loading_loading",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "loading()"
-    },
-    {
-      "label": "Loading()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/insights/loading.tsx",
-      "source_location": "L3",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_insights_loading_loading",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "loading()"
-    },
-    {
-      "label": "DashboardPage()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/page.tsx",
-      "source_location": "L17",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_page_dashboardpage",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "dashboardpage()"
-    },
-    {
-      "label": "Loading()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/settings/loading.tsx",
-      "source_location": "L3",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_settings_loading_loading",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "loading()"
-    },
-    {
-      "label": "ProfileForm()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/settings/profile-form.tsx",
-      "source_location": "L13",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_settings_profile_form_profileform",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "profileform()"
-    },
-    {
-      "label": "ActionForm()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/action-form.tsx",
-      "source_location": "L24",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_action_form_actionform",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "actionform()"
-    },
-    {
-      "label": "AuthForm()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/auth-form.tsx",
-      "source_location": "L20",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_auth_form_authform",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "authform()"
-    },
-    {
-      "label": "DashboardLoading()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/dashboard-loading.tsx",
-      "source_location": "L5",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_dashboard_loading_dashboardloading",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "dashboardloading()"
-    },
-    {
-      "label": "EmptyState()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/empty-state.tsx",
-      "source_location": "L5",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_empty_state_emptystate",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "emptystate()"
-    },
-    {
-      "label": "FormFeedback()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/form-feedback.tsx",
-      "source_location": "L13",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_form_feedback_formfeedback",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "formfeedback()"
-    },
-    {
-      "label": "Card()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/card.tsx",
-      "source_location": "L5",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_card_card",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "card()"
-    },
-    {
-      "label": "CardContent()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/card.tsx",
-      "source_location": "L64",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_card_cardcontent",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "cardcontent()"
-    },
-    {
-      "label": "CardDescription()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/card.tsx",
-      "source_location": "L41",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_card_carddescription",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "carddescription()"
-    },
-    {
-      "label": "CardHeader()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/card.tsx",
-      "source_location": "L18",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_card_cardheader",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "cardheader()"
-    },
-    {
-      "label": "CardTitle()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/card.tsx",
-      "source_location": "L31",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_card_cardtitle",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "cardtitle()"
-    },
-    {
-      "label": "Input()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/input.tsx",
-      "source_location": "L5",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_input_input",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "input()"
-    },
-    {
-      "label": "Label()",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/label.tsx",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_label_label",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "label()"
     },
     {
       "label": "authError()",
@@ -2070,18 +2082,6 @@
       "community": 9,
       "community_name": "auth/actions.ts",
       "norm_label": "updateprofile()"
-    },
-    {
-      "label": "AccountSettingsPage()",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/settings/page.tsx",
-      "source_location": "L18",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_settings_page_accountsettingspage",
-      "community": 9,
-      "community_name": "auth/actions.ts",
-      "norm_label": "accountsettingspage()"
     },
     {
       "label": "LoginPage()",
@@ -2223,39 +2223,6 @@
       "norm_label": "checkoutschema"
     },
     {
-      "label": "product.ts",
-      "file_type": "code",
-      "source_file": "apps/template/src/config/product.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_config_product",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "product.ts"
-    },
-    {
-      "label": "paidPlanIds",
-      "file_type": "code",
-      "source_file": "apps/template/src/config/product.ts",
-      "source_location": "L44",
-      "_origin": "ast",
-      "id": "apps_template_src_config_product_paidplanids",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "paidplanids"
-    },
-    {
-      "label": "welcome-email.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/emails/welcome-email.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_emails_welcome_email",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "welcome-email.tsx"
-    },
-    {
       "label": "public.ts",
       "file_type": "code",
       "source_file": "apps/template/src/env/public.ts",
@@ -2320,28 +2287,6 @@
       "community": 1,
       "community_name": "pricing/actions.ts",
       "norm_label": "env/validation.ts"
-    },
-    {
-      "label": "send.ts",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/email/send.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_lib_email_send",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "send.ts"
-    },
-    {
-      "label": "welcome.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/email/welcome.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_lib_email_welcome",
-      "community": 1,
-      "community_name": "pricing/actions.ts",
-      "norm_label": "welcome.tsx"
     },
     {
       "label": "stripe/client.ts",
@@ -2487,6 +2432,17 @@
       "norm_label": "config"
     },
     {
+      "label": "billing/loading.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/billing/loading.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_billing_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "billing/loading.tsx"
+    },
+    {
       "label": "billing/page.tsx",
       "file_type": "code",
       "source_file": "apps/template/src/app/dashboard/billing/page.tsx",
@@ -2520,6 +2476,28 @@
       "norm_label": "statuslabels"
     },
     {
+      "label": "insights/loading.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/insights/loading.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_insights_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "insights/loading.tsx"
+    },
+    {
+      "label": "insights/page.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/insights/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_insights_page",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "insights/page.tsx"
+    },
+    {
       "label": "dashboard/layout.tsx",
       "file_type": "code",
       "source_file": "apps/template/src/app/dashboard/layout.tsx",
@@ -2531,6 +2509,138 @@
       "norm_label": "dashboard/layout.tsx"
     },
     {
+      "label": "dashboard/loading.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/loading.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "dashboard/loading.tsx"
+    },
+    {
+      "label": "dashboard/page.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_page",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "dashboard/page.tsx"
+    },
+    {
+      "label": "stats",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/page.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_page_stats",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "stats"
+    },
+    {
+      "label": "settings/loading.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/settings/loading.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_settings_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "settings/loading.tsx"
+    },
+    {
+      "label": "settings/page.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/settings/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_settings_page",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "settings/page.tsx"
+    },
+    {
+      "label": "login/loading.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/login/loading.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_login_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "login/loading.tsx"
+    },
+    {
+      "label": "signup/loading.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/signup/loading.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_signup_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "signup/loading.tsx"
+    },
+    {
+      "label": "auth-loading.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/auth-loading.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_auth_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "auth-loading.tsx"
+    },
+    {
+      "label": "auth-page.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/auth-page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_auth_page",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "auth-page.tsx"
+    },
+    {
+      "label": "dashboard-loading.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/dashboard-loading.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_dashboard_loading",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "dashboard-loading.tsx"
+    },
+    {
+      "label": "empty-state.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/empty-state.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_empty_state",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "empty-state.tsx"
+    },
+    {
+      "label": "card.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/card.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_card",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "card.tsx"
+    },
+    {
       "label": "session.ts",
       "file_type": "code",
       "source_file": "apps/template/src/lib/auth/session.ts",
@@ -2540,6 +2650,39 @@
       "community": 10,
       "community_name": "billing/page.tsx",
       "norm_label": "session.ts"
+    },
+    {
+      "label": "queries.ts",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/db/queries.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_lib_db_queries",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "queries.ts"
+    },
+    {
+      "label": "getCurrentUser",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/db/queries.ts",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "apps_template_src_lib_db_queries_getcurrentuser",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "getcurrentuser"
+    },
+    {
+      "label": "getProfile",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/db/queries.ts",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "apps_template_src_lib_db_queries_getprofile",
+      "community": 10,
+      "community_name": "billing/page.tsx",
+      "norm_label": "getprofile"
     },
     {
       "label": "getSubscription",
@@ -2630,39 +2773,6 @@
       "norm_label": "demoinsights"
     },
     {
-      "label": "dashboard/error.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/error.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_error",
-      "community": 11,
-      "community_name": "marketing.tsx",
-      "norm_label": "dashboard/error.tsx"
-    },
-    {
-      "label": "dashboard/not-found.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/not-found.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_not_found",
-      "community": 11,
-      "community_name": "marketing.tsx",
-      "norm_label": "dashboard/not-found.tsx"
-    },
-    {
-      "label": "app/error.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/error.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_error",
-      "community": 11,
-      "community_name": "marketing.tsx",
-      "norm_label": "app/error.tsx"
-    },
-    {
       "label": "app/layout.tsx",
       "file_type": "code",
       "source_file": "apps/template/src/app/layout.tsx",
@@ -2683,17 +2793,6 @@
       "community": 11,
       "community_name": "marketing.tsx",
       "norm_label": "metadata"
-    },
-    {
-      "label": "app/not-found.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/not-found.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_not_found",
-      "community": 11,
-      "community_name": "marketing.tsx",
-      "norm_label": "app/not-found.tsx"
     },
     {
       "label": "app/page.tsx",
@@ -2740,37 +2839,26 @@
       "norm_label": "marketing.tsx"
     },
     {
-      "label": "state-page.tsx",
+      "label": "product.ts",
       "file_type": "code",
-      "source_file": "apps/template/src/components/state-page.tsx",
+      "source_file": "apps/template/src/config/product.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "apps_template_src_components_state_page",
+      "id": "apps_template_src_config_product",
       "community": 11,
       "community_name": "marketing.tsx",
-      "norm_label": "state-page.tsx"
+      "norm_label": "product.ts"
     },
     {
-      "label": "button.tsx",
+      "label": "paidPlanIds",
       "file_type": "code",
-      "source_file": "apps/template/src/components/ui/button.tsx",
-      "source_location": "L1",
+      "source_file": "apps/template/src/config/product.ts",
+      "source_location": "L44",
       "_origin": "ast",
-      "id": "apps_template_src_components_ui_button",
+      "id": "apps_template_src_config_product_paidplanids",
       "community": 11,
       "community_name": "marketing.tsx",
-      "norm_label": "button.tsx"
-    },
-    {
-      "label": "buttonVariants",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/button.tsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_button_buttonvariants",
-      "community": 11,
-      "community_name": "marketing.tsx",
-      "norm_label": "buttonvariants"
+      "norm_label": "paidplanids"
     },
     {
       "label": "productConfig",
@@ -2782,6 +2870,39 @@
       "community": 11,
       "community_name": "marketing.tsx",
       "norm_label": "productconfig"
+    },
+    {
+      "label": "welcome-email.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/emails/welcome-email.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_emails_welcome_email",
+      "community": 11,
+      "community_name": "marketing.tsx",
+      "norm_label": "welcome-email.tsx"
+    },
+    {
+      "label": "send.ts",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/email/send.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_lib_email_send",
+      "community": 11,
+      "community_name": "marketing.tsx",
+      "norm_label": "send.ts"
+    },
+    {
+      "label": "welcome.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/lib/email/welcome.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_lib_email_welcome",
+      "community": 11,
+      "community_name": "marketing.tsx",
+      "norm_label": "welcome.tsx"
     },
     {
       "label": "10. Release and rollback",
@@ -3961,6 +4082,61 @@
       "norm_label": "source nodes"
     },
     {
+      "label": "dashboard/error.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/error.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_error",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "dashboard/error.tsx"
+    },
+    {
+      "label": "dashboard/not-found.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/not-found.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_not_found",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "dashboard/not-found.tsx"
+    },
+    {
+      "label": "profile-form.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/settings/profile-form.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_settings_profile_form",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "profile-form.tsx"
+    },
+    {
+      "label": "initialState",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/dashboard/settings/profile-form.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "apps_template_src_app_dashboard_settings_profile_form_initialstate",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "initialstate"
+    },
+    {
+      "label": "app/error.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/app/error.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_app_error",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "app/error.tsx"
+    },
+    {
       "label": "app/loading.tsx",
       "file_type": "code",
       "source_file": "apps/template/src/app/loading.tsx",
@@ -3972,26 +4148,26 @@
       "norm_label": "app/loading.tsx"
     },
     {
-      "label": "login/loading.tsx",
+      "label": "app/not-found.tsx",
       "file_type": "code",
-      "source_file": "apps/template/src/app/login/loading.tsx",
+      "source_file": "apps/template/src/app/not-found.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "apps_template_src_app_login_loading",
+      "id": "apps_template_src_app_not_found",
       "community": 2,
       "community_name": "cn",
-      "norm_label": "login/loading.tsx"
+      "norm_label": "app/not-found.tsx"
     },
     {
-      "label": "signup/loading.tsx",
+      "label": "action-form.tsx",
       "file_type": "code",
-      "source_file": "apps/template/src/app/signup/loading.tsx",
+      "source_file": "apps/template/src/components/action-form.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "apps_template_src_app_signup_loading",
+      "id": "apps_template_src_components_action_form",
       "community": 2,
       "community_name": "cn",
-      "norm_label": "signup/loading.tsx"
+      "norm_label": "action-form.tsx"
     },
     {
       "label": "app-shell.tsx",
@@ -4005,15 +4181,26 @@
       "norm_label": "app-shell.tsx"
     },
     {
-      "label": "auth-loading.tsx",
+      "label": "auth-form.tsx",
       "file_type": "code",
-      "source_file": "apps/template/src/components/auth-loading.tsx",
+      "source_file": "apps/template/src/components/auth-form.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "apps_template_src_components_auth_loading",
+      "id": "apps_template_src_components_auth_form",
       "community": 2,
       "community_name": "cn",
-      "norm_label": "auth-loading.tsx"
+      "norm_label": "auth-form.tsx"
+    },
+    {
+      "label": "initialState",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/auth-form.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "apps_template_src_components_auth_form_initialstate",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "initialstate"
     },
     {
       "label": "container.tsx",
@@ -4049,6 +4236,17 @@
       "norm_label": "dashboard-shell.tsx"
     },
     {
+      "label": "form-feedback.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/form-feedback.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_form_feedback",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "form-feedback.tsx"
+    },
+    {
       "label": "logo.tsx",
       "file_type": "code",
       "source_file": "apps/template/src/components/logo.tsx",
@@ -4060,6 +4258,17 @@
       "norm_label": "logo.tsx"
     },
     {
+      "label": "state-page.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/state-page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_state_page",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "state-page.tsx"
+    },
+    {
       "label": "avatar.tsx",
       "file_type": "code",
       "source_file": "apps/template/src/components/ui/avatar.tsx",
@@ -4069,6 +4278,28 @@
       "community": 2,
       "community_name": "cn",
       "norm_label": "avatar.tsx"
+    },
+    {
+      "label": "button.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/button.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_button",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "button.tsx"
+    },
+    {
+      "label": "buttonVariants",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/button.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_button_buttonvariants",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "buttonvariants"
     },
     {
       "label": "dialog.tsx",
@@ -4091,6 +4322,28 @@
       "community": 2,
       "community_name": "cn",
       "norm_label": "dropdown-menu.tsx"
+    },
+    {
+      "label": "input.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/input.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_input",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "input.tsx"
+    },
+    {
+      "label": "label.tsx",
+      "file_type": "code",
+      "source_file": "apps/template/src/components/ui/label.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_template_src_components_ui_label",
+      "community": 2,
+      "community_name": "cn",
+      "norm_label": "label.tsx"
     },
     {
       "label": "separator.tsx",
@@ -4151,7 +4404,7 @@
       "label": "entryDirectory",
       "file_type": "code",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "packages_create_morrowkit_src_index_entrydirectory",
       "community": 20,
@@ -4162,7 +4415,7 @@
       "label": "excludedTemplateEntries",
       "file_type": "code",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "packages_create_morrowkit_src_index_excludedtemplateentries",
       "community": 20,
@@ -4173,7 +4426,7 @@
       "label": "packagedTemplate",
       "file_type": "code",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "packages_create_morrowkit_src_index_packagedtemplate",
       "community": 20,
@@ -4184,7 +4437,7 @@
       "label": "packageRoot",
       "file_type": "code",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "packages_create_morrowkit_src_index_packageroot",
       "community": 20,
@@ -4195,7 +4448,7 @@
       "label": "workspaceTemplate",
       "file_type": "code",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L16",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "packages_create_morrowkit_src_index_workspacetemplate",
       "community": 20,
@@ -4212,6 +4465,28 @@
       "community": 20,
       "community_name": "index.mjs",
       "norm_label": "cli.test.mjs"
+    },
+    {
+      "label": "cliPath",
+      "file_type": "code",
+      "source_file": "packages/create-morrowkit/test/cli.test.mjs",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "packages_create_morrowkit_test_cli_test_clipath",
+      "community": 20,
+      "community_name": "index.mjs",
+      "norm_label": "clipath"
+    },
+    {
+      "label": "packageRoot",
+      "file_type": "code",
+      "source_file": "packages/create-morrowkit/test/cli.test.mjs",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "packages_create_morrowkit_test_cli_test_packageroot",
+      "community": 20,
+      "community_name": "index.mjs",
+      "norm_label": "packageroot"
     },
     {
       "label": "20260814010000_create_billing_tables.sql",
@@ -6799,226 +7074,6 @@
       "norm_label": "vitest"
     },
     {
-      "label": "billing/loading.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/billing/loading.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_billing_loading",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "billing/loading.tsx"
-    },
-    {
-      "label": "insights/loading.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/insights/loading.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_insights_loading",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "insights/loading.tsx"
-    },
-    {
-      "label": "insights/page.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/insights/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_insights_page",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "insights/page.tsx"
-    },
-    {
-      "label": "dashboard/loading.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/loading.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_loading",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "dashboard/loading.tsx"
-    },
-    {
-      "label": "dashboard/page.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_page",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "dashboard/page.tsx"
-    },
-    {
-      "label": "stats",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/page.tsx",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_page_stats",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "stats"
-    },
-    {
-      "label": "settings/loading.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/settings/loading.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_settings_loading",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "settings/loading.tsx"
-    },
-    {
-      "label": "settings/page.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/settings/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_settings_page",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "settings/page.tsx"
-    },
-    {
-      "label": "profile-form.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/settings/profile-form.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_settings_profile_form",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "profile-form.tsx"
-    },
-    {
-      "label": "initialState",
-      "file_type": "code",
-      "source_file": "apps/template/src/app/dashboard/settings/profile-form.tsx",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "apps_template_src_app_dashboard_settings_profile_form_initialstate",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "initialstate"
-    },
-    {
-      "label": "action-form.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/action-form.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_components_action_form",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "action-form.tsx"
-    },
-    {
-      "label": "auth-form.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/auth-form.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_components_auth_form",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "auth-form.tsx"
-    },
-    {
-      "label": "initialState",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/auth-form.tsx",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "apps_template_src_components_auth_form_initialstate",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "initialstate"
-    },
-    {
-      "label": "auth-page.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/auth-page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_components_auth_page",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "auth-page.tsx"
-    },
-    {
-      "label": "dashboard-loading.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/dashboard-loading.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_components_dashboard_loading",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "dashboard-loading.tsx"
-    },
-    {
-      "label": "empty-state.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/empty-state.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_components_empty_state",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "empty-state.tsx"
-    },
-    {
-      "label": "form-feedback.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/form-feedback.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_components_form_feedback",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "form-feedback.tsx"
-    },
-    {
-      "label": "card.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/card.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_card",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "card.tsx"
-    },
-    {
-      "label": "input.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/input.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_input",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "input.tsx"
-    },
-    {
-      "label": "label.tsx",
-      "file_type": "code",
-      "source_file": "apps/template/src/components/ui/label.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_components_ui_label",
-      "community": 7,
-      "community_name": "settings/page.tsx",
-      "norm_label": "label.tsx"
-    },
-    {
       "label": "dependencies",
       "file_type": "code",
       "source_file": "apps/template/package.json",
@@ -7512,39 +7567,6 @@
       "community": 9,
       "community_name": "auth/actions.ts",
       "norm_label": "validation.test.ts"
-    },
-    {
-      "label": "queries.ts",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/db/queries.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_template_src_lib_db_queries",
-      "community": 9,
-      "community_name": "auth/actions.ts",
-      "norm_label": "queries.ts"
-    },
-    {
-      "label": "getCurrentUser",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/db/queries.ts",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "apps_template_src_lib_db_queries_getcurrentuser",
-      "community": 9,
-      "community_name": "auth/actions.ts",
-      "norm_label": "getcurrentuser"
-    },
-    {
-      "label": "getProfile",
-      "file_type": "code",
-      "source_file": "apps/template/src/lib/db/queries.ts",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "apps_template_src_lib_db_queries_getprofile",
-      "community": 9,
-      "community_name": "auth/actions.ts",
-      "norm_label": "getprofile"
     },
     {
       "label": "mutation.ts",
@@ -13058,7 +13080,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "packages/create-morrowkit/test/cli.test.mjs",
-      "source_location": "L7",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "packages_create_morrowkit_test_cli_test",
@@ -15158,7 +15180,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "packages/create-morrowkit/test/cli.test.mjs",
-      "source_location": "L7",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "packages_create_morrowkit_test_cli_test",
@@ -20143,7 +20165,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "packages_create_morrowkit_src_index",
@@ -20154,7 +20176,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "packages_create_morrowkit_src_index",
@@ -20165,7 +20187,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "packages_create_morrowkit_src_index",
@@ -20176,7 +20198,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "packages_create_morrowkit_src_index",
@@ -20187,7 +20209,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
       "source": "packages_create_morrowkit_src_index",
@@ -20198,7 +20220,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "packages_create_morrowkit_src_index",
@@ -20209,11 +20231,33 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/create-morrowkit/src/index.mjs",
-      "source_location": "L60",
+      "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
       "source": "packages_create_morrowkit_src_index",
       "target": "packages_create_morrowkit_src_index_printhelp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/create-morrowkit/test/cli.test.mjs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "packages_create_morrowkit_test_cli_test",
+      "target": "packages_create_morrowkit_test_cli_test_packageroot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/create-morrowkit/test/cli.test.mjs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "packages_create_morrowkit_test_cli_test",
+      "target": "packages_create_morrowkit_test_cli_test_clipath",
       "confidence_score": 1.0
     },
     {
@@ -21058,5 +21102,5 @@
       "source_file": ".codex/skills/graphify/references/query.md"
     }
   ],
-  "built_at_commit": "630aa34799a5965054a599880e47690802603779"
+  "built_at_commit": "c5c9e643e6f36cc5f70c07ff817528dc0d400569"
 }
