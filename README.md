@@ -251,6 +251,9 @@ pnpm cli -- my-app --no-install --no-git --yes
 
 Issues and pull requests are welcome.
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full contribution, versioning, and
+release process, and [CHANGELOG.md](CHANGELOG.md) for notable changes.
+
 1. Fork the repository and create a focused branch.
 2. Install dependencies and run `pnpm setup` for application work.
 3. Make the smallest coherent change and add tests where the behavior lives.

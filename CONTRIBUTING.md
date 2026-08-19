@@ -54,3 +54,53 @@ Open a focused pull request with:
 - documentation updates for changed setup or behavior.
 
 Keep the branch reviewable, respond to feedback, and ensure CI passes. Reviewers may ask for a smaller scope or additional tests. By participating, you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Versioning and releases
+
+MorrowKit uses [Semantic Versioning](https://semver.org/). The public version is
+the version of `create-morrowkit`; the private workspace and the application
+template bundled by the CLI are released with it under the same Git tag.
+
+- **Patch** releases fix bugs or make compatible maintenance and documentation
+  improvements.
+- **Minor** releases add backward-compatible features or meaningful template
+  capabilities.
+- **Major** releases contain breaking CLI behavior, remove supported options, or
+  require generated applications to make incompatible migration changes.
+
+Before `1.0.0`, breaking changes may be released in a minor version. They must be
+called out clearly in the changelog with migration guidance. Versions do not
+need to be bumped in every pull request.
+
+Contributors should add user-visible changes to the appropriate `Added`,
+`Changed`, `Deprecated`, `Removed`, `Fixed`, or `Security` section under
+[`Unreleased`](CHANGELOG.md#unreleased). Pure refactors, tests, and routine
+maintenance do not need entries unless they affect users.
+
+### Maintainer release checklist
+
+Releases are manual and are cut from the default branch:
+
+1. Confirm CI passes and review everything under `Unreleased`.
+2. Choose the next semantic version from user-visible impact, then update
+   `packages/create-morrowkit/package.json`.
+3. Rename the `Unreleased` changelog content to `[x.y.z] - YYYY-MM-DD`, add a new
+   empty `Unreleased` section, and include migration notes for breaking changes.
+4. Run `pnpm format:check`, `pnpm lint`, `pnpm typecheck`, `pnpm test`, and
+   `pnpm build`.
+5. Merge the release change into the default branch.
+6. From `packages/create-morrowkit` at that commit, run
+   `npm publish --access public` using an
+   npm account with publish access and two-factor authentication.
+7. Create and push an annotated Git tag named `vX.Y.Z`, create a GitHub release
+   from it using that version's changelog section, then verify
+   `npx create-morrowkit@X.Y.Z` in a temporary directory.
+
+If publishing fails, fix the cause and publish the same version only if npm has
+not accepted it. Never reuse or overwrite a version or Git tag that users may
+already have consumed; prepare a new patch release instead.
+
+This process intentionally requires no release tooling. If release volume or
+parallel contributions make manual changelog entries and version bumps
+error-prone, the project may adopt Changesets while retaining this changelog,
+semantic-versioning policy, and tag format.
