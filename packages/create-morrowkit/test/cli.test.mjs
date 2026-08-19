@@ -17,6 +17,7 @@ import {
   configureProject,
   createApp,
   finishProject,
+  removeEmailModule,
   removeStripeModule,
 } from "../src/index.mjs";
 
@@ -117,6 +118,40 @@ test("removes the complete Stripe module when disabled", () => {
   }
 });
 
+test("removes the complete transactional email module when disabled", () => {
+  const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
+  try {
+    const result = createApp("without-email", workspace);
+    removeEmailModule(result.target);
+
+    const packageJson = JSON.parse(
+      readFileSync(join(result.target, "package.json"), "utf8"),
+    );
+    assert.equal(packageJson.dependencies["react-email"], undefined);
+    assert.equal(packageJson.dependencies.resend, undefined);
+    assert.equal(existsSync(join(result.target, "pnpm-lock.yaml")), false);
+    assert.equal(existsSync(join(result.target, "src", "emails")), false);
+    assert.equal(existsSync(join(result.target, "src", "lib", "email")), false);
+    assert.doesNotMatch(
+      readFileSync(join(result.target, ".env.example"), "utf8"),
+      /RESEND_API_KEY|EMAIL_FROM/u,
+    );
+    assert.doesNotMatch(
+      readFileSync(join(result.target, "README.md"), "utf8"),
+      /Resend|React Email|transactional email|RESEND_API_KEY|EMAIL_FROM/iu,
+    );
+    assert.doesNotMatch(
+      readFileSync(
+        join(result.target, "docs", "production-deployment.md"),
+        "utf8",
+      ),
+      /Resend|React Email|RESEND_API_KEY|EMAIL_FROM/iu,
+    );
+  } finally {
+    rmSync(workspace, { force: true, recursive: true });
+  }
+});
+
 test("installs dependencies and initializes Git when selected", () => {
   const calls = [];
   finishProject(
@@ -176,6 +211,17 @@ test("CLI uses non-interactive defaults and rejects extra arguments", () => {
     assert.equal(withoutStripe.status, 0, withoutStripe.stderr);
     assert.equal(
       existsSync(join(workspace, "without-stripe", "src", "lib", "stripe")),
+      false,
+    );
+
+    const withoutEmail = spawnSync(
+      process.execPath,
+      [cliPath, "without-email", "--no-email", "--no-install", "--no-git"],
+      { cwd: workspace, encoding: "utf8", timeout: 10_000 },
+    );
+    assert.equal(withoutEmail.status, 0, withoutEmail.stderr);
+    assert.equal(
+      existsSync(join(workspace, "without-email", "src", "lib", "email")),
       false,
     );
 

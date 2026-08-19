@@ -90,6 +90,8 @@ const stripeModulePaths = [
   "pnpm-lock.yaml",
 ];
 
+const emailModulePaths = ["src/emails", "src/lib/email", "pnpm-lock.yaml"];
+
 function replaceFile(target, relativePath, transform) {
   const path = resolve(target, relativePath);
   writeFileSync(path, transform(readFileSync(path, "utf8")));
@@ -258,6 +260,58 @@ export type AnalyticsEvent<
   );
 }
 
+export function removeEmailModule(target) {
+  for (const relativePath of emailModulePaths) {
+    rmSync(resolve(target, relativePath), { force: true, recursive: true });
+  }
+
+  const packageJsonPath = resolve(target, "package.json");
+  const packageJson = JSON.parse(readFileSync(packageJsonPath, "utf8"));
+  delete packageJson.dependencies?.["react-email"];
+  delete packageJson.dependencies?.resend;
+  writeFileSync(packageJsonPath, `${JSON.stringify(packageJson, null, 2)}\n`);
+
+  replaceFile(target, ".env.example", (source) =>
+    source
+      .split(/\r?\n/u)
+      .filter(
+        (line) =>
+          !line.startsWith("RESEND_API_KEY=") &&
+          !line.startsWith("EMAIL_FROM=") &&
+          line !== "# Transactional email (required in production)",
+      )
+      .join("\n"),
+  );
+
+  replaceFile(target, "README.md", (source) =>
+    source
+      .replace(", billing, email, analytics", ", billing, analytics")
+      .replace(", transactional email, analytics", ", analytics")
+      .replace(/^.*\*\*Email:\*\*.*\r?\n/mu, "")
+      .replace(/^\| Email\s+\|.*\r?\n/mu, "")
+      .replace(" or email\nprovider", "\nprovider")
+      .replace(/\n### Production email[\s\S]*?(?=\n### Optional services)/u, "")
+      .replace(/\n## Email[\s\S]*?(?=\n## Development)/u, "")
+      .replace(", email, monitoring", ", monitoring")
+      .replace(/^\s*├─ Resend .*\r?\n/mu, "")
+      .replace(
+        "- `src/lib/email/`, `src/emails/`, and `src/lib/analytics/`: provider boundaries and domain events.",
+        "- `src/lib/analytics/`: provider boundary and domain events.",
+      ),
+  );
+
+  replaceFile(target, "docs/production-deployment.md", (source) =>
+    source
+      .replace(
+        "This is separate from the application's Resend integration.",
+        "",
+      )
+      .replace(/^.*`EMAIL_FROM`.*\r?\n/gmu, "")
+      .replace(/^\| `RESEND_API_KEY`.*\r?\n/mu, "")
+      .replace(/^\| `EMAIL_FROM`.*\r?\n/mu, ""),
+  );
+}
+
 const packageManagers = ["pnpm", "npm", "yarn", "bun"];
 
 function normalizePackageName(name) {
@@ -314,6 +368,7 @@ function parseArguments(arguments_) {
     git: true,
     install: true,
     packageManager: "pnpm",
+    email: true,
     target: undefined,
     stripe: true,
     yes: false,
@@ -322,6 +377,7 @@ function parseArguments(arguments_) {
   for (let index = 0; index < arguments_.length; index += 1) {
     const argument = arguments_[index];
     if (argument === "--yes" || argument === "-y") options.yes = true;
+    else if (argument === "--no-email") options.email = false;
     else if (argument === "--no-stripe") options.stripe = false;
     else if (argument === "--no-install") options.install = false;
     else if (argument === "--no-git") options.git = false;
@@ -383,7 +439,11 @@ async function promptForOptions(defaults) {
       await prompts.question("Include Stripe? (Y/n) "),
       true,
     );
-    return { ...defaults, git, install, packageManager, stripe, target };
+    const email = parseYesNo(
+      await prompts.question("Include transactional email? (Y/n) "),
+      true,
+    );
+    return { ...defaults, email, git, install, packageManager, stripe, target };
   } finally {
     prompts.close();
   }
@@ -400,6 +460,7 @@ Options:
   --no-install                Skip dependency installation
   --no-git                    Skip Git initialization
   --no-stripe                 Exclude Stripe and billing features
+  --no-email                  Exclude transactional email features
   -h, --help                  Show help`);
 }
 
@@ -421,6 +482,7 @@ if (
     const options = interactive ? await promptForOptions(defaults) : defaults;
     const result = createApp(options.target);
     if (!options.stripe) removeStripeModule(result.target);
+    if (!options.email) removeEmailModule(result.target);
     configureProject(result.target, result.name, options.packageManager);
     finishProject(result.target, options);
     console.log(`Created ${result.name} in ${result.target}`);

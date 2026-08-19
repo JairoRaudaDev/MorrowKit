@@ -6,7 +6,6 @@
   "4": "scripts",
   "5": "MorrowKit",
   "6": "devDependencies",
-  "7": "settings/page.tsx",
   "8": "dependencies",
   "9": "auth/actions.ts",
   "10": "billing/page.tsx",
@@ -49,9 +48,5 @@
   "47": "dashboard-protection.spec.ts",
   "48": "pricing.spec.ts",
   "49": "public-site.spec.ts",
-  "50": "vitest.config.mts",
-  "51": "auth-loading.tsx",
-  "52": "dashboard-loading.tsx",
-  "54": "auth-form.tsx",
-  "55": "utils.ts"
+  "50": "vitest.config.mts"
 }
