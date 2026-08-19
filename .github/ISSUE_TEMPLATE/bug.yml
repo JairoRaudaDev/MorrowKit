@@ -1,0 +1,77 @@
+name: Bug report
+description: Report a reproducible problem in SaaSSeed
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve SaaSSeed. Please search existing issues before filing a new report and remove any secrets from logs or screenshots.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Clearly describe the problem and its impact.
+      placeholder: Tell us what went wrong and who it affects.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reliable sequence that reproduces the issue.
+      placeholder: |
+        1. Start with ...
+        2. Go to ...
+        3. Click ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include the details relevant to reproducing the problem.
+      placeholder: |
+        - SaaSSeed commit/version:
+        - OS:
+        - Browser and version:
+        - Node.js version:
+        - pnpm version:
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs, screenshots, or recordings
+      description: Add useful diagnostics or visual evidence. Redact credentials, tokens, personal data, and other secrets.
+      placeholder: Drag and drop files here, or paste sanitized logs in a code block.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Share workarounds, suspected causes, regressions, or anything else that may help.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checklist
+      options:
+        - label: I searched existing issues for duplicates.
+          required: true
+        - label: I removed secrets and sensitive information from this report.
+          required: true

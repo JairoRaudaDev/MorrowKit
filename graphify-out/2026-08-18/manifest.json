@@ -628,5 +628,20 @@
     "mtime": 1787097684.7584417,
     "ast_hash": "4aa4bac4fc8f976db3d4a5a6a2ab8429",
     "semantic_hash": ""
+  },
+  "CODE_OF_CONDUCT.md": {
+    "mtime": 1787099085.5982902,
+    "ast_hash": "fd0c4b0d9a212946d545169faaa4ad7f",
+    "semantic_hash": ""
+  },
+  "CONTRIBUTING.md": {
+    "mtime": 1787099085.5973017,
+    "ast_hash": "9120fad40b9f56ef66f8f9433c16d75e",
+    "semantic_hash": ""
+  },
+  "SECURITY.md": {
+    "mtime": 1787099273.888052,
+    "ast_hash": "2a12c59ef986f6e06db4a58766f94355",
+    "semantic_hash": ""
   }
 }
