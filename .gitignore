@@ -1,12 +1,13 @@
 # dependencies
-/node_modules
+node_modules/
 
 # Next.js
-/.next/
-/out/
+.next/
+out/
 
 # production
-/build
+build/
+dist/
 
 # local environment files
 .env*
@@ -16,11 +17,14 @@
 *.log
 
 # Playwright
-/playwright-report/
-/test-results/
-/blob-report/
-/playwright/.cache/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
 
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# packaged CLI template
+packages/create-morrowkit/template/

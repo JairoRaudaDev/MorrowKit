@@ -8,7 +8,7 @@ You need Node.js 22.22+, pnpm 10+, and Docker Desktop.
 
 1. Fork and clone the repository.
 2. Run `pnpm install`.
-3. Copy `.env.example` to `.env.local` and add the local Supabase values reported by `pnpm exec supabase status`.
+3. Copy `apps/template/.env.example` to `apps/template/.env.local` and add the local Supabase values reported by `pnpm --filter morrowkit exec supabase status`.
 4. Run `pnpm supabase:start`, then `pnpm supabase:reset`.
 5. Start the app with `pnpm dev`.
 
