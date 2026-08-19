@@ -1,7 +1,7 @@
 # Graph Report - SaaSSeed  (2026-08-19)
 
 ## Corpus Check
-- 138 files · ~36,001 words
+- 138 files · ~36,271 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ee6fc800`
+- Built from commit: `51cd194e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -214,7 +214,7 @@ Nodes (5): How to reproduce or verify, Reviewer notes, Screenshots or recordings
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `logout()` (2× useful, score=1.829408473) _(code changed — re-verify)_
+- `logout()` (2× useful, score=1.798651558)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_

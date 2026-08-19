@@ -58,3 +58,78 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+  generated-project:
+    name: Generated project (${{ matrix.configuration }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - configuration: minimal
+            arguments: --no-stripe --no-email --no-analytics
+          - configuration: full
+            arguments: ""
+          - configuration: without-stripe
+            arguments: --no-stripe
+          - configuration: without-email
+            arguments: --no-email
+    env:
+      NEXT_PUBLIC_APP_URL: http://localhost:3000
+      NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ci-placeholder
+      SUPABASE_SERVICE_ROLE_KEY: ci-placeholder
+      STRIPE_SECRET_KEY: sk_test_ci_placeholder
+      STRIPE_WEBHOOK_SECRET: whsec_ci_placeholder
+      STRIPE_PRO_PRICE_ID: price_ci_pro
+      STRIPE_BUSINESS_PRICE_ID: price_ci_business
+      SENTRY_AUTH_TOKEN: ""
+      SENTRY_ORG: ""
+      SENTRY_PROJECT: ""
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Build create-morrowkit
+        run: pnpm --filter create-morrowkit build
+
+      - name: Generate ${{ matrix.configuration }} project
+        run: >-
+          node packages/create-morrowkit/dist/index.mjs
+          "${{ runner.temp }}/morrowkit-${{ matrix.configuration }}"
+          --yes
+          --no-install
+          --no-git
+          ${{ matrix.arguments }}
+
+      - name: Set up generated project environment
+        run: >-
+          cp
+          "${{ runner.temp }}/morrowkit-${{ matrix.configuration }}/.env.example"
+          "${{ runner.temp }}/morrowkit-${{ matrix.configuration }}/.env.local"
+
+      - name: Install generated project dependencies
+        working-directory: ${{ runner.temp }}/morrowkit-${{ matrix.configuration }}
+        run: pnpm install
+
+      - name: Type check generated project
+        working-directory: ${{ runner.temp }}/morrowkit-${{ matrix.configuration }}
+        run: pnpm typecheck
+
+      - name: Test generated project
+        working-directory: ${{ runner.temp }}/morrowkit-${{ matrix.configuration }}
+        run: pnpm test
+
+      - name: Build generated project
+        working-directory: ${{ runner.temp }}/morrowkit-${{ matrix.configuration }}
+        run: pnpm build

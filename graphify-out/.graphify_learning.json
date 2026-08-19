@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-19T00:34:46.335409+00:00",
+  "generated_at": "2026-08-19T18:11:30.566902+00:00",
   "nodes": {
-    "src_app_auth_actions_logout": {
-      "code_fingerprint": "7308fbd92121f3694d8cf3f86e0c04d3745eb13be191c5a9d1ad5210f378cd66",
+    "apps_template_src_app_auth_actions_logout": {
+      "code_fingerprint": "455bf340897560ec4c9efb1b42c659008358e23817e4722f566bb4117efc2f76",
       "label": "logout()",
       "last": "2026-08-15T22:07:28.770718+00:00",
       "provenance": [
@@ -17,13 +17,13 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 1.829408473,
-      "source_file": "src/app/auth/actions.ts",
+      "score": 1.798651558,
+      "source_file": "apps/template/src/app/auth/actions.ts",
       "status": "preferred",
       "uses": 2
     },
-    "src_app_dashboard_billing_actions_createbillingportalsession": {
-      "code_fingerprint": "7890c2f8eee78411ade3767bca44364ee99460e011d8773b434ceb0a92df1cde",
+    "apps_template_src_app_dashboard_billing_actions_createbillingportalsession": {
+      "code_fingerprint": "38361b6361de2108739826e2f565a5bd7bf3aae07d57e934f9cf26c9d8bc8ecf",
       "label": "createBillingPortalSession()",
       "last": "2026-08-15T22:07:28.770718+00:00",
       "provenance": [
@@ -33,13 +33,13 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.930830537,
-      "source_file": "src/app/dashboard/billing/actions.ts",
+      "score": 0.915180956,
+      "source_file": "apps/template/src/app/dashboard/billing/actions.ts",
       "status": "tentative",
       "uses": 1
     },
-    "src_app_dashboard_billing_page_billingpage": {
-      "code_fingerprint": "674e3c2a53c445f4a39175d39c8d504138adaf6776db1e052b55d9e86f75df05",
+    "apps_template_src_app_dashboard_billing_page_billingpage": {
+      "code_fingerprint": "625396a5b9dd9e154cda9aaa047f12b715e5027b2be488a6bfcc5670c242cfc9",
       "label": "BillingPage()",
       "last": "2026-08-14T17:00:51.334745+00:00",
       "provenance": [
@@ -49,12 +49,12 @@
           "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
         }
       ],
-      "score": 0.90510642,
-      "source_file": "src/app/dashboard/billing/page.tsx",
+      "score": 0.889889326,
+      "source_file": "apps/template/src/app/dashboard/billing/page.tsx",
       "status": "tentative",
       "uses": 1
     },
-    "src_app_dashboard_page": {
+    "apps_template_src_app_dashboard_page": {
       "code_fingerprint": "d2602dc22950aaefd448bc0901b5e64ff23d1c305379e2aa3b7de8070b06c91d",
       "label": "dashboard/page.tsx",
       "last": "2026-08-14T09:29:41.023268+00:00",
@@ -65,12 +65,12 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.898577936,
-      "source_file": "src/app/dashboard/page.tsx",
+      "score": 0.883470602,
+      "source_file": "apps/template/src/app/dashboard/page.tsx",
       "status": "tentative",
       "uses": 1
     },
-    "src_app_dashboard_settings_profile_form_profileform": {
+    "apps_template_src_app_dashboard_settings_profile_form_profileform": {
       "code_fingerprint": "b349888e0a0247852bb1d89d356e8bbd18c4a6d18ffd0b521b998d64d52593fb",
       "label": "ProfileForm()",
       "last": "2026-08-15T22:07:28.770718+00:00",
@@ -81,13 +81,13 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.930830537,
-      "source_file": "src/app/dashboard/settings/profile-form.tsx",
+      "score": 0.915180956,
+      "source_file": "apps/template/src/app/dashboard/settings/profile-form.tsx",
       "status": "tentative",
       "uses": 1
     },
-    "src_app_pricing_actions_createcheckoutsession": {
-      "code_fingerprint": "828daa364b1d5f49b95656b783dd61310f6c34189d00581f80769321a084ca44",
+    "apps_template_src_app_pricing_actions_createcheckoutsession": {
+      "code_fingerprint": "2b8c74a2028ebd6b790cc11a45c1bd39ea0a8db3cccdbf9f2167c40a89515694",
       "label": "createCheckoutSession()",
       "last": "2026-08-15T22:07:28.770718+00:00",
       "provenance": [
@@ -97,13 +97,13 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.930830537,
-      "source_file": "src/app/pricing/actions.ts",
+      "score": 0.915180956,
+      "source_file": "apps/template/src/app/pricing/actions.ts",
       "status": "tentative",
       "uses": 1
     },
-    "src_components_auth_form": {
-      "code_fingerprint": "ee3d993e9e71dea440a7acf5c72b0f534691d992b2d5debc3ed5d5e93aa13cb9",
+    "apps_template_src_components_auth_form": {
+      "code_fingerprint": "f8a0d64cbe86fef412fa2d90cb5726e8028141cde2b4c1793edd5bb2fce2fef0",
       "label": "auth-form.tsx",
       "last": "2026-08-15T22:07:28.770718+00:00",
       "provenance": [
@@ -113,12 +113,12 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.930830537,
-      "source_file": "src/components/auth-form.tsx",
+      "score": 0.915180956,
+      "source_file": "apps/template/src/components/auth-form.tsx",
       "status": "tentative",
       "uses": 1
     },
-    "src_lib_auth_session_requireauth": {
+    "apps_template_src_lib_auth_session_requireauth": {
       "code_fingerprint": "153e4d217588bfa60d831efeff22bc98ffd86757b5247ed01ffa701c241c9e75",
       "label": "requireAuth()",
       "last": "2026-08-14T09:29:41.023268+00:00",
@@ -129,28 +129,12 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.898577936,
-      "source_file": "src/lib/auth/session.ts",
+      "score": 0.883470602,
+      "source_file": "apps/template/src/lib/auth/session.ts",
       "status": "tentative",
       "uses": 1
     },
-    "src_lib_stripe_config_stripeconfig": {
-      "code_fingerprint": "6a6318c22e7f3fa13b3640e3f0eb324810d682bb8b9dbfa3d745c09399300a0f",
-      "label": "stripeConfig",
-      "last": "2026-08-14T17:00:51.334745+00:00",
-      "provenance": [
-        {
-          "date": "2026-08-14T17:00:51.334745+00:00",
-          "outcome": "useful",
-          "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
-        }
-      ],
-      "score": 0.90510642,
-      "source_file": "src/lib/stripe/config.ts",
-      "status": "tentative",
-      "uses": 1
-    },
-    "supabase_migrations_20260814000000_create_profiles_profiles_set_updated_at": {
+    "apps_template_supabase_migrations_20260814000000_create_profiles_profiles_set_updated_at": {
       "code_fingerprint": "cd61f615a6f74a201a966b4970304ce126f5942ebed252ec451f6db784593a00",
       "label": "profiles_set_updated_at",
       "last": "2026-08-16T20:48:22.350135+00:00",
@@ -161,12 +145,12 @@
           "q": "Add integration tests covering authentication-dependent data access, profile operations, subscription persistence, and important Supabase RLS behavior"
         }
       ],
-      "score": 0.951379338,
-      "source_file": "supabase/migrations/20260814000000_create_profiles.sql",
+      "score": 0.935384281,
+      "source_file": "apps/template/supabase/migrations/20260814000000_create_profiles.sql",
       "status": "tentative",
       "uses": 1
     },
-    "supabase_tests_database_rls_policies_test": {
+    "apps_template_supabase_tests_database_rls_policies_test": {
       "code_fingerprint": "efdcc3b41bb61a478e75e137c96c15a0c22ec4f227f5eb990ca7c528110b7bef",
       "label": "rls_policies.test.sql",
       "last": "2026-08-16T20:48:22.350135+00:00",
@@ -177,8 +161,8 @@
           "q": "Add integration tests covering authentication-dependent data access, profile operations, subscription persistence, and important Supabase RLS behavior"
         }
       ],
-      "score": 0.951379338,
-      "source_file": "supabase/tests/database/rls_policies.test.sql",
+      "score": 0.935384281,
+      "source_file": "apps/template/supabase/tests/database/rls_policies.test.sql",
       "status": "tentative",
       "uses": 1
     }

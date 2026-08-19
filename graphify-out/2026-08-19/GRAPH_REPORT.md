@@ -1,16 +1,16 @@
 # Graph Report - SaaSSeed  (2026-08-19)
 
 ## Corpus Check
-- 138 files · ~35,554 words
+- 138 files · ~36,001 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 711 nodes · 1150 edges · 50 communities (43 shown, 7 thin omitted)
+- 713 nodes · 1154 edges · 50 communities (43 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2cf64344`
+- Built from commit: `ee6fc800`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -91,12 +91,12 @@ Cohesion: 0.08
 Nodes (31): Folder Watch Incremental Rebuild, URL Ingestion, Optional Graph Exports, Token Reduction Benchmark, Edge Confidence Rubric, Deterministic Node IDs, Semantic Extraction JSON Schema, Cross Repository Graph Merge (+23 more)
 
 ### Community 1 - "pricing/actions.ts"
-Cohesion: 0.07
-Nodes (43): handledEvents, POST(), readWebhookBody(), BillingPortalFormState, createBillingPortalSession(), CheckoutFormState, checkoutSchema, createCheckoutSession() (+35 more)
+Cohesion: 0.08
+Nodes (42): handledEvents, POST(), readWebhookBody(), BillingPortalFormState, createBillingPortalSession(), CheckoutFormState, checkoutSchema, createCheckoutSession() (+34 more)
 
 ### Community 2 - "cn"
-Cohesion: 0.06
-Nodes (40): AppShell(), AppShellProps, Container(), ContainerProps, containerSizes, DashboardLoading(), navigation, Logo() (+32 more)
+Cohesion: 0.07
+Nodes (40): AppShell(), AppShellProps, AuthLoading(), Container(), ContainerProps, containerSizes, navigation, Logo() (+32 more)
 
 ### Community 3 - "compilerOptions"
 Cohesion: 0.07
@@ -120,15 +120,15 @@ Nodes (35): dependencies, class-variance-authority, clsx, lucide-react, next, po
 
 ### Community 9 - "auth/actions.ts"
 Cohesion: 0.09
-Nodes (34): authError(), AuthField, AuthFormState, AuthValues, login(), logout(), LogoutFormState, signup() (+26 more)
+Nodes (35): authError(), AuthField, AuthFormState, AuthValues, login(), logout(), LogoutFormState, signup() (+27 more)
 
 ### Community 10 - "billing/page.tsx"
 Cohesion: 0.07
-Nodes (41): BillingPage(), BillingPageProps, formatDate(), planLabels, statusLabels, PremiumInsightsPage(), DashboardLayout(), stats (+33 more)
+Nodes (37): BillingPage(), BillingPageProps, formatDate(), planLabels, statusLabels, PremiumInsightsPage(), DashboardLayout(), stats (+29 more)
 
 ### Community 11 - "marketing.tsx"
-Cohesion: 0.14
-Nodes (12): metadata, metadata, CTA(), Features, Footer(), Hero(), Navbar(), Pricing() (+4 more)
+Cohesion: 0.11
+Nodes (16): metadata, metadata, ActionForm(), ActionFormProps, FormFeedback(), FormFeedbackProps, CTA(), Features (+8 more)
 
 ### Community 12 - "Production deployment"
 Cohesion: 0.07
@@ -155,8 +155,8 @@ Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations, Source Nodes
 
 ### Community 20 - "index.mjs"
-Cohesion: 0.12
-Nodes (19): configureProject(), createApp(), emailModulePaths, entryDirectory, excludedTemplateEntries, finishProject(), normalizePackageName(), packagedTemplate (+11 more)
+Cohesion: 0.11
+Nodes (21): analyticsModulePaths, configureProject(), createApp(), emailModulePaths, entryDirectory, excludedTemplateEntries, finishProject(), normalizePackageName() (+13 more)
 
 ### Community 21 - "20260814010000_create_billing_tables.sql"
 Cohesion: 0.32
@@ -207,7 +207,7 @@ Cohesion: 0.33
 Nodes (5): How to reproduce or verify, Reviewer notes, Screenshots or recordings, Tests, What changed
 
 ## Knowledge Gaps
-- **309 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+304 more)
+- **310 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+305 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -220,16 +220,16 @@ Nodes (5): How to reproduce or verify, Reviewer notes, Screenshots or recordings
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `cn()` connect `cn` to `auth/actions.ts`, `billing/page.tsx`, `marketing.tsx`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `scripts`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `productConfig` connect `marketing.tsx` to `auth/actions.ts`, `billing/page.tsx`, `cn`, `pricing/actions.ts`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _309 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _310 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Graphify Pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.07526881720430108 - nodes in this community are weakly interconnected._
 - **Should `pricing/actions.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.07403846153846154 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07539682539682539 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**
-  _Cohesion score 0.06151062867480778 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06768905341089371 - nodes in this community are weakly interconnected._

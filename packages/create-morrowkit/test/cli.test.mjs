@@ -197,6 +197,27 @@ test("removes analytics without leaving imports or environment requirements", ()
   }
 });
 
+test("removes all optional modules together", () => {
+  const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
+  try {
+    const result = createApp("minimal", workspace);
+    removeStripeModule(result.target);
+    removeEmailModule(result.target);
+    removeAnalyticsModule(result.target);
+
+    const packageJson = JSON.parse(
+      readFileSync(join(result.target, "package.json"), "utf8"),
+    );
+    assert.equal(packageJson.dependencies.stripe, undefined);
+    assert.equal(packageJson.dependencies["react-email"], undefined);
+    assert.equal(packageJson.dependencies.resend, undefined);
+    assert.equal(packageJson.dependencies["posthog-node"], undefined);
+    assert.equal(existsSync(join(result.target, "pnpm-lock.yaml")), false);
+  } finally {
+    rmSync(workspace, { force: true, recursive: true });
+  }
+});
+
 test("installs dependencies and initializes Git when selected", () => {
   const calls = [];
   finishProject(

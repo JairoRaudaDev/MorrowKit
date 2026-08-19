@@ -302,16 +302,22 @@ export function removeEmailModule(target) {
       ),
   );
 
-  replaceFile(target, "docs/production-deployment.md", (source) =>
-    source
-      .replace(
-        "This is separate from the application's Resend integration.",
-        "",
-      )
-      .replace(/^.*`EMAIL_FROM`.*\r?\n/gmu, "")
-      .replace(/^\| `RESEND_API_KEY`.*\r?\n/mu, "")
-      .replace(/^\| `EMAIL_FROM`.*\r?\n/mu, ""),
+  const productionDeploymentPath = resolve(
+    target,
+    "docs/production-deployment.md",
   );
+  if (existsSync(productionDeploymentPath)) {
+    replaceFile(target, "docs/production-deployment.md", (source) =>
+      source
+        .replace(
+          "This is separate from the application's Resend integration.",
+          "",
+        )
+        .replace(/^.*`EMAIL_FROM`.*\r?\n/gmu, "")
+        .replace(/^\| `RESEND_API_KEY`.*\r?\n/mu, "")
+        .replace(/^\| `EMAIL_FROM`.*\r?\n/mu, ""),
+    );
+  }
 }
 
 export function removeAnalyticsModule(target) {
@@ -374,17 +380,23 @@ export function removeAnalyticsModule(target) {
       .join("\n"),
   );
 
-  replaceFile(target, "docs/production-deployment.md", (source) =>
-    source
-      .replace(", analytics, and monitoring", ", and monitoring")
-      .replace("### Monitoring and analytics", "### Monitoring")
-      .replace(/^.*Product analytics.*\r?\n/gmu, "")
-      .replace(/^.*analytics events.*\r?\n/gmu, "")
-      .replace(/^.*configured analytics.*\r?\n/gmu, "")
-      .split(/\r?\n/u)
-      .filter((line) => !/analytics|posthog|POSTHOG_/iu.test(line))
-      .join("\n"),
+  const productionDeploymentPath = resolve(
+    target,
+    "docs/production-deployment.md",
   );
+  if (existsSync(productionDeploymentPath)) {
+    replaceFile(target, "docs/production-deployment.md", (source) =>
+      source
+        .replace(", analytics, and monitoring", ", and monitoring")
+        .replace("### Monitoring and analytics", "### Monitoring")
+        .replace(/^.*Product analytics.*\r?\n/gmu, "")
+        .replace(/^.*analytics events.*\r?\n/gmu, "")
+        .replace(/^.*configured analytics.*\r?\n/gmu, "")
+        .split(/\r?\n/u)
+        .filter((line) => !/analytics|posthog|POSTHOG_/iu.test(line))
+        .join("\n"),
+    );
+  }
 }
 
 const packageManagers = ["pnpm", "npm", "yarn", "bun"];
