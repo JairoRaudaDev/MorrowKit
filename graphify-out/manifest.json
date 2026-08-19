@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787166666.7525582,
-    "ast_hash": "9ab9ef0c0e77b6e49bc1cad7012e2d58",
+    "mtime": 1787166866.6766412,
+    "ast_hash": "4e63e1c604d7132ecee3c1df902e7208",
     "semantic_hash": ""
   },
   "graphify-out/memory/query_20260814_092941_create__dashboard_settings_with_display_name__futu.md": {
@@ -100,8 +100,8 @@
     "semantic_hash": ""
   },
   "CONTRIBUTING.md": {
-    "mtime": 1787160149.7911046,
-    "ast_hash": "a608cbee099d6db252beb0299b8465d0",
+    "mtime": 1787166885.7191076,
+    "ast_hash": "bc2e3a05f0719943728b5d1f83f9de0e",
     "semantic_hash": ""
   },
   "SECURITY.md": {
@@ -160,8 +160,8 @@
     "semantic_hash": ""
   },
   "apps/template/scripts/setup.mjs": {
-    "mtime": 1787161853.9495096,
-    "ast_hash": "9c264ff483b7a62ed1ed733d10e3e499",
+    "mtime": 1787167137.9782825,
+    "ast_hash": "99c94a5a273db9f17358da65ed71973e",
     "semantic_hash": ""
   },
   "apps/template/src/app/api/stripe/webhook/route.ts": {
@@ -712,6 +712,11 @@
   "graphify-out/memory/query_20260819_183733_polish_create_morrowkit_output_with_concise_progre.md": {
     "mtime": 1787164653.9978905,
     "ast_hash": "99dbf5203b70e5e3c79f4dec702f6124",
+    "semantic_hash": ""
+  },
+  "CHANGELOG.md": {
+    "mtime": 1787167145.3573816,
+    "ast_hash": "3c2a89b7ef7dd4d2f64866e597e7a619",
     "semantic_hash": ""
   }
 }

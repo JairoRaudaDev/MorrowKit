@@ -10,7 +10,8 @@ if (!existsSync(envFile)) {
   console.log(`${envFile} already exists; keeping it unchanged.`);
 }
 
-const packageManager = process.env.npm_config_user_agent?.split("/")[0] || "pnpm";
+const packageManager =
+  process.env.npm_config_user_agent?.split("/")[0] || "pnpm";
 const command =
   process.platform === "win32" ? `${packageManager}.cmd` : packageManager;
 const execArguments = packageManager === "npm" ? ["exec", "--"] : ["exec"];

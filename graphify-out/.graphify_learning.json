@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T18:32:39.889389+00:00",
+  "generated_at": "2026-08-19T19:17:02.119114+00:00",
   "nodes": {
     "apps_template_src_app_auth_actions_logout": {
       "code_fingerprint": "455bf340897560ec4c9efb1b42c659008358e23817e4722f566bb4117efc2f76",
@@ -17,7 +17,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 1.798041128,
+      "score": 1.796761508,
       "source_file": "apps/template/src/app/auth/actions.ts",
       "status": "preferred",
       "uses": 2
@@ -33,7 +33,7 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.91487036,
+      "score": 0.91421927,
       "source_file": "apps/template/src/app/dashboard/billing/actions.ts",
       "status": "tentative",
       "uses": 1
@@ -49,7 +49,7 @@
           "q": "Create a centralized entitlement layer that converts billing state into application permissions. Product code should depend on entitlements rather than querying Stripe-specific fields directly"
         }
       ],
-      "score": 0.889587314,
+      "score": 0.888954217,
       "source_file": "apps/template/src/app/dashboard/billing/page.tsx",
       "status": "tentative",
       "uses": 1
@@ -65,7 +65,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.883170768,
+      "score": 0.882542238,
       "source_file": "apps/template/src/app/dashboard/page.tsx",
       "status": "tentative",
       "uses": 1
@@ -81,7 +81,7 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.91487036,
+      "score": 0.91421927,
       "source_file": "apps/template/src/app/dashboard/settings/profile-form.tsx",
       "status": "tentative",
       "uses": 1
@@ -97,7 +97,7 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.91487036,
+      "score": 0.91421927,
       "source_file": "apps/template/src/app/pricing/actions.ts",
       "status": "tentative",
       "uses": 1
@@ -113,7 +113,7 @@
           "q": "Add consistent pending, success, validation, and error feedback for authentication, account, checkout, and settings forms."
         }
       ],
-      "score": 0.91487036,
+      "score": 0.91421927,
       "source_file": "apps/template/src/components/auth-form.tsx",
       "status": "tentative",
       "uses": 1
@@ -129,7 +129,7 @@
           "q": "Create /dashboard/settings with display name, future avatar, email display, logout, separate password flows, and secure server-side mutations"
         }
       ],
-      "score": 0.883170768,
+      "score": 0.882542238,
       "source_file": "apps/template/src/lib/auth/session.ts",
       "status": "tentative",
       "uses": 1
@@ -145,7 +145,7 @@
           "q": "Add integration tests covering authentication-dependent data access, profile operations, subscription persistence, and important Supabase RLS behavior"
         }
       ],
-      "score": 0.935066828,
+      "score": 0.934401365,
       "source_file": "apps/template/supabase/migrations/20260814000000_create_profiles.sql",
       "status": "tentative",
       "uses": 1
@@ -161,8 +161,40 @@
           "q": "Add integration tests covering authentication-dependent data access, profile operations, subscription persistence, and important Supabase RLS behavior"
         }
       ],
-      "score": 0.935066828,
+      "score": 0.934401365,
       "source_file": "apps/template/supabase/tests/database/rls_policies.test.sql",
+      "status": "tentative",
+      "uses": 1
+    },
+    "packages_create_morrowkit_src_index_configureproject": {
+      "code_fingerprint": "774b2d0cb5df2ed8ae1857c0b3d1a2f9ca6d2ddb3582f4e8a4147ba2c9cd0bd2",
+      "label": "configureProject()",
+      "last": "2026-08-19T18:37:33.997883+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-19T18:37:33.997883+00:00",
+          "outcome": "useful",
+          "q": "Polish create-morrowkit output with concise progress indicators, useful validation errors, clean cancellation behavior, and clear next-step instructions."
+        }
+      ],
+      "score": 0.999366922,
+      "source_file": "packages/create-morrowkit/src/index.mjs",
+      "status": "tentative",
+      "uses": 1
+    },
+    "packages_create_morrowkit_src_index_promptforoptions": {
+      "code_fingerprint": "774b2d0cb5df2ed8ae1857c0b3d1a2f9ca6d2ddb3582f4e8a4147ba2c9cd0bd2",
+      "label": "promptForOptions()",
+      "last": "2026-08-19T18:37:33.997883+00:00",
+      "provenance": [
+        {
+          "date": "2026-08-19T18:37:33.997883+00:00",
+          "outcome": "useful",
+          "q": "Polish create-morrowkit output with concise progress indicators, useful validation errors, clean cancellation behavior, and clear next-step instructions."
+        }
+      ],
+      "score": 0.999366922,
+      "source_file": "packages/create-morrowkit/src/index.mjs",
       "status": "tentative",
       "uses": 1
     }
