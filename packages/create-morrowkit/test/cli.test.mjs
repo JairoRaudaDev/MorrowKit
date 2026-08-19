@@ -13,7 +13,12 @@ import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
-import { configureProject, createApp, finishProject } from "../src/index.mjs";
+import {
+  configureProject,
+  createApp,
+  finishProject,
+  removeStripeModule,
+} from "../src/index.mjs";
 
 const packageRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const cliPath = join(packageRoot, "src", "index.mjs");
@@ -69,6 +74,49 @@ test("configures the project name and package manager", () => {
   }
 });
 
+test("removes the complete Stripe module when disabled", () => {
+  const workspace = mkdtempSync(join(tmpdir(), "create-morrowkit-"));
+  try {
+    const result = createApp("without-stripe", workspace);
+    removeStripeModule(result.target);
+
+    const packageJson = JSON.parse(
+      readFileSync(join(result.target, "package.json"), "utf8"),
+    );
+    assert.equal(packageJson.dependencies.stripe, undefined);
+    assert.equal(existsSync(join(result.target, "pnpm-lock.yaml")), false);
+    assert.equal(
+      existsSync(join(result.target, "src", "lib", "stripe")),
+      false,
+    );
+    assert.equal(
+      existsSync(join(result.target, "src", "app", "pricing")),
+      false,
+    );
+    assert.equal(
+      existsSync(join(result.target, "src", "app", "dashboard", "billing")),
+      false,
+    );
+    assert.doesNotMatch(
+      readFileSync(join(result.target, ".env.example"), "utf8"),
+      /STRIPE_/u,
+    );
+    assert.doesNotMatch(
+      readFileSync(join(result.target, "README.md"), "utf8"),
+      /billing|pricing|stripe|subscription/iu,
+    );
+    assert.doesNotMatch(
+      readFileSync(
+        join(result.target, "src", "components", "dashboard-shell.tsx"),
+        "utf8",
+      ),
+      /billing|pricing|stripe/iu,
+    );
+  } finally {
+    rmSync(workspace, { force: true, recursive: true });
+  }
+});
+
 test("installs dependencies and initializes Git when selected", () => {
   const calls = [];
   finishProject(
@@ -119,6 +167,17 @@ test("CLI uses non-interactive defaults and rejects extra arguments", () => {
     assert.equal(created.status, 0, created.stderr);
     assert.match(created.stdout, /Created my-app/);
     assert.equal(existsSync(join(workspace, "my-app", "package.json")), true);
+
+    const withoutStripe = spawnSync(
+      process.execPath,
+      [cliPath, "without-stripe", "--no-stripe", "--no-install", "--no-git"],
+      { cwd: workspace, encoding: "utf8", timeout: 10_000 },
+    );
+    assert.equal(withoutStripe.status, 0, withoutStripe.stderr);
+    assert.equal(
+      existsSync(join(workspace, "without-stripe", "src", "lib", "stripe")),
+      false,
+    );
 
     const invalid = spawnSync(process.execPath, [cliPath, "one", "two"], {
       cwd: workspace,

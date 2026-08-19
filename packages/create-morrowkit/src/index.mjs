@@ -71,6 +71,193 @@ export function createApp(targetArgument, cwd = process.cwd()) {
   return { name: basename(target), target };
 }
 
+const stripeModulePaths = [
+  "src/app/api/stripe",
+  "src/app/dashboard/billing",
+  "src/app/dashboard/insights",
+  "src/app/pricing",
+  "src/lib/stripe",
+  "src/lib/entitlements.logic.test.ts",
+  "src/lib/entitlements.logic.ts",
+  "src/lib/entitlements.ts",
+  "src/lib/premium-insights.ts",
+  "supabase/migrations/20260814010000_create_billing_tables.sql",
+  "supabase/migrations/20260814020000_add_stripe_webhook_processing.sql",
+  "supabase/tests/database/auth_profile_subscription.test.sql",
+  "supabase/tests/database/rls_policies.test.sql",
+  "tests/e2e/pricing.spec.ts",
+  "docs/production-deployment.md",
+  "pnpm-lock.yaml",
+];
+
+function replaceFile(target, relativePath, transform) {
+  const path = resolve(target, relativePath);
+  writeFileSync(path, transform(readFileSync(path, "utf8")));
+}
+
+export function removeStripeModule(target) {
+  for (const relativePath of stripeModulePaths) {
+    rmSync(resolve(target, relativePath), { force: true, recursive: true });
+  }
+
+  const packageJsonPath = resolve(target, "package.json");
+  const packageJson = JSON.parse(readFileSync(packageJsonPath, "utf8"));
+  delete packageJson.dependencies?.stripe;
+  writeFileSync(packageJsonPath, `${JSON.stringify(packageJson, null, 2)}\n`);
+
+  replaceFile(
+    target,
+    "README.md",
+    () => `# MorrowKit application
+
+A production-oriented Next.js application with Supabase authentication, a
+protected dashboard, transactional email, analytics, monitoring, and tests.
+
+## Get started
+
+1. Run \`pnpm setup\` and follow the prompts.
+2. Start the app with \`pnpm dev\`.
+3. Open \`http://localhost:3000\`.
+
+Copy \`.env.example\` to \`.env.local\` when configuring the application
+manually. Keep all server secrets out of source control and browser-exposed
+environment variables.
+
+## Commands
+
+- \`pnpm dev\` — start local development.
+- \`pnpm typecheck\` — check TypeScript.
+- \`pnpm lint\` — run ESLint.
+- \`pnpm test\` — run unit tests.
+- \`pnpm test:e2e\` — run browser tests.
+- \`pnpm test:db\` — run database tests.
+`,
+  );
+
+  replaceFile(target, ".env.example", (source) =>
+    source
+      .split(/\r?\n/u)
+      .filter((line) => !line.startsWith("STRIPE_"))
+      .join("\n"),
+  );
+
+  replaceFile(target, "src/components/marketing.tsx", (source) =>
+    source
+      .replace(/import \{ createCheckoutSession \}[^\n]+\n/u, "")
+      .replace(/import \{ ActionForm \}[^\n]+\n/u, "")
+      .replace(/^\s*Check,\r?\n/mu, "")
+      .replace(
+        `          <Link
+            className="transition-colors hover:text-foreground"
+            href="/pricing"
+          >
+            Pricing
+          </Link>
+`,
+        "",
+      )
+      .replace(
+        `            <Button asChild size="lg" variant="outline">
+              <Link href="/pricing">View pricing</Link>
+            </Button>
+`,
+        "",
+      )
+      .replace(
+        `          <Link className="hover:text-foreground" href="/pricing">
+            Pricing
+          </Link>
+`,
+        "",
+      )
+      .replace(
+        /\nexport function Pricing\(\)[\s\S]*?\nexport function Footer\(\)/u,
+        "\nexport function Footer()",
+      ),
+  );
+
+  replaceFile(target, "src/components/dashboard-shell.tsx", (source) =>
+    source
+      .replace(/^\s*(ChartNoAxesCombined|CreditCard),\r?\n/gmu, "")
+      .replace(
+        /\n\s*\{\n\s*href: "\/dashboard\/insights",[\s\S]*?\n\s*\},/u,
+        "",
+      )
+      .replace(/\n\s*\{ href: "\/dashboard\/billing"[^\n]+\n/u, "")
+      .replace(
+        /\n\s*<DropdownMenuItem asChild>\s*<Link href="\/dashboard\/billing">[\s\S]*?<\/DropdownMenuItem>/u,
+        "",
+      ),
+  );
+
+  replaceFile(
+    target,
+    "src/config/product.ts",
+    () => `export const productConfig = {
+  name: "MorrowKit",
+  description: "Build what matters",
+  companyName: "MorrowKit",
+  dashboardLabel: "Workspace",
+} as const;
+`,
+  );
+
+  replaceFile(target, "src/lib/db/queries.ts", (source) =>
+    source
+      .replace(/\nexport type Subscription =[\s\S]*?\n\}>;\n/u, "")
+      .replace(
+        /\n\/\*\* Returns the user's most recently updated subscription[\s\S]*$/u,
+        "\n",
+      ),
+  );
+
+  replaceFile(
+    target,
+    "src/lib/analytics/events.ts",
+    () => `export type AnalyticsEvents = {
+  user_signed_up: {
+    userId?: string;
+  };
+};
+
+export type AnalyticsEventName = keyof AnalyticsEvents;
+
+export type AnalyticsEvent<
+  Name extends AnalyticsEventName = AnalyticsEventName,
+> = {
+  [EventName in Name]: {
+    name: EventName;
+    properties: AnalyticsEvents[EventName];
+  };
+}[Name];
+`,
+  );
+
+  replaceFile(
+    target,
+    "supabase/migrations/20260815000000_harden_rls_privileges.sql",
+    (source) =>
+      source.replace(
+        /\nrevoke all on table public\.billing_customers[\s\S]*?(?=\n-- This trigger helper)/u,
+        "\n",
+      ),
+  );
+
+  replaceFile(target, "playwright.config.ts", (source) =>
+    source.replace(
+      /\n\s*STRIPE_SECRET_KEY:[\s\S]*?"price_playwright_business",/u,
+      "",
+    ),
+  );
+
+  replaceFile(target, "tests/e2e/public-site.spec.ts", (source) =>
+    source.replace(
+      /\n\s*await page\.getByRole\("link", \{ name: "View pricing" \}\)[\s\S]*?\)\.toBeVisible\(\);/u,
+      "",
+    ),
+  );
+}
+
 const packageManagers = ["pnpm", "npm", "yarn", "bun"];
 
 function normalizePackageName(name) {
@@ -128,12 +315,14 @@ function parseArguments(arguments_) {
     install: true,
     packageManager: "pnpm",
     target: undefined,
+    stripe: true,
     yes: false,
   };
 
   for (let index = 0; index < arguments_.length; index += 1) {
     const argument = arguments_[index];
     if (argument === "--yes" || argument === "-y") options.yes = true;
+    else if (argument === "--no-stripe") options.stripe = false;
     else if (argument === "--no-install") options.install = false;
     else if (argument === "--no-git") options.git = false;
     else if (argument === "--package-manager") {
@@ -190,7 +379,11 @@ async function promptForOptions(defaults) {
       await prompts.question("Install dependencies? (Y/n) "),
       true,
     );
-    return { ...defaults, git, install, packageManager, target };
+    const stripe = parseYesNo(
+      await prompts.question("Include Stripe? (Y/n) "),
+      true,
+    );
+    return { ...defaults, git, install, packageManager, stripe, target };
   } finally {
     prompts.close();
   }
@@ -206,6 +399,7 @@ Options:
   --package-manager <manager> pnpm, npm, yarn, or bun (default: pnpm)
   --no-install                Skip dependency installation
   --no-git                    Skip Git initialization
+  --no-stripe                 Exclude Stripe and billing features
   -h, --help                  Show help`);
 }
 
@@ -226,6 +420,7 @@ if (
       process.stdin.isTTY && process.stdout.isTTY && !defaults.yes;
     const options = interactive ? await promptForOptions(defaults) : defaults;
     const result = createApp(options.target);
+    if (!options.stripe) removeStripeModule(result.target);
     configureProject(result.target, result.name, options.packageManager);
     finishProject(result.target, options);
     console.log(`Created ${result.name} in ${result.target}`);
